@@ -4,3 +4,10 @@ package-lock.json
 #logs
 *.log
 npm-debug.log*
+
+# imgages
+images/
+img/
+*.png
+*.jpg
+*.gif
