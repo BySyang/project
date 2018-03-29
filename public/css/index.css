@@ -4,7 +4,7 @@ a {
     margin: 0px;
     text-decoration: none;
 }
-
+/* 导航样式 */
 header {
     position: relative;
     width: 1347px;
@@ -50,11 +50,17 @@ header {
 .head-nav>ul>li>a:hover {
     color: #ff0066;
 }
-
-.head-banner {
+/* 轮播样式 */
+.box-banner{
+    position: relative;
     width: 1347px;
     height: 635px;
     overflow: hidden;
+}
+.head-banner {
+    position: absolute;
+    width: 5388px;
+    height: 635px;
 }
 
 .head-banner>img {
