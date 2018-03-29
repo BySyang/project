@@ -17,11 +17,18 @@ header {
 }
 
 .head-nav {
-    position: absolute;
+    position: fixed;
     width: 1347px;
     height: 86px;
     background-color: rgba(52, 52, 52, 0.3);
 }
+.head-nav1 {
+    position: fixed;
+    width: 1347px;
+    height: 86px;
+    background-color: rgb(255, 255, 255,0.7 );
+}
+
 
 .head-nav>h1 {
     width: 356px;
@@ -157,6 +164,102 @@ header {
     transition: border linear .2s, -webkit-box-shadow linear .5s;
     border: 1px solid #ff0066;
 }
+
+/* 内容 */
+section{
+    position: relative;
+    width: 1347px;
+    height: 1500px;
+}
+.first-contain{
+    width: 1347px;
+    height: 1003px;
+    background: #F7F7F7;
+    overflow: hidden;
+}
+p{
+    text-align: center;
+    margin: 35px 0px;
+}
+p:nth-child(1){
+    font-size: 26px;
+}
+.section-button{
+    width: 450px;
+    height: 60px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 10px auto;
+}
+.section-button>button{
+    width: 152px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.section-button>button:nth-child(1){
+    background: #ff0066;
+    color: white;
+    float: left;
+}
+.section-button>button:nth-child(2){
+    background: white;
+    color: #ff0066;
+    float: right;
+    border: 1px solid #ff0066;
+}
+.img-t1>div{
+    position: absolute;
+    background: url('../images/首页展示/野性魅惑/soir-venise-psr-cat-737x770.jpg');
+    background-size:100% 100%;
+    left: 186px;
+    top:255px;
+    width: 480px;
+    height: 500px;
+}
+.img-t2>div{
+    position: absolute;
+    top:390px;
+    right: 200px;
+    background: url('../images/首页展示/野性魅惑/black.jpg');
+    background-size:100% 100%;
+    box-shadow: 5px 2px 5px 3px black;
+    width: 455px;
+    height: 600px;
+}
+.img-t1>p{
+    position: absolute;
+    left: 51%;
+    top: 20%;
+    font-size: 16px;
+}
+.img-t2>p{
+    position: absolute;
+    left: 15%;
+    top: 48%;
+    font-size: 16px;
+}
+.text_t1{
+    position: absolute;
+    top: 55%;
+    left: 28%;
+    width: 197px;
+    height: 137px;
+    text-align: right;
+}
+.text_t1>i{
+    display: inline-block;
+    margin: 4px 0px;
+    font-style: normal;
+    font-size: 14px;
+}
+
+
+
+
+
 
 /* 
 底部导航栏
