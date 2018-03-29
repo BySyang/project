@@ -1,10 +1,14 @@
 *,
-a {
+a,
+li {
     padding: 0px;
     margin: 0px;
     text-decoration: none;
+    list-style: none;
 }
+
 /* 导航样式 */
+
 header {
     position: relative;
     width: 1347px;
@@ -19,24 +23,37 @@ header {
     background-color: rgba(52, 52, 52, 0.3);
 }
 
+.head-nav>h1 {
+    width: 356px;
+    height: 98px;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+.head-nav>h1>img {
+    width: 75%;
+    height: 75%;
+}
+
 .head-nav>ul {
     position: absolute;
     top: 0px;
     right: 0px;
-    width: 1200px;
+    width: 1000px;
     height: 86px;
     list-style: none;
     overflow: hidden;
+    /* border: 1px solid red; */
 }
 
 .head-nav>ul>li {
     line-height: 86px;
     float: left;
-    margin: 0px 0px 0px 50px;
+    margin: 0px 0px 0px 30px;
 }
 
 .head-nav>ul>li:nth-child(6) {
-    margin-right: 80px;
+    margin-right: 50px;
 }
 
 .iconfont {
@@ -50,36 +67,60 @@ header {
 .head-nav>ul>li>a:hover {
     color: #ff0066;
 }
+
 /* 轮播样式 */
-.box-banner{
+
+.box-banner {
     position: relative;
     width: 1347px;
     height: 635px;
     overflow: hidden;
+    z-index: -1;
 }
+
 .head-banner {
     position: absolute;
     width: 5388px;
     height: 635px;
+    top: 0px;
+    left: 0px;
 }
 
-.head-banner>img {
-    float: left;
+.head-banner>li {
     width: 1347px;
+    height: 635px;
+    float: left;
+}
+
+.head-banner>li:nth-child(1) {
+    background-image: url("../images/home-5038.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.head-banner>li:nth-child(2) {
+    background-image: url("../images/1502938457307_-6907284330823835652_03.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.head-banner>li:nth-child(3) {
+    background-image: url("../images/01-pilyq-whats-new.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
 }
 
 /* input标签 */
 
 .box {
     position: relative;
-    left: 45px;
+    left: 50px;
     width: 200px;
 }
 
 .icon-user {
     position: absolute;
     right: 60px;
-    z-index: 999;
     top: 41%;
     background-image: url("../images/搜索.png");
     /*引入图片图片*/
