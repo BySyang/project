@@ -12,7 +12,7 @@ $(function () {
         if (nowimg < 2) {
             nowimg++
             $(".head-banner").animate({ "left": nowimg * -1347 }, 2000)
-  
+
         }
         else {
             nowimg = 0
@@ -32,11 +32,11 @@ $(function () {
         var scrollTop = $(this).scrollTop();
         if (scrollTop > 10) {
             $(".head-nav").addClass("head-nav1")
-            $(".head-nav>ul>li>a").css({"color":"#ff0066"})
+            $(".head-nav>ul>li>a").css({ "color": "#ff0066" })
         }
-        if(scrollTop<10){
+        if (scrollTop < 10) {
             $(".head-nav").removeClass("head-nav1")
-            $(".head-nav>ul>li>a").css({"color":"white"})
+            $(".head-nav>ul>li>a").css({ "color": "white" })
         }
     })
 
