@@ -1,0 +1,112 @@
+*,
+a {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+header {
+    position: relative;
+    width: 1347px;
+    height: 635px;
+    border: 1px solid red;
+}
+
+.head-nav {
+    position: absolute;
+    width: 1347px;
+    height: 86px;
+    background-color: rgba(52, 52, 52, 0.3);
+}
+
+.head-nav>ul {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 1200px;
+    height: 86px;
+    list-style: none;
+    overflow: hidden;
+}
+
+.head-nav>ul>li {
+    line-height: 86px;
+    float: left;
+    margin: 0px 0px 0px 50px;
+}
+
+.head-nav>ul>li:nth-child(6) {
+    margin-right: 80px;
+}
+
+.iconfont {
+    font: 40px;
+}
+
+.head-nav>ul>li>a {
+    color: white;
+}
+
+.head-nav>ul>li>a:hover {
+    color: #ff0066;
+}
+
+.head-banner {
+    width: 1347px;
+    height: 635px;
+    overflow: hidden;
+}
+
+.head-banner>img {
+    float: left;
+    width: 1347px;
+}
+
+/* input标签 */
+
+.box {
+    position: relative;
+    left: 45px;
+    width: 200px;
+}
+
+.icon-user {
+    position: absolute;
+    right: 60px;
+    z-index: 999;
+    top: 41%;
+    background-image: url("../images/搜索.png");
+    /*引入图片图片*/
+    background-repeat: no-repeat;
+    /*设置图片不重复*/
+    background-position: 0px 0px;
+    /*图片显示的位置*/
+    width: 20px;
+    /*设置图片显示的宽*/
+    height: 20px;
+    /*图片显示的高*/
+}
+
+.user {
+    width: 120px;
+    height: 22px;
+    padding-left: 22px;
+    opacity: 0.3;
+    border-radius: 12px;
+    border: 1px;
+}
+
+.user:hover {
+    transition: border linear .2s, -webkit-box-shadow linear .5s;
+    border: 1px solid #ff0066;
+}
+
+.user:hover .icon-user {
+    background-image: url("../images/搜索 (1).png");
+    background-repeat: no-repeat;
+}
+
+.user:focus {
+    transition: border linear .2s, -webkit-box-shadow linear .5s;
+    border: 1px solid #ff0066;
+}
