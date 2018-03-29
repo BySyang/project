@@ -13,7 +13,7 @@ header {
     position: relative;
     width: 1347px;
     height: 635px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .head-nav {
@@ -156,4 +156,140 @@ header {
 .user:focus {
     transition: border linear .2s, -webkit-box-shadow linear .5s;
     border: 1px solid #ff0066;
+}
+
+/* 
+底部导航栏
+*/
+
+footer {
+    position: relative;
+    width: 1347px;
+    height: 371px;
+    background: #F2F2F2;
+}
+
+.bottom-right {
+    position: absolute;
+    right: 100px;
+    top: 18%;
+    margin: 0px auto;
+}
+
+.bottom-right>ul {
+    float: left;
+    margin: 0px 40px;
+}
+
+.bottom-right>ul>li {
+    margin: 17px 0px;
+    font-size: 14px;
+}
+
+.bottom-right>ul>li a {
+    color: gray;
+}
+
+.bottom-right>ul>li:nth-child(1) {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.bottom-right>ul>li:nth-child(1) a {
+    color: black
+}
+
+.bottom-nav-first {
+    position: absolute;
+    width: 310px;
+    height: 22px;
+    left: 150px;
+    top: 24%;
+}
+
+.bottom-nav-first>a {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.bottom-input {
+    position: absolute;
+    /* border: 1px solid blue; */
+    width: 400px;
+    height: 35px;
+    left: 150px;
+    top: 42%;
+}
+
+.bottom-input>input {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto 0px;
+    width: 300px;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 2px;
+}
+
+.bottom-input>button {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 16px;
+    margin: auto 0px;
+    height: 31px;
+    width: 80px;
+    background: #000000;
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
+
+.bottom {
+    position: absolute;
+    width: 1347px;
+    height: 51px;
+    background: #000000;
+    color: white;
+    text-align: center;
+    line-height: 51px;
+    font-size: 14px;
+    bottom: 0px;
+}
+
+.bottom-icon {
+    position: absolute;
+    width: 150px;
+    height: 22px;
+    left: 150px;
+    top: 65%;
+}
+
+.bottom-icon>i {
+    margin: auto 6px;
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+
+.icon-weixin {
+    background-image: url('../images/微信.png');
+    background-size: 100% 100%;
+}
+
+.icon-weibo {
+    background-image: url('../images/微博.png');
+    background-size: 100% 100%;
+}
+
+.icon-zhifu {
+    background-image: url('../images/支付宝认证.png');
+    background-size: 100% 100%;
+}
+
+.icon-yinlian {
+    background-image: url('../images/银行-银联-09.png');
+    background-size: 100% 100%;
 }
