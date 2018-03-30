@@ -28,7 +28,8 @@ header {
     position: fixed;
     width: 1347px;
     height: 86px;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgb(255, 255, 255, 0.9);
+    box-shadow: -2px 0px  8px #000000;
 }
 
 .head-nav>h1 {
@@ -77,6 +78,9 @@ header {
 
 .head-nav>ul>li>a {
     color: white;
+}
+.head_nav_ul_li_a{
+    color: black;;
 }
 
 .head-nav>ul>li>a:hover {
@@ -135,6 +139,9 @@ header {
     width: 300px;
     height: 25px
 }
+.head_nav_right_i{
+
+}
 
 .head_nav_right_i {
     position: absolute;
@@ -159,13 +166,18 @@ header {
     position: absolute;
     width: 120px;
     height: 22px;
-    opacity: 0.5;
+    opacity: 0.6;
     border-radius: 10px;
+    outline: none;
     border: 1px;
 }
 
-.box_input:hover {
+.box_input:focus {
+    outline: none;
     border: 1px solid #ff0066;
+}
+.box_input1{
+    color: #ff0066;
 }
 
 /* 内容 */
@@ -194,7 +206,7 @@ p:nth-child(1) {
     font-size: 26px;
 }
 
-.section-button {
+.section-button,.section-button2{
     width: 450px;
     height: 60px;
     position: absolute;
@@ -210,11 +222,32 @@ p:nth-child(1) {
     border-radius: 10px;
     font-size: 16px;
 }
+.section-button2>button {
+    width: 152px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
 
 .section-button>button:nth-child(1) {
     background: #ff0066;
     color: white;
     float: left;
+}
+.section-button2>button:nth-child(2) {
+    background: white;
+    color: #ff0066;
+    float: left;
+    border: 1px solid #ff0066;
+}
+.section-button2>button:nth-child(1){
+    background: #ff0066;
+    color: white;
+    float: right;
+    
+
 }
 
 .section-button>button:nth-child(2) {
@@ -542,8 +575,8 @@ p:nth-child(1) {
     height: 980px;
     /* border: 1px solid blue; */
 }
-.five_img1>div,.five_img2>div,.five_img3>div{
-    box-shadow: 1px 0px 10px  #111111;
+.five_img1>div,.five_img3>div{
+    box-shadow: 0px 1px 8px  #000000;
 }
 .five_img1>div{
     position: absolute;
