@@ -7,6 +7,7 @@ li {
     list-style: none;
 }
 
+
 /* 导航样式 */
 
 header {
@@ -59,18 +60,22 @@ header {
     float: left;
     margin: 0px 0px 0px 30px;
 }
-.box_icon{
+
+.box_icon {
     font-size: 20px;
     color: white;
     z-index: 9999;
 }
-.box_icon:hover{
+
+.box_icon:hover {
     color: #ff0066;
     z-index: 9999;
 }
+
 .head-nav>ul>li:nth-child(6) {
     margin-right: 50px;
 }
+
 .head-nav>ul>li>a {
     color: white;
 }
@@ -78,6 +83,7 @@ header {
 .head-nav>ul>li>a:hover {
     color: #ff0066;
 }
+
 
 /* 轮播样式 */
 
@@ -121,8 +127,10 @@ header {
     background-repeat: no-repeat;
 }
 
+
 /* input标签 */
-.head_nav_right{
+
+.head_nav_right {
     /*border: 1px solid red;*/
     position: absolute;
     right: 30px;
@@ -130,22 +138,26 @@ header {
     width: 300px;
     height: 25px
 }
-.head_nav_right_i{
+
+.head_nav_right_i {
     position: absolute;
     width: 200px;
     height: 25px;
     left: 80px;
 }
-.head_nav_right_i>i{
+
+.head_nav_right_i>i {
     /*position: absolute;*/
     margin: 0px 20px;
 }
-.head-nav>ul>li:nth-child(7){
+
+.head-nav>ul>li:nth-child(7) {
     border: 1px solid red;
     position: absolute;
     width: 120px;
-    height:30px;
+    height: 30px;
 }
+
 .box_input {
     position: absolute;
     width: 120px;
@@ -155,10 +167,10 @@ header {
     border: 1px;
 }
 
-.box_input:hover  {
+.box_input:hover {
     border: 1px solid #ff0066;
-
 }
+
 
 /* 内容 */
 
@@ -167,7 +179,10 @@ section {
     width: 1347px;
     height: 1500px;
 }
+
+
 /* 内容第一部分 */
+
 .first-contain {
     width: 1347px;
     height: 1003px;
@@ -265,15 +280,18 @@ p:nth-child(1) {
     font-size: 14px;
 }
 
+
 /* 内容第二部分 */
-.second_contain{
+
+.second_contain {
     position: relative;
     /* top: 1000px; */
     width: 1347px;
     height: 932px;
     border: 1px solid red;
 }
-.second_img{
+
+.second_img {
     position: absolute;
     left: 0px;
     right: 0px;
@@ -282,83 +300,95 @@ p:nth-child(1) {
     width: 962px;
     height: 614px;
     color: #333333;
-    
     /* border: 1px solid red; */
 }
-.second_img>div{
+
+.second_img>div {
     box-shadow: 2px 2px 2px 1px grey;
 }
-.second_img1{
+
+.second_img1 {
     position: absolute;
     background: url("../images/首页展示/清新自然/splendeur-soie-collection-cat-504x560.jpg");
     background-size: 100% 100%;
     width: 457px;
     height: 562px;
-    
 }
-.second_img1>p{
+
+.second_img1>p {
     position: absolute;
     top: 97%;
     left: 25%;
     font-size: 16px;
 }
-.second_img2{
+
+.second_img2 {
     position: absolute;
-   left: 51%;
+    left: 51%;
     width: 470px;
     height: 320px;
     /* border:  1px solid red; */
 }
-.second_img2>div{
+
+.second_img2>div {
     position: absolute;
     width: 217px;
     height: 254px;
 }
-.second_img2>div:nth-child(1){
+
+.second_img2>div:nth-child(1) {
     position: absolute;
     background: url("../images/首页展示/清新自然/8.jpg");
     background-size: 100% 100%;
 }
-.second_img2>div:nth-child(2){
+
+.second_img2>div:nth-child(2) {
     position: absolute;
     left: 54%;
-     background: url("../images/首页展示/清新自然/19A}313[3FTT}1F}H12H]@R.jpg");
+    background: url("../images/首页展示/清新自然/19A}313[3FTT}1F}H12H]@R.jpg");
     background-size: 100% 100%;
 }
-.second_img2>p{
+
+.second_img2>p {
     position: absolute;
     top: 78%;
     font-size: 16px;
 }
-.second_img3{
+
+.second_img3 {
     position: absolute;
     top: 55%;
     left: 51%;
     background: url("../images/首页展示/清新自然/slide.jpg");
     background-size: 100% 100%;
-    background-repeat:no-repeat; 
+    background-repeat: no-repeat;
     width: 469px;
     height: 227px;
 }
-.second_img3>p{
+
+.second_img3>p {
     position: absolute;
     top: 91%;
     left: 25%;
     font-size: 16px;
 }
 
+
 /* 内容第三部分 */
-.three_contain{
+
+.three_contain {
     position: relative;
-    top:-40px;
+    top: -40px;
     width: 1347px;
     height: 885px;
     background-color: #f7f7f7;
 }
-.three_contain>p{
+
+.three_contain>p {
     padding-top: 20px;
 }
-.three_img{
+
+.three_img {
     position: absolute;
     left: 0px;
     right: 0px;
@@ -367,35 +397,41 @@ p:nth-child(1) {
     height: 625px;
     top: 258px;
 }
-.three_img1{
+
+.three_img1 {
     position: absolute;
     width: 466px;
     height: 521px;
 }
-.three_img1>div{
+
+.three_img1>div {
     box-shadow: 1px 1px 1px 1px #333333;
 }
-.three_img1>div{
+
+.three_img1>div {
     background: url("../images/首页展示/活力少女/sport.jpg");
     background-size: 100% 100%;
     width: 466px;
     height: 521px;
 }
-.three_img2{
+
+.three_img2 {
     position: absolute;
     left: 50%;
     width: 484px;
     height: 315px;
     /* border: 1px solid blue; */
 }
-.three_img2>div:nth-child(1){
+
+.three_img2>div:nth-child(1) {
     position: absolute;
     width: 230px;
     height: 315px;
     background: url("../images/首页展示/活力少女/070_S18_SPT_074_JS_016_e6294633.jpg");
     background-size: 100% 100%;
 }
-.three_img2>div:nth-child(2){
+
+.three_img2>div:nth-child(2) {
     position: absolute;
     width: 236px;
     height: 230px;
@@ -403,48 +439,49 @@ p:nth-child(1) {
     background: url("../images/首页展示/活力少女/活力.jpg");
     background-size: 100% 100%;
 }
-.three_img2>p{
+
+.three_img2>p {
     position: absolute;
     color: #333333;
     font-size: 16px;
     top: 70%;
     left: 53%;
     text-align: left;
-    padding:5px;
+    padding: 5px;
 }
-.three_img3{
+
+.three_img3 {
     position: absolute;
     left: 50%;
     top: 54%;
     width: 486px;
     height: 286px;
 }
-.three_img3>div{
+
+.three_img3>div {
     position: absolute;
     width: 486px;
     height: 286px;
-    background:url("../images/首页展示/活力少女/0000001.jpg");
+    background: url("../images/首页展示/活力少女/0000001.jpg");
     background-size: 100% 100%;
 }
 
+
 /* 内容第四部分 */
-.four_contain{
+
+.four_contain {
     position: relative;
     width: 1347px;
     height: 1020px;
     border: 1px solid red;
 }
-.four_img{
+
+.four_img {
     position: absolute;
     width: 975px;
     height: 753px;
     border: 1px solid red;
 }
-
-
-
-
-
 
 
 /* 
@@ -583,4 +620,3 @@ footer {
     background-image: url('../images/银行-银联-09.png');
     background-size: 100% 100%;
 }
-
