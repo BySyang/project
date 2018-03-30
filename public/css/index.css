@@ -59,15 +59,18 @@ header {
     float: left;
     margin: 0px 0px 0px 30px;
 }
-
+.box_icon{
+    font-size: 20px;
+    color: white;
+    z-index: 9999;
+}
+.box_icon:hover{
+    color: #ff0066;
+    z-index: 9999;
+}
 .head-nav>ul>li:nth-child(6) {
     margin-right: 50px;
 }
-
-.iconfont {
-    font: 40px;
-}
-
 .head-nav>ul>li>a {
     color: white;
 }
@@ -101,69 +104,60 @@ header {
 }
 
 .head-banner>li:nth-child(1) {
-    background-image: url("../images/home-5038.jpg");
+    background-image: url("../images/首页banner/home-5038.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 .head-banner>li:nth-child(2) {
-    background-image: url("../images/1502938457307_-6907284330823835652_03.png");
+    background-image: url("../images/首页banner/01-pilyq-whats-new.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 .head-banner>li:nth-child(3) {
-    background-image: url("../images/01-pilyq-whats-new.jpg");
-    background-size: 100% auto;
+    background-image: url("../images/首页banner/u8.png");
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 /* input标签 */
-
-.box {
-    position: relative;
-    left: 50px;
-    width: 200px;
-}
-
-.icon-user {
+.head_nav_right{
+    /*border: 1px solid red;*/
     position: absolute;
-    right: 60px;
-    top: 41%;
-    background-image: url("../images/搜索.png");
-    /*引入图片图片*/
-    background-repeat: no-repeat;
-    /*设置图片不重复*/
-    background-position: 0px 0px;
-    /*图片显示的位置*/
-    width: 20px;
-    /*设置图片显示的宽*/
-    height: 20px;
-    /*图片显示的高*/
+    right: 30px;
+    top: 30px;
+    width: 300px;
+    height: 25px
 }
-
-.user {
+.head_nav_right_i{
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    left: 80px;
+}
+.head_nav_right_i>i{
+    /*position: absolute;*/
+    margin: 0px 20px;
+}
+.head-nav>ul>li:nth-child(7){
+    border: 1px solid red;
+    position: absolute;
+    width: 120px;
+    height:30px;
+}
+.box_input {
+    position: absolute;
     width: 120px;
     height: 22px;
-    padding-left: 22px;
-    opacity: 0.3;
-    border-radius: 12px;
+    opacity: 0.5;
+    border-radius: 10px;
     border: 1px;
 }
 
-.user:hover {
-    transition: border linear .2s, -webkit-box-shadow linear .5s;
+.box_input:hover  {
     border: 1px solid #ff0066;
-}
 
-.user:hover .icon-user {
-    background-image: url("../images/搜索 (1).png");
-    background-repeat: no-repeat;
-}
-
-.user:focus {
-    transition: border linear .2s, -webkit-box-shadow linear .5s;
-    border: 1px solid #ff0066;
 }
 
 /* 内容 */

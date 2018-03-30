@@ -4,7 +4,7 @@ $(function () {
     var nowimg = 0;
     var timer = null;
     $(".head-banner li:first").clone().appendTo('.head-banner').css({
-        "background-image": "url('./images/home-5038.jpg')", "background-size": "100% 100%",
+        "background-image": "url('./images/首页banner/home-5038.jpg')", "background-size": "100% 100%",
         "background-repeat": "no-repeat"
     })
 
@@ -21,7 +21,7 @@ $(function () {
             })
         }
     }
-    timer = setInterval(rightFunc, 5000)
+    timer = setInterval(rightFunc, 4000)
     $(".head-banner").mouseenter(function () {
         clearInterval(timer)
     })
