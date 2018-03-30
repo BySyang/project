@@ -524,6 +524,7 @@ p:nth-child(1) {
 }
 
 /* 内容第五部分 */
+
 .five_contain{
     position: relative;
     width: 1347px;
@@ -542,7 +543,7 @@ p:nth-child(1) {
     /* border: 1px solid blue; */
 }
 .five_img1>div,.five_img2>div,.five_img3>div{
-    box-shadow: 1px 2px 1px 2px #f5f5f5;
+    box-shadow: 1px 0px 10px  #111111;
 }
 .five_img1>div{
     position: absolute;
@@ -592,15 +593,68 @@ p:nth-child(1) {
 }
 
 /* 内容第六部分 */
+.six_contain{
+    position: relative;
+    width: 1347px;
+    height: 882px;
+    /* border: 1px solid red; */
+}
+.six_img{
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 18%;
+    margin: 0px auto;
+    width: 970px;
+    height: 690px;
+    /* border: 1px solid red; */
+
+}
+.six_img>i:nth-child(1){
+    position: absolute;
+    background: url("../images/首页展示/火爆热款/P_2017_E_P_01_PP_002_T0L.jpg");
+    background-size: 100% 100%;
+    width: 440px;
+    height: 352px;
+}
+.six_img>i:nth-child(2){
+    position: absolute;
+    right: 0px;
+    background: url("../images/首页展示/火爆热款/Parahi10500-5059.jpg");
+    background-size: 100% 100%;
+    width: 517px;
+    height: 279px;
+}
+.six_img>i:nth-child(3){
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background: url("../images/首页展示/火爆热款/bloc-photo-haute-couture.jpg");
+    background-size: 100% 100%;
+    width: 440px;
+    height: 317px;
+}
+.six_img>i:nth-child(4){
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background: url("../images/首页展示/火爆热款/P_2018_E_P_01_BA_001_T0L.jpg");
+    background-size: 100% 100%;
+    width: 516px;
+    height: 402px;
+}
+.six_img>i{
+    box-shadow: 1px 0px 12px  #000000;
+}
 
 
-/* 
-底部导航栏
-*/
+
+/* 底部导航栏 */
+
 
 footer {
     position: relative;
-    top: 5000px;
+    top: 4625px;
     width: 1347px;
     height: 371px;
     background: #F2F2F2;
