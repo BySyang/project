@@ -54,8 +54,6 @@ gulp.task('watch', ['del'], function () {
 gulp.task('default',['watch']);
 
 
-
-
 function errorhandling(err) {
   gutil.log(gutil.colors.red(err.message))
   this.end();
