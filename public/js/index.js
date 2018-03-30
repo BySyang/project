@@ -31,11 +31,17 @@ $(window).scroll(function() {
     var scrollTop = $(this).scrollTop();
     if (scrollTop > 10) {
         $(".head-nav").addClass("head-nav1")
-        $(".head-nav>ul>li>a").css({ "color": "#ff0066" })
+        $(".head-nav>ul>li>a").css({"color":"#000000"})
+        $(".head_nav_right_i>i").addClass("box_input1")
+        $(".box_input").css({"border":"1px solid #ff0066"})
     }
+
     if (scrollTop < 10) {
         $(".head-nav").removeClass("head-nav1")
         $(".head-nav>ul>li>a").css({ "color": "white" })
+        $(".head_nav_right_i>i").removeClass("box_input1");
+        $(".box_input").css({"border":"1px solid white"})
+
     }
 })
 
