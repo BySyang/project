@@ -18,6 +18,7 @@ header {
 
 .head-nav {
     position: fixed;
+    z-index: 999;
     width: 1347px;
     height: 86px;
     background-color: rgba(52, 52, 52, 0.3);
@@ -172,7 +173,7 @@ section {
     width: 1347px;
     height: 1500px;
 }
-
+/* 内容第一部分 */
 .first-contain {
     width: 1347px;
     height: 1003px;
@@ -270,12 +271,195 @@ p:nth-child(1) {
     font-size: 14px;
 }
 
+/* 内容第二部分 */
+.second_contain{
+    position: relative;
+    /* top: 1000px; */
+    width: 1347px;
+    height: 932px;
+    border: 1px solid red;
+}
+.second_img{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 24%;
+    margin: 0px auto;
+    width: 962px;
+    height: 614px;
+    color: #333333;
+    
+    /* border: 1px solid red; */
+}
+.second_img>div{
+    box-shadow: 2px 2px 2px 1px grey;
+}
+.second_img1{
+    position: absolute;
+    background: url("../images/首页展示/清新自然/splendeur-soie-collection-cat-504x560.jpg");
+    background-size: 100% 100%;
+    width: 457px;
+    height: 562px;
+    
+}
+.second_img1>p{
+    position: absolute;
+    top: 97%;
+    left: 25%;
+    font-size: 16px;
+}
+.second_img2{
+    position: absolute;
+   left: 51%;
+    width: 470px;
+    height: 320px;
+    /* border:  1px solid red; */
+}
+.second_img2>div{
+    position: absolute;
+    width: 217px;
+    height: 254px;
+}
+.second_img2>div:nth-child(1){
+    position: absolute;
+    background: url("../images/首页展示/清新自然/8.jpg");
+    background-size: 100% 100%;
+}
+.second_img2>div:nth-child(2){
+    position: absolute;
+    left: 54%;
+     background: url("../images/首页展示/清新自然/19A}313[3FTT}1F}H12H]@R.jpg");
+    background-size: 100% 100%;
+}
+.second_img2>p{
+    position: absolute;
+    top: 78%;
+    font-size: 16px;
+}
+.second_img3{
+    position: absolute;
+    top: 55%;
+    left: 51%;
+    background: url("../images/首页展示/清新自然/slide.jpg");
+    background-size: 100% 100%;
+    background-repeat:no-repeat; 
+    width: 469px;
+    height: 227px;
+}
+.second_img3>p{
+    position: absolute;
+    top: 91%;
+    left: 25%;
+    font-size: 16px;
+}
+
+/* 内容第三部分 */
+.three_contain{
+    position: relative;
+    top:-40px;
+    width: 1347px;
+    height: 885px;
+    background-color: #f7f7f7;
+}
+.three_contain>p{
+    padding-top: 20px;
+}
+.three_img{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    width: 974px;
+    height: 625px;
+    top: 258px;
+}
+.three_img1{
+    position: absolute;
+    width: 466px;
+    height: 521px;
+}
+.three_img1>div{
+    box-shadow: 1px 1px 1px 1px #333333;
+}
+.three_img1>div{
+    background: url("../images/首页展示/活力少女/sport.jpg");
+    background-size: 100% 100%;
+    width: 466px;
+    height: 521px;
+}
+.three_img2{
+    position: absolute;
+    left: 50%;
+    width: 484px;
+    height: 315px;
+    /* border: 1px solid blue; */
+}
+.three_img2>div:nth-child(1){
+    position: absolute;
+    width: 230px;
+    height: 315px;
+    background: url("../images/首页展示/活力少女/070_S18_SPT_074_JS_016_e6294633.jpg");
+    background-size: 100% 100%;
+}
+.three_img2>div:nth-child(2){
+    position: absolute;
+    width: 236px;
+    height: 230px;
+    left: 52%;
+    background: url("../images/首页展示/活力少女/活力.jpg");
+    background-size: 100% 100%;
+}
+.three_img2>p{
+    position: absolute;
+    color: #333333;
+    font-size: 16px;
+    top: 70%;
+    left: 53%;
+    text-align: left;
+    padding:5px;
+}
+.three_img3{
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    width: 486px;
+    height: 286px;
+}
+.three_img3>div{
+    position: absolute;
+    width: 486px;
+    height: 286px;
+    background:url("../images/首页展示/活力少女/0000001.jpg");
+    background-size: 100% 100%;
+}
+
+/* 内容第四部分 */
+.four_contain{
+    position: relative;
+    width: 1347px;
+    height: 1020px;
+    border: 1px solid red;
+}
+.four_img{
+    position: absolute;
+    width: 975px;
+    height: 753px;
+    border: 1px solid red;
+}
+
+
+
+
+
+
+
 /* 
 底部导航栏
 */
 
 footer {
     position: relative;
+    top: 3000px;
     width: 1347px;
     height: 371px;
     background: #F2F2F2;
@@ -405,3 +589,4 @@ footer {
     background-image: url('../images/银行-银联-09.png');
     background-size: 100% 100%;
 }
+

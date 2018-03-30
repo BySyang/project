@@ -11,8 +11,7 @@ $(function () {
     function rightFunc() {
         if (nowimg < 2) {
             nowimg++
-            $(".head-banner").animate({ "left": nowimg * -1347 }, 2000)
-
+            $(".head-banner").animate({ "left": nowimg * -1347 }, 1500)
         }
         else {
             nowimg = 0
@@ -22,7 +21,7 @@ $(function () {
             })
         }
     }
-    timer = setInterval(rightFunc, 2500)
+    timer = setInterval(rightFunc, 5000)
     $(".head-banner").mouseenter(function () {
         clearInterval(timer)
     })
