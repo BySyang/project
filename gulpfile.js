@@ -64,11 +64,8 @@ gulp.task('server',['del'],function(){
     gulp.watch(['./public/css/*.css','./public/*.html']).on('change',reload);
 })
 
-<<<<<<< HEAD
 gulp.task('default',['watch']);
 
-=======
->>>>>>> 6759d83eff915bb343a9c58ba0770b1d641a83a2
 
 function errorhandling(err) {
   gutil.log(gutil.colors.red(err.message))
