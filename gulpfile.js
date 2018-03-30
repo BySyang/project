@@ -11,15 +11,20 @@ var del = require('delete');
 var autoprefix = new LessAutoprefix({
   browsers: ['last 2 versions']
 });
+
 //删除中间处理文件
-gulp.task('del',['cssuglify'],function(){
-    del(['./src/css/*'], function(err, deleted) {
+gulp.task('del',['copy'],function(){
+    del(['./src/css/*.css'], function(err, deleted) {
         if (err) throw err;
         console.log("delete success");
       });
 })
+// 复制css 到 public
+gulp.task('copy',['cssuglify'],function(){
+    return gulp.src('./src/css/*.css')
+    .pipe(gulp.dest('./public/css/'));
+})
 //js处理
-
 gulp.task('js',function(){
     return gulp.src('./src/js/*.js')
     .pipe(uglify({
@@ -47,7 +52,7 @@ gulp.task('less', function () {
 });
 
 gulp.task('watch', ['del'], function () {
-  return gulp.watch('./src/less/*', ['del']);
+  return gulp.watch('./src/less/*.less', ['del']);
 })
 
 

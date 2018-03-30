@@ -1,0 +1,1 @@
+{"version":3,"sources":["personal-center.less","../../<input css 1>"],"names":[],"mappings":"AACA;EACI,iBAAA;CCAH;ADGD;EACI,iBAAA;CCDH","file":"personal-center.css","sourcesContent":["\r\n.box{\r\n    color: aliceblue;\r\n}\r\n\r\np{\r\n    color: aliceblue;\r\n}\r\n\r\n",".box {\n  color: aliceblue;\n}\np {\n  color: aliceblue;\n}\n"]}
