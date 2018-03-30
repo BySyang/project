@@ -7,7 +7,9 @@ var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var LessAutoprefix = require('less-plugin-autoprefix');
 var cleancss = require('gulp-clean-css');
-var del = require('delete');
+var del = require('delete'); 
+var browserSync = require('browser-sync');
+var reload      = browserSync.reload;
 var autoprefix = new LessAutoprefix({
   browsers: ['last 2 versions']
 });
@@ -51,12 +53,22 @@ gulp.task('less', function () {
     .pipe(gulp.dest('./src/css'));
 });
 
-gulp.task('watch', ['del'], function () {
-  return gulp.watch('./src/less/*.less', ['del']);
+//实时刷新
+gulp.task('server',['del'],function(){
+    browserSync.init({
+        server:{
+            baseDir:'./public'
+        }
+    });
+    gulp.watch('./src/less/*.less', ['del']);
+    gulp.watch(['./public/css/*.css','./public/*.html']).on('change',reload);
 })
 
+<<<<<<< HEAD
 gulp.task('default',['watch']);
 
+=======
+>>>>>>> 6759d83eff915bb343a9c58ba0770b1d641a83a2
 
 function errorhandling(err) {
   gutil.log(gutil.colors.red(err.message))

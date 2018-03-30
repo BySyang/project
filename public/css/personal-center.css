@@ -1,7 +1,7 @@
-.box {
-  color: aliceblue;
-}
-p {
+@import "reset.css";
+section {
+  background-image: url('../img/person/bg.png');
+  height: 500px;
   color: aliceblue;
 }
 
