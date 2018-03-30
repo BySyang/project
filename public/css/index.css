@@ -7,7 +7,6 @@ li {
     list-style: none;
 }
 
-
 /* 导航样式 */
 
 header {
@@ -84,7 +83,6 @@ header {
     color: #ff0066;
 }
 
-
 /* 轮播样式 */
 
 .box-banner {
@@ -126,7 +124,6 @@ header {
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-
 
 /* input标签 */
 
@@ -171,7 +168,6 @@ header {
     border: 1px solid #ff0066;
 }
 
-
 /* 内容 */
 
 section {
@@ -179,7 +175,6 @@ section {
     width: 1347px;
     height: 1500px;
 }
-
 
 /* 内容第一部分 */
 
@@ -280,7 +275,6 @@ p:nth-child(1) {
     font-size: 14px;
 }
 
-
 /* 内容第二部分 */
 
 .second_contain {
@@ -288,7 +282,7 @@ p:nth-child(1) {
     /* top: 1000px; */
     width: 1347px;
     height: 932px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .second_img {
@@ -372,7 +366,6 @@ p:nth-child(1) {
     left: 25%;
     font-size: 16px;
 }
-
 
 /* 内容第三部分 */
 
@@ -466,22 +459,139 @@ p:nth-child(1) {
     background-size: 100% 100%;
 }
 
-
 /* 内容第四部分 */
 
 .four_contain {
     position: relative;
     width: 1347px;
     height: 1020px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .four_img {
     position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 26%;
+    margin: 0px auto;
     width: 975px;
     height: 753px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    
 }
+.four_img1>div,.four_img2>div{
+    box-shadow: 2px 1px 1px 1px #333333;
+}
+.four_img1>div{
+    position: absolute;
+    background: url("../images/首页展示/情调趣味/new sex.jpg");
+    background-size: 100% 100%;
+    width: 460px;
+    height: 539px;
+}
+.four_img1>p{
+    position: absolute;
+    bottom: 18%;
+    left: 19%;
+    font-size: 16px;
+    color: #333333;
+    letter-spacing: 1px;
+}
+.four_img2>div{
+    position: absolute;
+    left: 55.7%;
+    background: url("../images/首页展示/情调趣味/category-4-landscape.jpg");
+    background-size: 100% 100%;
+    width: 432px;
+    height: 287px;
+}
+.four_img3>div{
+    position: absolute;
+    left: 48.8%;
+    top: 46.6%;
+    background: url("../images/首页展示/情调趣味/20180326_c74_b.jpg");
+    background-size: 100% 100%;
+    width: 500px;
+    height: 402px;
+}
+.four_img3>p{
+    position: absolute;
+    top: 80%;
+    left: 29%;
+    font-size: 16px;
+    color: #333333;
+    text-align: right;
+}
+
+/* 内容第五部分 */
+.five_contain{
+    position: relative;
+    width: 1347px;
+    height: 1225px;
+    /* border: 1px solid red; */
+    background-color: #f7f7f7;
+}
+.five_img{
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 20%;
+    margin: 0px auto;
+    width: 975px;
+    height: 980px;
+    /* border: 1px solid blue; */
+}
+.five_img1>div,.five_img2>div,.five_img3>div{
+    box-shadow: 1px 2px 1px 2px #f5f5f5;
+}
+.five_img1>div{
+    position: absolute;
+    right: 0px;
+    width: 600px;
+    top: 0px;
+    height: 338px;
+    background: url("../images/首页展示/气质优雅/优雅.jpg");
+    background-size: 100% 100%;
+}
+.five_img1>p{
+    position: absolute;
+    text-align: right;
+    top:10%;
+    left:18%;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: #333333;
+}
+.five_img2>div{
+    position: absolute;
+    left: 0px;
+    top: 36%;
+    width: 525px;
+    height: 420px;
+    background: url("../images/首页展示/气质优雅/mariejo.jpg");
+    background-size: 100% 100%;
+}
+.five_img2>p{
+    position: absolute;
+    text-align: left;
+    top:27%;
+    left:0px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: #333333;
+}
+
+.five_img3>div{
+    position: absolute;
+    right: 0px;
+    top: 41.5%;
+    width: 428px;
+    height: 570px;
+    background: url("../images/首页展示/气质优雅/068_S18_BRA_047_RS_039_e6183885.jpg");
+    background-size: 100% 100%;
+}
+
+/* 内容第六部分 */
 
 
 /* 
@@ -490,7 +600,7 @@ p:nth-child(1) {
 
 footer {
     position: relative;
-    top: 3000px;
+    top: 5000px;
     width: 1347px;
     height: 371px;
     background: #F2F2F2;
