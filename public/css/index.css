@@ -795,3 +795,41 @@ footer {
     background-image: url(../images/银行-银联-09.png);
     background-size: 100% 100%
 }
+
+/* 产品系列下拉菜单 */
+.product_list{
+    position: absolute;
+    top: 86px;
+    width: 1347px;
+    height: 400px;
+    background: #ffffff;
+    opacity: 0.5;
+    display: none;
+}
+.iconbox{
+    position: absolute;
+    font-size: 20px;
+    left: 36%;
+    top:-15px;
+    opacity: 0.46;
+    color: #ffffff;
+}
+.product_list>ul:nth-child(2) {
+    float: left;
+    border: 1px solid red;
+    margin-left: 350px;
+}
+.product_list>ul:nth-child(3) {
+    float: left;
+    border: 1px solid red;
+    margin-left: 200px;
+}
+.product_list ul li{
+    font-size: 15px;
+    margin-top: 50px;
+    color: black;
+}
+.product_list ul li:hover{
+    color: #ff0066;
+}
+

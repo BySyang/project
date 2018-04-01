@@ -7,7 +7,7 @@ form{
     width: 654px;
     height: 440px;
     /* border: 1px solid red; */
-    background: whitesmoke;
+    /* background: whitesmoke; */
     left: 0px;
     right: 0px;
     margin: 0px auto;
@@ -178,9 +178,7 @@ form{
 /* 注册 */
 .register{
     position: absolute;
-    /* border: 1px solid red; */
     top: 20%;
-    /* left: 10%; */
     right: 5%;
     margin: 0px auto;
     width: 281px;
