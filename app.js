@@ -1,7 +1,7 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
+var favicon = require('serve-favicon');//引用图标模块
+// var logger = require('morgan'); 引用日志模块
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var debug = require('debug')('project:server');
