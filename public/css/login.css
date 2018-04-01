@@ -1,0 +1,225 @@
+/* 登录 */
+form{
+    position: relative;
+}
+.login_contain{
+    position: relative;
+    width: 654px;
+    height: 440px;
+    /* border: 1px solid red; */
+    background: whitesmoke;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+
+}
+.l_z{
+    position: absolute;
+    width: 130px;
+    height: 30px;
+    top: 15px;
+    left: 30px;
+    /* border: 1px solid red; */
+}
+.l_z>span:nth-child(1){
+    display: inline-block;
+    line-height: 30px;
+    width: 45px;
+    height: 25px;
+    padding: 0px 6px 0px 9px;
+    /* padding-bottom:1px ; */
+    border-bottom: 4px solid #ff0066;
+    text-align: center;
+    letter-spacing: 5px;
+
+}
+.l_z>span:nth-child(2){
+    display: inline-block;
+    line-height: 30px;
+    width: 45px;
+    height: 25px;
+    padding: 0px 6px 0px 9px;
+    /* padding-bottom:1px ; */
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.login_contain_left{
+    position: absolute;
+    left: 20px;
+    top: 9px;
+    width: 290px;
+    height: 421px;
+    /* border: 1px solid blue; */
+    
+
+}
+.login_contain_left>img{
+    width: 290px;
+    height: 421px;;
+}
+.login_contain_right{
+    position: absolute;
+    top: 9px;
+    width: 297px;
+    height: 421px;
+    /* border: 1px solid yellow; */
+    right: 20px;
+}
+.login_row{
+    position: relative;
+    top:80px;
+
+    width: 282px;
+    height: 332px;
+    /* border: 1px solid cadetblue; */
+
+}
+.field,.field1{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+    font: inherit;
+    vertical-align: baseline;
+    width: 100%;
+    /* border: 1px solid red; */
+    margin-bottom: 15px;
+}
+.input_big{
+    display: block;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    width: 80%;
+    height: 35px;
+
+}
+.icon_login{
+    position: absolute;
+    right: 30px;
+    top:6px;
+    font-size: 22px;
+    color: #bfbfbf;
+}
+.input_checkbox{
+    position: absolute;
+    width: 80%;
+    height: 5%;
+    /* border: 1px solid red; */
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+   
+}
+.input_checkbox>input:nth-child(1){
+    position: absolute;
+    left: 0px;
+    top: 15%;
+    
+}
+.input_checkbox>input:nth-child(3){
+    position: absolute;
+    right: 0px;
+    top: 15%;
+    
+}
+
+.input_checkbox>span:nth-child(2){
+    position: absolute;
+    display: block;
+    left: 15px;
+    font-size: 11px;
+
+}
+.input_checkbox>span:nth-child(4){
+    position: absolute;
+    display: block;
+    right: 15px;
+    font-size: 11px;
+}
+.button{
+    position: absolute;
+    width: 209px;
+    height: 39px;
+    border-radius: 10px;
+    background: #ff0066;
+    color:white;
+    font-size: 16px;
+    border: none;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    top: 45%;
+    letter-spacing: 5px;
+}
+.login_text{
+    position: absolute;
+    font-size: 14px;
+    top: 65%;
+    left: 30%;
+    color: #666666;
+}
+.login_icon{
+    position: absolute;
+    top: 78%;
+    left: 30%;
+
+}
+.login_icon>i{
+    margin: 0px 8px 0px 8px;
+    font-size: 16px;
+}
+
+/* 注册 */
+.register{
+    position: absolute;
+    border: 1px solid red;
+    top: 20%;
+    /* left: 10%; */
+    right: 28.3%;
+    margin: 0px auto;
+    width: 281px;
+    height: 242px;
+    display: none;
+}
+.regs_contain{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+    font: inherit;
+    vertical-align: baseline;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+.regs_contain>input{
+    display: block;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    width: 80%;
+    height: 35px;
+    margin-bottom:10px; 
+}
+.regist_checkbox{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    left: 10%;
+    font: inherit;
+    vertical-align: baseline;
+    width: 100%;
+    font-size: 12px;
+}
+.regist_button{
+    position: absolute;
+    left: 13%;
+}
