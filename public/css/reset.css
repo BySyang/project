@@ -1,0 +1,340 @@
+address,
+blockquote,
+body,
+center,
+dd,
+dir,
+div,
+dl,
+dt,
+fieldset,
+form,
+frame,
+frameset,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+menu,
+noframes,
+ol,
+p,
+pre,
+ul {
+    display: block
+}
+
+li {
+    display: list-item
+}
+
+head {
+    display: none
+}
+
+table {
+    display: table
+}
+
+tr {
+    display: table-row
+}
+
+thead {
+    display: table-header-group
+}
+
+tbody {
+    display: table-row-group
+}
+
+tfoot {
+    display: table-footer-group
+}
+
+col {
+    display: table-column
+}
+
+colgroup {
+    display: table-column-group
+}
+
+td,
+th {
+    display: table-cell
+}
+
+caption {
+    display: table-caption
+}
+
+th {
+    font-weight: bolder;
+    text-align: center
+}
+
+caption {
+    text-align: center
+}
+
+body {
+    margin: 8px;
+    line-height: 1.12
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: .75em 0
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: .83em 0
+}
+
+blockquote,
+dir,
+dl,
+fieldset,
+form,
+h4,
+menu,
+ol,
+p,
+ul {
+    margin: 1.12em 0
+}
+
+h5 {
+    font-size: .83em;
+    margin: 1.5em 0
+}
+
+h6 {
+    font-size: .75em;
+    margin: 1.67em 0
+}
+
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    font-weight: bolder
+}
+
+blockquote {
+    margin-left: 40px;
+    margin-right: 40px
+}
+
+address,
+cite,
+em,
+i,
+var {
+    font-style: italic
+}
+
+code,
+kbd,
+pre,
+samp,
+tt {
+    font-family: monospace
+}
+
+pre {
+    white-space: pre
+}
+
+button,
+input,
+object,
+select,
+textarea {
+    display: inline-block
+}
+
+big {
+    font-size: 1.17em
+}
+
+small,
+sub,
+sup {
+    font-size: .83em
+}
+
+sub {
+    vertical-align: sub
+}
+
+sup {
+    vertical-align: super
+}
+
+table {
+    border-spacing: 2px
+}
+
+tbody,
+tfoot,
+thead {
+    vertical-align: middle
+}
+
+td,
+th {
+    vertical-align: inherit
+}
+
+del,
+s,
+strike {
+    text-decoration: line-through
+}
+
+hr {
+    border: 1px inset
+}
+
+dd,
+dir,
+menu,
+ol,
+ul {
+    margin-left: 40px
+}
+
+ol {
+    list-style-type: decimal
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+ins,
+u {
+    text-decoration: underline
+}
+
+center {
+    text-align: center
+}
+
+abbr,
+acronym {
+    font-variant: small-caps;
+    letter-spacing: .1em
+}
+
+:link,
+:visited {
+    text-decoration: underline
+}
+
+:focus {
+    outline: thin dotted invert
+}
+
+BDO[DIR=ltr] {
+    direction: ltr;
+    unicode-bidi: bidi-override
+}
+
+BDO[DIR=rtl] {
+    direction: rtl;
+    unicode-bidi: bidi-override
+}
+
+[DIR=ltr] {
+    direction: ltr;
+    unicode-bidi: embed
+}
+
+[DIR=rtl] {
+    direction: rtl;
+    unicode-bidi: embed
+}
+
+html {
+    width: 100%
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+    font-size: 16px
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+h1 {
+    font-size: xx-large
+}
+
+h2 {
+    font-size: x-large
+}
+
+h3 {
+    font-size: large
+}
+
+h4 {
+    font-size: medium
+}
+
+h5 {
+    font-size: small
+}
+
+h6 {
+    font-size: x-small
+}
+
+hx {
+    font-weight: 400;
+    font-size: value
+}
+
+dd,
+ol,
+ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0
+}
+
+a {
+    text-decoration: none;
+    color: #fff
+}
+
+img {
+    border: 0
+}
