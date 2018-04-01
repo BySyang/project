@@ -48,13 +48,6 @@ gulp.task('server',['copy'],function(){
     gulp.watch('./src/less/*.less', ['copy']);
     gulp.watch(['./public/css/*.css','./public/*.html']).on('change',reload);
 })
-<<<<<<< HEAD
-=======
-
-gulp.task('default',['watch']);
-
-
->>>>>>> 39d155ee0c309cb88ddf8144c8da9fc7a0a5dbde
 function errorhandling(err) {
   gutil.log(gutil.colors.red(err))
   this.end();
