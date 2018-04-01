@@ -43,7 +43,7 @@ gulp.task('less', function () {
         plugins:[autoprefix]
     })).on('error', errorhandling)
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./src/css'));
+    .pipe(gulp.dest('./public/css'));
 });
 
 gulp.task('watch', ['del'], function () {
