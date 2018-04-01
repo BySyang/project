@@ -92,6 +92,7 @@ form{
     left: 0px;
     right: 0px;
     margin: 0px auto;
+    padding-left:5px; 
     border: 1px solid #ddd;
     border-radius: 2px;
     width: 80%;
@@ -118,20 +119,20 @@ form{
 .input_checkbox>input:nth-child(1){
     position: absolute;
     left: 0px;
-    top: 15%;
+    /* top: 5%; */
     
 }
 .input_checkbox>input:nth-child(3){
     position: absolute;
     right: 0px;
-    top: 15%;
+    /* top: 15%; */
     
 }
 
 .input_checkbox>span:nth-child(2){
     position: absolute;
     display: block;
-    left: 15px;
+    left: 20px;
     font-size: 11px;
 
 }
@@ -165,7 +166,7 @@ form{
 }
 .login_icon{
     position: absolute;
-    top: 78%;
+    top: 73%;
     left: 30%;
 
 }
@@ -177,10 +178,10 @@ form{
 /* 注册 */
 .register{
     position: absolute;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     top: 20%;
     /* left: 10%; */
-    right: 28.3%;
+    right: 5%;
     margin: 0px auto;
     width: 281px;
     height: 242px;
@@ -219,7 +220,8 @@ form{
     width: 100%;
     font-size: 12px;
 }
-.regist_button{
+.regist_button>input{
     position: absolute;
-    left: 13%;
+    left: 0%;
+    top: 100%;
 }

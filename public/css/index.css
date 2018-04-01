@@ -1,1 +1,797 @@
-*,a,li{padding:0;margin:0;text-decoration:none;list-style:none}header{position:relative;width:1347px;height:635px}.head-nav{position:fixed;z-index:999;width:1347px;height:86px;background-color:rgba(52,52,52,.3)}.head-nav1{position:fixed;width:1347px;height:86px;background-color:rgb(255,255,255,.9);box-shadow:-2px 0 8px #000}.head-nav>h1{width:356px;height:98px;margin-left:50px;margin-top:5px}.head-nav>h1>img{width:75%;height:75%}.head-nav>ul{position:absolute;top:0;right:0;width:1000px;height:86px;list-style:none;overflow:hidden}.head-nav>ul>li{line-height:86px;float:left;margin:0 0 0 30px}.box_icon{font-size:20px;color:#fff;z-index:9999}.box_icon:hover{color:#f06;z-index:9999}.head-nav>ul>li:nth-child(6){margin-right:50px}.head-nav>ul>li>a{color:#fff}.head_nav_ul_li_a{color:#000}.head-nav>ul>li>a:hover{color:#f06}.box-banner{position:relative;width:1347px;height:635px;overflow:hidden;z-index:-1}.head-banner{position:absolute;width:5388px;height:635px;top:0;left:0}.head-banner>li{width:1347px;height:635px;float:left}.head-banner>li:nth-child(1){background-image:url(../images/首页banner/home-5038.jpg);background-size:100% 100%;background-repeat:no-repeat}.head-banner>li:nth-child(2){background-image:url(../images/首页banner/01-pilyq-whats-new.jpg);background-size:100% 100%;background-repeat:no-repeat}.head-banner>li:nth-child(3){background-image:url(../images/首页banner/u8.png);background-size:100% 100%;background-repeat:no-repeat}.head_nav_right{position:absolute;right:30px;top:30px;width:300px;height:25px}.head_nav_right_i{position:absolute;width:200px;height:25px;left:80px}.head_nav_right_i>i{margin:0 20px}.head-nav>ul>li:nth-child(7){border:1px solid red;position:absolute;width:120px;height:30px}.box_input{position:absolute;width:120px;height:22px;opacity:.6;border-radius:10px;outline:0;border:1px}.box_input:focus{outline:0;border:1px solid #f06}.box_input1{color:#f06}section{position:relative;width:1347px;height:1500px}.first-contain{width:1347px;height:1003px;background:#f7f7f7;overflow:hidden}p{text-align:center;margin:35px 0}p:nth-child(1){font-size:26px}.section-button,.section-button2{width:450px;height:60px;position:absolute;left:0;right:0;margin:10px auto}.section-button>button{width:152px;height:40px;border:none;border-radius:10px;font-size:16px}.section-button2>button{width:152px;height:40px;border:none;border-radius:10px;font-size:16px}.section-button>button:nth-child(1){background:#f06;color:#fff;float:left}.section-button2>button:nth-child(2){background:#fff;color:#f06;float:left;border:1px solid #f06}.section-button2>button:nth-child(1){background:#f06;color:#fff;float:right}.section-button>button:nth-child(2){background:#fff;color:#f06;float:right;border:1px solid #f06}.img-t1>div{position:absolute;background:url(../images/首页展示/野性魅惑/soir-venise-psr-cat-737x770.jpg);background-size:100% 100%;left:186px;top:255px;width:480px;height:500px}.img-t2>div{position:absolute;top:390px;right:200px;background:url(../images/首页展示/野性魅惑/black.jpg);background-size:100% 100%;box-shadow:5px 2px 5px 3px #000;width:455px;height:600px}.img-t1>p{position:absolute;left:51%;top:20%;font-size:16px}.img-t2>p{position:absolute;left:15%;top:48%;font-size:16px}.text_t1{position:absolute;top:55%;left:28%;width:197px;height:137px;text-align:right}.text_t1>i{display:inline-block;margin:4px 0;font-style:normal;font-size:14px}.second_contain{position:relative;width:1347px;height:932px}.second_img{position:absolute;left:0;right:0;top:24%;margin:0 auto;width:962px;height:614px;color:#333}.second_img>div{box-shadow:2px 2px 2px 1px grey}.second_img1{position:absolute;background:url(../images/首页展示/清新自然/splendeur-soie-collection-cat-504x560.jpg);background-size:100% 100%;width:457px;height:562px}.second_img1>p{position:absolute;top:97%;left:25%;font-size:16px}.second_img2{position:absolute;left:51%;width:470px;height:320px}.second_img2>div{position:absolute;width:217px;height:254px}.second_img2>div:nth-child(1){position:absolute;background:url(../images/首页展示/清新自然/8.jpg);background-size:100% 100%}.second_img2>div:nth-child(2){position:absolute;left:54%;background:url(../images/首页展示/清新自然/19A}313[3FTT}1F}H12H]@R.jpg);background-size:100% 100%}.second_img2>p{position:absolute;top:78%;font-size:16px}.second_img3{position:absolute;top:55%;left:51%;background:url(../images/首页展示/清新自然/slide.jpg);background-size:100% 100%;background-repeat:no-repeat;width:469px;height:227px}.second_img3>p{position:absolute;top:91%;left:25%;font-size:16px}.three_contain{position:relative;top:-40px;width:1347px;height:885px;background-color:#f7f7f7}.three_contain>p{padding-top:20px}.three_img{position:absolute;left:0;right:0;margin:0 auto;width:974px;height:625px;top:258px}.three_img1{position:absolute;width:466px;height:521px}.three_img1>div{box-shadow:1px 1px 1px 1px #333}.three_img1>div{background:url(../images/首页展示/活力少女/sport.jpg);background-size:100% 100%;width:466px;height:521px}.three_img2{position:absolute;left:50%;width:484px;height:315px}.three_img2>div:nth-child(1){position:absolute;width:230px;height:315px;background:url(../images/首页展示/活力少女/070_S18_SPT_074_JS_016_e6294633.jpg);background-size:100% 100%}.three_img2>div:nth-child(2){position:absolute;width:236px;height:230px;left:52%;background:url(../images/首页展示/活力少女/活力.jpg);background-size:100% 100%}.three_img2>p{position:absolute;color:#333;font-size:16px;top:70%;left:53%;text-align:left;padding:5px}.three_img3{position:absolute;left:50%;top:54%;width:486px;height:286px}.three_img3>div{position:absolute;width:486px;height:286px;background:url(../images/首页展示/活力少女/0000001.jpg);background-size:100% 100%}.four_contain{position:relative;width:1347px;height:1020px}.four_img{position:absolute;left:0;right:0;top:26%;margin:0 auto;width:975px;height:753px}.four_img1>div,.four_img2>div{box-shadow:2px 1px 1px 1px #333}.four_img1>div{position:absolute;background:url("../images/首页展示/情调趣味/new sex.jpg");background-size:100% 100%;width:460px;height:539px}.four_img1>p{position:absolute;bottom:18%;left:19%;font-size:16px;color:#333;letter-spacing:1px}.four_img2>div{position:absolute;left:55.7%;background:url(../images/首页展示/情调趣味/category-4-landscape.jpg);background-size:100% 100%;width:432px;height:287px}.four_img3>div{position:absolute;left:48.8%;top:46.6%;background:url(../images/首页展示/情调趣味/20180326_c74_b.jpg);background-size:100% 100%;width:500px;height:402px}.four_img3>p{position:absolute;top:80%;left:29%;font-size:16px;color:#333;text-align:right}.five_contain{position:relative;width:1347px;height:1225px;background-color:#f7f7f7}.five_img{position:absolute;right:0;left:0;top:20%;margin:0 auto;width:975px;height:980px}.five_img1>div,.five_img3>div{box-shadow:0 1px 8px #000}.five_img1>div{position:absolute;right:0;width:600px;top:0;height:338px;background:url(../images/首页展示/气质优雅/优雅.jpg);background-size:100% 100%}.five_img1>p{position:absolute;text-align:right;top:10%;left:18%;letter-spacing:1px;font-size:16px;color:#333}.five_img2>div{position:absolute;left:0;top:36%;width:525px;height:420px;background:url(../images/首页展示/气质优雅/mariejo.jpg);background-size:100% 100%}.five_img2>p{position:absolute;text-align:left;top:27%;left:0;letter-spacing:1px;font-size:16px;color:#333}.five_img3>div{position:absolute;right:0;top:41.5%;width:428px;height:570px;background:url(../images/首页展示/气质优雅/068_S18_BRA_047_RS_039_e6183885.jpg);background-size:100% 100%}.six_contain{position:relative;width:1347px;height:882px}.six_img{position:absolute;right:0;left:0;top:18%;margin:0 auto;width:970px;height:690px}.six_img>i:nth-child(1){position:absolute;background:url(../images/首页展示/火爆热款/P_2017_E_P_01_PP_002_T0L.jpg);background-size:100% 100%;width:440px;height:352px}.six_img>i:nth-child(2){position:absolute;right:0;background:url(../images/首页展示/火爆热款/Parahi10500-5059.jpg);background-size:100% 100%;width:517px;height:279px}.six_img>i:nth-child(3){position:absolute;left:0;bottom:0;background:url(../images/首页展示/火爆热款/bloc-photo-haute-couture.jpg);background-size:100% 100%;width:440px;height:317px}.six_img>i:nth-child(4){position:absolute;right:0;bottom:0;background:url(../images/首页展示/火爆热款/P_2018_E_P_01_BA_001_T0L.jpg);background-size:100% 100%;width:516px;height:402px}.six_img>i{box-shadow:1px 0 12px #000}footer{position:relative;top:4625px;width:1347px;height:371px;background:#f2f2f2}.bottom-right{position:absolute;right:100px;top:18%;margin:0 auto}.bottom-right>ul{float:left;margin:0 40px}.bottom-right>ul>li{margin:17px 0;font-size:14px}.bottom-right>ul>li a{color:gray}.bottom-right>ul>li:nth-child(1){font-weight:700;font-size:18px}.bottom-right>ul>li:nth-child(1) a{color:#000}.bottom-nav-first{position:absolute;width:310px;height:22px;left:150px;top:24%}.bottom-nav-first>a{color:#000;font-weight:700;font-size:18px}.bottom-input{position:absolute;width:400px;height:35px;left:150px;top:42%}.bottom-input>input{position:absolute;top:0;bottom:0;margin:auto 0;width:300px;height:30px;border:1px solid grey;border-radius:2px}.bottom-input>button{position:absolute;top:0;bottom:0;right:16px;margin:auto 0;height:31px;width:80px;background:#000;color:#fff;border:none;border-radius:2px}.bottom{position:absolute;width:1347px;height:51px;background:#000;color:#fff;text-align:center;line-height:51px;font-size:14px;bottom:0}.bottom-icon{position:absolute;width:150px;height:22px;left:150px;top:65%}.bottom-icon>i{margin:auto 6px;float:left;width:20px;height:20px}.icon-weixin{background-image:url(../images/微信.png);background-size:100% 100%}.icon-weibo{background-image:url(../images/微博.png);background-size:100% 100%}.icon-zhifu{background-image:url(../images/支付宝认证.png);background-size:100% 100%}.icon-yinlian{background-image:url(../images/银行-银联-09.png);background-size:100% 100%}
+*,
+a,
+li {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none
+}
+
+header {
+    position: relative;
+    width: 1347px;
+    height: 635px
+}
+
+.head-nav {
+    position: fixed;
+    z-index: 999;
+    width: 1347px;
+    height: 86px;
+    background-color: rgba(52, 52, 52, .3)
+}
+
+.head-nav1 {
+    position: fixed;
+    width: 1347px;
+    height: 86px;
+    background-color: rgb(255, 255, 255, .9);
+    box-shadow: -2px 0 8px #000
+}
+
+.head-nav>h1 {
+    width: 356px;
+    height: 98px;
+    margin-left: 50px;
+    margin-top: 5px
+}
+
+.head-nav>h1>img {
+    width: 75%;
+    height: 75%
+}
+
+.head-nav>ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1000px;
+    height: 86px;
+    list-style: none;
+    overflow: hidden
+}
+
+.head-nav>ul>li {
+    line-height: 86px;
+    float: left;
+    margin: 0 0 0 30px
+}
+
+.box_icon {
+    font-size: 20px;
+    color: #fff;
+    z-index: 9999
+}
+
+.box_icon:hover {
+    color: #f06;
+    z-index: 9999
+}
+
+.head-nav>ul>li:nth-child(6) {
+    margin-right: 50px
+}
+
+.head-nav>ul>li>a {
+    color: #fff
+}
+
+.head_nav_ul_li_a {
+    color: #000
+}
+
+.head-nav>ul>li>a:hover {
+    color: #f06
+}
+
+.box-banner {
+    position: relative;
+    width: 1347px;
+    height: 635px;
+    overflow: hidden;
+    z-index: -1
+}
+
+.head-banner {
+    position: absolute;
+    width: 5388px;
+    height: 635px;
+    top: 0;
+    left: 0
+}
+
+.head-banner>li {
+    width: 1347px;
+    height: 635px;
+    float: left
+}
+
+.head-banner>li:nth-child(1) {
+    background-image: url(../images/首页banner/home-5038.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat
+}
+
+.head-banner>li:nth-child(2) {
+    background-image: url(../images/首页banner/01-pilyq-whats-new.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat
+}
+
+.head-banner>li:nth-child(3) {
+    background-image: url(../images/首页banner/u8.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat
+}
+
+.head_nav_right {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 300px;
+    height: 25px
+}
+
+.head_nav_right_i {
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    left: 80px
+}
+
+.head_nav_right_i>i {
+    margin: 0 20px
+}
+
+.head-nav>ul>li:nth-child(7) {
+    border: 1px solid red;
+    position: absolute;
+    width: 120px;
+    height: 30px
+}
+
+.box_input {
+    position: absolute;
+    width: 120px;
+    height: 22px;
+    opacity: .6;
+    border-radius: 10px;
+    outline: 0;
+    border: 1px
+}
+
+.box_input:focus {
+    outline: 0;
+    border: 1px solid #f06
+}
+
+.box_input1 {
+    color: #f06
+}
+
+section {
+    position: relative;
+    width: 1347px;
+    height: 1500px
+}
+
+.first-contain {
+    width: 1347px;
+    height: 1003px;
+    background: #f7f7f7;
+    overflow: hidden
+}
+
+p {
+    text-align: center;
+    margin: 35px 0
+}
+
+p:nth-child(1) {
+    font-size: 26px
+}
+
+.section-button,
+.section-button2 {
+    width: 450px;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 10px auto
+}
+
+.section-button>button {
+    width: 152px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px
+}
+
+.section-button2>button {
+    width: 152px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px
+}
+
+.section-button>button:nth-child(1) {
+    background: #f06;
+    color: #fff;
+    float: left
+}
+
+.section-button2>button:nth-child(2) {
+    background: #fff;
+    color: #f06;
+    float: left;
+    border: 1px solid #f06
+}
+
+.section-button2>button:nth-child(1) {
+    background: #f06;
+    color: #fff;
+    float: right
+}
+
+.section-button>button:nth-child(2) {
+    background: #fff;
+    color: #f06;
+    float: right;
+    border: 1px solid #f06
+}
+
+.img-t1>div {
+    position: absolute;
+    background: url(../images/首页展示/野性魅惑/soir-venise-psr-cat-737x770.jpg);
+    background-size: 100% 100%;
+    left: 186px;
+    top: 255px;
+    width: 480px;
+    height: 500px
+}
+
+.img-t2>div {
+    position: absolute;
+    top: 390px;
+    right: 200px;
+    background: url(../images/首页展示/野性魅惑/black.jpg);
+    background-size: 100% 100%;
+    box-shadow: 5px 2px 5px 3px #000;
+    width: 455px;
+    height: 600px
+}
+
+.img-t1>p {
+    position: absolute;
+    left: 51%;
+    top: 20%;
+    font-size: 16px
+}
+
+.img-t2>p {
+    position: absolute;
+    left: 15%;
+    top: 48%;
+    font-size: 16px
+}
+
+.text_t1 {
+    position: absolute;
+    top: 55%;
+    left: 28%;
+    width: 197px;
+    height: 137px;
+    text-align: right
+}
+
+.text_t1>i {
+    display: inline-block;
+    margin: 4px 0;
+    font-style: normal;
+    font-size: 14px
+}
+
+.second_contain {
+    position: relative;
+    width: 1347px;
+    height: 932px
+}
+
+.second_img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 24%;
+    margin: 0 auto;
+    width: 962px;
+    height: 614px;
+    color: #333
+}
+
+.second_img>div {
+    box-shadow: 2px 2px 2px 1px grey
+}
+
+.second_img1 {
+    position: absolute;
+    background: url(../images/首页展示/清新自然/splendeur-soie-collection-cat-504x560.jpg);
+    background-size: 100% 100%;
+    width: 457px;
+    height: 562px
+}
+
+.second_img1>p {
+    position: absolute;
+    top: 97%;
+    left: 25%;
+    font-size: 16px
+}
+
+.second_img2 {
+    position: absolute;
+    left: 51%;
+    width: 470px;
+    height: 320px
+}
+
+.second_img2>div {
+    position: absolute;
+    width: 217px;
+    height: 254px
+}
+
+.second_img2>div:nth-child(1) {
+    position: absolute;
+    background: url(../images/首页展示/清新自然/8.jpg);
+    background-size: 100% 100%
+}
+
+.second_img2>div:nth-child(2) {
+    position: absolute;
+    left: 54%;
+    background: url(../images/首页展示/清新自然/19A}313[3FTT}1F}H12H]@R.jpg);
+    background-size: 100% 100%
+}
+
+.second_img2>p {
+    position: absolute;
+    top: 78%;
+    font-size: 16px
+}
+
+.second_img3 {
+    position: absolute;
+    top: 55%;
+    left: 51%;
+    background: url(../images/首页展示/清新自然/slide.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 469px;
+    height: 227px
+}
+
+.second_img3>p {
+    position: absolute;
+    top: 91%;
+    left: 25%;
+    font-size: 16px
+}
+
+.three_contain {
+    position: relative;
+    top: -40px;
+    width: 1347px;
+    height: 885px;
+    background-color: #f7f7f7
+}
+
+.three_contain>p {
+    padding-top: 20px
+}
+
+.three_img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 974px;
+    height: 625px;
+    top: 258px
+}
+
+.three_img1 {
+    position: absolute;
+    width: 466px;
+    height: 521px
+}
+
+.three_img1>div {
+    box-shadow: 1px 1px 1px 1px #333
+}
+
+.three_img1>div {
+    background: url(../images/首页展示/活力少女/sport.jpg);
+    background-size: 100% 100%;
+    width: 466px;
+    height: 521px
+}
+
+.three_img2 {
+    position: absolute;
+    left: 50%;
+    width: 484px;
+    height: 315px
+}
+
+.three_img2>div:nth-child(1) {
+    position: absolute;
+    width: 230px;
+    height: 315px;
+    background: url(../images/首页展示/活力少女/070_S18_SPT_074_JS_016_e6294633.jpg);
+    background-size: 100% 100%
+}
+
+.three_img2>div:nth-child(2) {
+    position: absolute;
+    width: 236px;
+    height: 230px;
+    left: 52%;
+    background: url(../images/首页展示/活力少女/活力.jpg);
+    background-size: 100% 100%
+}
+
+.three_img2>p {
+    position: absolute;
+    color: #333;
+    font-size: 16px;
+    top: 70%;
+    left: 53%;
+    text-align: left;
+    padding: 5px
+}
+
+.three_img3 {
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    width: 486px;
+    height: 286px
+}
+
+.three_img3>div {
+    position: absolute;
+    width: 486px;
+    height: 286px;
+    background: url(../images/首页展示/活力少女/0000001.jpg);
+    background-size: 100% 100%
+}
+
+.four_contain {
+    position: relative;
+    width: 1347px;
+    height: 1020px
+}
+
+.four_img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 26%;
+    margin: 0 auto;
+    width: 975px;
+    height: 753px
+}
+
+.four_img1>div,
+.four_img2>div {
+    box-shadow: 2px 1px 1px 1px #333
+}
+
+.four_img1>div {
+    position: absolute;
+    background: url("../images/首页展示/情调趣味/new sex.jpg");
+    background-size: 100% 100%;
+    width: 460px;
+    height: 539px
+}
+
+.four_img1>p {
+    position: absolute;
+    bottom: 18%;
+    left: 19%;
+    font-size: 16px;
+    color: #333;
+    letter-spacing: 1px
+}
+
+.four_img2>div {
+    position: absolute;
+    left: 55.7%;
+    background: url(../images/首页展示/情调趣味/category-4-landscape.jpg);
+    background-size: 100% 100%;
+    width: 432px;
+    height: 287px
+}
+
+.four_img3>div {
+    position: absolute;
+    left: 48.8%;
+    top: 46.6%;
+    background: url(../images/首页展示/情调趣味/20180326_c74_b.jpg);
+    background-size: 100% 100%;
+    width: 500px;
+    height: 402px
+}
+
+.four_img3>p {
+    position: absolute;
+    top: 80%;
+    left: 29%;
+    font-size: 16px;
+    color: #333;
+    text-align: right
+}
+
+.five_contain {
+    position: relative;
+    width: 1347px;
+    height: 1225px;
+    background-color: #f7f7f7
+}
+
+.five_img {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 20%;
+    margin: 0 auto;
+    width: 975px;
+    height: 980px
+}
+
+.five_img1>div,
+.five_img3>div {
+    box-shadow: 0 1px 8px #000
+}
+
+.five_img1>div {
+    position: absolute;
+    right: 0;
+    width: 600px;
+    top: 0;
+    height: 338px;
+    background: url(../images/首页展示/气质优雅/优雅.jpg);
+    background-size: 100% 100%
+}
+
+.five_img1>p {
+    position: absolute;
+    text-align: right;
+    top: 10%;
+    left: 18%;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: #333
+}
+
+.five_img2>div {
+    position: absolute;
+    left: 0;
+    top: 36%;
+    width: 525px;
+    height: 420px;
+    background: url(../images/首页展示/气质优雅/mariejo.jpg);
+    background-size: 100% 100%
+}
+
+.five_img2>p {
+    position: absolute;
+    text-align: left;
+    top: 27%;
+    left: 0;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: #333
+}
+
+.five_img3>div {
+    position: absolute;
+    right: 0;
+    top: 41.5%;
+    width: 428px;
+    height: 570px;
+    background: url(../images/首页展示/气质优雅/068_S18_BRA_047_RS_039_e6183885.jpg);
+    background-size: 100% 100%
+}
+
+.six_contain {
+    position: relative;
+    width: 1347px;
+    height: 882px
+}
+
+.six_img {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 18%;
+    margin: 0 auto;
+    width: 970px;
+    height: 690px
+}
+
+.six_img>i:nth-child(1) {
+    position: absolute;
+    background: url(../images/首页展示/火爆热款/P_2017_E_P_01_PP_002_T0L.jpg);
+    background-size: 100% 100%;
+    width: 440px;
+    height: 352px
+}
+
+.six_img>i:nth-child(2) {
+    position: absolute;
+    right: 0;
+    background: url(../images/首页展示/火爆热款/Parahi10500-5059.jpg);
+    background-size: 100% 100%;
+    width: 517px;
+    height: 279px
+}
+
+.six_img>i:nth-child(3) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url(../images/首页展示/火爆热款/bloc-photo-haute-couture.jpg);
+    background-size: 100% 100%;
+    width: 440px;
+    height: 317px
+}
+
+.six_img>i:nth-child(4) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url(../images/首页展示/火爆热款/P_2018_E_P_01_BA_001_T0L.jpg);
+    background-size: 100% 100%;
+    width: 516px;
+    height: 402px
+}
+
+.six_img>i {
+    box-shadow: 1px 0 12px #000
+}
+
+footer {
+    position: relative;
+    top: 4625px;
+    width: 1347px;
+    height: 371px;
+    background: #f2f2f2
+}
+
+.bottom-right {
+    position: absolute;
+    right: 100px;
+    top: 18%;
+    margin: 0 auto
+}
+
+.bottom-right>ul {
+    float: left;
+    margin: 0 40px
+}
+
+.bottom-right>ul>li {
+    margin: 17px 0;
+    font-size: 14px
+}
+
+.bottom-right>ul>li a {
+    color: gray
+}
+
+.bottom-right>ul>li:nth-child(1) {
+    font-weight: 700;
+    font-size: 18px
+}
+
+.bottom-right>ul>li:nth-child(1) a {
+    color: #000
+}
+
+.bottom-nav-first {
+    position: absolute;
+    width: 310px;
+    height: 22px;
+    left: 150px;
+    top: 24%
+}
+
+.bottom-nav-first>a {
+    color: #000;
+    font-weight: 700;
+    font-size: 18px
+}
+
+.bottom-input {
+    position: absolute;
+    width: 400px;
+    height: 35px;
+    left: 150px;
+    top: 42%
+}
+
+.bottom-input>input {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 300px;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 2px
+}
+
+.bottom-input>button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 16px;
+    margin: auto 0;
+    height: 31px;
+    width: 80px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 2px
+}
+
+.bottom {
+    position: absolute;
+    width: 1347px;
+    height: 51px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 51px;
+    font-size: 14px;
+    bottom: 0
+}
+
+.bottom-icon {
+    position: absolute;
+    width: 150px;
+    height: 22px;
+    left: 150px;
+    top: 65%
+}
+
+.bottom-icon>i {
+    margin: auto 6px;
+    float: left;
+    width: 20px;
+    height: 20px
+}
+
+.icon-weixin {
+    background-image: url(../images/微信.png);
+    background-size: 100% 100%
+}
+
+.icon-weibo {
+    background-image: url(../images/微博.png);
+    background-size: 100% 100%
+}
+
+.icon-zhifu {
+    background-image: url(../images/支付宝认证.png);
+    background-size: 100% 100%
+}
+
+.icon-yinlian {
+    background-image: url(../images/银行-银联-09.png);
+    background-size: 100% 100%
+}
