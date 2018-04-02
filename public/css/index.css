@@ -48,7 +48,7 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    width: 1000px;
+    width: 74.3%;
     height: 86px;
     list-style: none;
     overflow: hidden
@@ -131,7 +131,7 @@ header {
     position: absolute;
     right: 30px;
     top: 30px;
-    width: 300px;
+    width: 22.2%;
     height: 25px
 }
 
@@ -754,7 +754,7 @@ footer {
 
 .bottom {
     position: absolute;
-    width: 1347px;
+    width: 100%;
     height: 51px;
     background: #000;
     color: #fff;
