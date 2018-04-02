@@ -48,7 +48,7 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    width: 1000px;
+    width: 74.3%;
     height: 86px;
     list-style: none;
     overflow: hidden
@@ -131,7 +131,7 @@ header {
     position: absolute;
     right: 30px;
     top: 30px;
-    width: 300px;
+    width: 22.2%;
     height: 25px
 }
 
@@ -484,7 +484,7 @@ p:nth-child(1) {
     right: 0;
     top: 26%;
     margin: 0 auto;
-    width: 975px;
+    width: 72.3%;
     height: 753px
 }
 
@@ -612,7 +612,7 @@ p:nth-child(1) {
 
 .six_contain {
     position: relative;
-    width: 1347px;
+    width: 100%;
     height: 882px
 }
 
@@ -670,7 +670,7 @@ p:nth-child(1) {
 footer {
     position: relative;
     top: 4625px;
-    width: 1347px;
+    width: 100%;
     height: 371px;
     background: #f2f2f2
 }
@@ -721,7 +721,7 @@ footer {
 
 .bottom-input {
     position: absolute;
-    width: 400px;
+    width: 29.6%;
     height: 35px;
     left: 150px;
     top: 42%
@@ -754,7 +754,7 @@ footer {
 
 .bottom {
     position: absolute;
-    width: 1347px;
+    width: 100%;
     height: 51px;
     background: #000;
     color: #fff;
