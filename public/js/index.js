@@ -3,8 +3,9 @@ $(function() {
 // 轮播js
 var nowimg = 0;
 var timer = null;
+$(".list_item").css({"cursor":"pointe"})
 $(".head-banner li:first").clone().appendTo('.head-banner').css({
-    "background-image": "url('./images/首页banner/home-5038.jpg')",
+    "background-image": "url('./images/fashion_img/indexImage/index_banner/index_banner1.jpg')",
     "background-size": "100% 100%",
     "background-repeat": "no-repeat"
 })
@@ -29,11 +30,14 @@ $(".head-banner").mouseenter(function() {
 // 导航js
 $(window).scroll(function() {
     var scrollTop = $(this).scrollTop();
-    if (scrollTop > 10) {
+    if (scrollTop > 300) {
         $(".head-nav").addClass("head-nav1")
         $(".head-nav>ul>li>a").css({"color":"#000000"})
         $(".head_nav_right_i>i").addClass("box_input1")
         $(".box_input").css({"border":"1px solid #ff0066"})
+        $(".section-button").show(500,function(){
+            //回调函数，设置点击按钮执行相应功能
+        })
     }
 
     if (scrollTop < 10) {
@@ -44,6 +48,25 @@ $(window).scroll(function() {
 
     }
 })
+
+
+    // 系列下拉菜单js
+    // var imgarr=new Array(['../images/menuImage/sonMenu_fresh.jpg'])
+    $(".product_txt").mouseenter("click",function(){
+        $(".product_list").toggle(500)
+        $(".product_img").toggle(500)
+        // $(".product_list>ul>li:nth-child(1)").on('click',function(){
+        //     $(".product_img>div:nth-child(1)").css({"background":"url(../images/menuImage/sonMenu_fresh.jpg)"})
+        //     console.log(imgarr[0])
+        //     console.log("1111")
+        // })
+    })
+   
+   
+
+
+
+
 
 // 登录注册弹出框js  
     $('.icon-gerenzhongxin').on('click', function(){
