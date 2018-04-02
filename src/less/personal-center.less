@@ -10,7 +10,9 @@
     height: 3px;
     background: darken(@pinkColor, 2%);
 }
-
+.boxShow{
+    box-shadow: 2px 2px 3px #e0dfdf;
+}
 .person-info {
     padding-top: 50px;
     background: url('../images/personalImage/personal_bg.png') no-repeat;
@@ -252,6 +254,7 @@
                 background: #fff;
                 font-size: @smFont;
                 border-radius: 0 10px 10px 0;
+                .boxShow;
                 .updateImg {
                     margin-left: 20px;
                     color: @pinkColor;
@@ -320,6 +323,7 @@
                 font-size: @smFont;
                 width: 95%;
                 border-radius: 0 10px 10px 0;
+                .boxShow;
                 .addr-items {
                     text-align: center;
                     border-collapse: collapse;
@@ -363,7 +367,11 @@
                 }
             }
             .logistics {
+                display: none;
                 background: #FFF;
+                width: 95%;
+                border-radius: 0 10px 10px  0;
+                .boxShow;
             }
             .members {
                 display: none;
@@ -373,7 +381,9 @@
                     background: #FFF;
                     .l;
                     width: 48%;
-                    margin-left: 1%;
+                   &:last-child{
+                       margin-left: 1%;
+                   }
                     .radius;
                     h4{
                         color: @pinkColor;
