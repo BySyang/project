@@ -13,7 +13,7 @@
 
 .person-info {
     padding-top: 50px;
-    background: url('../img/person/bg.png') no-repeat;
+    background: url('../img/personalImage/personal_bg.png') no-repeat;
     background-size: 100%;
     height: 700px;
     .person-info-wrap {
@@ -36,9 +36,9 @@
             }
             p {
                 margin: 10px 0;
-                span{
-                    color: rgba(255, 208, 0, 0.623);
-                    font-size: @smFont
+                span {
+                    color: @pinkColor;
+                    font-size: 16px;
                 }
             }
         }
@@ -85,7 +85,8 @@
         }
         .infos {
             .orders {
-                width: 90%;
+                display: none;
+                width: 95%;
                 border-radius: 0 6px 6px 0;
                 .tab {
                     background: #fff;
@@ -139,7 +140,7 @@
                         }
                     }
                     .order-goods {
-                        border: 1px solid #cecece;
+                        border-top: 1px solid #cecece;
                         border-left: none;
                         border-right: none;
                         padding: 5px 20px;
@@ -173,13 +174,13 @@
                                     color: @pinkColor;
                                     text-overflow: ellipsis;
                                     white-space: nowrap;
-                                    em{
+                                    em {
                                         font-size: 16px;
                                         font-style: normal;
                                         padding: 0 5px;
                                         cursor: pointer;
                                     }
-                                    input{
+                                    input {
                                         outline: none;
                                         border: none;
                                         text-align: center;
@@ -190,7 +191,7 @@
                                 }
                             }
                         }
-                        &>a{
+                        &>a {
                             color: @pinkColor;
                             padding: 45px;
                             .l
@@ -202,7 +203,7 @@
                             line-height: 60px;
                             text-align: right;
                             font-size: 18px;
-                            button{
+                            button {
                                 border: none;
                                 outline: none;
                                 background: @pinkColor;
@@ -227,6 +228,72 @@
                                 background: rgb(201, 200, 200);
                             }
                         }
+                    }
+                }
+                .pages {
+                    margin-top: 34px;
+                    padding-right: 20px;
+                    background: #fff;
+                    height: 50px;
+                    font-size: @smFont;
+                    line-height: 50px;
+                    text-align: right;
+                    border-radius: 0 10px 0 10px;
+                    a {
+                        color: #000;
+                    }
+                }
+            }
+            .preson {
+                padding: 10px 30px;
+                width: 90%;
+                background: #fff;
+                font-size: @smFont;
+                border-radius: 0 10px 10px 0;
+                dl{
+                    overflow: hidden;
+                }
+                dt {
+                    .l;
+                    width: 20%;
+                    color: #999;
+                    letter-spacing: .5em;
+                    i{
+                        font-size: 12px;
+                        letter-spacing: 0;
+                        color: #fff;
+                        background: #999;
+                        border-radius: 10px;
+                        &:hover{
+                            cursor: pointer;
+                            background: #666;
+                        }
+                    }
+                }
+                dd{
+                    .r;
+                    width: 70%;
+                    input{
+                        vertical-align: bottom;
+                        border: none;
+                        background: #fff;
+                        color: #000;
+                        &[type="radio"]{
+                            display: none;
+                        }
+                    }
+                    label{
+                        display: none;
+                    }
+                    label.show{
+                        display: block;
+                    }
+                    img{
+                        width: 75px;
+                        border-radius: 50%;
+                    }
+                    &:nth-of-type(3){
+                        background: #111;
                     }
                 }
             }

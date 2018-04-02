@@ -241,44 +241,6 @@ center {
     text-align: center
 }
 
-<<<<<<< HEAD
-=======
-abbr,
-acronym {
-    font-variant: small-caps;
-    letter-spacing: .1em
-}
-
-:link,
-:visited {
-    text-decoration: underline
-}
-
-:focus {
-    outline: thin dotted invert
-}
-
-BDO[DIR=ltr] {
-    direction: ltr;
-    unicode-bidi: bidi-override
-}
-
-BDO[DIR=rtl] {
-    direction: rtl;
-    unicode-bidi: bidi-override
-}
-
-[DIR=ltr] {
-    direction: ltr;
-    unicode-bidi: embed
-}
-
-[DIR=rtl] {
-    direction: rtl;
-    unicode-bidi: embed
-}
->>>>>>> 87cef8795e1c99f234560ca6e0ff823fbf0c7607
-
 html {
     width: 100%
 }
@@ -340,8 +302,8 @@ a {
 
 img {
     border: 0
-<<<<<<< HEAD
 }
+
 /* 清除浮动 */
 .clearfix:before,.clearfix:after {
 
@@ -357,6 +319,4 @@ img {
 
     zoom: 1;
 
-=======
->>>>>>> 87cef8795e1c99f234560ca6e0ff823fbf0c7607
 }
