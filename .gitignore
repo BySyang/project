@@ -18,3 +18,5 @@ img/
 *.ttf
 *.woff
 *.svg
+# map
+*.map

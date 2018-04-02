@@ -241,6 +241,8 @@ center {
     text-align: center
 }
 
+<<<<<<< HEAD
+=======
 abbr,
 acronym {
     font-variant: small-caps;
@@ -275,6 +277,7 @@ BDO[DIR=rtl] {
     direction: rtl;
     unicode-bidi: embed
 }
+>>>>>>> 87cef8795e1c99f234560ca6e0ff823fbf0c7607
 
 html {
     width: 100%
@@ -326,8 +329,8 @@ dd,
 ol,
 ul {
     list-style-type: none;
-    margin-left: 0;
-    padding-left: 0
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -337,4 +340,23 @@ a {
 
 img {
     border: 0
+<<<<<<< HEAD
+}
+/* 清除浮动 */
+.clearfix:before,.clearfix:after {
+
+    content: "";
+
+    display: block;
+
+    clear: both;
+
+}
+
+.clearfix {
+
+    zoom: 1;
+
+=======
+>>>>>>> 87cef8795e1c99f234560ca6e0ff823fbf0c7607
 }
