@@ -12,7 +12,7 @@
 .person-info {
   padding-top: 50px;
   background: url('../img/personalImage/personal_bg.png') no-repeat;
-  background-size: 100%;
+  background-size: cover;
   height: 700px;
 }
 .person-info .person-info-wrap {
@@ -63,7 +63,7 @@
 }
 .person-info .person-info-tabs .person-info-list li.active > a:hover {
   background: #ff0066;
-  color: #ec575d;
+  color: #f1f1f1;
 }
 .person-info .person-info-content {
   margin-left: 20px;
@@ -74,12 +74,13 @@
   border-radius: 10px;
 }
 .person-info .person-info-content .info-title {
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: 30px 0 8px;
   text-indent: 30px;
   font-weight: normal;
   font-size: 16px;
   border-radius: 10px 10px 0 0;
+  border-bottom: 2px solid #f1f1f1;
 }
 .person-info .person-info-content .infos .orders {
   display: none;
@@ -254,11 +255,26 @@
   color: #000;
 }
 .person-info .person-info-content .infos .preson {
+  display: none;
   padding: 10px 30px;
   width: 90%;
   background: #fff;
   font-size: 14px;
   border-radius: 0 10px 10px 0;
+}
+.person-info .person-info-content .infos .preson .updateImg {
+  margin-left: 20px;
+  color: #ff0066;
+}
+.person-info .person-info-content .infos .preson div {
+  text-align: center;
+}
+.person-info .person-info-content .infos .preson a {
+  color: #ff0066;
+  cursor: pointer;
+  padding: 2px 10px;
+  border-radius: 5px;
+  background: #f1f1f1;
 }
 .person-info .person-info-content .infos .preson dl {
   overflow: hidden;
@@ -279,6 +295,9 @@
 .person-info .person-info-content .infos .preson dt i:hover {
   cursor: pointer;
   background: #666;
+}
+.person-info .person-info-content .infos .preson dt.touxiang {
+  line-height: 75px;
 }
 .person-info .person-info-content .infos .preson dd {
   float: right;
@@ -302,9 +321,92 @@
 .person-info .person-info-content .infos .preson dd img {
   width: 75px;
   border-radius: 50%;
+  vertical-align: middle;
 }
-.person-info .person-info-content .infos .preson dd:nth-of-type(3) {
-  background: #111;
+.person-info .person-info-content .infos .addr {
+  display: none;
+  background: #fff;
+  font-size: 14px;
+  width: 95%;
+  border-radius: 0 10px 10px 0;
+}
+.person-info .person-info-content .infos .addr .addr-items {
+  text-align: center;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+.person-info .person-info-content .infos .addr .addr-items tr {
+  border-bottom: 1px solid #eee;
+}
+.person-info .person-info-content .infos .addr .addr-items td,
+.person-info .person-info-content .infos .addr .addr-items th {
+  padding: 5px 0;
+  width: 10%;
+  line-height: 22px;
+  font-weight: normal;
+}
+.person-info .person-info-content .infos .addr .addr-items .control {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.person-info .person-info-content .infos .addr a {
+  padding: 2px 10px;
+  color: #fff;
+  font-size: 12px;
+  background: #ff3385;
+  border-radius: 8px;
+}
+.person-info .person-info-content .infos .addr a:hover {
+  background: #cc0052;
+}
+.person-info .person-info-content .infos .addr div {
+  margin-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.person-info .person-info-content .infos .addr div p {
+  color: #bbb;
+  padding-bottom: 10px;
+}
+.person-info .person-info-content .infos .logistics {
+  background: #FFF;
+}
+.person-info .person-info-content .infos .members {
+  display: none;
+  text-align: center;
+}
+.person-info .person-info-content .infos .members > div {
+  padding-bottom: 50px;
+  background: #FFF;
+  float: left;
+  width: 48%;
+  margin-left: 1%;
+  border-radius: 10px;
+}
+.person-info .person-info-content .infos .members > div h4 {
+  color: #ff0066;
+  font-size: 18px;
+}
+.person-info .person-info-content .infos .members > div p {
+  font-size: 16px;
+  color: #ff0066;
+}
+.person-info .person-info-content .infos .members > div div {
+  margin: 0 auto;
+  width: 60%;
+  line-height: 30px;
+  text-align: left;
+}
+.person-info .person-info-content .infos .members > div div p {
+  font-size: 16px;
+  color: #bbb;
+  word-spacing: 20px;
+}
+.person-info .person-info-content .infos .members > div div p i {
+  font-size: 17px;
+  color: #ff0066;
 }
 
 /*# sourceMappingURL=personal-center.css.map */
