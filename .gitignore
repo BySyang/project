@@ -20,5 +20,4 @@ img/
 *.svg
 
 # map
-/src/css/*.map
-/public/css/*.map
+css/*.map
