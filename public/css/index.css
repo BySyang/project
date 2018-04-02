@@ -110,19 +110,19 @@ header {
 }
 
 .head-banner>li:nth-child(1) {
-    background-image: url("../images/fashion_img/indexImage/index_banner/index_banner1.jpg");
+    background-image: url("../images/indexImage/index_banner/index_banner1.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat
 }
 
 .head-banner>li:nth-child(2) {
-    background-image: url("../images/fashion_img/indexImage/index_banner/index_banner2.jpg");
+    background-image: url("../images/indexImage/index_banner/index_banner2.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat
 }
 
 .head-banner>li:nth-child(3) {
-    background-image: url("../images/fashion_img/indexImage/index_banner/index_banner3.jpg");
+    background-image: url("../images/indexImage/index_banner/index_banner3.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat
 }
@@ -249,7 +249,7 @@ p:nth-child(1) {
 
 .img-t1>div {
     position: absolute;
-    background: url("../images/fashion_img/indexImage/index_content/wild/index_wild1.jpg");
+    background: url("../images/indexImage/index_content/wild/index_wild1.jpg");
     background-size: 100% 100%;
     left: 186px;
     top: 255px;
@@ -261,7 +261,7 @@ p:nth-child(1) {
     position: absolute;
     top: 390px;
     right: 200px;
-    background: url("../images/fashion_img/indexImage/index_content/wild/index_wild2.jpg");
+    background: url("../images/indexImage/index_content/wild/index_wild2.jpg");
     background-size: 100% 100%;
     box-shadow: 5px 2px 5px 3px #000;
     width: 455px;
@@ -321,7 +321,7 @@ p:nth-child(1) {
 
 .second_img1 {
     position: absolute;
-    background: url("../images/fashion_img/indexImage/index_content/fresh/index_fresh1.jpg");
+    background: url("../images/indexImage/index_content/fresh/index_fresh1.jpg");
     background-size: 100% 100%;
     width: 457px;
     height: 562px
@@ -349,14 +349,14 @@ p:nth-child(1) {
 
 .second_img2>div:nth-child(1) {
     position: absolute;
-    background: url("../images/fashion_img/indexImage/index_content/fresh/index_fresh2.jpg");
+    background: url("../images/indexImage/index_content/fresh/index_fresh2.jpg");
     background-size: 100% 100%
 }
 
 .second_img2>div:nth-child(2) {
     position: absolute;
     left: 54%;
-    background: url("../images/fashion_img/indexImage/index_content/fresh/index_fresh3.jpg");
+    background: url("../images/indexImage/index_content/fresh/index_fresh3.jpg");
     background-size: 100% 100%
 }
 
@@ -370,7 +370,7 @@ p:nth-child(1) {
     position: absolute;
     top: 55%;
     left: 51%;
-    background: url("../images/fashion_img/indexImage/index_content/fresh/index_fresh4.jpg");
+    background: url("../images/indexImage/index_content/fresh/index_fresh4.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     width: 469px;
@@ -417,7 +417,7 @@ p:nth-child(1) {
 }
 
 .three_img1>div {
-    background: url("../images/fashion_img/indexImage/index_content/sports/index_sports1.jpg");
+    background: url("../images/indexImage/index_content/sports/index_sports1.jpg");
     background-size: 100% 100%;
     width: 466px;
     height: 521px
@@ -434,7 +434,7 @@ p:nth-child(1) {
     position: absolute;
     width: 230px;
     height: 315px;
-    background: url("../images/fashion_img/indexImage/index_content/sports/index_sports2.jpg");
+    background: url("../images/indexImage/index_content/sports/index_sports2.jpg");
     background-size: 100% 100%
 }
 
@@ -443,7 +443,7 @@ p:nth-child(1) {
     width: 236px;
     height: 230px;
     left: 52%;
-    background: url("../images/fashion_img/indexImage/index_content/sports/index_sports3.jpg");
+    background: url("../images/indexImage/index_content/sports/index_sports3.jpg");
     background-size: 100% 100%
 }
 
@@ -469,7 +469,7 @@ p:nth-child(1) {
     position: absolute;
     width: 486px;
     height: 286px;
-    background: url("../images/fashion_img/indexImage/index_content/sports/index_sports4.jpg");
+    background: url("../images/indexImage/index_content/sports/index_sports4.jpg");
     background-size: 100% 100%
 }
 
@@ -496,7 +496,7 @@ p:nth-child(1) {
 
 .four_img1>div {
     position: absolute;
-    background: url("../images/fashion_img/indexImage/index_content/sexy/index_sex1.jpg");
+    background: url("../images/indexImage/index_content/sexy/index_sex1.jpg");
     background-size: 100% 100%;
     width: 460px;
     height: 539px
@@ -514,7 +514,7 @@ p:nth-child(1) {
 .four_img2>div {
     position: absolute;
     left: 55.7%;
-    background: url("../images/fashion_img/indexImage/index_content/sexy/index_sex2.jpg");
+    background: url("../images/indexImage/index_content/sexy/index_sex2.jpg");
     background-size: 100% 100%;
     width: 432px;
     height: 287px
@@ -524,7 +524,7 @@ p:nth-child(1) {
     position: absolute;
     left: 48.8%;
     top: 46.6%;
-    background: url("../images/fashion_img/indexImage/index_content/sexy/index_sex3.jpg");
+    background: url("../images/indexImage/index_content/sexy/index_sex3.jpg");
     background-size: 100% 100%;
     width: 500px;
     height: 402px
@@ -567,7 +567,7 @@ p:nth-child(1) {
     width: 600px;
     top: 0;
     height: 338px;
-    background: url("../images/fashion_img/indexImage/index_content/grace/index_grace1.jpg");
+    background: url("../images/indexImage/index_content/grace/index_grace1.jpg");
     background-size: 100% 100%
 }
 
@@ -587,7 +587,7 @@ p:nth-child(1) {
     top: 36%;
     width: 525px;
     height: 420px;
-    background: url("../images/fashion_img/indexImage/index_content/grace/index_grace2.jpg");
+    background: url("../images/indexImage/index_content/grace/index_grace2.jpg");
     background-size: 100% 100%
 }
 
@@ -607,7 +607,7 @@ p:nth-child(1) {
     top: 41.5%;
     width: 428px;
     height: 570px;
-    background: url("../images/fashion_img/indexImage/index_content/grace/index_grace3.jpg");
+    background: url("../images/indexImage/index_content/grace/index_grace3.jpg");
     background-size: 100% 100%
 }
 
@@ -628,7 +628,7 @@ p:nth-child(1) {
 }
 .six_img>i:nth-child(1) {
     position: absolute;
-    background: url("../images/fashion_img/indexImage/index_content/hot/index_hot1.jpg");
+    background: url("../images/indexImage/index_content/hot/index_hot1.jpg");
     background-size: 100% 100%;
     width: 440px;
     height: 352px
@@ -637,7 +637,7 @@ p:nth-child(1) {
 .six_img>i:nth-child(2) {
     position: absolute;
     right: 0;
-    background: url("../images/fashion_img/indexImage/index_content/hot/index_hot3.jpg");
+    background: url("../images/indexImage/index_content/hot/index_hot3.jpg");
     background-size: 100% 100%;
     width: 517px;
     height: 279px
@@ -647,7 +647,7 @@ p:nth-child(1) {
     position: absolute;
     left: 0;
     bottom: 0;
-    background: url("../images/fashion_img/indexImage/index_content/hot/index_hot2.jpg");
+    background: url("../images/indexImage/index_content/hot/index_hot2.jpg");
     background-size: 100% 100%;
     width: 440px;
     height: 317px
@@ -657,7 +657,7 @@ p:nth-child(1) {
     position: absolute;
     right: 0;
     bottom: 0;
-    background: url("../images/fashion_img/indexImage/index_content/hot/index_hot4.jpg");
+    background: url("../images/indexImage/index_content/hot/index_hot4.jpg");
     background-size: 100% 100%;
     width: 516px;
     height: 402px
@@ -831,7 +831,7 @@ footer {
     top: 0px;
     bottom: 0px;
     margin: auto;
-    background: url("../images/fashion_img/menuImage/sonMenu_default.jpg");
+    background: url("../images/menuImage/sonMenu_default.jpg");
     background-size: 100% 100%;
     width: 499px;
     height: 344px;

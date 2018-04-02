@@ -4,7 +4,7 @@ var nowimg = 0;
 var timer = null;
 $(".list_item").css({"cursor":"pointe"})
 $(".head-banner li:first").clone().appendTo('.head-banner').css({
-    "background-image": "url('./images/fashion_img/indexImage/index_banner/index_banner1.jpg')",
+    "background-image": "url('./images/indexImage/index_banner/index_banner1.jpg')",
     "background-size": "100% 100%",
     "background-repeat": "no-repeat"
 })
