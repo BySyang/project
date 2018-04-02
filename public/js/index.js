@@ -1,5 +1,4 @@
 $(function() {
-
 // 轮播js
 var nowimg = 0;
 var timer = null;
