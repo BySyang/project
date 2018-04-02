@@ -558,7 +558,7 @@ p:nth-child(1) {
 
 .five_img1>div,
 .five_img3>div {
-    box-shadow: 0 1px 8px #000
+    box-shadow: 0 1px 5px #000
 }
 
 .five_img1>div {
@@ -626,7 +626,6 @@ p:nth-child(1) {
     width: 970px;
     height: 690px
 }
-
 .six_img>i:nth-child(1) {
     position: absolute;
     background: url("../images/fashion_img/indexImage/index_content/hot/index_hot1.jpg");
@@ -665,7 +664,7 @@ p:nth-child(1) {
 }
 
 .six_img>i {
-    box-shadow: 1px 0 12px #000
+    box-shadow: 1px 0 8px #000
 }
 
 footer {
@@ -776,28 +775,7 @@ footer {
 .bottom-icon>i {
     margin: auto 6px;
     float: left;
-    width: 20px;
-    height: 20px
-}
-
-.icon-weixin {
-    background-image: url(../images/微信.png);
-    background-size: 100% 100%
-}
-
-.icon-weibo {
-    background-image: url(../images/微博.png);
-    background-size: 100% 100%
-}
-
-.icon-zhifu {
-    background-image: url(../images/支付宝认证.png);
-    background-size: 100% 100%
-}
-
-.icon-yinlian {
-    background-image: url(../images/银行-银联-09.png);
-    background-size: 100% 100%
+    font-size: 24px;
 }
 
 /* 产品系列下拉菜单 */
