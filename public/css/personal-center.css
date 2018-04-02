@@ -11,7 +11,7 @@
 }
 .person-info {
   padding-top: 50px;
-  background: url('../img/personalImage/personal_bg.png') no-repeat;
+  background: url('../images/personalImage/personal_bg.png') no-repeat;
   background-size: cover;
   height: 700px;
 }

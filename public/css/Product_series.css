@@ -10,7 +10,7 @@ section {
   background-color: #f7f7f7;
 }
 .section {
-  width: 1139px;
+  width: 85%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -59,51 +59,63 @@ section {
   color: #ff0066;
 }
 .First_part {
-  width: 1139px;
+  width: 100%;
   height: 563px;
   margin-top: 16px;
 }
-.First_part div {
+.First_part .r_text {
   float: left;
-  margin-left: 58px;
+  margin-left: 5%;
+  width: 43% ;
 }
-.First_part div img {
-  width: 494px;
-  height: 363px;
-  margin-top: 7px;
+.First_part .r_text .first_big_right {
+  width: 100%;
+  margin-top: 19px;
 }
-.First_part div .p1 {
+.First_part .r_text .first_big_right img {
+  width: 100%;
+}
+.First_part .r_text .p1 {
   color: #666666;
   font-size: 20px;
+  margin-top: 5px;
+  width: 100%;
 }
-.First_part div .p2 {
+.First_part .r_text .p2 {
   color: #333333;
   font-size: 18px;
+  margin-top: 12px;
+  width: 100%;
 }
-.First_part div .p3 {
+.First_part .r_text .p3 {
   color: #333333;
   font-size: 13px;
   line-height: 210%;
+  margin-top: 10px;
+  width: 100%;
 }
-.First_part div .line {
-  width: 108px;
+.First_part .r_text .line {
+  width: 20%;
   height: 1px;
   background-color: #797979;
   margin: -9px 0;
 }
-.First_part img {
-  width: 585px;
+.First_part .first_big_left {
+  width: 51%;
   height: 562px;
   float: left;
 }
+.First_part .first_big_left img {
+  width: 100%;
+}
 .firstList {
-  width: 1139px;
+  width: 100%;
   height: 972px;
 }
 .firstList .bigdl {
   margin-top: 38px;
   float: left;
-  width: 257px;
+  width: 22.4%;
   height: 448px;
   background-color: white;
   margin-left: 36px;
@@ -115,8 +127,7 @@ section {
   margin-top: -100px;
 }
 .smimg {
-  width: 250px;
-  height: 332px;
+  width: 98% ;
   margin-top: 3px;
   margin-left: 3px;
 }
@@ -127,63 +138,76 @@ section {
   font-weight: normal;
 }
 .bugBtn {
-  width: 43;
-  height: 20;
+  width: 43px;
+  height: 22px;
+  line-height: 22px;
   border-radius: 5px;
   border: 1px solid #ff0066;
   background-color: white;
   color: #ff0066;
   font-weight: normal;
-  margin-left: 73px;
+  margin-left: 65px;
   -webkit-transition: all .3s linear;
 }
 .bugBtn:hover {
   background-color: #ff0066;
   color: white;
 }
+.last {
+  line-height: 36px;
+}
 .icon-iconset0317 {
   color: #ff0066;
-  font-size: 50px;
+  font-size: 24px;
   margin-left: 10px;
+  margin-top: 5px;
 }
 .second_part_img {
-  width: 1139px;
+  width: 100%;
   height: 523px;
   margin-top: 51px;
 }
-.second_part_img div {
+.second_part_img .l_second_text {
   float: left;
+  width: 33%;
 }
-.second_part_img div img {
-  width: 378px;
+.second_part_img .l_second_text .second_big_left {
+  width: 100%;
   height: 361px;
-  margin-top: 7px;
+  margin-top: 39px;
 }
-.second_part_img div .p1 {
+.second_part_img .l_second_text .second_big_left img {
+  width: 100%;
+}
+.second_part_img .l_second_text .p1 {
   color: #666666;
   font-size: 20px;
   margin-left: 233px;
-  margin-top: 45px;
+  margin-top: 35px;
   font-size: 28px;
 }
-.second_part_img div .p2 {
+.second_part_img .l_second_text .p2 {
   color: #333333;
   font-size: 18px;
   margin-left: 251px;
   font-size: 28px;
+  margin-top: 15px;
 }
-.second_part_img div .line {
+.second_part_img .l_second_text .line {
   width: 148px;
   height: 1px;
   background-color: #797979;
   margin: -9px 0;
   margin-left: 226px;
 }
-.second_part_img > img {
-  width: 735px;
+.second_part_img > .second_big_gight {
+  width: 64.5%;
   height: 523px;
   float: left;
-  margin-left: 26px;
+  margin-left: 2.3%;
+}
+.second_part_img > .second_big_gight img {
+  width: 100%;
 }
 .last_part {
   width: 120px;
