@@ -86,7 +86,6 @@
   border-bottom: 2px solid #f1f1f1;
 }
 .person-info .person-info-content .infos .orders {
-  display: none;
   width: 95%;
   border-radius: 0 6px 6px 0;
 }
@@ -391,6 +390,7 @@
   background: #FFF;
   float: left;
   width: 48%;
+  box-shadow: 2px 2px 3px #e0dfdf;
   border-radius: 10px;
 }
 .person-info .person-info-content .infos .members > div:last-child {
