@@ -1,6 +1,7 @@
 //颜色 
 @titleColor: #f7f7f7;
 @pinkColor: #ff0066;
+@hover: #ffccff;
 //字体 
 @lgFont: 26px;
 @mdFont: 16px;
@@ -24,12 +25,14 @@
 .fontStyle(@_) {
     letter-spacing: 2em;
 }
-//通用样式
 
+//通用样式
 //圆角
-.radius(@size: 10px) {
+.radius(@size: 10px) { 
     border-radius: @size;
 }
+
+
 
 //浮动
 .l() {
@@ -38,4 +41,9 @@
 
 .r() {
     float: right;
+}
+
+//阴影
+.shadow(@x: 2px, @y: 2px, @size: 3px, @color: rgb(224, 223, 223)) {
+    box-shadow: @arguments;
 }
