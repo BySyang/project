@@ -97,14 +97,14 @@ header {
 
 .head-banner {
     position: absolute;
-    width: 5388px;
+    width: 1347px;
     height: 635px;
     top: 0;
     left: 0
 }
 
 .head-banner>li {
-    width: 1347px;
+    width: 100%;
     height: 635px;
     float: left
 }
