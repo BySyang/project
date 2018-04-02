@@ -1,6 +1,7 @@
 # Dependency directories
 node_modules/
 package-lock.json
+
 #logs
 *.log
 npm-debug.log*
@@ -11,3 +12,11 @@ img/
 *.png
 *.jpg
 *.gif
+
+# fonts
+*.eot
+*.ttf
+*.woff
+*.svg
+# map
+*.map

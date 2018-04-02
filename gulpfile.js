@@ -7,19 +7,14 @@ var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var LessAutoprefix = require('less-plugin-autoprefix');
 var cleancss = require('gulp-clean-css');
-var del = require('delete');
+var del = require('delete'); 
+var browserSync = require('browser-sync');
+var reload      = browserSync.reload;
 var autoprefix = new LessAutoprefix({
   browsers: ['last 2 versions']
 });
-//删除中间处理文件
-gulp.task('del',['cssuglify'],function(){
-    del(['./src/css/*'], function(err, deleted) {
-        if (err) throw err;
-        console.log("delete success");
-      });
-})
-//js处理
 
+//js处理
 gulp.task('js',function(){
     return gulp.src('./src/js/*.js')
     .pipe(uglify({
@@ -28,12 +23,9 @@ gulp.task('js',function(){
     .pipe(gulp.dest('./public/js'))
 })
 //css压缩
-gulp.task('cssuglify',['less'],function(){
-    return gulp.src('./src/css/*.css')
-    .pipe(cleancss({
-
-    })).on('error',errorhandling)
-    .pipe(gulp.dest('./public/css'))
+gulp.task('copy',['less'],function(){
+    return gulp.src(['./public/css/*.css','!./src/css/reset.css'])
+    .pipe(gulp.dest('./public/css/'))
 })
 //处理less
 gulp.task('less', function () {
@@ -43,20 +35,20 @@ gulp.task('less', function () {
         plugins:[autoprefix]
     })).on('error', errorhandling)
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./src/css'));
+    .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('watch', ['del'], function () {
-  return gulp.watch('./src/less/*', ['del']);
+//实时刷新
+gulp.task('server',['copy'],function(){
+    browserSync.init({
+        server:{
+            baseDir:'./public'
+        }
+    });
+    gulp.watch('./src/less/*.less', ['copy']);
+    gulp.watch(['./public/css/*.css','./public/*.html']).on('change',reload);
 })
-
-
-gulp.task('default',['watch']);
-
-
-
-
 function errorhandling(err) {
-  gutil.log(gutil.colors.red(err.message))
+  gutil.log(gutil.colors.red(err))
   this.end();
 }

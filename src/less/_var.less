@@ -1,31 +1,49 @@
-
-
-/* 颜色 */
+//颜色 
 @titleColor: #f7f7f7;
 @pinkColor: #ff0066;
-
-
-/* 字体 */
-
+@hover: #ffccff;
+//字体 
 @lgFont: 26px;
 @mdFont: 16px;
 @smFont: 14px;
-
-/* 按钮风格 */
-.btnStyle(@width:152px,@height:40px){
+// 按钮风格
+.btnStyle(@width: 152px, @height: 40px) {
     width: @width;
     height: @height;
     background-color: @pinkColor
 }
 
-/* 文字风格 */
-.fontStyle(biaozi){
+//文字风格 
+.fontStyle(biaozi) {
     line-height: 26px;
-    
 }
-.fontStyle(goods){
+
+.fontStyle(goods) {
     line-height: 18px;
 }
-.fontStyle(@_){
+
+.fontStyle(@_) {
     letter-spacing: 2em;
+}
+
+//通用样式
+//圆角
+.radius(@size: 10px) { 
+    border-radius: @size;
+}
+
+
+
+//浮动
+.l() {
+    float: left;
+}
+
+.r() {
+    float: right;
+}
+
+//阴影
+.shadow(@x: 2px, @y: 2px, @size: 3px, @color: rgb(224, 223, 223)) {
+    box-shadow: @arguments;
 }
