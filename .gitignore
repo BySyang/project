@@ -18,5 +18,7 @@ img/
 *.ttf
 *.woff
 *.svg
+
 # map
-*.map
+/src/css/*.map
+/public/css/*.map
