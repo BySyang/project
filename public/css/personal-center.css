@@ -11,7 +11,7 @@
 }
 .person-info {
   padding-top: 50px;
-  background: url('../img/person/bg.png') no-repeat;
+  background: url('../img/personalImage/personal_bg.png') no-repeat;
   background-size: 100%;
   height: 700px;
 }
@@ -39,8 +39,8 @@
   margin: 10px 0;
 }
 .person-info .person-info-tabs .head p span {
-  color: rgba(255, 208, 0, 0.623);
-  font-size: 14px;
+  color: #ff0066;
+  font-size: 16px;
 }
 .person-info .person-info-tabs .person-info-list li.active {
   background: #ff0066;
@@ -82,7 +82,8 @@
   border-radius: 10px 10px 0 0;
 }
 .person-info .person-info-content .infos .orders {
-  width: 90%;
+  display: none;
+  width: 95%;
   border-radius: 0 6px 6px 0;
 }
 .person-info .person-info-content .infos .orders .tab {
@@ -150,7 +151,7 @@
   color: #99b5d7;
 }
 .person-info .person-info-content .infos .orders .order-item .order-goods {
-  border: 1px solid #cecece;
+  border-top: 1px solid #cecece;
   border-left: none;
   border-right: none;
   padding: 5px 20px;
@@ -238,6 +239,72 @@
 }
 .person-info .person-info-content .infos .orders .order-item .order-goods div a:last-child {
   background: #c9c8c8;
+}
+.person-info .person-info-content .infos .orders .pages {
+  margin-top: 34px;
+  padding-right: 20px;
+  background: #fff;
+  height: 50px;
+  font-size: 14px;
+  line-height: 50px;
+  text-align: right;
+  border-radius: 0 10px 0 10px;
+}
+.person-info .person-info-content .infos .orders .pages a {
+  color: #000;
+}
+.person-info .person-info-content .infos .preson {
+  padding: 10px 30px;
+  width: 90%;
+  background: #fff;
+  font-size: 14px;
+  border-radius: 0 10px 10px 0;
+}
+.person-info .person-info-content .infos .preson dl {
+  overflow: hidden;
+}
+.person-info .person-info-content .infos .preson dt {
+  float: left;
+  width: 20%;
+  color: #999;
+  letter-spacing: .5em;
+}
+.person-info .person-info-content .infos .preson dt i {
+  font-size: 12px;
+  letter-spacing: 0;
+  color: #fff;
+  background: #999;
+  border-radius: 10px;
+}
+.person-info .person-info-content .infos .preson dt i:hover {
+  cursor: pointer;
+  background: #666;
+}
+.person-info .person-info-content .infos .preson dd {
+  float: right;
+  width: 70%;
+}
+.person-info .person-info-content .infos .preson dd input {
+  vertical-align: bottom;
+  border: none;
+  background: #fff;
+  color: #000;
+}
+.person-info .person-info-content .infos .preson dd input[type="radio"] {
+  display: none;
+}
+.person-info .person-info-content .infos .preson dd label {
+  display: none;
+}
+.person-info .person-info-content .infos .preson dd label.show {
+  display: block;
+}
+.person-info .person-info-content .infos .preson dd img {
+  width: 75px;
+  border-radius: 50%;
+}
+.person-info .person-info-content .infos .preson dd:nth-of-type(3) {
+  background: #111;
 }
 
 /*# sourceMappingURL=personal-center.css.map */
