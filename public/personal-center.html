@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_611086_r0w78oxu4skvgqfr.css">
     <link rel="stylesheet" href="./css/personal-center.css">
 </head>
 
@@ -15,27 +16,32 @@
         <div class="person-info-wrap">
             <div class="person-info-tabs">
                 <div class="head">
-                    <img src="./img/person/tou.jpeg" alt="">
+                    <img src="./img/personalImage/personal_personImg.jpeg" alt="">
                     <p class="person-name clearfix">
                         Soul
-                        <span>普通会员</span>
+                        <span class="iconfont icon-vip1"> </span>
                     </p>
                 </div>
                 <ul class="person-info-list">
                     <li class="active">
-                        <a href="#">我的订单</a>
+                        <a href="#">
+                            <i class="iconfont icon-dingdan"></i>我的订单</a>
                     </li>
                     <li>
-                        <a href="#">个人信息</a>
+                        <a href="#">
+                            <i class="iconfont icon-infor"></i>个人信息</a>
                     </li>
                     <li>
-                        <a href="#">我的会员</a>
+                        <a href="#">
+                            <i class="iconfont icon-vipcenter"></i>我的会员</a>
                     </li>
                     <li>
-                        <a href="#">地址管理</a>
+                        <a href="#">
+                            <i class="iconfont icon-addr"></i>地址管理</a>
                     </li>
                     <li>
-                        <a href="#">物流信息</a>
+                        <a href="#">
+                            <i class="iconfont icon-wuliu"></i>物流信息</a>
                     </li>
                 </ul>
             </div>
@@ -58,7 +64,7 @@
                                 </em>
                             </p>
                             <div class="order-goods clearfix">
-                                <img src="./img/person/1.jpg" alt="">
+                                <img src="./img/personalImage/personal_goodsPic.jpg" alt="">
                                 <ul>
                                     <li>商品名称 :
                                         <span>玫瑰诱惑rwqrqwrqwrqwerqrweqrqw</span>
@@ -107,7 +113,7 @@
                                 </em>
                             </p>
                             <div class="order-goods clearfix">
-                                <img src="./img/person/1.jpg" alt="">
+                                <img src="./img/personalImage/personal_goodsPic.jpg" alt="">
                                 <ul>
                                     <li>商品名称 :
                                         <span>玫瑰诱惑rwqrqwrqwrqwerqrweqrqw</span>
@@ -147,9 +153,71 @@
 
                             </div>
                         </div>
+                        <div class="pages">
+                            <a href="#">首页</a>
+                            <a href="#">上一页</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">下一页</a>
+                            <a href="#">尾页</a>
+                        </div>
 
                     </div>
-                    <div class="preson"></div>
+                    <div class="preson ">
+                        <form id="info">
+                            <dl>
+                                <dt>昵称
+                                    <i class="iconfont icon-help" title="你公开的用户名" disabled="true"></i>
+                                </dt>
+                                <dd>
+                                    <input type="text" value="Soul" disabled="true">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>手机号码</dt>
+                                <dd>
+                                    <input type="nubmer" value="15777592624" disabled="true">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>邮箱地址</dt>
+                                <dd>
+                                    <input type="email" value="1628366273@qq.com" disabled="true">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>头像</dt>
+                                <dd>
+                                    <img src="./img/personalImage/personal_personImg.jpeg" alt="">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>性别</dt>
+                                <dd>
+                                    <label for="sex1" class="show">
+                                        <input type="radio" name="sex" value="0" id="sex1" checked="true" disabled="true"> 保密
+                                    </label>
+                                    <label for="sex2">
+                                        <input type="radio" name="sex" value="0" id="sex2" disabled="true"> 男
+                                    </label>
+                                    <label for="sex3">
+                                        <input type="radio" name="sex" value="0" id="sex3" disabled="true"> 女
+                                    </label>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>生日</dt>
+                                <dd>
+                                    <input type="text" value="2月22" disabled="true">
+                                </dd>
+                            </dl>
+                            <button>编辑</button> <button>取消</button> <button>保存</button>
+                        </form>
+
+                    </div>
                     <div class="members"></div>
                     <div class="addr"></div>
                     <div class="logistics"></div>

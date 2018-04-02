@@ -1,237 +1,204 @@
-
-
 header {
-    width: 1346px;
-    height: 550px
+  width: 1346px;
+  height: 550px;
 }
-
 #Banimg {
-    width: 1346px;
-    height: 550px
+  width: 1346px;
+  height: 550px;
 }
-
 section {
-    background-color: #f7f7f7
+  background-color: #f7f7f7;
 }
-
 .section {
-    width: 1139px;
-    margin: 0 auto;
-    overflow: hidden
+  width: 1139px;
+  margin: 0 auto;
+  overflow: hidden;
 }
-
 .search_border {
-    width: 1139px;
-    height: 34px;
-    border-bottom: 1px solid #fcf;
-    border-top: 1px solid #fcf;
-    margin-top: 62px
+  width: 1139px;
+  height: 34px;
+  border-bottom: 1px solid #FFCCFF;
+  border-top: 1px solid #FFCCFF;
+  margin-top: 62px;
 }
-
-.search_border #search_color, .search_border #search_size, .search_border .glyphicon, .search_border p {
-    float: left;
-    margin-top: 6px
-}
-
-.search_border #search_color, .search_border #search_size {
-    width: 70px;
-    margin-left: 5px;
-    border-color: #f06
-}
-
-.search_border #search_color:hover, .search_border #search_size:hover {
-    color: #f06
-}
-
+.search_border #search_color,
+.search_border #search_size,
+.search_border .glyphicon,
 .search_border p {
-    color: #f06;
-    padding-left: 815px;
-    font-family: "Times New Roman";
-    font-size: 22px;
-    margin-top: 0
+  float: left;
+  margin-top: 6px;
 }
-
+.search_border #search_color,
 .search_border #search_size {
-    margin-left: 20px;
-    margin-right: 0
+  width: 70px;
+  margin-left: 5px;
+  border-color: #ff0066;
 }
-
+.search_border #search_color:hover,
+.search_border #search_size:hover {
+  color: #ff0066;
+}
+.search_border p {
+  color: #ff0066;
+  padding-left: 815px;
+  font-family: "Times New Roman";
+  font-size: 22px;
+  margin-top: 0px;
+}
+.search_border #search_size {
+  margin-left: 20px;
+  margin-right: 0px;
+}
 .search_border .glyphicon {
-    font-size: 20px;
-    margin-left: 20px;
-    margin-right: 0;
-    color: #999
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 0px;
+  color: #999999;
 }
-
 .search_border .glyphicon:hover {
-    color: #f06
+  color: #ff0066;
 }
-
 .First_part {
-    width: 1139px;
-    height: 563px;
-    margin-top: 16px
+  width: 1139px;
+  height: 563px;
+  margin-top: 16px;
 }
-
 .First_part div {
-    float: left;
-    margin-left: 58px
+  float: left;
+  margin-left: 58px;
 }
-
 .First_part div img {
-    width: 494px;
-    height: 363px;
-    margin-top: 7px
+  width: 494px;
+  height: 363px;
+  margin-top: 7px;
 }
-
 .First_part div .p1 {
-    color: #666;
-    font-size: 20px
+  color: #666666;
+  font-size: 20px;
 }
-
 .First_part div .p2 {
-    color: #333;
-    font-size: 18px
+  color: #333333;
+  font-size: 18px;
 }
-
 .First_part div .p3 {
-    color: #333;
-    font-size: 13px;
-    line-height: 210%
+  color: #333333;
+  font-size: 13px;
+  line-height: 210%;
 }
-
 .First_part div .line {
-    width: 108px;
-    height: 1px;
-    background-color: #797979;
-    margin: -9px 0
+  width: 108px;
+  height: 1px;
+  background-color: #797979;
+  margin: -9px 0;
 }
-
 .First_part img {
-    width: 585px;
-    height: 562px;
-    float: left
+  width: 585px;
+  height: 562px;
+  float: left;
 }
-
 .firstList {
-    width: 1139px;
-    height: 972px
+  width: 1139px;
+  height: 972px;
 }
-
 .firstList .bigdl {
-    margin-top: 38px;
-    float: left;
-    width: 257px;
-    height: 448px;
-    background-color: #fff;
-    margin-left: 36px
+  margin-top: 38px;
+  float: left;
+  width: 257px;
+  height: 448px;
+  background-color: white;
+  margin-left: 36px;
 }
-
 .icon-xing {
-    color: #ffc832;
-    letter-spacing: -3px;
-    font-weight: normal;
-    margin-top: -100px
+  color: #ffc832;
+  letter-spacing: -3px;
+  font-weight: normal;
+  margin-top: -100px;
 }
-
 .smimg {
-    width: 250px;
-    height: 332px;
-    margin-top: 3px;
-    margin-left: 3px
+  width: 250px;
+  height: 332px;
+  margin-top: 3px;
+  margin-left: 3px;
 }
-
 .icon-fl-renminbi {
-    color: #f06;
-    font-size: 18px;
-    font-family: "微软雅黑", "宋体";
-    font-weight: normal
+  color: #ff0066;
+  font-size: 18px;
+  font-family: "微软雅黑", "宋体";
+  font-weight: normal;
 }
-
 .bugBtn {
-    width: 43;
-    height: 20;
-    border-radius: 5px;
-    border: 1px solid #f06;
-    background-color: #fff;
-    color: #f06;
-    font-weight: normal;
-    margin-left: 73px;
-    -webkit-transition: all .3s linear
+  width: 43;
+  height: 20;
+  border-radius: 5px;
+  border: 1px solid #ff0066;
+  background-color: white;
+  color: #ff0066;
+  font-weight: normal;
+  margin-left: 73px;
+  -webkit-transition: all .3s linear;
 }
-
 .bugBtn:hover {
-    background-color: #f06;
-    color: #fff
+  background-color: #ff0066;
+  color: white;
 }
-
 .icon-iconset0317 {
-    color: #f06;
-    font-size: 50px;
-    margin-left: 10px
+  color: #ff0066;
+  font-size: 50px;
+  margin-left: 10px;
 }
-
 .second_part_img {
-    width: 1139px;
-    height: 523px;
-    margin-top: 51px
+  width: 1139px;
+  height: 523px;
+  margin-top: 51px;
 }
-
 .second_part_img div {
-    float: left
+  float: left;
 }
-
 .second_part_img div img {
-    width: 378px;
-    height: 361px;
-    margin-top: 7px
+  width: 378px;
+  height: 361px;
+  margin-top: 7px;
 }
-
 .second_part_img div .p1 {
-    color: #666;
-    font-size: 20px;
-    margin-left: 233px;
-    margin-top: 45px;
-    font-size: 28px
+  color: #666666;
+  font-size: 20px;
+  margin-left: 233px;
+  margin-top: 45px;
+  font-size: 28px;
 }
-
 .second_part_img div .p2 {
-    color: #333;
-    font-size: 18px;
-    margin-left: 251px;
-    font-size: 28px
+  color: #333333;
+  font-size: 18px;
+  margin-left: 251px;
+  font-size: 28px;
 }
-
 .second_part_img div .line {
-    width: 148px;
-    height: 1px;
-    background-color: #797979;
-    margin: -9px 0;
-    margin-left: 226px
+  width: 148px;
+  height: 1px;
+  background-color: #797979;
+  margin: -9px 0;
+  margin-left: 226px;
 }
-
 .second_part_img > img {
-    width: 735px;
-    height: 523px;
-    float: left;
-    margin-left: 26px
+  width: 735px;
+  height: 523px;
+  float: left;
+  margin-left: 26px;
 }
-
 .last_part {
-    width: 120px;
-    height: 100px;
-    margin: 0 auto;
-    text-align: center
+  width: 120px;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
 }
-
 .last_part span {
-    font-size: 24px
+  font-size: 24px;
 }
-
 .last_part i {
-    font-size: 20px
+  font-size: 20px;
+}
+.page1 {
+  color: #ff0066;
 }
 
-.page1 {
-    color: #f06
-}
+/*# sourceMappingURL=Product_series.css.map */
