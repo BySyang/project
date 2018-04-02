@@ -6,24 +6,27 @@ li {
     text-decoration: none;
     list-style: none
 }
+body{
+    width: 100%;
+}
 
 header {
     position: relative;
-    width: 1347px;
+    width: 100%;
     height: 635px
 }
 
 .head-nav {
     position: fixed;
     z-index: 999;
-    width: 1347px;
+    width: 100%;
     height: 86px;
     background-color: rgba(52, 52, 52, .3)
 }
 
 .head-nav1 {
     position: fixed;
-    width: 1347px;
+    width: 100%;
     height: 86px;
     background-color: rgb(255, 255, 255, .9);
     box-shadow: -2px 0 8px #000
@@ -86,7 +89,7 @@ header {
 
 .box-banner {
     position: relative;
-    width: 1347px;
+    width: 100%;
     height: 635px;
     overflow: hidden;
     z-index: -1
@@ -171,12 +174,12 @@ header {
 
 section {
     position: relative;
-    width: 1347px;
+    width: 100%;
     height: 1500px
 }
 
 .first-contain {
-    width: 1347px;
+    width: 100%;
     height: 1003px;
     background: #f7f7f7;
     overflow: hidden
@@ -296,7 +299,7 @@ p:nth-child(1) {
 
 .second_contain {
     position: relative;
-    width: 1347px;
+    width: 100%;
     height: 932px
 }
 
@@ -383,7 +386,7 @@ p:nth-child(1) {
 .three_contain {
     position: relative;
     top: -40px;
-    width: 1347px;
+    width: 100%;
     height: 885px;
     background-color: #f7f7f7
 }
@@ -471,7 +474,7 @@ p:nth-child(1) {
 
 .four_contain {
     position: relative;
-    width: 1347px;
+    width: 100%;
     height: 1020px
 }
 
@@ -537,7 +540,7 @@ p:nth-child(1) {
 
 .five_contain {
     position: relative;
-    width: 1347px;
+    width: 100%;
     height: 1225px;
     background-color: #f7f7f7
 }
@@ -800,7 +803,7 @@ footer {
 .product_list{
     position: absolute;
     top: 86px;
-    width: 1347px;
+    width: 100%;
     height: 400px;
     background: #ffffff;
     opacity: 0.5;
