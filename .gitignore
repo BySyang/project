@@ -12,6 +12,7 @@ img/
 *.png
 *.jpg
 *.gif
+*.jpeg
 
 # fonts
 *.eot
