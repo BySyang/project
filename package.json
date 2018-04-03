@@ -25,10 +25,11 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "less-plugin-autoprefix": "^1.5.1"
+    "less-plugin-autoprefix": "^1.5.1",
+    "mysql": "^2.15.0"
   },
   "scripts": {
-    "test": "node ./bin/www"
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
