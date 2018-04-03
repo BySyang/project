@@ -24,7 +24,7 @@ gulp.task('js',function(){
 })
 //css压缩
 gulp.task('copy',['less'],function(){
-    return gulp.src(['./public/css/*.css','!./src/css/reset.css'])
+    return gulp.src(['./public/css/*.css','!./public/css/reset.css'])
     .pipe(gulp.dest('./public/css/'))
 })
 //处理less
