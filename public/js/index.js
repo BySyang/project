@@ -40,7 +40,6 @@ $(window).scroll(function() {
             //回调函数，设置点击按钮执行相应功能
         })
     }
-
     if (scrollTop < 10) {
         $(".head-nav").removeClass("head-nav1")
         $(".head-nav>ul>li>a").css({ "color": "white" })
