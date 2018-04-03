@@ -12,7 +12,7 @@
 
 <body>
     <!-- 登录注册 -->
-    <form action="post" class="submit" name="index.do" id="index.do">
+    <form  action="login.do" method="post" class="submit"  id="from" enctype="multipart/form-data">
         <div class="login_contain">
             <div class="login_contain_left">
                 <img src="./images/login/login_pic.png" alt="">
@@ -25,11 +25,11 @@
                 <!-- 登录输入框 -->
                 <div class="login_row">
                     <div class="field">
-                        <input type="text" class="input_big  username" placeholder="请输入用户名/手机号">
+                        <input type="text" id="username" name="username" class="input_big" placeholder="请输入用户名/手机号">
                         <i class="iconfont icon-suo icon_login"></i>
                     </div>
                     <div class="field">
-                        <input type="text" class="input_big password" placeholder="请输入密码">
+                        <input type="password" id="password" name="possword" class="input_big" placeholder="请输入密码">
                         <i class="iconfont icon-gerenzhongxin1 icon_login"></i>
                     </div>
                     <div class='input_checkbox'>
@@ -59,11 +59,11 @@
                 <i class="iconfont icon-xinxi icon_login"></i>
             </div>
             <div class="regs_contain">
-                <input type="text" class="input_big" placeholder="最新密码长度为6">
+                <input type="password" class="input_big" placeholder="最新密码长度为6">
                 <i class="iconfont icon-suo icon_login"></i>
             </div>
             <div class="regs_contain">
-                <input type="text" class="input_big" placeholder="请再次输入密码">
+                <input type="password" class="input_big" placeholder="请再次输入密码">
                 <i class="iconfont icon-hekriconshebeisuoguan icon_login"></i>
             </div>
             <div class="regist_checkbox">
