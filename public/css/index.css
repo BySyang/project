@@ -97,14 +97,14 @@ header {
 
 .head-banner {
     position: absolute;
-    width: 1347px;
+    width:  5388px;
     height: 635px;
     top: 0;
     left: 0
 }
 
 .head-banner>li {
-    width: 100%;
+    width: 25%;
     height: 635px;
     float: left
 }
@@ -157,6 +157,7 @@ header {
     position: absolute;
     width: 120px;
     height: 22px;
+    padding-left: 8px;
     opacity: .6;
     border-radius: 10px;
     outline: 0;
@@ -874,7 +875,3 @@ footer {
     top: 70%;
     
 }
-
-
-
-

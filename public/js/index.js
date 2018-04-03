@@ -13,15 +13,17 @@ function rightFunc() {
     if (nowimg < 2) {
         nowimg++
         $(".head-banner").animate({ "left": nowimg * -1347 }, 1500)
+        console.log("1111")
     } else {
         nowimg = 0
         $(".head-banner").animate({ "left": 3 * -1347 }, 2000, function() {
             $(".head-banner").css("left", 0)
+            console.log("2222")
 
         })
     }
 }
-timer = setInterval(rightFunc, 4000)
+timer = setInterval(rightFunc, 2000)
 $(".head-banner").mouseenter(function() {
     clearInterval(timer)
 })

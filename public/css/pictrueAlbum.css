@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+}
+header {
+  width: 100%;
+  height: 550px;
+  position: relative;
+}
+header div {
+  position: absolute;
+  left: 10px;
+  top: 180px;
+  width: 450px;
+}
+header div h2 {
+  color: white;
+  font-size: 36px;
+  letter-spacing: .2em;
+  height: 80px;
+  float: right;
+}
+header div h2 span {
+  color: #ff0066;
+}
+header div p {
+  font-size: 36px;
+  color: white;
+  letter-spacing: .5em;
+  height: 80px;
+  float: right;
+}
+header img {
+  width: 100%;
+  height: 550px;
+}
+.albumSec1 {
+  background-color: #f7f7f7;
+  width: 84%;
+  height: 900px;
+  padding: 0 10%;
+}
+.albumSec1 > div:first-child {
+  overflow: hidden;
+  width: 100%;
+}
+.albumSec1 > div:first-child > div {
+  float: left;
+  width: 44%;
+  height: 600px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+.albumSec1 > div:first-child > div img {
+  width: 100%;
+  height: 730px;
+}
+.albumSec1 > div:first-child > div:nth-of-type(2) {
+  margin-left: 6%;
+}
+.albumSec1 > div:nth-of-type(2) {
+  width: 94%;
+  margin-top: 20px;
+  height: 180px;
+}
+.albumSec1 > div:nth-of-type(2) h2 {
+  width: 84%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 80px;
+}
+.albumSec1 > div:nth-of-type(2) > div {
+  width: 82%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 40px;
+}
+
+/*# sourceMappingURL=pictrueAlbum.css.map */
