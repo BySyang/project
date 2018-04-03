@@ -48,3 +48,9 @@ function xingMargin() {
     $(".bigdl dt:nth-child(4)").css({"margin-left": "11px", "margin-top": "6px"});
 }
 xingMargin();
+$(".bigdl").mouseenter(function(){
+    $(this).find(".smimg img").css({"transform":"scale(1.02)"})
+})
+$(".bigdl").mouseout(function(){
+    $(this).find(".smimg img").css({"transform":"","-webkit-transition":"all 0.3s linear"})
+})

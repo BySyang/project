@@ -10,9 +10,12 @@
     height: 3px;
     background: darken(@pinkColor, 2%);
 }
-.boxShow{
+@loaderColor: rgb(131, 141, 114);
+
+.boxShow {
     box-shadow: 2px 2px 3px #e0dfdf;
 }
+
 .person-info {
     padding-top: 50px;
     background: url('../images/personalImage/personal_bg.png') no-repeat;
@@ -152,7 +155,7 @@
                         }
                         ul {
                             .l;
-                            width: 440px;
+                            width: 68%;
                             padding: 10px 0 0 30px;
                             li {
                                 display: inline-block;
@@ -195,7 +198,7 @@
                         }
                         &>a {
                             color: @pinkColor;
-                            padding: 45px;
+                            line-height: 110px;
                             .l
                         }
                         div {
@@ -362,15 +365,63 @@
                         color: #bbb;
                         padding-bottom: 10px;
                     }
-                    a {}
                 }
             }
             .logistics {
                 display: none;
                 background: #FFF;
+                padding: 10px 0;
                 width: 95%;
-                border-radius: 0 10px 10px  0;
+                border-radius: 0 10px 10px 0;
                 .boxShow;
+                font-size: 14px;
+                text-align: center;
+                p {
+                    margin-bottom: 20px;
+                    text-indent: 20px;
+                    text-align: left;
+                    em {
+                        font-style: normal;
+                        font-size: 12px;
+                        margin-left: 20px;
+                        color: #bbb;
+                    }
+                }
+                li {
+                    display: inline-block;
+                    width: 10%;
+                    font-size: 16px;
+                    font-weight: bold;
+                    strong {
+                        display: block;
+                        padding-top: 5px;
+                        font-weight: normal;
+                        font-size: 12px;
+                    }
+                    &:nth-child(2n) {
+                        height: 3px;
+                        position: relative;
+                        top: -12px;
+                        background-color: #6DA807;
+                        border: 1px solid #6DA807;
+                        border-radius: 10px;
+                        box-shadow: 1vw 3vh 10vh rgba(109, 168, 7, 0.8);
+                        background-size: 3em 3em;
+                        background-image: linear-gradient(-45deg, transparent 0em, transparent 0.8em, @loaderColor 0.9em, @loaderColor 2.1em, transparent 2.1em, transparent 2.9em, #96D923 3.1em);
+                        animation: loader 750ms infinite linear;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            height: 100%;
+                            border-radius: 10px;
+                            background-image: linear-gradient(to bottom, rgb(42.7%, 65.9%, 2.7%), rgba(171, 226, 77, 0.6) 15%, transparent 60%, #6DA807);
+                        }
+                    }
+                }
             }
             .members {
                 display: none;
@@ -381,36 +432,53 @@
                     .l;
                     width: 48%;
                     .boxShow;
-                   &:last-child{
-                       margin-left: 1%;
-                   }
+                    &:last-child {
+                        margin-left: 1%;
+                    }
                     .radius;
-                    h4{
+                    h4 {
                         color: @pinkColor;
                         font-size: 18px;
                     }
-                    p{
+                    p {
                         font-size: 16px;
                         color: @pinkColor;
                     }
-                    div{
+                    div {
                         margin: 0 auto;
                         width: 60%;
                         line-height: 30px;
                         text-align: left;
-                        p{
+                        p {
                             font-size: 16px;
                             color: #bbb;
                             word-spacing: 20px;
-                            i{
+                            i {
                                 font-size: 17px;
                                 color: @pinkColor;
                             }
-
                         }
                     }
                 }
             }
         }
+    }
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes loader {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 3em 0;
     }
 }

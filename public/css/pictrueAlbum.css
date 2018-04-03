@@ -17,7 +17,7 @@ header div {
   width: 450px;
 }
 header div h2 {
-  color: #ffffff;
+  color: white;
   font-size: 36px;
   letter-spacing: .2em;
   height: 80px;
@@ -28,7 +28,7 @@ header div h2 span {
 }
 header div p {
   font-size: 36px;
-  color: #ffffff;
+  color: white;
   letter-spacing: .5em;
   height: 80px;
   float: right;
@@ -78,3 +78,5 @@ header img {
   margin: 0 auto;
   line-height: 40px;
 }
+
+/*# sourceMappingURL=pictrueAlbum.css.map */

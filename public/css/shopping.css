@@ -1,0 +1,125 @@
+@import 'reset.css';
+section {
+  background-color: #f2f2f2;
+  overflow: hidden;
+  padding: 10px 0;
+}
+section > div {
+  width: 80%;
+  margin: 20px auto;
+}
+section > div ul {
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+}
+section > div ul li {
+  background-color: #fff;
+  text-align: center;
+  width: 15%;
+  display: inline-block;
+}
+.shop_check {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.shop_checked {
+  border-color: #ff0000;
+  background-color: #ff0000;
+}
+.shopping_sec ul li * {
+  vertical-align: middle;
+}
+.shopping_sec li:nth-of-type(4) {
+  font-size: 0;
+}
+.shopping_sec li:nth-of-type(4) div,
+.shopping_sec li:nth-of-type(4) input {
+  padding: 0;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border: 1px solid #c9c9c9;
+  text-align: center;
+  line-height: 30px;
+}
+.shopping_sec li:nth-of-type(4) div:first-child {
+  border-right: none;
+}
+.shopping_sec li:nth-of-type(4) div:last-child {
+  border-left: none;
+}
+.shopping_sec li:nth-of-type(4) input {
+  outline: none;
+  border-right: none;
+  border-left: none;
+}
+.shopping_sec li:nth-of-type(4) div:hover {
+  background-color: #f2f2f2;
+}
+.shopping_sec .icon-shanchu:hover {
+  color: red;
+  cursor: pointer;
+}
+.shopping_settlement ul {
+  height: 40px;
+}
+.shopping_settlement li:first-child {
+  float: left;
+  width: 30%;
+}
+.shopping_settlement li:first-child a {
+  text-decoration: none;
+  color: #000;
+}
+.shopping_settlement li:first-child a:hover {
+  color: red;
+  cursor: pointer;
+}
+.shopping_settlement li:first-child #shopping_allnum {
+  color: red;
+}
+.shopping_settlement li:first-child #shopping_checknum {
+  color: red;
+}
+.shopping_settlement li:first-child p {
+  padding: 10px 0;
+}
+.shopping_settlement li:last-child {
+  float: left;
+  margin-left: 45%;
+  width: 25%;
+}
+.shopping_settlement li:last-child p {
+  float: left;
+  width: 60%;
+  color: red;
+}
+.shopping_settlement li:last-child p #shopping_subtotal {
+  font-size: 26px;
+}
+.shopping_settlement li:last-child a {
+  cursor: pointer;
+  float: left;
+  width: 20%;
+}
+.shopping_settlement li:last-child a:hover {
+  box-shadow: 2px 2px 5px #c9c9c9;
+}
+.shopping_btn {
+  text-decoration: none;
+  color: #fff;
+  background: #ff0066;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
