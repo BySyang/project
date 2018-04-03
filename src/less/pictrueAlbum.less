@@ -15,6 +15,15 @@ body{
 @line-height: 80px;
 @lgHeight:80px;
 @right:right;
+h2{
+  font-size: 26px;
+  letter-spacing:.2em;
+  line-height:70px;
+}
+div{
+  letter-spacing: .15em;
+  line-height: 35px;
+}
 header{
   width: @Width;
   height: @bannerHeight;
@@ -30,7 +39,6 @@ header{
       }
       color: @lgFontColor;
       font-size: 36px;
-      letter-spacing:.2em;
       height: @lgHeight;
       float: @right;
       //line-height:@line-height;
@@ -54,18 +62,19 @@ header{
 //div宽
 @divWidth: 44%;
 @margin-left: 6%;
-@sec1Width:84%;
+@sec-width:84%;
+section{
+  width:@sec-width;
+  padding:0 10%;
+}
 .albumSec1{
   background-color: #f7f7f7;
-  width: @sec1Width;
-  height: 900px;
-  padding:0 10%;
+  height: 1850px;
   >div:first-child{
     overflow: hidden;
     width: 100%;
     >div{
       float: left;
-      //display: inline-block;
       width:@divWidth;
       height: 600px;
       margin-top: 50px;
@@ -81,20 +90,158 @@ header{
   }
   >div:nth-of-type(2){
     width:(@divWidth)*2+@margin-left;
-    //background-color: white;
+    background-color: white;
     margin-top: 20px;
-    height: 180px;
+    height: 200px;
     h2{
-      width: @sec1Width;
+      width: @sec-width;
       text-align: center;
       margin: 0 auto;
-      line-height: @line-height;
     }
     >div{
       width: 82%;
       text-align: center;
       margin: 0 auto;
-      line-height: 40px;
+    }
+  }
+  >div:nth-of-type(3){
+    width:(@divWidth)*2+@margin-left;
+    margin-top: 20px;
+    >div{
+      float: left;
+    }
+    >div:nth-of-type(1){
+      width: 47%;
+      height: 700px;
+      img{
+        width: @Width;
+        height: 100%;
+      }
+      h2{
+        margin: 0 6%;
+        color: #ff0066;
+      }
+    }
+    >div:last-child{
+      margin-left: 6%;
+      width: 47%;
+      img{
+        width: @Width;
+      }
+      >img:first-child{
+        height: 600px;
+      }
+      >img:last-child{
+        height: 300px;
+      }
+    }
+  }
+}
+
+
+//身体2
+.albumSec2{
+  background-color: white;
+  height: 570px;
+  @h2_marTop:475px;
+  div{
+    position: relative;
+    width: 30%;
+    float: left;
+    margin-top: 20px;
+    img{
+      transition: all 1s linear;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
+    img:nth-of-type(2){
+      opacity: 0;//设置图片透明度为0，JS部分animate需要
+    }
+    >h2{
+      color: #ff0066;
+      margin-left: 30%;
+    }
+  }
+  div:nth-of-type(1){
+    @height: 460px;
+    height:@height ;
+    img{
+      height:@height ;
+    }
+    >h2{
+      margin-top:@h2_marTop;
+    }
+  }
+  div:nth-of-type(2){
+    @height: 520px;
+    height:@height ;
+    margin-left: 2%;
+    img{
+      height:@height ;
+    }
+
+  }
+  div:nth-of-type(3){
+    @height: 460px;
+    height:@height ;
+    margin-left: 2%;
+    img{
+      height:@height ;
+    }
+    >h2{
+      margin:@h2_marTop 0 0 40%;
+    }
+  }
+}
+
+
+//身体3
+.albumSec3{
+  position: relative;
+  margin-top: 10px;
+  width: @sec-width;
+  height: 520px;
+  div{
+    float: left;
+  }
+  >div:nth-of-type(1){
+    width:30%;
+    img{
+       width: @Width;
+      height: 460px;
+    }
+  }
+  >div:nth-of-type(2){
+    position: relative;
+    margin-left: 2%;
+    width: 30%;
+    height: 230px;
+    div:first-child{
+      margin-top: 30px;
+      p{
+        text-align: center;
+        line-height: 50px;
+        height: 50px;
+      }
+    }
+    div:last-child{
+      height: 228px;
+      position: absolute;
+      top: 233px;
+      img{
+        width: @Width;
+      }
+    }
+
+  }
+  div:nth-of-type(3){
+    width: 30%;
+    margin-left: 2%;
+    img{
+      width: @Width;
+      height: 460px;
     }
   }
 }
