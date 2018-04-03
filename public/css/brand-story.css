@@ -14,6 +14,11 @@
     width: 100%;
     height: 550px;
 }
+
+.bannaer img{
+    width: 100%;
+    height: 550px;
+}
 .content {
     width: 100%;
     height: 800px;
@@ -98,6 +103,10 @@
     float: right;
     background-color: #FFFFFF;
 }
+/*.section2-1-r>img{*/
+    /*width: 1347px;*/
+    /*height: 300px;*/
+/*}*/
 
 
 .section2-t1{
