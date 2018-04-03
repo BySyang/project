@@ -1,0 +1,100 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100%;
+}
+//banner部分less代码
+@Width:100%;
+@bannerHeight:550px;
+@bannerWordLeft:10px;
+@lgFontSize:36px;
+@lgFontColor:white;
+@pink:#ff0066;
+@line-height: 80px;
+@lgHeight:80px;
+@right:right;
+header{
+  width: @Width;
+  height: @bannerHeight;
+  position: relative;
+  div{
+    position:absolute;
+    left:@bannerWordLeft;
+    top:180px;
+    width: 450px;
+    h2{
+      span{
+        color: @pink;
+      }
+      color: @lgFontColor;
+      font-size: 36px;
+      letter-spacing:.2em;
+      height: @lgHeight;
+      float: @right;
+      //line-height:@line-height;
+    }
+    p{
+      font-size:@lgFontSize;
+      color: @lgFontColor;
+      letter-spacing:.5em;
+      height: @lgHeight;
+      float: @right;
+      //line-height:@line-height;
+    }
+  }
+  img{
+    width: @Width;
+    height: @bannerHeight;
+  }
+}
+
+//身体1
+//div宽
+@divWidth: 44%;
+@margin-left: 6%;
+@sec1Width:84%;
+.albumSec1{
+  background-color: #f7f7f7;
+  width: @sec1Width;
+  height: 900px;
+  padding:0 10%;
+  >div:first-child{
+    overflow: hidden;
+    width: 100%;
+    >div{
+      float: left;
+      //display: inline-block;
+      width:@divWidth;
+      height: 600px;
+      margin-top: 50px;
+      overflow: hidden;
+      img{
+        width: @Width;
+        height: 730px;
+      }
+    }
+    >div:nth-of-type(2){
+      margin-left: @margin-left;
+    }
+  }
+  >div:nth-of-type(2){
+    width:(@divWidth)*2+@margin-left;
+    //background-color: white;
+    margin-top: 20px;
+    height: 180px;
+    h2{
+      width: @sec1Width;
+      text-align: center;
+      margin: 0 auto;
+      line-height: @line-height;
+    }
+    >div{
+      width: 82%;
+      text-align: center;
+      margin: 0 auto;
+      line-height: 40px;
+    }
+  }
+}
