@@ -14,19 +14,7 @@ var autoprefix = new LessAutoprefix({
   browsers: ['last 2 versions']
 });
 
-//js处理
-gulp.task('js',function(){
-    return gulp.src('./src/js/*.js')
-    .pipe(uglify({
-        //
-    })).on('error',errorhandling)
-    .pipe(gulp.dest('./public/js'))
-})
-//css压缩
-gulp.task('copy',['less'],function(){
-    return gulp.src(['./public/css/*.css','!./public/css/reset.css'])
-    .pipe(gulp.dest('./public/css/'))
-})
+
 //处理less
 gulp.task('less', function () {
   return gulp.src(['./src/less/*.less','!./src/less/_*.less'])
@@ -39,13 +27,13 @@ gulp.task('less', function () {
 });
 
 //实时刷新
-gulp.task('server',['copy'],function(){
+gulp.task('server',['less'],function(){
     browserSync.init({
         server:{
             baseDir:'./public'
         }
     });
-    gulp.watch('./src/less/*.less', ['copy']);
+    gulp.watch('./src/less/*.less', ['less']);
     gulp.watch(['./public/css/*.css','./public/*.html']).on('change',reload);
 })
 function errorhandling(err) {

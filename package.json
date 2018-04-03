@@ -28,7 +28,7 @@
     "less-plugin-autoprefix": "^1.5.1"
   },
   "scripts": {
-    "test": "node ./bin/www"
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
