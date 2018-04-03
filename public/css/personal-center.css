@@ -166,7 +166,7 @@
 }
 .person-info .person-info-content .infos .orders .order-item .order-goods ul {
   float: left;
-  width: 440px;
+  width: 68%;
   padding: 10px 0 0 30px;
 }
 .person-info .person-info-content .infos .orders .order-item .order-goods ul li {
@@ -209,7 +209,7 @@
 }
 .person-info .person-info-content .infos .orders .order-item .order-goods > a {
   color: #ff0066;
-  padding: 45px;
+  line-height: 110px;
   float: left;
 }
 .person-info .person-info-content .infos .orders .order-item .order-goods div {
