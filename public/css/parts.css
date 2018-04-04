@@ -64,7 +64,7 @@ header {
 }
 
 .box_icon {
-    font-size: 20px;
+    font-size: 16px;
     color: #fff;
     z-index: 9999
 }
@@ -145,7 +145,7 @@ header {
     left: 80px
 }
 
-.head_nav_right_i>i {
+.head_nav_right_i> .box_icon {
     margin: 0 20px
 }
 

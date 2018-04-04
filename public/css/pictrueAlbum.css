@@ -10,38 +10,38 @@ h2 {
   letter-spacing: .2em;
   line-height: 70px;
 }
-div {
+/* div {
   letter-spacing: .15em;
   line-height: 35px;
-}
-header {
+} */
+.h-banner {
   width: 100%;
   height: 550px;
   position: relative;
 }
-header div {
+.h-banner div {
   position: absolute;
   left: 10px;
   top: 180px;
   width: 450px;
 }
-header div h2 {
+.h-banner div h2 {
   color: white;
   font-size: 36px;
   height: 80px;
   float: right;
 }
-header div h2 span {
+.h-banner div h2 span {
   color: #ff0066;
 }
-header div p {
+.h-banner div p {
   font-size: 36px;
   color: white;
   letter-spacing: .5em;
   height: 80px;
   float: right;
 }
-header img {
+.h-banner img {
   width: 100%;
   height: 550px;
 }
