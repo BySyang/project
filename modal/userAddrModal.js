@@ -1,5 +1,4 @@
 /* 用户地址 */
-
 const sqlPool = require('./sqlPool');
 let sql = 'select * from users_address';
 module.exports = {
