@@ -50,7 +50,10 @@ function xingMargin() {
 xingMargin();
 $(".bigdl").mouseenter(function(){
     $(this).find(".smimg img").css({"transform":"scale(1.02)"})
-})
+});
 $(".bigdl").mouseout(function(){
     $(this).find(".smimg img").css({"transform":"","-webkit-transition":"all 0.3s linear"})
-})
+});
+$('.bigdl').on('click',function(){
+    location.href='Product_details.html';
+});
