@@ -1,6 +1,6 @@
 /* 登录 */
 
-form {
+.submit {
     position: relative;
 }
 
@@ -15,7 +15,7 @@ form {
 
 .l_z {
     position: absolute;
-    width: 130px;
+    width: 150px;
     height: 30px;
     top: 15px;
     left: 30px;
@@ -140,11 +140,14 @@ form {
     font-size: 11px;
 }
 
-.input_checkbox>span:nth-child(4) {
+.input_checkbox a{
     position: absolute;
     display: block;
-    right: 15px;
+    right: -8px;
     font-size: 11px;
+    text-decoration: none;
+    color: black;
+    
 }
 
 .button {
@@ -184,6 +187,9 @@ form {
 
 /* 注册 */
 
+#zhuce{
+    display: none;
+}
 .register {
     position: absolute;
     top: 20%;
@@ -191,7 +197,7 @@ form {
     margin: 0px auto;
     width: 281px;
     height: 242px;
-    display: none;
+    display: block;
 }
 
 .regs_contain {
@@ -206,7 +212,7 @@ form {
     /* border: 1px solid red; */
 }
 
-.regs_contain>input {
+.regs_contain>input:nth-child(1) {
     display: block;
     left: 0px;
     right: 0px;
@@ -216,6 +222,18 @@ form {
     width: 80%;
     height: 35px;
     margin-bottom: 10px;
+}
+.req_mesg{
+    position: absolute;
+    top: 1px;
+    right: 25px;
+    color: white;
+    background: #ff0066;
+    width: 65px;
+    height: 37px;
+    border: none;
+    text-align: center;
+    border-radius: 2px;
 }
 
 .regist_checkbox {
@@ -234,4 +252,27 @@ form {
     position: absolute;
     left: 0%;
     top: 100%;
+}
+
+/* 忘记密码 */
+
+#wangji{
+    position: absolute;
+    top: 30px;
+    left: 51.5%;
+    width: 285px;
+    height: 242px;
+    display: none;
+
+    /* border: 1px solid red; */
+}
+#wangji>span{
+    position: absolute;
+    top: 0px;
+    left: 90px;
+    font-size: 18px;
+}
+.forget_button>input{
+    position: absolute;
+    top: 70%
 }
