@@ -30,11 +30,8 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 //分发路由
 app.use(express.static(path.join(__dirname, 'public')));
-app.get('/',pages);
-app.post('/user',users);
-app.post('/goods',goods);
-app.post('./cats',cats);
-app.post('')
+app.use('/',pages);
+app.use('/',users);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

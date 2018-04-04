@@ -3,7 +3,11 @@ header {
   height: 550px;
 }
 #Banimg {
-  width: 1346px;
+  width: 100%;
+  height: 550px;
+}
+#Banimg img{
+  width: 100%;
   height: 550px;
 }
 section {

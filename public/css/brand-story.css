@@ -4,11 +4,11 @@
 }
 .body {
     width: 1347px;
-    font-family: "Î¢ÈíÑÅºÚ";
+    font-family: "å¾®è½¯é›…é»‘";
 }
 .outer {
     width: 100%;
-    height: 1000px;
+    height: 2560px;
 }
 .banner {
     width: 100%;
@@ -72,7 +72,7 @@
 /*section2*/
 .section2 {
     width: 100%;
-    height: 1000px;
+    /* height: 1000px; */
     /*background-color: yellowgreen;*/
 }
 
