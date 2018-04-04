@@ -12,7 +12,7 @@
 
 <body>
     <!-- 登录注册 -->
-    <form  action="login.do" method="post" class="submit"  id="from" enctype="multipart/form-data">
+    <div action="login.do" method="post" class="submit">
         <div class="login_contain">
             <div class="login_contain_left">
                 <img src="./images/login/login_pic.png" alt="">
@@ -23,60 +23,85 @@
                     <span>注册</span>
                 </div>
                 <!-- 登录输入框 -->
-                <div class="login_row">
-                    <div class="field">
-                        <input type="text" id="username" name="username" class="input_big" placeholder="请输入用户名/手机号">
-                        <i class="iconfont icon-suo icon_login"></i>
+                <form action="" id="denglu">
+                    <div class="login_row" action="submit" method="post">
+                        <div class="field">
+                            <input type="text" id="username" name="username" class="input_big" placeholder="请输入用户名/手机号">
+                            <i class="iconfont icon-suo icon_login"></i>
+                        </div>
+                        <div class="field">
+                            <input type="password" id="password" name="possword" class="input_big" placeholder="请输入密码">
+                            <i class="iconfont icon-gerenzhongxin1 icon_login"></i>
+                        </div>
+                        <div class='input_checkbox'>
+                            <input type="checkbox" name="checkbox" value="记住密码">
+                            <span>记住密码</span>
+                            <a href="javascript:void(0)">忘记密码？</a>
+                        </div>
+                        <input type="button" class="button" value="登录">
+                        <div class="login_text">通过以下账号登录</div>
+                        <div class="login_icon">
+                            <i class="iconfont icon-qq"></i>
+                            <i class="iconfont icon-weibo"></i>
+                            <i class="iconfont icon-zhifubaozhifu"></i>
+                        </div>
                     </div>
-                    <div class="field">
-                        <input type="password" id="password" name="possword" class="input_big" placeholder="请输入密码">
-                        <i class="iconfont icon-gerenzhongxin1 icon_login"></i>
-                    </div>
-                    <div class='input_checkbox'>
-                        <input type="checkbox" name="checkbox" value="记住密码">
-                        <span>记住密码</span>
-                        <input type="checkbox" name="checkbox" value="忘记密码">
-                        <span>忘记密码？</span>
-                    </div>
-                    <input type="button" class="button" value="登录">
-                    <div class="login_text">通过以下账号登录</div>
-                    <div class="login_icon">
-                        <i class="iconfont icon-qq"></i>
-                        <i class="iconfont icon-weibo"></i>
-                        <i class="iconfont icon-zhifubaozhifu"></i>
-                    </div>
+            </div>
+        </div>
+        </form>
+        <!-- 注册 -->
+        <form action="" id="zhuce">
+            <div class="register" action="submit" method="post">
+                <div class="regs_contain">
+                    <input type="text" class="input_big" placeholder="请输入手机号">
+                    <i class="iconfont icon-gerenzhongxin1 icon_login"></i>
+                </div>
+                <div class="regs_contain">
+                    <input type="text" class="input_big" placeholder="短信验证码">
+                    <input type="button" class="req_mesg" value="点击获取"></input>
+                </div>
+                <div class="regs_contain">
+                    <input type="password" class="input_big" placeholder="最新密码长度为6">
+                    <i class="iconfont icon-suo icon_login"></i>
+                </div>
+                <div class="regs_contain">
+                    <input type="password" class="input_big" placeholder="请再次输入密码">
+                    <i class="iconfont icon-hekriconshebeisuoguan icon_login"></i>
+                </div>
+                <div class="regist_checkbox">
+                    <input type="checkbox">阅读并同意
+                    <a href="">《FashionGirl服务协议》</a>
+                </div>
+                <div class="regist_button">
+                    <input type="button" class="button" value="注册"></input>
                 </div>
             </div>
+        </form>
+        
+        <!-- 忘记密码 -->
+        <form action="" id="wangji">
+            <span>重置密码</span>
+            <div class="forget_pwd" action="submit" method="post">
+                <div class="register" action="submit" method="post">
+                    <div class="regs_contain">
+                        <input type="text" class="input_big" placeholder="请输入新密码">
+                    </div>
+                    <div class="regs_contain">
+                        <input type="text" class="input_big" placeholder="请再次输入新密码">
+                    </div>
+                    <div class="regs_contain">
+                        <input type="text" class="input_big" placeholder="短信验证码">
+                        <input type="button" class="req_mesg" value="点击获取"></input>
+                    </div>
+                    <div class="forget_button">
+                        <input type="button" class="button" value="确定"></input>
+                    </div>
+                </div>
+        </form>
         </div>
-        <!-- 注册 -->
-        <div class="register">
-            <div class="regs_contain">
-                <input type="text" class="input_big" placeholder="请输入手机号">
-                <i class="iconfont icon-gerenzhongxin1 icon_login"></i>
-            </div>
-            <div class="regs_contain">
-                <input type="text" class="input_big" placeholder="请输入邮箱">
-                <i class="iconfont icon-xinxi icon_login"></i>
-            </div>
-            <div class="regs_contain">
-                <input type="password" class="input_big" placeholder="最新密码长度为6">
-                <i class="iconfont icon-suo icon_login"></i>
-            </div>
-            <div class="regs_contain">
-                <input type="password" class="input_big" placeholder="请再次输入密码">
-                <i class="iconfont icon-hekriconshebeisuoguan icon_login"></i>
-            </div>
-            <div class="regist_checkbox">
-                <input type="checkbox">阅读并同意
-                <a href="">《FashionGirl服务协议》</a>
-            </div>
-            <div class="regist_button">
-                <input type="button" class="button" value="注册"></input>
-            </div>
-        </div>
-    </form>
 </body>
 <script src="./js/jquery-1.11.3.js"></script>
 <script src="./js/layer-v3.1.1/layer/layer.js"></script>
 <script src="./js/index.js"></script>
+
 </html>

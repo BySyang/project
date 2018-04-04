@@ -85,19 +85,30 @@ $(window).scroll(function() {
     
     // 登录注册切换js
     $(".l_z>span:nth-child(1)").on('click',function(){
-        $(".login_row").css({"display":"block"})
+        $("#denglu").css({"display":"block"})
         $(".l_z>span:nth-child(2)").css({"border-bottom":"none"})
         $(this).css({"border-bottom":"4px solid #ff0066"})
-        $(".register").css({"display":"none"})
+        $("#zhuce").css({"display":"none"})
         // console.log("1111")
     })
     $(".l_z>span:nth-child(2)").on('click',function(){
-        $(".login_row").css({"display":"none"})
+        $("#denglu").css({"display":"none"})
         $(".l_z>span:nth-child(1)").css({"border-bottom":"none"})
         $(this).css({"border-bottom":"4px solid #ff0066"})
-        $(".register").css({"display":"block"})
+        $("#zhuce").css({"display":"block"})
         // console.log("2222")
     })
-    
+    $(".input_checkbox>a").on('click',function(){
+        $("#wangji").css({"display":"block"})
+        $("#zhuce").css({"display":"none"})
+        $("#denglu").css({"display":"none"})
+        $(".l_z").css({"display":"none"})
+        $(".forget_button").on('click',function(){
+            $("#wangji").css({"display":"none"})
+            $(".l_z").css({"display":"block"})
+            $("#denglu").css({"display":"block"})
+        })
+    })
+
 
     })
