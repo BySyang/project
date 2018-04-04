@@ -1,5 +1,7 @@
 const userModal = require('../modal/userModal');
 const userAddr = require('../modal/userAddrModal');
+const leanengine = require('leanengine');
+
 module.exports = {
     userLogin(req, res) {
         let user = req.body.username;
@@ -7,7 +9,8 @@ module.exports = {
         userModal.userLogin(user, pwd, function (err, data) {
             if (!err) {
                 if (data[0]) {
-                    res.session.userInfo = data[0];
+                    console.log(data[0])
+                    req.session.userInfo = data[0];
                     res.send('ok');
                 } else {
                     res.send('fail');
@@ -16,6 +19,35 @@ module.exports = {
                 console.log(err);
             }
         })
+    },
+    register(req, res) {
+        userModal.register(req.body.username, req.body.password, function (err, data) {
+            if (!err) {
+                if (data) {
+                    res.send('ok');
+                } else {
+                    res.send('fail');
+                }
+            } else {
+                console.log(err);
+            }
+        })
+    },
+    resetPwd(req, res) {
+        userModal.resetPwd(req.body.username, req.body.password, function (err, data) {
+            if (!err) {
+                if (data) {
+                    res.send('ok');
+                } else {
+                    res.send('fail');
+                }
+            } else {
+                console.log(err);
+            }
+        })
+    },
+    isLogin(req, res) {
+        res.send(req.session.userInfo ? 'true' : 'false');
     },
     userExit(req, res) {
         req.session.destroy();
