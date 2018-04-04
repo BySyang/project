@@ -18,7 +18,7 @@
 }
 #product_detatop {
   width: 80%;
-  height: 550px;
+  height: 525px;
   margin: 20px auto;
 }
 #product_detaright,
@@ -32,7 +32,7 @@
   border: 2px solid #000;
 }
 #product_detaright {
-  margin-left: 20px;
+  margin-left: 95px;
 }
 #product_detaright > .right_deta p:first-of-type {
   font-size: 16px;
@@ -115,7 +115,7 @@
 #product_detaright > .buy {
   margin-top: 15px;
   width: 400px;
-  height: 80px;
+  height: 40px;
 }
 #product_detaright > .buy #tianjiagouwu,
 #product_detaright > .buy #lijibuy {
@@ -128,17 +128,17 @@
 }
 .con-FangDa {
   height: auto;
-  width: 490px;
+  width: 300px;
   position: relative;
   background-color: #fff;
 }
 /*正常容器*/
 .con-fangDaIMg {
-  width: 400px;
-  height: 500px;
+  width: 300px;
+  height: 450px;
   position: absolute;
   top: 0;
-  left: 90px;
+  left: 75px;
 }
 .con-fangDaIMg > img {
   width: 100%;
@@ -196,13 +196,13 @@
   height: auto;
 }
 .con-FangDa-ImgList > .active {
-  border-color: #000;
+  border-color: #9e9d9d;
 }
 .product_detamid {
   width: 100%;
   height: 100px;
   margin: 0 auto;
-  border-top: 2px solid #f7f7f7;
+  border-top: 1px solid #f7f7f7;
   border-bottom: 1px solid #f7f7f7;
 }
 .product_detamid ul {
@@ -212,7 +212,7 @@
 }
 .product_detamid ul li {
   cursor: pointer;
-  margin-right: 120px;
+  margin-right: 6%;
   display: inline-block;
   padding: 18px 40px;
 }
@@ -224,7 +224,7 @@
   margin: 20px 0;
   font-size: 14px;
   line-height: 18px;
-  width: 300px;
+  width: 30%;
   height: 100px;
   display: inline-block;
   vertical-align: top;
@@ -243,6 +243,12 @@
 #product_datatab1 .tab1_list {
   width: 80%;
   margin: 0 auto;
+}
+#product_datatab1 .tab1_list .tab1_box {
+  width: 100%;
+}
+#product_datatab1 .tab1_list .tab2_box img {
+  width: 100%;
 }
 #product_datatab1 .tab1_list .tab3_box {
   height: 740px;
@@ -397,10 +403,11 @@
   margin-top: 15px;
 }
 #product_detatab3 .product_guide .guide_con .guide_bra_info a p {
+  text-align: left;
   line-height: 24px;
-  width: 60%;
+  width: 76%;
   margin: 0 auto;
-  height: 90px;
+  height: 110px;
   margin-bottom: 10px;
 }
 #product_detatab3 .product_guide .guide_con .guide_bra_info a span {
@@ -415,8 +422,8 @@
   text-indent: 2em;
 }
 #product_detatab3 .product_guide .guide_con .guide_wear {
-  height: 600px;
-  width: 85%;
+  height: 666px;
+  width: 100%;
   margin: 0 auto;
 }
 #product_detatab3 .product_guide .guide_con .guide_wear a {
@@ -425,7 +432,7 @@
   float: left;
 }
 #product_detatab3 .product_guide .guide_con .guide_wear a p {
-  width: 75%;
+  width: 85%;
   margin: 0 auto;
 }
 #product_detatab3 .product_guide .guide_con .guide_wash_icon {
@@ -475,5 +482,3 @@
 #product_detatab4 .product_problem p {
   font-size: 10px;
 }
-
-/*# sourceMappingURL=Product_details.css.map */
