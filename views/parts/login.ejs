@@ -23,22 +23,22 @@
                     <span>注册</span>
                 </div>
                 <!-- 登录输入框 -->
-                <form action="" id="denglu">
+                <form id="denglu">
                     <div class="login_row" action="submit" method="post">
                         <div class="field">
                             <input type="text" id="username" name="username" class="input_big" placeholder="请输入用户名/手机号">
                             <i class="iconfont icon-suo icon_login"></i>
                         </div>
                         <div class="field">
-                            <input type="password" id="password" name="possword" class="input_big" placeholder="请输入密码">
+                            <input type="password" id="password" name="password" class="input_big" placeholder="请输入密码">
                             <i class="iconfont icon-gerenzhongxin1 icon_login"></i>
                         </div>
                         <div class='input_checkbox'>
-                            <input type="checkbox" name="checkbox" value="记住密码">
+                            <input type="checkbox" value="记住密码">
                             <span>记住密码</span>
                             <a href="javascript:void(0)">忘记密码？</a>
                         </div>
-                        <input type="button" class="button" value="登录">
+                        <input type="button" class="button" id="logBtn" value="登录">
                         <div class="login_text">通过以下账号登录</div>
                         <div class="login_icon">
                             <i class="iconfont icon-qq"></i>
@@ -53,15 +53,15 @@
         <form action="" id="zhuce">
             <div class="register" action="submit" method="post">
                 <div class="regs_contain">
-                    <input type="text" class="input_big" placeholder="请输入手机号">
+                    <input type="text" class="input_big" name="username" placeholder="请输入手机号">
                     <i class="iconfont icon-gerenzhongxin1 icon_login"></i>
                 </div>
                 <div class="regs_contain">
-                    <input type="text" class="input_big" placeholder="短信验证码">
-                    <input type="button" class="req_mesg" value="点击获取"></input>
+                    <input type="text" class="input_big identCode" placeholder="短信验证码">
+                    <input type="button" class="req_mesg getIdent_code" value="点击获取"></input>
                 </div>
                 <div class="regs_contain">
-                    <input type="password" class="input_big" placeholder="最新密码长度为6">
+                    <input type="password" class="input_big" name="password" placeholder="最新密码长度为6">
                     <i class="iconfont icon-suo icon_login"></i>
                 </div>
                 <div class="regs_contain">
@@ -73,28 +73,31 @@
                     <a href="">《FashionGirl服务协议》</a>
                 </div>
                 <div class="regist_button">
-                    <input type="button" class="button" value="注册"></input>
+                    <input type="button" class="button" id="regBtn" value="注册"></input>
                 </div>
             </div>
         </form>
-        
+
         <!-- 忘记密码 -->
         <form action="" id="wangji">
             <span>重置密码</span>
-            <div class="forget_pwd" action="submit" method="post">
-                <div class="register" action="submit" method="post">
+            <div class="forget_pwd">
+                <div class="register">
                     <div class="regs_contain">
-                        <input type="text" class="input_big" placeholder="请输入新密码">
+                        <input type="text" class="input_big" name="username" placeholder="请输入你的手机号码">
                     </div>
                     <div class="regs_contain">
-                        <input type="text" class="input_big" placeholder="请再次输入新密码">
+                        <input type="password" class="input_big" name="password" placeholder="请输入新密码">
                     </div>
                     <div class="regs_contain">
-                        <input type="text" class="input_big" placeholder="短信验证码">
-                        <input type="button" class="req_mesg" value="点击获取"></input>
+                        <input type="password" class="input_big" placeholder="请再次输入新密码">
+                    </div>
+                    <div class="regs_contain">
+                        <input type="text" class="input_big identCode" placeholder="请输入短信验证码">
+                        <input type="button" class="req_mesg getIdent_code" value="点击获取"></input>
                     </div>
                     <div class="forget_button">
-                        <input type="button" class="button" value="确定"></input>
+                        <input type="button" class="button" value="确定" id="resetPwd"></input>
                     </div>
                 </div>
         </form>
