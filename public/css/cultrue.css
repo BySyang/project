@@ -1,0 +1,858 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: 100%;
+  height: 550px;
+  background-image: url("../images/culture/bg.png");
+
+}
+header>h5 {
+  color: rgb(71, 71, 71);
+  font-family: "Î¢ÈíÑÅºÚ";
+  font-size: 20px;
+  position: absolute;
+  left: 800px;
+  top: 300px;
+  font-weight: normal;
+  text-indent:40px;
+  line-height: 40px;
+}
+section {
+  width: 100%;
+  height: 655px;
+  background-color: #f7f7f7;
+}
+ul li {
+  list-style: none;
+}
+.culCaption {
+  width: 330px;
+  height: 130px;
+  box-shadow: 2px 3px 10px rgba(188, 188, 188, 0.35);
+}
+#culContent>ul {
+  float: left;
+}
+#culContent>ul>li>div>p {
+   color: #666666;
+   font-family: "Î¢ÈíÑÅºÚ";
+   font-size: 24px;
+   line-height: 130px;
+ }
+#culContent>ul>li>div>a>span {
+  color: #666666;
+  font-family: "Î¢ÈíÑÅºÚ";
+  font-size: 14px;
+
+}
+.culCaptionNum1 {
+  width: 330px;
+  height: 130px;
+  margin-top: 10px;
+  box-shadow: 1px 2px 10px rgba(188, 188, 188, 0.35);
+}
+.culCaptionNum1>a>img {
+  margin-top: 13px;
+}
+.culCaptionNum2 {
+  width: 330px;
+  height: 100px;
+  margin-top: 3px;
+  box-shadow: 1px 2px 10px rgba(188, 188, 188, 0.35);
+}
+.culCaptionNum2>a>img {
+  float: left;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.culCaptionNum2>a>span {
+  float: right;
+  margin-top: 40px;
+  padding-right: 20px;
+}
+.culCaptionNum2>a>span>img {
+  position: relative;
+  top: 5px;
+}
+#num2First,#num3First {
+  margin-top: 10px;
+}
+.culCaptionNum3 {
+  width: 330px;
+  height: 200px;
+  margin-top: 8px;
+  box-shadow: 1px 2px 10px rgba(188, 188, 188, 0.35);
+}
+.culCaptionNum3>a>img {
+  margin-top:35px;
+}
+.culCaptionNum3>a>span>img {
+  margin-top:13px;
+}
+#culContent {
+  width: 1050px;
+  height: 550px;
+  margin: auto;
+  padding-top: 50px;
+}
+#culContent > ul {
+  width: 350px;
+  height: 550px;
+}
+li>div {
+  text-align: center;
+  margin: auto;
+}
+/*¸øËùÓÐLiÌí¼ÓÑùÊ½*/
+
+.liClass {
+  width: 330px;
+  height: 130px;
+  margin-left: 10px;
+}
+a {
+  text-decoration: none;
+}
+
+
+
+/*myModaNuml °å¿éÑùÊ½*/
+.myImg {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+p {
+   text-align: center;
+   color: #666666;
+   font-family: "Î¢ÈíÑÅºÚ";
+   font-size: 18px;
+   margin-top: 20px;
+   line-height: 30px;
+   clear: both;
+}
+#myNav1_1 {
+   width: 840px;
+   height: 220px;
+   margin: 10px auto;
+ }
+#myNav1_2 {
+  width: 690px;
+  height: 220px;
+  margin: 10px auto;
+}
+#myNav1_1>ul>li,
+#myNav1_2>ul>li {
+  float: left;
+}
+#myNav1_2>ul>li>div {
+  margin: 0 20px;
+  width: 180px;
+  height: 200px;
+}
+#myNav1_1>ul>li>div{
+  margin: 0 20px;
+  width: 160px;
+  height: 200px;
+}
+#myNav1_1 span , #myNav1_2 span {
+  text-align: center;
+  color: #666666;
+  font-family: "Î¢ÈíÑÅºÚ";
+  font-size: 14px;
+}
+#myNav1_1>ul>li>div>img ,
+#myNav1_2>ul>li>div>img {
+  width: 80px;
+  padding-bottom: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+/*myModaNum1_1 °å¿éÑùÊ½*/
+.mySize {
+  width: 900px;
+  height: 155px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.mySize_1,.mySize_2 {
+  width: 430px;
+  height: 155px;
+  float: left;
+}
+.mySize_11 {
+  float: left;
+  height: 155px;
+  width: 100px;
+  font-size: 18px;
+  color: #F86986;
+  line-height: 155px;
+}
+.mySize_12 {
+  background-image: url("../images/culture/102/clear_size_samll.png");
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: center;
+  float: left;
+  height: 155px;
+  width: 280px;
+  line-height: 24px;
+  margin-left: 10px;
+}
+.mySize_12 ul {
+  padding-top: 46px;
+  padding-left: 60px;
+}
+.mySize li {
+  color: #514C45;
+  line-height: 30px;
+  font-size: 16px;
+}
+.mySize_21 {
+  float: left;
+  height: 105px;
+  width: 140px;
+  font-size: 18px;
+  color: #f86986;
+  padding-top: 50px;
+}
+.mySize_22 {
+  float: left;
+  height: 155px;
+  width: 280px;
+  line-height: 24px;
+  margin-left: 10px;
+}
+.mySize_22 ul {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.mySize_title {
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+/*myModaNum1_2 °å¿éÑùÊ½*/
+#myModalNum1_2>p {
+  font-size: 14px;
+  color: #666;
+  line-height: 20px;
+  width: 685px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.beautyPasd_1 {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.pasdText {
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+#myModalNum1_2 .washText {
+  width: 685px;
+}
+.pic1 {
+  background-image: url(../images/culture/103/found_beautypsd_pic001.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 420px;
+}
+.pic2 {
+  background-image: url(../images/culture/103/found_beautypsd_pic002.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 340px;
+}
+.beautyPasd_3>.pic1 {
+  background-image: url(../images/culture/103/found_beautypsd_pic003.png);
+  height: 274px;
+}
+.beautyPasd_3>.pic2 {
+  background-image: url(../images/culture/103/found_beautypsd_pic004.png);
+  height: 220px;
+}
+.beautyPasd_4 .washText {
+  text-align: left;
+  text-indent:2em;
+}
+
+
+
+
+/*myNodaNum2_1 ÄÚÒÂ´©´÷²½Öèstyle*/
+
+.myStep1 {
+  background-image: url("../images/culture/201/wear_steps_pic1.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: center;
+  height: 397px;
+  width: 828px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 60px;
+  padding-left: 20px;
+}
+.stepText4 {
+  text-align: left;
+  font-size: 14px;
+  line-height: 30px;
+  width: 210px;
+  float: left;
+  padding-left: 13px;
+  padding-top: 50px;
+}
+.stepText3 {
+  text-align: right;
+  font-size: 14px;
+  line-height: 30px;
+  width: 210px;
+  float: right;
+  padding-right: 10px;
+  margin-top: -40px;
+}
+
+.stepText1 {
+  text-align: left;
+  font-size: 14px;
+  line-height: 30px;
+  width: 210px;
+  float: left;
+  padding-top: 155px;
+  padding-left: 13px;
+}
+.stepText2 {
+  text-align: right;
+  font-size: 14px;
+  line-height: 30px;
+  width: 250px;
+  float: right;
+  padding-right: 10px;
+  margin-top: -100px;
+}
+.myStep2 {
+  background-image: url("../images/culture/201/wear_steps_pic2.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: center;
+  height: 397px;
+  width: 828px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 60px;
+  padding-left: 20px;
+}
+.stepText5 {
+  text-align: left;
+  font-size: 14px;
+  line-height: 30px;
+  float: left;
+  padding-left: 15px;
+  margin-top: 70px;
+  width: 250px;
+}
+.stepText6 {
+  text-align: right;
+  font-size: 14px;
+  line-height: 30px;
+  float: right;
+  padding-right: 15px;
+  margin-top: 135px;
+  width: 250px;
+}
+.myStep3 {
+  font-size: 30px;
+  line-height: 20px;
+  text-align: center;
+  height: 30px;
+  padding-top: 50px;
+}
+.myStep4 {
+  height: 400px;
+  width: 828px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 30px;
+}
+
+.myStep4_1,.myStep4_2,.myStep4_3,.myStep4_4,.myStep4_5 {
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 300px;
+  width: 165px;
+  float: left;
+}
+.myStep4_1 {
+  background-image: url(../images/culture/201/wear_steps_001.png);
+}
+.myStep4_2 {
+  background-image: url(../images/culture/201/wear_steps_002.png);
+}
+.myStep4_3 {
+  background-image: url(../images/culture/201/wear_steps_003.png);
+}
+.myStep4_4 {
+  background-image: url(../images/culture/201/wear_steps_004.png);
+}
+.myStep4_5 {
+  background-image: url(../images/culture/201/wear_steps_005.png);
+}
+.myText {
+  font-size: 14px;
+  line-height: 20px;
+  width: 135px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 200px;
+}
+
+/*myNodaNum2_2 ÄÚÒÂÏ´µÓstyle*/
+
+.washTitle1 {
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  padding-top: 50px;
+}
+.washText1 {
+  font-size: 14px;
+  line-height: 24px;
+  width: 672px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.washTitle2 {
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  padding-top: 25px;
+}
+.washTitle3 {
+  width: 840px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 25px;
+}
+
+.listUp {
+  float: left;
+  height: 115px;
+  width: 276px;
+}
+.listDown {
+  float: left;
+  height: 170px;
+  width: 276px;
+  padding-top: 50px;
+}
+.washPart1 {
+  background-image: url(../images/culture/202/part84h.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  float: left;
+  width: 1px;
+  height: 115px;
+}
+.washPart2 {
+  background-image: url(../images/culture/202/part170h.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 180px;
+  width: 1px;
+  float: left;
+  margin-top: 50px;
+}
+.one ,.two,.three,.four,.five,.six{
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 25px;
+}
+.one {
+  background-image: url(../images/culture/202/Underwear_Wash_one.png);
+}
+.two {
+  background-image: url(../images/culture/202/Underwear_Wash_two.png);
+}
+.three {
+  background-image: url(../images/culture/202/Underwear_Wash_three.png);
+}
+.four {
+  background-image: url(../images/culture/202/Underwear_Wash_four.png);
+}
+.five {
+  background-image: url(../images/culture/202/Underwear_Wash_five.png);
+}
+.six {
+  background-image: url(../images/culture/202/Underwear_Wash_six.png);
+}
+.washText {
+  font-size: 14px;
+  line-height: 24px;
+  width: 230px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20px;
+}
+.washTitle4>.washText {
+  width: 660px;
+}
+.washTitle4>.washTitle2 {
+  padding-top: 50px;
+}
+.washSpan {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+
+/*myNodaNum2_3 ÄÚÒÂÁÀÉ¹style*/
+.myAir {
+  background-image: url(../images/culture/203/Underwear_air_content.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height: 419px;
+  margin-right: auto;
+  margin-left: 150px;
+  padding-top: 85px;
+  width: 858px;
+}
+
+.airText1 {
+  width: 858px;
+  padding-top: 45px;
+}
+.airText2 {
+  width: 858px;
+  padding-top: 205px;
+}
+.airText1>.airOne {
+  text-align: left;
+  font-size: 14px;
+  line-height: 20px;
+  width: 180px;
+  float: left;
+  padding-left: 55px;
+  margin-top: 0;
+}
+.airText1>.airTwo {
+  text-align: left;
+  font-size: 14px;
+  line-height: 20px;
+  width: 180px;
+  float: right;
+  padding-right: 80px;
+  margin-top: -60px;
+}
+
+.airText2>.airThree {
+  text-align: left;
+  font-size: 14px;
+  line-height: 20px;
+  width: 160px;
+  padding-left: 55px;
+  float: left;
+  margin-top: 0;
+}
+.airText2>.airFour {
+  text-align: left;
+  font-size: 14px;
+  line-height: 20px;
+  width: 240px;
+  float: right;
+  padding-right: 55px;
+  margin-top: -60px;
+}
+
+
+/*myNodaNum2_4 ÄÚÒÂÁÀÉ¹style*/
+
+.foldText1 {
+  background-image: url(../images/culture/204/Underwear_FoldKeep_bigpic.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 800px;
+  padding-top: 50px;
+  text-indent: -9999px;
+}
+
+.foldText2>.washText {
+  width: 480px;
+}
+
+.foldText3 {
+  margin: 0  auto;
+  width: 820px;
+}
+
+.foldOne ,.foldTwo,.foldThree,
+.foldFour,.foldFive,.foldSix,
+.foldSeven,.foldEight {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25px;
+}
+.part81h {
+  background-image: url(../images/culture/204/part81h.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 81px;
+  float: left;
+  width: 1px;
+  margin-top: 50px;
+}
+
+.foldBox {
+  width: 200px;
+  float: left;
+  height: 110px;
+  padding-right: 3px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.foldOne {
+  background-image: url(../images/culture/204/Underwear_FoldKeep_one.png);
+}
+.foldTwo {
+  background-image: url(../images/culture/204/Underwear_FoldKeep_two.png);
+}
+.foldThree {
+  background-image: url(../images/culture/204/Underwear_FoldKeep_three.png);
+}
+.foldFour {
+  background-image: url(../../images/culture/204/Underwear_FoldKeep_four.png);
+}
+.foldFive  {
+  background-image: url(../images/culture/204/Underwear_FoldKeep_five.png);
+}
+.foldSix {
+  background-image: url(../images/culture/204/Underwear_FoldKeep_six.png);
+}
+.foldSeven {
+  background-image: url(../images/culture/204/Underwear_FoldKeep_seven.png);
+}
+.foldEight {
+  background-image: url(../images/culture/204/Underwear_FoldKeep_eight.png);
+}
+
+
+
+
+
+/*myNodaNum3_1 Ñ¡¹ºÄÚÒÂµÄÒªµãstyle*/
+
+.myKey {
+  margin-left: 80px;
+  margin-top: 50px;
+}
+
+.keyTextB {
+  padding-top: 100px;
+  width: 240px;
+  float: left;
+  margin-right: 13px;
+}
+.keyTextB>p {
+  padding-top: 5px;
+  font-size: 14px;
+  color: #514c45;
+  line-height: 20px;
+  width: 238px;
+  text-indent: 28px;
+}
+.keyImg {
+  float: left;
+  height: 401px;
+  width: 416px;
+}
+.keyTextA {
+  margin-left: 10px;
+  padding-top: 60px;
+  width: 240px;
+  float: left;
+  margin-right: 13px;
+}
+.keyTextA>p {
+  text-align: center;
+  font-size: 14px;
+  color: #514c45;
+  line-height: 20px;
+  width: 238px;
+  text-indent: 28px;
+}
+.keyTextC {
+  margin-left: auto;
+  padding-top: 415px;
+  width: 240px;
+  margin-right: auto;
+}
+.keyTextC>p {
+  font-size: 14px;
+  color: #514c45;
+  line-height: 20px;
+  text-indent: 28px;
+  width: 238px;
+}
+
+
+
+/*myNodaNum3_2 Ñ¡¹ºÄÚÒÂ´îÅä*/
+
+.myMatchTitle {
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  padding-top: 30px;
+}
+.part40h {
+  float: left;
+  height: 100px;
+  width: 1px;
+  background-image: url(../images/culture/302/part40h.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.matchText1 {
+  width: 850px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 30px;
+}
+
+.matchBoxA,.matchBoxB,.matchBoxC,.matchBoxD {
+  float: left;
+  height: 100px;
+  width: 210px;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.matchBoxA {
+  background-image: url(../images/culture/302/wearing_collocation_A.png);
+}
+.matchBoxB {
+  background-image: url(../images/culture/302/wearing_collocation_B.png);
+}
+.matchBoxC {
+  background-image: url(../images/culture/302/wearing_collocation_C.png);
+}
+.matchBoxD {
+  background-image: url(../images/culture/302/wearing_collocation_D.png);
+}
+.matchText1 {
+  text-align: center;
+  font-size: 20px;
+  line-height: 26px;
+  padding-top: 30px;
+}
+.matchText2 {
+  height: 560px;
+  width: 830px;
+  margin-right: auto;
+  margin-left: auto;
+  clear: both;
+  padding-top: 30px;
+}
+
+
+
+.matchText2_Left {
+  float: left;
+  width: 412px;
+  height: 560px;
+  background-image: url(../images/culture/302/wearing_collocation_pic001.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.matchT {
+  text-align: center;
+  font-size: 20px;
+  line-height: 26px;
+  padding-top: 310px;
+}
+
+.part530h {
+  background-image: url(../images/culture/302/part530h.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 560px;
+  width: 1px;
+  float: left;
+}
+#myModalNum3_2  .washText{
+  width: 290px;
+}
+.matchText2_Right {
+  background-image: url(../images/culture/302/wearing_collocation_pic002.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 560px;
+  width: 412px;
+  float: left;
+}
+.part316w {
+  float: left;
+  width: 412px;
+  background-image: url(../images/culture/302/part316w.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 25px;
+  padding-bottom: 5px;
+}
+.matchText3 ,.matchText4 {
+  width: 830px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.matchText5 {
+  width: 930px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 30px;
+  padding-left: 60px;
+  margin-top: 50px;
+}
+
+.matchImg {
+  background: url(../images/culture/302/wearing_collocation_pic005.png) top center no-repeat;
+  float: left;
+  height: 320px;
+  width: 280px;
+  padding-left: 50px;
+}
+.matchFont {
+  float: left;
+  width: 420px;
+  padding-left: 50px;
+  padding-top: 40px;
+}
+.matchFont> .washText1 {
+  width: 420px;
+}
+.matchT1 {
+  font-size: 20px;
+  line-height: 26px;
+  font-family: Î¢ÈíÑÅºÚ;
+}
+.matchT2 {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: bold;
+}
