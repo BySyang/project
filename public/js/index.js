@@ -84,40 +84,35 @@ $(function () {
 
     // 登录注册弹出框js  
     $('.icon-gerenzhongxin').on('click', function () {
-        $.ajax({
-            type: 'post',
-            url: 'isLogin',
-            success(data) {
-                if (data == 'false') {
-                    layer.open({
-                        type: 2,
-                        title: false,
-                        shade: [0.8],
-                        maxmin: false,
-                        shadeClose: true,
-                        // anim: 2,
-                        content: ['login.html', 'no'], //iframe的url，no代表不显示滚动条
-                        area: ['680px', '458px'],
-                        content: 'login.html'
-                    });
+        isLogin({
+            fail() {
+                layer.open({
+                    type: 2,
+                    title: false,
+                    shade: [0.8],
+                    maxmin: false,
+                    shadeClose: true,
+                    // anim: 2,
+                    content: ['login.html', 'no'], //iframe的url，no代表不显示滚动条
+                    area: ['680px', '458px'],
+                    content: 'login.html'
+                });
+            },
+            success() {
+                if (location.href.search('personal-center') > 0) {
+                    $.ajax({
+                        url: 'orderList',
+                        type: 'post',
+                        success(data) {
+                            // console.log(data)
+                            showOrders()(data);
+                        },
+                        error(err) {
+                            console.log(err)
+                        }
+                    })
                 } else {
-
-                    if (location.href.search('personal-center') > 0) {
-                        $.ajax({
-                            url: 'orderList',
-                            type: 'post',
-                            success(data) {
-                                // console.log(data)
-                                showOrders()(data);
-                            },
-                            error(err) {
-                                console.log(err)
-                            }
-                        })
-                    } else {
-                        location.href = 'personal-center.html';
-                    }
-
+                    location.href = 'personal-center.html';
                 }
             }
         })
@@ -257,11 +252,23 @@ $('#regBtn').click(function () {
         }
     })
 })
-
+/**
+ * 购物车显示判断
+ */
+$('#shopping').click(function () {
+    isLogin({
+        success() {
+            location.href = 'shopping.html'
+        },
+        fail() {
+            console.log('请先登录');
+        }
+    })
+})
 /**
  * 个人中心页面渲染
  */
-
+//  订单
 function showOrders() {
     var orderBox = $('.person-info .orders');
     var tabs = orderBox.first().children();
@@ -326,12 +333,12 @@ function showOrders() {
         <li data-num="1">正在处理</li>
         <li data-num="1">已完成</li>
     </ul>` + str);
-    console.log(orderBox)
+        console.log(orderBox)
     }
 
 }
 
-$('')
+
 /* 
  *  获取验证码
  */
@@ -371,10 +378,25 @@ function getYz(dom, fn) {
     })
 
 }
-
+/**
+ * 判断是否登录
+ */
+function isLogin(options) {
+    $.ajax({
+        type: 'post',
+        url: 'isLogin',
+        success(data) {
+            if (data == 'false') {
+                options.fail && options.fail();
+            } else {
+                options.success && options.success();
+            }
+        }
+    })
+}
 
 /**
- * 格式或日期
+ * 格式化日期
  */
 function formatDate(dateStr) {
     var iDate = new Date(dateStr);
