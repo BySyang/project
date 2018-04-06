@@ -13,7 +13,8 @@
 </head>
 
 <body>
-  <% include parts/header %>
+  <% include header %>
+  <%  console.log(data) %>
     <section id="product_sectop">
       <div class="line"></div>
       <div id="product_leftmenu">
@@ -27,16 +28,16 @@
             <ul class="con-FangDa-ImgList">
               <!-- 图片显示列表 -->
               <li class="active">
-                <img src="./images/series/sports/sports_goods/sports_goods1/sportsGoods1_content/sportsGoods1_picA.jpg" data-bigimg="./images/series/sports/sports_goods/sports_goods1/sportsGoods1_content/sportsGoods1_picA(1).jpg">
+                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('|')[0].replace('?','')  %>" data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('|')[0].replace('?','')  %>">
               </li>
               <li>
-                <img src="./images/series/sports/sports_goods/sports_goods1/sportsGoods1_content/sportsGoods1_picB.jpg" data-bigimg="./images/series/sports/sports_goods/sports_goods1/sportsGoods1_content/sportsGoods1_picB(1).jpg">
+                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[1]  %>"  data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[1]  %>">
               </li>
               <li>
-                <img src="./images/series/sports/sports_goods/sports_goods1/sportsGoods1_content/sportsGoods1_picC.jpg" data-bigimg="./images/series/sports/sports_goods/sports_goods1/sportsGoods1_content/sportsGoods1_picC(1).jpg">
+                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[2]   %>" data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[2] %>">
               </li>
               <li>
-                <img src="./images/series/sports/sports_goods/sports_goods1/sportsGoods1_content/sportsGoods1_picD.jpg" data-bigimg="./images/series/sports/sports_goods/sports_goods1/sportsGoods1_content/sportsGoods1_picD(1).jpg">
+                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[3]   %>" data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[3]  %>">
               </li>
             </ul>
             <div class="con-fangDaIMg">
@@ -907,7 +908,7 @@
       </div>
 
     </section>
-    <% include parts/footer %>
+  <% include footer %>
       <script src="js/jquery-1.11.3.js"></script>
       <script src="./js/layer-v3.1.1/layer/layer.js"></script>
       <script src="./js/index.js"></script>

@@ -84,35 +84,43 @@ $(function () {
 
     // 登录注册弹出框js  
     $('.icon-gerenzhongxin').on('click', function () {
-        if (location.href.search('personal-center') < 0) {
-            $.ajax({
-                type: 'post',
-                url: 'isLogin',
-                success(data) {
-                    if (data == 'false') {
-                        layer.open({
-                            type: 2,
-                            title: false,
-                            shade: [0.8],
-                            maxmin: false,
-                            shadeClose: true,
-                            // anim: 2,
-                            content: ['login.html', 'no'], //iframe的url，no代表不显示滚动条
-                            area: ['680px', '458px'],
-                            content: 'login.html'
-                        });
+        $.ajax({
+            type: 'post',
+            url: 'isLogin',
+            success(data) {
+                if (data == 'false') {
+                    layer.open({
+                        type: 2,
+                        title: false,
+                        shade: [0.8],
+                        maxmin: false,
+                        shadeClose: true,
+                        // anim: 2,
+                        content: ['login.html', 'no'], //iframe的url，no代表不显示滚动条
+                        area: ['680px', '458px'],
+                        content: 'login.html'
+                    });
+                } else {
+
+                    if (location.href.search('personal-center') > 0) {
+                        $.ajax({
+                            url: 'orderList',
+                            type: 'post',
+                            success(data) {
+                                // console.log(data)
+                                showOrders()(data);
+                            },
+                            error(err) {
+                                console.log(err)
+                            }
+                        })
                     } else {
                         location.href = 'personal-center.html';
-
                     }
+
                 }
-            })
-        }
-
-
-
-
-
+            }
+        })
     });
 
     // 登录注册切换js
@@ -221,7 +229,7 @@ $('#resetPwd').click(function () {
 
 // isOk = true 
 $('#wangji .getIdent_code').click(function () {
-    getYz($('#wangji'),function(){
+    getYz($('#wangji'), function () {
         window.isOk = true;
     });
 });
@@ -229,8 +237,8 @@ $('#zhuce .getIdent_code').click(function () {
     getYz($('#zhuce'));
 });
 /* 
-*   注册
-*/
+ *   注册
+ */
 $('#regBtn').click(function () {
     let data = $('#zhuce').serialize();
     $.ajax({
@@ -250,10 +258,84 @@ $('#regBtn').click(function () {
     })
 })
 
+/**
+ * 个人中心页面渲染
+ */
+
+function showOrders() {
+    var orderBox = $('.person-info .orders');
+    var tabs = orderBox.first().children();
+    var str = '';
+    return function (data) {
+        for (item in data) {
+            let order = data[item];
+            str += `<div class="order-item">
+        <p>订单号 :
+            <span>${order.orderunique}</span>
+            <time>${formatDate(order.createTime)}</time>
+            <em>待支付
+                <span>[5:00]</span>
+            </em>
+        </p>
+        <div class="order-goods clearfix">
+            <img src="./images/personalImage/personal_goodsPic.jpg" alt="">
+            <ul>
+                <li>商品名称 :
+                    <span>${order.goodsName}</span>
+                </li>
+                <li>颜色 :
+                    <span>${goodSpec().color(order.color) }</span>
+                </li>
+                <li>尺码 :
+                    <span>${goodSpec().color(order.size) }</span>
+                </li>
+                <li>备注 :
+                    <span>${order.orderRemarks}</span>
+                </li>
+                <li>运费 :
+                    <strong>¥ ${order.deliverMoney}</strong>
+                </li>
+
+                <li>获得积分 :
+                    <strong>${order.orderScore}</strong>
+                </li>
+                <li>价格 :
+                    <strong>¥ ${order.realTotalMoney}</strong>
+                </li>
+                <li>数量 :
+                    <strong>
+                        <em>&#45;</em>
+                        <input type="text" value="${order.goodsNum}">
+                        <em>&#43;</em>
+                    </strong>
+                </li>
+            </ul>
+            <a href="#">查看详情</a>
+            <div>
+                <a href="#">立即支付</a>
+                <a href="#">取消订单</a>
+            </div>
+
+        </div>
+    </div>`;
+
+        }
+        orderBox.html(`<ul class="tab">
+        <li class="active">全部订单</li>
+        <li data-num="1">待支付</li>
+        <li data-num="1">正在处理</li>
+        <li data-num="1">已完成</li>
+    </ul>` + str);
+    console.log(orderBox)
+    }
+
+}
+
+$('')
 /* 
-*  获取验证码
-*/
-function getYz(dom,fn) {
+ *  获取验证码
+ */
+function getYz(dom, fn) {
     $.ajax({
         url: 'getIdent',
         type: 'post',
@@ -269,7 +351,7 @@ function getYz(dom,fn) {
                         success(data) {
                             if (data == 'success') {
                                 console.log('短信验证成功!')
-                                fn&&fn();
+                                fn && fn();
                             } else {
                                 console.log('短信验证失败!')
                             }
@@ -288,4 +370,64 @@ function getYz(dom,fn) {
         }
     })
 
+}
+
+
+/**
+ * 格式或日期
+ */
+function formatDate(dateStr) {
+    var iDate = new Date(dateStr);
+
+    function addZreo(num) {
+        return num < 10 ? '0' + num : num;
+    }
+    return iDate.getFullYear() + '-' + (addZreo(iDate.getMonth() + 1)) + '-' + addZreo(iDate.getDate());
+
+}
+/**
+ * 商品规格处理
+ */
+function goodSpec() {
+    let goodSpec = {
+        color(color) {
+            var str = '';
+            switch (color) {
+                case 0:
+                    str = '红色';
+                    break;
+                case 1:
+                    str = '粉色';
+                    break;
+                    break;
+                    str = '黑色';
+                    break;
+                case 2:
+                    break;
+                default:
+                    str = '白色';
+            }
+            return str
+        },
+        size(size) {
+            var str = '';
+            switch (size) {
+                case 0:
+                    str = '31';
+                    break;
+                case 1:
+                    str = '32';
+                    break;
+                    break;
+                    str = '33';
+                    break;
+                case 2:
+                    break;
+                default:
+                    str = '34';
+            }
+            return str
+        }
+    }
+    return goodSpec
 }

@@ -13,8 +13,8 @@ module.exports = (function () {
             if (!err) {
                 connection.query(sql, arr, function (err, data) {
                     fn(err,data);
-                    connection.release();
                 });
+                connection.release();
             } else {
                 console.log(err.message);
             }

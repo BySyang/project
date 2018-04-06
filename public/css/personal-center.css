@@ -103,7 +103,7 @@
   display: inline-block;
 }
 .person-info .person-info-content .infos .orders .tab li:nth-of-type(n+2):before {
-  content: "1";
+  content: attr(data-num);
   position: absolute;
   padding: 0 5px;
   right: 28px;
@@ -114,7 +114,7 @@
   border-radius: 10px;
 }
 .person-info .person-info-content .infos .orders .tab li:hover:after {
-  content: ' ';
+  content: '';
   position: absolute;
   left: 0;
   bottom: 0;
