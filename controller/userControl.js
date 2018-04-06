@@ -9,7 +9,6 @@ module.exports = {
         userModal.userLogin(user, pwd, function (err, data) {
             if (!err) {
                 if (data[0]) {
-                    console.log(data[0])
                     req.session.userInfo = data[0];
                     res.send('ok');
                 } else {
