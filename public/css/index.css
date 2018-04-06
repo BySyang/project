@@ -1,13 +1,15 @@
 *,
 a,
-li {
+li,input {
     padding: 0;
     margin: 0;
     text-decoration: none;
-    list-style: none
+    list-style: none;
+    outline: none;
 }
 body{
     width: 100%;
+    height: 6400px;
 }
 
     /* 第一部分 */
