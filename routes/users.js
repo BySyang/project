@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const userControll = require('../controller/userControl');
+const userControll = require('../controller/userControll');
 const AV = require('../modal/AV');
 router.post('/isLogin',userControll.isLogin);
 router.post('/login',userControll.userLogin); //登录
@@ -16,5 +16,6 @@ router.post('/userAddress',userControll.addr);
 router.post('/getIdent',AV.sendMsg);
 
 router.post('/verifyCode',AV.verifyCode);
+
 
 module.exports = router;

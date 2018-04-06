@@ -505,3 +505,8 @@ p:nth-child(1) {
 .six_img>i {
     box-shadow: 1px 0 8px #000
 }
+
+footer{
+    bottom: -4637px;
+    
+}

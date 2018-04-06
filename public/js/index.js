@@ -333,7 +333,6 @@ function showOrders() {
         <li data-num="1">正在处理</li>
         <li data-num="1">已完成</li>
     </ul>` + str);
-        console.log(orderBox)
     }
 
 }
