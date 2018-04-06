@@ -180,10 +180,10 @@ header {
 
 footer {
     position: relative;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     height: 371px;
-    background: #f2f2f2
+    background: #f2f2f2;
 }
 
 .bottom-right {
