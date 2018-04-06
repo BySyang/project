@@ -1,6 +1,7 @@
-const AV = require('leanengine');
+const AV = require('leanengine');//引用短信模块
 
-AV.init({
+AV.init({   //短信接口初始化
+
     appId: '1pDX5iHJuBy3hRizQw3rRAzk-gzGzoHsz',
     appKey: 'vCNSnDNh2TiX0H8xf8HPY9KP',
     masterKey: 'DkLJl32eEOVUhV8IMTV6Yuyx'

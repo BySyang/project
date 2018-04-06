@@ -2,11 +2,12 @@
 
 *,
 a,
-li {
+li ,button{
     padding: 0;
     margin: 0;
     text-decoration: none;
-    list-style: none
+    list-style: none;
+    outline: none;
 }
 
 body {
