@@ -42,7 +42,7 @@ $(function () {
             $(".head-nav>ul>li>a").css({
                 "color": "#000000"
             })
-            $(".head_nav_right_i>i").addClass("box_input1")
+            $(".head_nav_right_i>a").addClass("box_input1")
             $(".box_input").css({
                 "border": "1px solid #ff0066"
             })
@@ -55,7 +55,7 @@ $(function () {
             $(".head-nav>ul>li>a").css({
                 "color": "white"
             })
-            $(".head_nav_right_i>i").removeClass("box_input1");
+            $(".head_nav_right_i>a").removeClass("box_input1");
             $(".box_input").css({
                 "border": "1px solid white"
             })
@@ -258,7 +258,7 @@ $('#regBtn').click(function () {
 $('#shopping').click(function () {
     isLogin({
         success() {
-            location.href = 'shopping.html'
+            location.href = 'shopping.html';
         },
         fail() {
             console.log('请先登录');

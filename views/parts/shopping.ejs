@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <% include parts/header %>
+  <% include header %>
     <section>
       <div class="shopping_top">
         <ul>
@@ -28,26 +28,29 @@
         </ul>
       </div>
       <div class="shopping_sec">
+        <%  data.forEach(function(item){ %>
+          <% console.log(item) %>
         <ul>
           <li class="onlycheck">
             <i class="shop_check iconfont icon-gougou"></i>
           </li>
           <li class="shopping_name">
-            <img src="./images/series/sports/sports_goods/sports_goods1/sportsGoods1_content/sportsGoods1_picA.jpg" alt="">
-            <span>运动内衣</span>
+            <img src="./images/series/sports/sports_goods/<%= item.goodsImg.split('|')[0].replace('?','') %>" alt="">
+            <span><%= data.goodsName %></span>
           </li>
-          <li class="shopping_price">399元</li>
+          <li class="shopping_price"><%= item.goodsPrice%>   元</li>
           <li class="shopping_number">
             <div class="number_redu iconfont icon-jian"></div>
-            <input type="text" value="1" class="number_show" readonly="readonly">
+            <input type="text" value="<%= item.cartNum%>" class="number_show" readonly="readonly">
             <div class="number_add iconfont icon-jia"></div>
           </li>
-          <li class="shopping_subtotal">399元</li>
+          <li class="shopping_subtotal"><%= item.goodsPrice*item.cartNum%>元</li>
           <li class="shopping_operation">
             <i class="iconfont icon-shanchu"></i>
           </li>
 
         </ul>
+      <% }) %>
       </div>
       <div class="shopping_settlement">
         <ul>
@@ -68,7 +71,7 @@
         </ul>
       </div>
     </section>
-    <% include parts/footer %>
+    <% include footer %>
       <script src="./js/jquery-1.11.3.js"></script>
       <script src="./js/layer-v3.1.1/layer/layer.js"></script>
       <script src="./js/index.js"></script>
