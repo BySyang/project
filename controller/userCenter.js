@@ -4,25 +4,24 @@ const orderModal = require('../modal/orderModal');
 module.exports = {
     userCenterInit(req, res) {
         if (req.session.userInfo) {
-            var userInfo = JSON.stringify(req.session.userInfo);
+            var userInfo = req.session.userInfo;
             let obj = {};
             obj.userInfo = userInfo;
             new Promise(function (resolve, reject) {
                 orderModal.orderList(userInfo.userId, function (err, orders) {
                     if (!err) {
-                        resolve(orders)
+                        obj.orders = orders;
+                        resolve(obj)
                     } else {
                         reject(err);
                     }
                 })
-            }).then(function (orders) {
-                obj.orders = orders;
+            }).then(function (obj) {
                 return new Promise(function (resolve, reject) {
-                    userAddrModal.userAddr(obj.orders[0].userId, function (err, data) {
+                    userAddrModal.userAddr(obj.userInfo.userId, function (err, data) {
                         if (!err) {
                             obj.userAddr = data;
                             res.render('personal-center', obj);
-                            console.log(obj)
                             resolve('ok');
                         } else {
                             reject(err);
