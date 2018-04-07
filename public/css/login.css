@@ -95,7 +95,8 @@
     display: block;
     left: 0px;
     right: 0px;
-    margin: 0px auto;
+    margin: 0px  auto;
+    margin-bottom:20px; 
     padding-left: 5px;
     border: 1px solid #ddd;
     border-radius: 2px;
@@ -120,6 +121,26 @@
     right: 0px;
     margin: 0px auto;
 }
+/* 登录提示 */
+.Prompt{
+    position: absolute;
+    /* display: none; */
+    top: -24px;
+    left: 25px;
+}
+.Prompt1{
+    position: absolute;
+    /* display: none; */
+    top: -24px;
+    left: 25px;
+}
+.Prompt>i{
+    color: #ff0066;
+}
+.st-icon-pandora{
+    font-size: 12px;
+}
+
 
 .input_checkbox>input:nth-child(1) {
     position: absolute;

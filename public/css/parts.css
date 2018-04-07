@@ -65,6 +65,7 @@ header {
 }
 
 .box_icon {
+    padding-left: 3px;
     font-size: 16px;
     color: #fff;
     z-index: 9999
@@ -135,13 +136,14 @@ header {
     position: absolute;
     right: 30px;
     top: 30px;
-    width: 22.2%;
-    height: 25px
+    width: 24%;
+    height: 25px;
+    /* border: 1px solid red; */
 }
 
 .head_nav_right_i {
     position: absolute;
-    width: 200px;
+    width: 220px;
     height: 25px;
     left: 80px
 }

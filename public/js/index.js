@@ -2,6 +2,9 @@ $(function () {
     // 轮播js
     var nowimg = 0;
     var timer = null;
+    // var username = $(".Prompt");
+    // var password = $(".Prompt1");
+    // console.log(username);
     $(".list_item").css({
         "cursor": "pointe"
     })
@@ -85,7 +88,7 @@ $(function () {
     // 登录注册弹出框js  
     $('.icon-gerenzhongxin').on('click', function () {
         isLogin({
-            fail() {
+            fail(){
                 layer.open({
                     type: 2,
                     title: false,
@@ -175,6 +178,7 @@ $('#logBtn').click(function () {
         success(data) {
             if (data == 'ok') {
                 window.parent.location.reload();
+                
             } else {
                 console.log('登录失败')
             }
@@ -183,6 +187,7 @@ $('#logBtn').click(function () {
             console.log(err)
         }
     })
+    
 });
 
 /**
@@ -393,6 +398,11 @@ function isLogin(options) {
         }
     })
 }
+// 登录退出
+$(".icon-login_out").on('click',function(){
+  
+})
+
 
 /**
  * 格式化日期
