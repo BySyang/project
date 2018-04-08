@@ -1,41 +1,18 @@
 $(function () {
     // 轮播js
-    var nowimg = 0;
-    var timer = null;
-    // var username = $(".Prompt");
-    // var password = $(".Prompt1");
-    // console.log(username);
-    $(".list_item").css({
-        "cursor": "pointe"
-    })
-    $(".head-banner li:first").clone().appendTo('.head-banner').css({
-        "background-image": "url('./images/indexImage/index_banner/index_banner1.jpg')",
-        "background-size": "100% 100%",
-        "background-repeat": "no-repeat"
-    })
 
-    function rightFunc() {
-        if (nowimg < 2) {
-            nowimg++
-            $(".head-banner").animate({
-                "left": nowimg * -1347
-            }, 1500)
-            // console.log("1111")
-        } else {
-            nowimg = 0
-            $(".head-banner").animate({
-                "left": 3 * -1347
-            }, 2000, function () {
-                $(".head-banner").css("left", 0)
-                // console.log("2222")
+        $(".head-banner li").css({opacity:0}).eq(0).css({opacity:1});    //先隐藏所有图片，再将对象移到第一张图片，使之淡入
+        var index = 0;
+        setInterval(function(){
+            $(".head-banner li").eq(index).animate({'opacity':1},2000).siblings().animate({opacity:0},2000);
+            index++;
+            index%=3;
+            
+        },4000)
+         
 
-            })
-        }
-    }
-    timer = setInterval(rightFunc, 2000)
-    $(".head-banner").mouseenter(function () {
-        clearInterval(timer)
-    })
+
+
 
     // 导航js
     $(window).scroll(function () {
