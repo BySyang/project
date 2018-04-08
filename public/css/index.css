@@ -111,14 +111,14 @@ p:nth-child(1) {
 
 .img-t1>p {
     position: absolute;
-    left: 51%;
+    left: 51.5%;
     top: 20%;
     font-size: 16px
 }
 
 .img-t2>p {
     position: absolute;
-    left: 15%;
+    left: 14%;
     top: 49%;
     font-size: 16px
 }
@@ -126,17 +126,17 @@ p:nth-child(1) {
 .text_t1 {
     position: absolute;
     top: 55%;
-    left: 28%;
-    width: 197px;
+    left: 31%;
     height: 137px;
-    text-align: right
 }
 
-.text_t1>i {
-    display: inline-block;
+.text_t1>p {
+    /*display: inline-block;*/
     margin: 4px 0;
     font-style: normal;
-    font-size: 14px
+    font-size: 14px;
+    width: 245px;
+    text-align: right;
 }
 
 .second_contain {
@@ -218,7 +218,7 @@ p:nth-child(1) {
 .second_img3>p {
     position: absolute;
     top: 91%;
-    left: 25%;
+    left: 32%;
     font-size: 16px
 }
 
@@ -287,12 +287,13 @@ p:nth-child(1) {
 }
 
 .three_img2>p {
+    width: 300px;
     position: absolute;
     color: #333;
     font-size: 16px;
     top: 70%;
-    left: 53%;
-    text-align: left;
+    left: 38%;
+    text-align: right;
     padding: 5px
 }
 
