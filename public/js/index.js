@@ -456,11 +456,15 @@ function isLogin(options) {
         }
     })
 }
-// 登录退出
-$(".icon-login_out").on('click', function () {
-
+//退出按钮
+isLogin({
+    success(){
+        $('.out').show();
+    },
+    fail(){
+        $('.out').hide();
+    }
 })
-
 
 /**
  * 格式化日期
@@ -526,6 +530,11 @@ $('.toSeriesBtn').click(function () {
     location.href = `Product_series.html?seriesId=${series}`;
 })
 
+/**
+ * 本地储存用户
+ * @param {*} user 
+ * @param {*} pwd 
+ */
 function remeberUser(user, pwd) {
     localStorage.setItem('username', user);
     localStorage.setItem('password', pwd);
@@ -538,3 +547,4 @@ function deluser() {
     }
 
 }
+
