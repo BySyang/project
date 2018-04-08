@@ -69,16 +69,51 @@ $(function () {
 
 
     // 系列下拉菜单js
+    var flag=$("#list").is(":hidden");
+    var imgflag=$(".product_img").is(":hidden");
+    $(".product_txt").mouseenter("click",function(){
+    if(flag){
+        $("#list").show()
+        $(".product_img").show()
+    }
+    else{
+        $("#list").hide()
+        $(".product_img").hide()
+    }
+    })
+    $("#list").mouseover(function (){  
+        $("#list").show();  
+        $(".product_img").show()
+    }).mouseout(function (){  
+        $("#list").hide(); 
+        $(".product_img").hide() 
+
+    })
     // var imgarr=new Array(['../images/menuImage/sonMenu_fresh.jpg'])
-    $(".product_txt").mouseenter("click", function () {
-        $(".product_list").toggle(500)
-        $(".product_img").toggle(500)
+    // $(".product_txt").mouseenter("click", function () {
+    //     $("#list").show(500)
+    //     $(".product_img").show(500)
+    // })
+    // $("#list>ul").mouseenter('click',function(){
+    //     $("#list").show(500)
+    //     $(".product_img").show(500)
+    // })
         // $(".product_list>ul>li:nth-child(1)").on('click',function(){
         //     $(".product_img>div:nth-child(1)").css({"background":"url(../images/menuImage/sonMenu_fresh.jpg)"})
         //     console.log(imgarr[0])
         //     console.log("1111")
         // })
-    })
+   
+    // $("#list"). mouseout("click", function () {
+    //     $("#list").hide(500)
+    //     $(".product_img").hide(500)
+    
+        // $(".product_list>ul>li:nth-child(1)").on('click',function(){
+        //     $(".product_img>div:nth-child(1)").css({"background":"url(../images/menuImage/sonMenu_fresh.jpg)"})
+        //     console.log(imgarr[0])
+        //     console.log("1111")
+        // })
+    // })
 
 
 
@@ -175,7 +210,7 @@ $('#logBtn').click(function () {
     var password=document.getElementById("password").value;
     console.log(username);
     console.log(password);
-    let data = $('#denglu').serialize();
+    let fromData = $('#denglu').serialize();
     $.ajax({
         url: 'login',
         type: 'post',

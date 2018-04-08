@@ -12,20 +12,22 @@ body{
 p{
     letter-spacing: .2em;
 }
-    /* 第一部分 */
-section {
+    /* 内容第一部分 */
+section{
     position: relative;
     width: 100%;
     height: 1500px
 }
 
-.first-contain {
+.first-contain{
     width: 100%;
-    height: 1003px;
+    height: 1000px;
     background: #f7f7f7;
     overflow: hidden
 }
-
+.first_text{
+    /* border: 1px solid red; */
+}
 p {
     text-align: center;
     margin: 35px 0
@@ -92,7 +94,7 @@ p:nth-child(1) {
     background: url("../images/indexImage/index_content/wild/index_wild1.jpg");
     background-size: 100% 100%;
     left: 186px;
-    top: 255px;
+    top: 290px;
     width: 480px;
     height: 500px
 }
@@ -118,7 +120,7 @@ p:nth-child(1) {
 .img-t2>p {
     position: absolute;
     left: 14%;
-    top: 49%;
+    top: 52.5%;
     font-size: 16px
 }
 
@@ -143,12 +145,14 @@ p:nth-child(1) {
     width: 100%;
     height: 932px
 }
-
+.second_text{
+    /* border: 1px solid red; */
+}
 .second_img {
     position: absolute;
     left: 0;
     right: 0;
-    top: 24%;
+    top: 27%;
     margin: 0 auto;
     width: 962px;
     height: 614px;
@@ -226,7 +230,11 @@ p:nth-child(1) {
     top: -40px;
     width: 100%;
     height: 885px;
-    background-color: #f7f7f7
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+.three_text{
+    /* border: 1px solid red; */
 }
 
 .three_contain>p {
@@ -240,7 +248,7 @@ p:nth-child(1) {
     margin: 0 auto;
     width: 974px;
     height: 625px;
-    top: 258px
+    top: 28.7%
 }
 
 .three_img1 {
@@ -318,12 +326,15 @@ p:nth-child(1) {
     width: 100%;
     height: 1020px
 }
-
+.four_text{
+    margin-top: -40px;
+    /* border: 1px solid red; */
+}
 .four_img {
     position: absolute;
     left: 0;
     right: 0;
-    top: 26%;
+    top: 25.4%;
     margin: 0 auto;
     width: 72.3%;
     height: 753px
@@ -380,15 +391,18 @@ p:nth-child(1) {
 .five_contain {
     position: relative;
     width: 100%;
-    height: 1225px;
-    background-color: #f7f7f7
+    height: 1240px;
+    background-color: #f7f7f7;
+    overflow: hidden;
 }
-
+.five_text{
+    /* border: 1px solid red; */
+}
 .five_img {
     position: absolute;
     right: 0;
     left: 0;
-    top: 20%;
+    top: 21%;
     margin: 0 auto;
     width: 975px;
     height: 980px
@@ -451,9 +465,16 @@ p:nth-child(1) {
 .six_contain {
     position: relative;
     width: 100%;
-    height: 882px
+    height: 850px;
+    /* border: 1px solid red; */
 }
-
+.six_contain>p{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 30px auto 0px  auto;
+    top: 30px;
+}
 .six_img {
     position: absolute;
     right: 0;
@@ -505,6 +526,6 @@ p:nth-child(1) {
 }
 
 footer{
-    bottom: -4637px;
+    bottom: -4650px;
     
 }
