@@ -40,12 +40,12 @@ $(function () {
     // 导航js
     $(window).scroll(function () {
         var scrollTop = $(this).scrollTop();
-        if (scrollTop >100) {
+        if (scrollTop > 100) {
             $(".head-nav").addClass("head-nav1")
             $(".list_item").css({
-                "color":"#000000"
-            }).hover(function(){
-                $(this).css("color","#ff0066").parent().siblings().children().css("color","#000000")
+                "color": "#000000"
+            }).hover(function () {
+                $(this).css("color", "#ff0066").parent().siblings().children().css("color", "#000000")
             })
             $(".head_nav_right_i>a").addClass("box_input1")
             $(".box_input").css({
@@ -59,8 +59,8 @@ $(function () {
             $(".head-nav").removeClass("head-nav1")
             $(".list_item").css({
                 "color": "white"
-            }).hover(function(){
-                $(this).css("color","#ff0066").parent().siblings().children().css("color","white")
+            }).hover(function () {
+                $(this).css("color", "#ff0066").parent().siblings().children().css("color", "white")
             })
             $(".head_nav_right_i>a").removeClass("box_input1");
             $(".box_input").css({
@@ -72,24 +72,23 @@ $(function () {
 
 
     // 系列下拉菜单js
-    var flag=$("#list").is(":hidden");
-    var imgflag=$(".product_img").is(":hidden");
-    $(".product_txt").mouseenter("click",function(){
-    if(flag){
-        $("#list").show()
-        $(".product_img").show()
-    }
-    else{
-        $("#list").hide()
-        $(".product_img").hide()
-    }
+    var flag = $("#list").is(":hidden");
+    var imgflag = $(".product_img").is(":hidden");
+    $(".product_txt").mouseenter("click", function () {
+        if (flag) {
+            $("#list").show()
+            $(".product_img").show()
+        } else {
+            $("#list").hide()
+            $(".product_img").hide()
+        }
     })
-    $("#list").mouseover(function (){  
-        $("#list").show();  
+    $("#list").mouseover(function () {
+        $("#list").show();
         $(".product_img").show()
-    }).mouseout(function (){  
-        $("#list").hide(); 
-        $(".product_img").hide() 
+    }).mouseout(function () {
+        $("#list").hide();
+        $(".product_img").hide()
 
     })
     // var imgarr=new Array(['../images/menuImage/sonMenu_fresh.jpg'])
@@ -101,21 +100,21 @@ $(function () {
     //     $("#list").show(500)
     //     $(".product_img").show(500)
     // })
-        // $(".product_list>ul>li:nth-child(1)").on('click',function(){
-        //     $(".product_img>div:nth-child(1)").css({"background":"url(../images/menuImage/sonMenu_fresh.jpg)"})
-        //     console.log(imgarr[0])
-        //     console.log("1111")
-        // })
-   
+    // $(".product_list>ul>li:nth-child(1)").on('click',function(){
+    //     $(".product_img>div:nth-child(1)").css({"background":"url(../images/menuImage/sonMenu_fresh.jpg)"})
+    //     console.log(imgarr[0])
+    //     console.log("1111")
+    // })
+
     // $("#list"). mouseout("click", function () {
     //     $("#list").hide(500)
     //     $(".product_img").hide(500)
-    
-        // $(".product_list>ul>li:nth-child(1)").on('click',function(){
-        //     $(".product_img>div:nth-child(1)").css({"background":"url(../images/menuImage/sonMenu_fresh.jpg)"})
-        //     console.log(imgarr[0])
-        //     console.log("1111")
-        // })
+
+    // $(".product_list>ul>li:nth-child(1)").on('click',function(){
+    //     $(".product_img>div:nth-child(1)").css({"background":"url(../images/menuImage/sonMenu_fresh.jpg)"})
+    //     console.log(imgarr[0])
+    //     console.log("1111")
+    // })
     // })
 
 
@@ -207,12 +206,18 @@ $(function () {
 
     })
 })
+if (localStorage.username) {
+    $('#denglu').find('input[name="username"]').val(localStorage.username);
+    $('#denglu').find('input[name="password"]').val(localStorage.password);
+    $('#denglu').find('#remember').prop('checked', true);
+
+
+
+}
 // 登录账户和密码以及登录状态判断
 $('#logBtn').click(function () {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
-    console.log(username);
-    console.log(password);
     let fromData = $('#denglu').serialize();
     $.ajax({
         url: 'login',
@@ -220,7 +225,14 @@ $('#logBtn').click(function () {
         data: fromData,
         success(data) {
             if (data == 'ok') {
-                window.parent.location.reload()
+                if ($('#remember').prop('checked')) {
+                    remeberUser(username, password)
+                } else {
+                    deluser();
+                }
+
+                window.parent.location.reload();
+
             } else if (username.length == 0 && password.length > 0) {
                 layer.msg('账号不能为空，请输入账号');
             } else if (password.length == 0 && username.length > 0) {
@@ -513,3 +525,16 @@ $('.toSeriesBtn').click(function () {
     let series = $(this).data('id');
     location.href = `Product_series.html?seriesId=${series}`;
 })
+
+function remeberUser(user, pwd) {
+    localStorage.setItem('username', user);
+    localStorage.setItem('password', pwd);
+}
+
+function deluser() {
+    if (localStorage.username) {
+        localStorage.removeItem('username');
+        localStorage.removeItem('password');
+    }
+
+}
