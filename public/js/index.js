@@ -255,7 +255,6 @@ $('#logBtn').click(function () {
 
 // 重置密码
 $('#resetPwd').click(function () {
-    if (typeof isOk != 'undefined' && isOk) {
         let data = $('#wangji').serialize();
         $.ajax({
             url: 'resetPwd',
@@ -263,7 +262,7 @@ $('#resetPwd').click(function () {
             data: data,
             success(data) {
                 if (data == 'ok') {
-                    console.log('密码重置成功')
+                    layer.msg('密码重置成功');
                     $("#wangji").css({
                         "display": "none"
                     })
@@ -274,27 +273,21 @@ $('#resetPwd').click(function () {
                         "display": "block"
                     })
                 } else {
-                    console.log('密码重置失败')
+                    layer.msg('密码重置失败')
                 }
             },
             error(err) {
                 console.log(err)
             }
         })
-    } else {
-        alert('验证码错误');
-    }
-
 });
 
 // isOk = true 
 $('#wangji .getIdent_code').click(function () {
-    getYz($('#wangji'), function () {
-        window.isOk = true;
-    });
+    getYz($('#wangji'),'#resetPwd');
 });
 $('#zhuce .getIdent_code').click(function () {
-    getYz($('#zhuce'));
+    getYz($('#zhuce'),'#regBtn');
 });
 /* 
  *   注册
@@ -307,9 +300,9 @@ $('#regBtn').click(function () {
         type: 'post',
         success(data) {
             if (data == 'ok') {
-                console.log('注册成功');
+                layer.msg('注册成功');
             } else {
-                consoel.log('注册失败');
+                layer.msg('注册失败');
             }
         },
         error(err) {
@@ -326,7 +319,7 @@ $('#shopping').click(function () {
             location.href = 'shopping.html';
         },
         fail() {
-            console.log('请先登录');
+            layer.msg('请先登录');
         }
     })
 })
@@ -406,25 +399,25 @@ function showOrders() {
 /* 
  *  获取验证码
  */
-function getYz(dom, fn) {
+function getYz(dom,btn, fn) {
     $.ajax({
         url: 'getIdent',
         type: 'post',
         data: `&phone=${dom.find('input[name="username"]').val()}`,
         success(data) {
             if (data == 'success') {
-                console.log('短信发送成功!');
-                dom.find('.identCode').change(function () {
+                layer.msg('短信发送成功!');
+                dom.find(btn).on('click',function () {
                     $.ajax({
                         url: 'verifyCode',
                         type: 'post',
                         data: `&smscode=${dom.find('.identCode').val()}&phone=${dom.find('input[name="username"]').val()}`,
                         success(data) {
                             if (data == 'success') {
-                                console.log('短信验证成功!')
+                                layer.msg('短信验证成功!')
                                 fn && fn();
                             } else {
-                                console.log('短信验证失败!')
+                                layer.msg('短信验证失败!')
                             }
                         },
                         error(err) {
@@ -460,12 +453,28 @@ function isLogin(options) {
 }
 //退出按钮
 isLogin({
-    success(){
+    success() {
         $('.out').show();
     },
-    fail(){
+
+    fail() {
         $('.out').hide();
     }
+})
+
+//点击退出
+$(".out").on('click',function(){
+    $.ajax({
+        type:'post',
+        url:'userExit',
+        success:function(data){
+            if(data=='ok'){
+                location.reload()
+            }
+        }
+
+    })
+
 })
 
 /**
