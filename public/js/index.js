@@ -1,4 +1,3 @@
-
 $(function () {
     // 轮播js
     var nowimg = 0;
@@ -128,7 +127,7 @@ $(function () {
     // 登录注册弹出框js  
     $('.icon-gerenzhongxin').on('click', function () {
         isLogin({
-            fail(){
+            fail() {
                 layer.open({
                     type: 2,
                     title: false,
@@ -210,8 +209,8 @@ $(function () {
 })
 // 登录账户和密码以及登录状态判断
 $('#logBtn').click(function () {
-    var username=document.getElementById("username").value;
-    var password=document.getElementById("password").value;
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
     console.log(username);
     console.log(password);
     let fromData = $('#denglu').serialize();
@@ -220,19 +219,15 @@ $('#logBtn').click(function () {
         type: 'post',
         data: fromData,
         success(data) {
-            if (data =='ok') {
+            if (data == 'ok') {
                 window.parent.location.reload()
-            }
-             else if(username.length==0 && password.length>0) {   
+            } else if (username.length == 0 && password.length > 0) {
                 layer.msg('账号不能为空，请输入账号');
-            }
-            else if(password.length==0 && username.length>0 ){
+            } else if (password.length == 0 && username.length > 0) {
                 layer.msg('密码不能为空，请输入密码');
-            }
-            else if(password.length==0 && username.length==0){
+            } else if (password.length == 0 && username.length == 0) {
                 layer.msg('请输入账户和密码');
-            }
-            else{
+            } else {
                 layer.msg('账号或密码错误，请重新登录');
                 console.log('登录失败')
             }
@@ -241,7 +236,7 @@ $('#logBtn').click(function () {
             console.log(err)
         }
     })
-    
+
 });
 
 // 重置密码
@@ -299,8 +294,7 @@ $('#regBtn').click(function () {
         success(data) {
             if (data == 'ok') {
                 console.log('注册成功');
-            } 
-            else {
+            } else {
                 consoel.log('注册失败');
             }
         },
@@ -451,8 +445,8 @@ function isLogin(options) {
     })
 }
 // 登录退出
-$(".icon-login_out").on('click',function(){
-  
+$(".icon-login_out").on('click', function () {
+
 })
 
 
@@ -514,3 +508,8 @@ function goodSpec() {
     }
     return goodSpec
 }
+
+$('.toSeriesBtn').click(function () {
+    let series = $(this).data('id');
+    location.href = `Product_series.html?seriesId=${series}`;
+})

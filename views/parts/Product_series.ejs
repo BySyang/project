@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>产品系列</title>
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_611086_1tufovounm56ogvi.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_611086_ykgw0jdliwcow29.css">
     <link rel="stylesheet" href="./css/parts.css">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/Product_series.css">
@@ -16,10 +16,10 @@
 </head>
 
 <body>
-    <% include parts/header %>
+    <% include header %>
         <section>
             <div id="Banimg">
-                <img src="./images/series/sports/sports_banner.jpg" alt="" />
+                <img src="./images/series/<%= data.goodsType.typeBannerImg %>" alt="" />
             </div>
             <div class="section">
                 <!-- 搜索栏-->
@@ -45,42 +45,41 @@
                 <!-- 第一部分大图-->
                 <div class="First_part">
                     <div class="first_big_left">
-                        <img src="./images/series/sports/sports_show/sports_showTop1.jpg" alt="" />
+                        <img src="./images/series/<%= data.goodsType.typeImg.replace('?','').split('|')[0] %>" alt="" />
                     </div>
-
                     <div class="r_text">
-                        <p class="p1">FashionGirl</p>
+                        <p class="p1">
+                            <%= data.goodsType.typeName %>
+                        </p>
 
                         <div class="line"></div>
                         <p class="p2">2018 春夏</p>
 
                         <p class="p3">
-                            Bra
-                            <br/>轻奢主义，一见倾心
-                            <br/>细腻品味，无边向往
-                            <br/>优雅艺术有发瑰丽之梦，心灵神动轻启璀璨序幕
+                            <%- data.goodsType.typeDes %>
                         </p>
                         <div class="first_big_right">
-                            <img src="./images/series/sports/sports_show/sports_showTop2.jpg" alt="" />
+                            <img src="./images/series/<%= data.goodsType.typeImg.split('?')[0]+data.goodsType.typeImg.split('|')[1] %>" alt="" />
                         </div>
                     </div>
                 </div>
                 <!-- 第一部分产品-->
                 <div class="firstList">
                     <!--dl*8>(dt*3+dd*3)-->
-                    <% data.forEach(function(item){ %>
-                        <% if(item.typeId=== 4) { %>
+                    <% data.goodsList.forEach(function(item){ %>
+                        <% if(item.isHot== 1) { %>
                             <dl class="bigdl" data-id="<%= item.goodsId %>">
                                 <dt class="smimg">
                                     <img src="./images/series/<%= item.goodLargeImg %>" alt="">
                                 </dt>
                                 <dt>
                                     <span> &nbsp;&nbsp;</span>
-                                    <span class="icon-xing iconfont"></span>
-                                    <span class="icon-xing iconfont"></span>
-                                    <span class="icon-xing iconfont"></span>
-                                    <span class="icon-xing iconfont"></span>
-                                    <span class="icon-xing iconfont"></span>
+                                    <% for(let i=0;i < item.goodscore;i++ ){ %>
+                                        <span class="icon-star iconfont"></span>
+                                        <% } %>
+                                            <% for(let i=0;i < 5-item.goodscore;i++ ){ %>
+                                                <span class="icon-STAR iconfont"></span>
+                                                <% } %>
                                 </dt>
                                 <dt>
                                     <%= item.goodsName %>
@@ -94,8 +93,9 @@
                                 </dt>
                             </dl>
                             <% } %>
-                                <% }) %>
+                                <% })%>
                 </div>
+
                 <!-- 第二部分大图-->
                 <div class="second_part_img">
                     <div class="l_second_text">
@@ -103,28 +103,30 @@
                         <div class="line"></div>
                         <p class="p2">2018 春夏</p>
                         <div class="second_big_left">
-                            <img src="./images/series/sports/sports_show/sports_showBottom1.jpg" alt="" />
+                            <img src="./images/series/<%= data.goodsType.typeImg.split('?')[0]+data.goodsType.typeImg.split('|')[2] %>" alt="" />
                         </div>
                     </div>
                     <div class="second_big_gight">
-                        <img src="./images/series/sports/sports_show/sports_showBottom2.jpg" alt="" />
+                        <img src="./images/series/<%= data.goodsType.typeImg.split('?')[0]+data.goodsType.typeImg.split('|')[3] %>" alt="" />
                     </div>
                 </div>
                 <!-- 第二部分产品-->
                 <div class="firstList">
                     <!--dl*8>(dt*3+dd*3)-->
-                    <% data.forEach(function(item){ %>
-                        <% if(item.typeId=== 2) { %>
+                    <% data.goodsList.forEach(function(item){ %>
+                        <% if(item.isHot== 0) { %>
                             <dl class="bigdl" data-id="<%= item.goodsId %>">
                                 <dt class="smimg">
+                                    <img src="./images/series/<%= item.goodLargeImg %>" alt="">
                                 </dt>
                                 <dt>
                                     <span> &nbsp;&nbsp;</span>
-                                    <span class="icon-xing iconfont"></span>
-                                    <span class="icon-xing iconfont"></span>
-                                    <span class="icon-xing iconfont"></span>
-                                    <span class="icon-xing iconfont"></span>
-                                    <span class="icon-xing iconfont"></span>
+                                    <% for(let i=0;i < item.goodscore;i++ ){ %>
+                                        <span class="icon-star iconfont"></span>
+                                        <% } %>
+                                            <% for(let i=0;i < 5-item.goodscore;i++ ){ %>
+                                                <span class="icon-STAR iconfont"></span>
+                                                <% } %>
                                 </dt>
                                 <dt>
                                     <%= item.goodsName %>
@@ -137,9 +139,10 @@
                                     <i class="icon-iconset0317 iconfont"></i>
                                 </dt>
                             </dl>
-                            <% } %>
-                                <% }) %>
+                            <% }%>
+                                <% })%>
                 </div>
+
                 <div class="last_part">
                     <i class="icon-jiantouarrowhead7 iconfont"></i>
                     <span class="page1">1</span>&nbsp;
@@ -148,7 +151,7 @@
                 </div>
             </div>
         </section>
-        <% include parts/footer %>
+        <% include footer %>
             <script src="js/jquery-1.11.3.js"></script>
             <script src="./js/layer-v3.1.1/layer/layer.js"></script>
             <script src="./js/index.js"></script>
