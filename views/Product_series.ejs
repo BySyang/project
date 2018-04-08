@@ -69,9 +69,11 @@
                 <div class="firstList">
                     <!--dl*8>(dt*3+dd*3)-->
                     <% data.forEach(function(item){ %>
-                        <% if(item.typeId=== 1) { %>
+                        <% if(item.typeId=== 4) { %>
                             <dl class="bigdl" data-id="<%= item.goodsId %>">
-                                <dt class="smimg"></dt>
+                                <dt class="smimg">
+                                    <img src="./images/series/<%= item.goodLargeImg %>" alt="">
+                                </dt>
                                 <dt>
                                     <span> &nbsp;&nbsp;</span>
                                     <span class="icon-xing iconfont"></span>

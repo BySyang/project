@@ -28,26 +28,26 @@
             <ul class="con-FangDa-ImgList">
               <!-- 图片显示列表 -->
               <li class="active">
-                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('|')[0].replace('?','')  %>" data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('|')[0].replace('?','').replace(/(\.+)/,'(1)$1')  %>">
+                <img src="./images/series/<%=  data.goodsImg.split('|')[0].replace('?','')  %>" data-bigimg="./images/series/<%=  data.goodsImg.split('|')[0].replace('?','').replace(/(\.+)/,'(1)$1')  %>">
               </li>
               <li>
-                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[1]  %>"  data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+(data.goodsImg.split('|')[1].replace(/(\.+)/,'(1)$1')) %>">
+                <img src="./images/series/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[1]  %>"  data-bigimg="./images/series/<%=  data.goodsImg.split('?')[0]+(data.goodsImg.split('|')[1].replace(/(\.+)/,'(1)$1')) %>">
               </li>
               <li>
-                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[2]   %>" data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+(data.goodsImg.split('|')[2].replace(/(\.+)/,'(1)$1')) %>">
+                <img src="./images/series/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[2]   %>" data-bigimg="./images/series/<%=  data.goodsImg.split('?')[0]+(data.goodsImg.split('|')[2].replace(/(\.+)/,'(1)$1')) %>">
               </li>
               <li>
-                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[3]   %>" data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+(data.goodsImg.split('|')[3].replace(/(\.+)/,'(1)$1'))  %>">
+                <img src="./images/series/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[3]   %>" data-bigimg="./images/series/<%=  data.goodsImg.split('?')[0]+(data.goodsImg.split('|')[3].replace(/(\.+)/,'(1)$1'))  %>">
               </li>
             </ul>
             <div class="con-fangDaIMg">
               <!-- 正常显示的图片-->
-              <img src="./images/series/sports/sports_goods/sports_goods1/sportsGoods1_content/sportsGoods1_picA(1).jpg">
+              <img src="./images/series/<%=  data.goodsImg.split('|')[0].replace('?','').replace(/(\.+)/,'(1)$1')  %>">
               <!-- 滑块-->
               <div class="magnifyingBegin"></div>
               <!-- 放大镜显示的图片 -->
               <div class="magnifyingShow">
-                <img src="./images/series/sports/sports_goods/sports_goods1/sportsGoods1_content/sportsGoods1_picA(1).jpg">
+                <img src="./images/series/<%=  data.goodsImg.split('|')[0].replace('?','').replace(/(\.+)/,'(1)$1')  %>">
               </div>
             </div>
 

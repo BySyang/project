@@ -179,7 +179,7 @@ $('#logBtn').click(function () {
     $.ajax({
         url: 'login',
         type: 'post',
-        data: data,
+        data: fromData,
         success(data) {
             if (data =='ok') {
                 window.parent.location.reload()

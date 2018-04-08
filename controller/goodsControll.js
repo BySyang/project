@@ -13,7 +13,17 @@ module.exports = {
         let goodsId = req.query.id;
         goodsModal.goodsOne(goodsId,function(err,data){
            if(!err){
-            res.render('parts/Product_details',{data:data[0]})
+               if(data[0])  {
+                res.render('parts/Product_details',{data:data[0]});
+               }else{
+                var error = new Error('没有此商品');
+                error.message = '没有此商品';
+                res.status(404);
+                res.locals.message = error.message;
+                res.render('error',{error});
+               }
+               
+           
            }else{
                console.log(err)
            }
