@@ -41,10 +41,12 @@ $(function () {
     // 导航js
     $(window).scroll(function () {
         var scrollTop = $(this).scrollTop();
-        if (scrollTop > 300) {
+        if (scrollTop >100) {
             $(".head-nav").addClass("head-nav1")
-            $(".head-nav>ul>li>a").css({
-                "color": "#000000"
+            $(".list_item").css({
+                "color":"#000000"
+            }).hover(function(){
+                $(this).css("color","#ff0066").parent().siblings().children().css("color","#000000")
             })
             $(".head_nav_right_i>a").addClass("box_input1")
             $(".box_input").css({
@@ -56,8 +58,10 @@ $(function () {
         }
         if (scrollTop < 10) {
             $(".head-nav").removeClass("head-nav1")
-            $(".head-nav>ul>li>a").css({
+            $(".list_item").css({
                 "color": "white"
+            }).hover(function(){
+                $(this).css("color","#ff0066").parent().siblings().children().css("color","white")
             })
             $(".head_nav_right_i>a").removeClass("box_input1");
             $(".box_input").css({
