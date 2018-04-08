@@ -68,12 +68,20 @@ header {
     padding-left: 3px;
     font-size: 16px;
     color: #fff;
-    z-index: 9999
+}
+.out{
+    padding-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    display: none;
 }
 
 .box_icon:hover {
     color: #f06;
-    z-index: 9999
+}
+.out:hover{
+    color: #f06;
+    /* z-index: 9999 */
 }
 
 .head-nav>ul>li:nth-child(6) {

@@ -168,18 +168,35 @@ $(function () {
 
     })
 })
-
+// 登录账户和密码以及登录状态判断
 $('#logBtn').click(function () {
+    var username=document.getElementById("username").value;
+    var password=document.getElementById("password").value;
+    console.log(username);
+    console.log(password);
     let data = $('#denglu').serialize();
     $.ajax({
         url: 'login',
         type: 'post',
         data: data,
         success(data) {
-            if (data == 'ok') {
-                window.parent.location.reload();
-                
-            } else {
+            if (data =='ok') {
+                window.parent.location.reload(function(){
+                    $(".out").css({"display":"block"})
+                    console.log("11111")
+                });
+            }
+             else if(username.length==0 && password.length>0) {   
+                layer.msg('账号不能为空，请输入账号');
+            }
+            else if(password.length==0 && username.length>0 ){
+                layer.msg('密码不能为空，请输入密码');
+            }
+            else if(password.length==0 && username.length==0){
+                layer.msg('请输入账户和密码');
+            }
+            else{
+                layer.msg('账号或密码错误，请重新登录');
                 console.log('登录失败')
             }
         },
@@ -190,10 +207,7 @@ $('#logBtn').click(function () {
     
 });
 
-/**
- * 重置密码
- */
-
+// 重置密码
 $('#resetPwd').click(function () {
     if (typeof isOk != 'undefined' && isOk) {
         let data = $('#wangji').serialize();
