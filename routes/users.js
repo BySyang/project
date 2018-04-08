@@ -6,7 +6,7 @@ router.post('/isLogin',userControll.isLogin);
 router.post('/login',userControll.userLogin); //登录
 
 router.post('/resetPwd',userControll.resetPwd);
-router.post('/exit',userControll.userExit); //退出登录
+router.post('/userExit',userControll.userExit); //退出登录
 router.post('/register',userControll.register)
 
 router.post('/userInfo',userControll.userInfo); //个人中心展示

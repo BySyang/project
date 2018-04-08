@@ -50,6 +50,7 @@ module.exports = {
     },
     userExit(req, res) {
         req.session.destroy();
+        res.send('ok');
     },
     userInfo(req, res) {
         let userInfo = JSON.stringify(req.session.userInfo);

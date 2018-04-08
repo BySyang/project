@@ -1,4 +1,3 @@
-
 $(function () {
     // 轮播js
     var nowimg = 0;
@@ -41,10 +40,12 @@ $(function () {
     // 导航js
     $(window).scroll(function () {
         var scrollTop = $(this).scrollTop();
-        if (scrollTop > 300) {
+        if (scrollTop > 100) {
             $(".head-nav").addClass("head-nav1")
-            $(".head-nav>ul>li>a").css({
+            $(".list_item").css({
                 "color": "#000000"
+            }).hover(function () {
+                $(this).css("color", "#ff0066").parent().siblings().children().css("color", "#000000")
             })
             $(".head_nav_right_i>a").addClass("box_input1")
             $(".box_input").css({
@@ -56,8 +57,10 @@ $(function () {
         }
         if (scrollTop < 10) {
             $(".head-nav").removeClass("head-nav1")
-            $(".head-nav>ul>li>a").css({
+            $(".list_item").css({
                 "color": "white"
+            }).hover(function () {
+                $(this).css("color", "#ff0066").parent().siblings().children().css("color", "white")
             })
             $(".head_nav_right_i>a").removeClass("box_input1");
             $(".box_input").css({
@@ -69,24 +72,23 @@ $(function () {
 
 
     // 系列下拉菜单js
-    var flag=$("#list").is(":hidden");
-    var imgflag=$(".product_img").is(":hidden");
-    $(".product_txt").mouseenter("click",function(){
-    if(flag){
-        $("#list").show()
-        $(".product_img").show()
-    }
-    else{
-        $("#list").hide()
-        $(".product_img").hide()
-    }
+    var flag = $("#list").is(":hidden");
+    var imgflag = $(".product_img").is(":hidden");
+    $(".product_txt").mouseenter("click", function () {
+        if (flag) {
+            $("#list").show()
+            $(".product_img").show()
+        } else {
+            $("#list").hide()
+            $(".product_img").hide()
+        }
     })
-    $("#list").mouseover(function (){  
-        $("#list").show();  
+    $("#list").mouseover(function () {
+        $("#list").show();
         $(".product_img").show()
-    }).mouseout(function (){  
-        $("#list").hide(); 
-        $(".product_img").hide() 
+    }).mouseout(function () {
+        $("#list").hide();
+        $(".product_img").hide()
 
     })
     // var imgarr=new Array(['../images/menuImage/sonMenu_fresh.jpg'])
@@ -98,21 +100,21 @@ $(function () {
     //     $("#list").show(500)
     //     $(".product_img").show(500)
     // })
-        // $(".product_list>ul>li:nth-child(1)").on('click',function(){
-        //     $(".product_img>div:nth-child(1)").css({"background":"url(../images/menuImage/sonMenu_fresh.jpg)"})
-        //     console.log(imgarr[0])
-        //     console.log("1111")
-        // })
-   
+    // $(".product_list>ul>li:nth-child(1)").on('click',function(){
+    //     $(".product_img>div:nth-child(1)").css({"background":"url(../images/menuImage/sonMenu_fresh.jpg)"})
+    //     console.log(imgarr[0])
+    //     console.log("1111")
+    // })
+
     // $("#list"). mouseout("click", function () {
     //     $("#list").hide(500)
     //     $(".product_img").hide(500)
-    
-        // $(".product_list>ul>li:nth-child(1)").on('click',function(){
-        //     $(".product_img>div:nth-child(1)").css({"background":"url(../images/menuImage/sonMenu_fresh.jpg)"})
-        //     console.log(imgarr[0])
-        //     console.log("1111")
-        // })
+
+    // $(".product_list>ul>li:nth-child(1)").on('click',function(){
+    //     $(".product_img>div:nth-child(1)").css({"background":"url(../images/menuImage/sonMenu_fresh.jpg)"})
+    //     console.log(imgarr[0])
+    //     console.log("1111")
+    // })
     // })
 
 
@@ -124,7 +126,7 @@ $(function () {
     // 登录注册弹出框js  
     $('.icon-gerenzhongxin').on('click', function () {
         isLogin({
-            fail(){
+            fail() {
                 layer.open({
                     type: 2,
                     title: false,
@@ -204,31 +206,40 @@ $(function () {
 
     })
 })
+if (localStorage.username) {
+    $('#denglu').find('input[name="username"]').val(localStorage.username);
+    $('#denglu').find('input[name="password"]').val(localStorage.password);
+    $('#denglu').find('#remember').prop('checked', true);
+
+
+
+}
 // 登录账户和密码以及登录状态判断
 $('#logBtn').click(function () {
-    var username=document.getElementById("username").value;
-    var password=document.getElementById("password").value;
-    console.log(username);
-    console.log(password);
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
     let fromData = $('#denglu').serialize();
     $.ajax({
         url: 'login',
         type: 'post',
         data: fromData,
         success(data) {
-            if (data =='ok') {
-                window.parent.location.reload()
-            }
-             else if(username.length==0 && password.length>0) {   
+            if (data == 'ok') {
+                if ($('#remember').prop('checked')) {
+                    remeberUser(username, password)
+                } else {
+                    deluser();
+                }
+
+                window.parent.location.reload();
+
+            } else if (username.length == 0 && password.length > 0) {
                 layer.msg('账号不能为空，请输入账号');
-            }
-            else if(password.length==0 && username.length>0 ){
+            } else if (password.length == 0 && username.length > 0) {
                 layer.msg('密码不能为空，请输入密码');
-            }
-            else if(password.length==0 && username.length==0){
+            } else if (password.length == 0 && username.length == 0) {
                 layer.msg('请输入账户和密码');
-            }
-            else{
+            } else {
                 layer.msg('账号或密码错误，请重新登录');
                 console.log('登录失败')
             }
@@ -237,12 +248,13 @@ $('#logBtn').click(function () {
             console.log(err)
         }
     })
-    
+
 });
+
+
 
 // 重置密码
 $('#resetPwd').click(function () {
-    if (typeof isOk != 'undefined' && isOk) {
         let data = $('#wangji').serialize();
         $.ajax({
             url: 'resetPwd',
@@ -250,7 +262,7 @@ $('#resetPwd').click(function () {
             data: data,
             success(data) {
                 if (data == 'ok') {
-                    console.log('密码重置成功')
+                    layer.msg('密码重置成功');
                     $("#wangji").css({
                         "display": "none"
                     })
@@ -261,27 +273,21 @@ $('#resetPwd').click(function () {
                         "display": "block"
                     })
                 } else {
-                    console.log('密码重置失败')
+                    layer.msg('密码重置失败')
                 }
             },
             error(err) {
                 console.log(err)
             }
         })
-    } else {
-        alert('验证码错误');
-    }
-
 });
 
 // isOk = true 
 $('#wangji .getIdent_code').click(function () {
-    getYz($('#wangji'), function () {
-        window.isOk = true;
-    });
+    getYz($('#wangji'),'#resetPwd');
 });
 $('#zhuce .getIdent_code').click(function () {
-    getYz($('#zhuce'));
+    getYz($('#zhuce'),'#regBtn');
 });
 /* 
  *   注册
@@ -294,10 +300,9 @@ $('#regBtn').click(function () {
         type: 'post',
         success(data) {
             if (data == 'ok') {
-                console.log('注册成功');
-            } 
-            else {
-                consoel.log('注册失败');
+                layer.msg('注册成功');
+            } else {
+                layer.msg('注册失败');
             }
         },
         error(err) {
@@ -314,7 +319,7 @@ $('#shopping').click(function () {
             location.href = 'shopping.html';
         },
         fail() {
-            console.log('请先登录');
+            layer.msg('请先登录');
         }
     })
 })
@@ -394,25 +399,25 @@ function showOrders() {
 /* 
  *  获取验证码
  */
-function getYz(dom, fn) {
+function getYz(dom,btn, fn) {
     $.ajax({
         url: 'getIdent',
         type: 'post',
         data: `&phone=${dom.find('input[name="username"]').val()}`,
         success(data) {
             if (data == 'success') {
-                console.log('短信发送成功!');
-                dom.find('.identCode').change(function () {
+                layer.msg('短信发送成功!');
+                dom.find(btn).on('click',function () {
                     $.ajax({
                         url: 'verifyCode',
                         type: 'post',
                         data: `&smscode=${dom.find('.identCode').val()}&phone=${dom.find('input[name="username"]').val()}`,
                         success(data) {
                             if (data == 'success') {
-                                console.log('短信验证成功!')
+                                layer.msg('短信验证成功!')
                                 fn && fn();
                             } else {
-                                console.log('短信验证失败!')
+                                layer.msg('短信验证失败!')
                             }
                         },
                         error(err) {
@@ -446,11 +451,31 @@ function isLogin(options) {
         }
     })
 }
-// 登录退出
-$(".icon-login_out").on('click',function(){
-  
+//退出按钮
+isLogin({
+    success() {
+        $('.out').show();
+    },
+
+    fail() {
+        $('.out').hide();
+    }
 })
 
+//点击退出
+$(".out").on('click',function(){
+    $.ajax({
+        type:'post',
+        url:'userExit',
+        success:function(data){
+            if(data=='ok'){
+                location.reload()
+            }
+        }
+
+    })
+
+})
 
 /**
  * 格式化日期
@@ -510,3 +535,27 @@ function goodSpec() {
     }
     return goodSpec
 }
+
+$('.toSeriesBtn').click(function () {
+    let series = $(this).data('id');
+    location.href = `Product_series.html?seriesId=${series}`;
+})
+
+/**
+ * 本地储存用户
+ * @param {*} user 
+ * @param {*} pwd 
+ */
+function remeberUser(user, pwd) {
+    localStorage.setItem('username', user);
+    localStorage.setItem('password', pwd);
+}
+
+function deluser() {
+    if (localStorage.username) {
+        localStorage.removeItem('username');
+        localStorage.removeItem('password');
+    }
+
+}
+
