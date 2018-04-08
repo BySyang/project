@@ -182,10 +182,7 @@ $('#logBtn').click(function () {
         data: fromData,
         success(data) {
             if (data =='ok') {
-                window.parent.location.reload(function(){
-                    $(".out").css({"display":"block"})
-                    console.log("11111")
-                });
+                window.parent.location.reload()
             }
              else if(username.length==0 && password.length>0) {   
                 layer.msg('账号不能为空，请输入账号');
@@ -263,7 +260,8 @@ $('#regBtn').click(function () {
         success(data) {
             if (data == 'ok') {
                 console.log('注册成功');
-            } else {
+            } 
+            else {
                 consoel.log('注册失败');
             }
         },
