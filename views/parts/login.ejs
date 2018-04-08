@@ -12,7 +12,7 @@
 
 <body>
     <!-- 登录注册 -->
-    <div action="login.do" method="post" class="submit">
+    <div  method="post" class="submit">
         <div class="login_contain">
             <div class="login_contain_left">
                 <img src="./images/login/login_pic.png" alt="">
@@ -23,7 +23,7 @@
                     <span>注册</span>
                 </div>
                 <!-- 登录输入框 -->
-                <form id="denglu">
+                <form id="denglu" action="">
                     <div class="login_row" action="submit" method="post">
                         <div class="field">
                             <input type="text" id="username" name="username" class="input_big" placeholder="请输入用户名/手机号">
@@ -42,7 +42,7 @@
                                 <span class="st-icon-pandora">密码错误</span>
                             </div> -->
                         </div>
-                        <div class='input_checkbox'>
+                        <div class='input_checkbox' id="remember">
                             <input type="checkbox" value="记住密码">
                             <span>记住密码</span>
                             <a href="javascript:void(0)">忘记密码？</a>
@@ -115,5 +115,4 @@
 <script src="./js/jquery-1.11.3.js"></script>
 <script src="./js/layer-v3.1.1/layer/layer.js"></script>
 <script src="./js/index.js"></script>
-
 </html>
