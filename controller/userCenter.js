@@ -4,6 +4,7 @@ const orderModal = require('../modal/orderModal');
 module.exports = {
     userCenterInit(req, res) {
         if (req.session.userInfo) {
+            console.log(req.session.userInfo)
             var userInfo = req.session.userInfo;
             let obj = {};
             obj.userInfo = userInfo;

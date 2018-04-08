@@ -10,33 +10,6 @@ function margin() {
     });
 }
 margin();
-//    添加图片
-var imgArray = [
-    "images/series/sports/sports_goods/sports_goods1/sportsGoods1_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods2/sportsGoods2_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods3/sportsGoods3_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods4/sportsGoods4_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods5/sportsGoods5_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods6/sportsGoods6_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods7/sportsGoods7_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods8/sportsGoods8_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods9/sportsGoods9_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods10/sportsGoods10_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods11/sportsGoods11_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods12/sportsGoods12_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods13/sportsGoods13_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods14/sportsGoods14_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods15/sportsGoods15_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods16/sportsGoods16_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods17/sportsGoods17_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods18/sportsGoods18_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods19/sportsGoods19_mid.jpg",
-    "images/series/sports/sports_goods/sports_goods20/sportsGoods20_mid.jpg"
-];
-var index = 0;
-$(".smimg").each(function (index, ele) {
-    $(this).html("<img src='" + imgArray[index] + "'/>");
-});
 $(".smimg img").css({
     "width": "100%"
 });

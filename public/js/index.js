@@ -1,3 +1,4 @@
+
 $(function () {
     // 轮播js
     var nowimg = 0;
@@ -170,11 +171,11 @@ $(function () {
 })
 
 $('#logBtn').click(function () {
-    let data = $('#denglu').serialize();
+    let fromData = $('#denglu').serialize();
     $.ajax({
         url: 'login',
         type: 'post',
-        data: data,
+        data: fromData,
         success(data) {
             if (data == 'ok') {
                 window.parent.location.reload();
