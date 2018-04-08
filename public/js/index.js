@@ -93,31 +93,7 @@ $(function () {
         $(".product_img").hide() 
 
     })
-    // var imgarr=new Array(['../images/menuImage/sonMenu_fresh.jpg'])
-    // $(".product_txt").mouseenter("click", function () {
-    //     $("#list").show(500)
-    //     $(".product_img").show(500)
-    // })
-    // $("#list>ul").mouseenter('click',function(){
-    //     $("#list").show(500)
-    //     $(".product_img").show(500)
-    // })
-        // $(".product_list>ul>li:nth-child(1)").on('click',function(){
-        //     $(".product_img>div:nth-child(1)").css({"background":"url(../images/menuImage/sonMenu_fresh.jpg)"})
-        //     console.log(imgarr[0])
-        //     console.log("1111")
-        // })
-   
-    // $("#list"). mouseout("click", function () {
-    //     $("#list").hide(500)
-    //     $(".product_img").hide(500)
-    
-        // $(".product_list>ul>li:nth-child(1)").on('click',function(){
-        //     $(".product_img>div:nth-child(1)").css({"background":"url(../images/menuImage/sonMenu_fresh.jpg)"})
-        //     console.log(imgarr[0])
-        //     console.log("1111")
-        // })
-    // })
+
 
 
 
@@ -224,7 +200,10 @@ $('#logBtn').click(function () {
                 window.parent.location.reload()
             }
              else if(username.length==0 && password.length>0) {   
-                layer.msg('账号不能为空，请输入账号');
+                layer.msg('账号不能为空，请输入账号',{
+                    time:1500
+
+                });
             }
             else if(password.length==0 && username.length>0 ){
                 layer.msg('密码不能为空，请输入密码');
@@ -243,6 +222,8 @@ $('#logBtn').click(function () {
     })
     
 });
+
+
 
 // 重置密码
 $('#resetPwd').click(function () {
@@ -450,11 +431,6 @@ function isLogin(options) {
         }
     })
 }
-// 登录退出
-$(".icon-login_out").on('click',function(){
-  
-})
-
 
 /**
  * 格式化日期
