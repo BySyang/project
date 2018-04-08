@@ -28,16 +28,16 @@
             <ul class="con-FangDa-ImgList">
               <!-- 图片显示列表 -->
               <li class="active">
-                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('|')[0].replace('?','')  %>" data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('|')[0].replace('?','')  %>">
+                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('|')[0].replace('?','')  %>" data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('|')[0].replace('?','').replace(/(\.+)/,'(1)$1')  %>">
               </li>
               <li>
-                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[1]  %>"  data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[1]  %>">
+                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[1]  %>"  data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+(data.goodsImg.split('|')[1].replace(/(\.+)/,'(1)$1')) %>">
               </li>
               <li>
-                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[2]   %>" data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[2] %>">
+                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[2]   %>" data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+(data.goodsImg.split('|')[2].replace(/(\.+)/,'(1)$1')) %>">
               </li>
               <li>
-                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[3]   %>" data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[3]  %>">
+                <img src="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[3]   %>" data-bigimg="./images/series/sports/sports_goods/<%=  data.goodsImg.split('?')[0]+(data.goodsImg.split('|')[3].replace(/(\.+)/,'(1)$1'))  %>">
               </li>
             </ul>
             <div class="con-fangDaIMg">
@@ -94,7 +94,7 @@
               <div>B</div>
               <div>C</div>
               <div>D</div>
-              <div>DD</div>
+              <div>E</div>
             </div>
             <div class="number">
               <p>数量</p>

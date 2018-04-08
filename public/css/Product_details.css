@@ -1,6 +1,6 @@
 #product_sectop {
   width: 80%;
-  padding: 1px 0;
+  padding-top: 100px;
   margin: 0 auto;
 }
 #product_sectop .line {
@@ -36,9 +36,14 @@
 }
 #product_detaright > .right_deta p:first-of-type {
   font-size: 16px;
+  margin-bottom: 10px;
 }
 #product_detaright > .right_deta p:last-of-type {
   font-size: 14px;
+  margin-bottom: 10px;
+}
+#product_detaright > .right_deta span:first-of-type {
+  margin-bottom: 10px;
 }
 #product_detaright > .right_deta span:first-of-type i {
   color: #fecf4c;
@@ -47,12 +52,16 @@
   font-size: 14px;
 }
 #product_detaright > .right_deta > .price {
+  margin-bottom: 10px;
   padding: 10px 0;
   width: 400px;
   border-bottom: 1px dotted #000;
 }
 #product_detaright > .right_deta > .price span {
   font-size: 14px;
+}
+#product_detaright > .right_deta > .color {
+  margin-bottom: 10px;
 }
 #product_detaright > .right_deta > .color p {
   font-size: 14px;
@@ -82,6 +91,10 @@
 #product_detaright > .right_deta > .color div:nth-of-type(6) {
   background-color: blue;
 }
+#product_detaright > .right_deta > .size,
+#product_detaright > .right_deta .cups {
+  margin-bottom: 10px;
+}
 #product_detaright > .right_deta > .size p,
 #product_detaright > .right_deta .cups p {
   font-size: 14px;
@@ -96,6 +109,9 @@
   border: 1px solid #c9c9c9;
   text-align: center;
   line-height: 30px;
+}
+#product_detaright > .right_deta > .number {
+  margin-bottom: 10px;
 }
 #product_detaright > .right_deta > .number p {
   font-size: 14px;
@@ -482,5 +498,3 @@
 #product_detatab4 .product_problem p {
   font-size: 10px;
 }
-
-/*# sourceMappingURL=Product_details.css.map */
