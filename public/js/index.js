@@ -175,7 +175,7 @@ $('#logBtn').click(function () {
     var password=document.getElementById("password").value;
     console.log(username);
     console.log(password);
-    let data = $('#denglu').serialize();
+    let fromData = $('#denglu').serialize();
     $.ajax({
         url: 'login',
         type: 'post',
