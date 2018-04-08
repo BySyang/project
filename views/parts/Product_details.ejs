@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>产品详情</title>
-  <link rel="stylesheet" href="https://at.alicdn.com/t/font_611086_bcxvamj8v0rx80k9.css">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_611086_ykgw0jdliwcow29.css">
   <link rel="stylesheet" href="./css/parts.css">
   <link rel="stylesheet" href="css/Product_details.css">
-  <link rel="stylesheet" href="http://at.alicdn.com/t/font_611086_ug71q3xm0zxjq0k9.css">
+  <!-- <link rel="stylesheet" href="http://at.alicdn.com/t/font_611086_ug71q3xm0zxjq0k9.css"> -->
 </head>
 
 <body>
@@ -29,12 +29,12 @@
               <% data.goodsImg.split('|').forEach(function(item,index){  %>
                 <% if(index == 0){ %>
                   <li class="active">
-                      <img src="./images/series/<%=  item.replace('?','')  %>" data-bigimg="./images/series/<%=  item.replace('?','').replace(/(\.+)/,'(1)$1')  %>">
-                    </li>
+                    <img src="./images/series/<%=  item.replace('?','')  %>" data-bigimg="./images/series/<%=  item.replace('?','').replace(/(\.+)/,'(1)$1')  %>">
+                  </li>
                   <% }else{ %>
                     <li>
-                        <img src="./images/series/<%=  data.goodsImg.split('?')[0]+item  %>" data-bigimg="./images/series/<%=  data.goodsImg.split('?')[0]+(item.replace(/(\.+)/,'(1)$1')) %>">
-                      </li>
+                      <img src="./images/series/<%=  data.goodsImg.split('?')[0]+item  %>" data-bigimg="./images/series/<%=  data.goodsImg.split('?')[0]+(item.replace(/(\.+)/,'(1)$1')) %>">
+                    </li>
                     <% } %>
                       <% }) %>
             </ul>
@@ -56,12 +56,12 @@
             <p>活力粉色运动内衣</p>
             <p>挥洒青春，穿出自我</p>
             <span>
-              <i class="iconfont icon-xing1"></i>
-              <i class="iconfont icon-xing1"></i>
-              <i class="iconfont icon-xing1"></i>
-              <i class="iconfont icon-xing1"></i>
-              <i class="iconfont icon-unie615"></i>
-              <span>4.5</span>
+              <i class="iconfont icon-star"></i>
+              <i class="iconfont icon-star"></i>
+              <i class="iconfont icon-star"></i>
+              <i class="iconfont icon-star"></i>
+              <i class="iconfont icon-star"></i>
+              <span>5</span>
               <span>></span>
               <span>369条评论</span>
             </span>
@@ -257,40 +257,59 @@
         </div>
         <div id="product_detatab2" class="con">
           <div class="product_box">
-            <div class="item">
-              综合分
-              <i class="iconfont icon-xing"></i>
-              <i class="iconfont icon-xing"></i>
-              <i class="iconfont icon-xing"></i>
-              <i class="iconfont icon-xing"></i>
-              <i class="iconfont icon-xing"></i>
-              <br> 外观分
-              <i class="iconfont icon-xing"></i>
-              <i class="iconfont icon-xing"></i>
-              <i class="iconfont icon-xing"></i>
-              <i class="iconfont icon-xing"></i>
-              <i class="iconfont icon-xing"></i>
-              <br> 舒适度
-              <i class="iconfont icon-xing"></i>
-              <i class="iconfont icon-xing"></i>
-              <i class="iconfont icon-xing"></i>
-              <i class="iconfont icon-xing"></i>
-              <i class="iconfont icon-xing"></i>
+            <div class="product_comments_top">
+              <p>整体评价</p>
+              <p>5</p>
+              <p>
+                <i class="iconfont icon-star"></i>
+                <i class="iconfont icon-star"></i>
+                <i class="iconfont icon-star"></i>
+                <i class="iconfont icon-star"></i>
+                <i class="iconfont icon-star"></i>
+              </p>
+              <img src="./images/series/content_images/zhichi.png" alt="">
             </div>
-            <div class="item">
-              尺码偏小: (0%)
-              <br> 尺码适中: (0%)
-              <br> 尺码偏大: (0%)
-            </div>
-            <div class="item">
-              面料偏薄: (0%)
-              <br> 面料适中: (0%)
-              <br> 面料偏厚: (0%)
-            </div>
-            <div class="item">
-              不聚拢:(0%)
-              <br> 适中:(0%)
-              <br> 聚拢:(0%)
+            <div class="product_comments_con">
+              <div>
+                <div class="con_left">
+                  <img src="./images/personalImage/personal_personImg.jpeg" alt="">
+                  <p>Soul</p>
+                </div>
+                <div class="con_right">
+                  <div>
+                    <p>评分:</p>
+                    <span>
+                      <i class="iconfont icon-star"></i>
+                      <i class="iconfont icon-star"></i>
+                      <i class="iconfont icon-star"></i>
+                      <i class="iconfont icon-star"></i>
+                      <i class="iconfont icon-star"></i>
+                    </span>
+                  </div>
+                  <p>合身，舒服，料子自然</p>
+                  <p>2017-04-2 15:20:39</p>
+                </div>
+              </div>
+              <div>
+                  <div class="con_left">
+                    <img src="./images/personalImage/personal_personImg.jpeg" alt="">
+                    <p>Soul</p>
+                  </div>
+                  <div class="con_right">
+                    <div>
+                      <p>评分:</p>
+                      <span>
+                        <i class="iconfont icon-star"></i>
+                        <i class="iconfont icon-star"></i>
+                        <i class="iconfont icon-star"></i>
+                        <i class="iconfont icon-star"></i>
+                        <i class="iconfont icon-star"></i>
+                      </span>
+                    </div>
+                    <p>合身，舒服，料子自然</p>
+                    <p>2017-04-2 15:20:39</p>
+                  </div>
+                </div>
             </div>
           </div>
           <div class="product_comments">
