@@ -1,7 +1,11 @@
 const goodsModal = require('../modal/goodsModal');
 module.exports = {
+    goodsType(req,res){
+       
+    },
     goodsList(req, res) {
-        goodsModal.goodsList(function (err, data) {
+        let typeId = req.query.seriesId;
+        goodsModal.goodsList(typeId,function (err, data) {
             if (!err) {
                 res.render('Product_series', {data})
             } else {

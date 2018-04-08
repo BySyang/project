@@ -14,7 +14,6 @@
 
 <body>
   <% include header %>
-  <%  console.log(data) %>
     <section id="product_sectop">
       <div class="line"></div>
       <div id="product_leftmenu">
@@ -27,18 +26,17 @@
           <div class="con-FangDa" id="fangdajing">
             <ul class="con-FangDa-ImgList">
               <!-- 图片显示列表 -->
-              <li class="active">
-                <img src="./images/series/<%=  data.goodsImg.split('|')[0].replace('?','')  %>" data-bigimg="./images/series/<%=  data.goodsImg.split('|')[0].replace('?','').replace(/(\.+)/,'(1)$1')  %>">
-              </li>
-              <li>
-                <img src="./images/series/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[1]  %>"  data-bigimg="./images/series/<%=  data.goodsImg.split('?')[0]+(data.goodsImg.split('|')[1].replace(/(\.+)/,'(1)$1')) %>">
-              </li>
-              <li>
-                <img src="./images/series/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[2]   %>" data-bigimg="./images/series/<%=  data.goodsImg.split('?')[0]+(data.goodsImg.split('|')[2].replace(/(\.+)/,'(1)$1')) %>">
-              </li>
-              <li>
-                <img src="./images/series/<%=  data.goodsImg.split('?')[0]+data.goodsImg.split('|')[3]   %>" data-bigimg="./images/series/<%=  data.goodsImg.split('?')[0]+(data.goodsImg.split('|')[3].replace(/(\.+)/,'(1)$1'))  %>">
-              </li>
+              <% data.goodsImg.split('|').forEach(function(item,index){  %>
+                <% if(index == 0){ %>
+                  <li class="active">
+                      <img src="./images/series/<%=  item.replace('?','')  %>" data-bigimg="./images/series/<%=  item.replace('?','').replace(/(\.+)/,'(1)$1')  %>">
+                    </li>
+                  <% }else{ %>
+                    <li>
+                        <img src="./images/series/<%=  data.goodsImg.split('?')[0]+item  %>" data-bigimg="./images/series/<%=  data.goodsImg.split('?')[0]+(item.replace(/(\.+)/,'(1)$1')) %>">
+                      </li>
+                    <% } %>
+                      <% }) %>
             </ul>
             <div class="con-fangDaIMg">
               <!-- 正常显示的图片-->
@@ -908,7 +906,7 @@
       </div>
 
     </section>
-  <% include footer %>
+    <% include footer %>
       <script src="js/jquery-1.11.3.js"></script>
       <script src="./js/layer-v3.1.1/layer/layer.js"></script>
       <script src="./js/index.js"></script>

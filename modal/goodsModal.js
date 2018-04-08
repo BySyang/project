@@ -1,13 +1,12 @@
 /* 商品 */
 const sqlPool = require('./sqlPool');
-let sql =  `SELECT * FROM goods a,goods_types b,goods_scores c  WHERE a.typeId = b.typeId and a.goodsId=c.goodsId` ;
-    
+let sql = `SELECT * FROM goods LEFT JOIN  goods_scores ON goods.goodsId=goods_scores.goodsId WHERE goods.typeId=?`;
 module.exports = {
-    goodsList(fn){
-        sqlPool(sql,fn);
+    goodsList(typeId, fn) {
+        sqlPool(sql, [typeId], fn);
     },
-    goodsOne(goodsId,fn){
+    goodsOne(goodsId, fn) {
         let sql = `SELECT * FROM (SELECT *FROM goods WHERE goodsId=?)AS a ,goods_scores b WHERE a.goodsId=b.goodsId`;
-        sqlPool(sql ,[goodsId],fn)
+        sqlPool(sql, [goodsId], fn)
     }
 }
