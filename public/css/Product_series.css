@@ -1,4 +1,4 @@
-a{
+a {
   text-decoration: none !important;
   font-size: 16px;
 }
@@ -68,7 +68,6 @@ section {
 }
 .First_part {
   width: 100%;
-  height: 563px;
   margin-top: 16px;
   -webkit-transition: all 0.3s linear;
 }
@@ -78,14 +77,16 @@ section {
 .First_part .r_text {
   float: left;
   margin-left: 5%;
-  width: 43% ;
+  width: 43%;
 }
 .First_part .r_text .first_big_right {
   width: 100%;
-  margin-top: 19px;
+  height: 354px;
+  margin-top: 24px;
 }
 .First_part .r_text .first_big_right img {
   width: 100%;
+  height: 100%;
 }
 .First_part .r_text .p1 {
   color: #666666;
@@ -119,13 +120,15 @@ section {
   width: 51%;
   height: 562px;
   float: left;
+  height: 560px;
 }
 .First_part .first_big_left img {
   width: 100%;
+  height: 100%;
 }
 .firstList {
   width: 100%;
-  height: 972px;
+  overflow: hidden;
 }
 .firstList .bigdl {
   margin-top: 38px;
@@ -136,14 +139,26 @@ section {
   margin-left: 36px;
   -webkit-transition: all 0.8s linear;
 }
-.icon-xing {
+.firstList .bigdl:nth-child(1) {
+  margin-left: 0;
+}
+.firstList .bigdl:nth-child(5) {
+  margin-left: 0;
+}
+.icon-star {
+  color: #ffc832;
+  letter-spacing: -3px;
+  font-weight: normal;
+  margin-top: -100px;
+}
+.icon-STAR {
   color: #ffc832;
   letter-spacing: -3px;
   font-weight: normal;
   margin-top: -100px;
 }
 .smimg {
-  width: 98% ;
+  width: 98%;
   margin-top: 3px;
   margin-left: 3px;
 }
@@ -184,7 +199,7 @@ section {
 .second_part_img {
   width: 100%;
   height: 523px;
-  margin-top: 51px;
+  margin-top: 35px;
   -webkit-transition: all 0.3s linear;
 }
 .second_part_img:hover .l_second_text .p1 {
@@ -193,14 +208,16 @@ section {
 .second_part_img .l_second_text {
   float: left;
   width: 33%;
+  height: 326px;
 }
 .second_part_img .l_second_text .second_big_left {
   width: 100%;
   height: 361px;
-  margin-top: 39px;
+  margin-top: 30px;
 }
 .second_part_img .l_second_text .second_big_left img {
   width: 100%;
+  height: 100%;
 }
 .second_part_img .l_second_text .p1 {
   color: #666666;
@@ -231,9 +248,11 @@ section {
   height: 523px;
   float: left;
   margin-left: 2.3%;
+  height: 514px;
 }
 .second_part_img > .second_big_gight img {
   width: 100%;
+  height: 100%;
 }
 .last_part {
   width: 120px;
