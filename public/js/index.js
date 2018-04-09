@@ -11,9 +11,6 @@ $(function () {
         },4000)
          
 
-
-
-
     // 导航js
     $(window).scroll(function () {
         var scrollTop = $(this).scrollTop();
@@ -68,36 +65,12 @@ $(function () {
         $(".product_img").hide()
 
     })
-    // var imgarr=new Array(['../images/menuImage/sonMenu_fresh.jpg'])
-    // $(".product_txt").mouseenter("click", function () {
-    //     $("#list").show(500)
-    //     $(".product_img").show(500)
-    // })
-    // $("#list>ul").mouseenter('click',function(){
-    //     $("#list").show(500)
-    //     $(".product_img").show(500)
-    // })
-    // $(".product_list>ul>li:nth-child(1)").on('click',function(){
-    //     $(".product_img>div:nth-child(1)").css({"background":"url(../images/menuImage/sonMenu_fresh.jpg)"})
-    //     console.log(imgarr[0])
-    //     console.log("1111")
-    // })
+    $(".product_txt").parent().siblings().children().mouseenter(function(){
+        $("#list").hide();
+        $(".product_img").hide()
+        console.log("11111")
 
-    // $("#list"). mouseout("click", function () {
-    //     $("#list").hide(500)
-    //     $(".product_img").hide(500)
-
-    // $(".product_list>ul>li:nth-child(1)").on('click',function(){
-    //     $(".product_img>div:nth-child(1)").css({"background":"url(../images/menuImage/sonMenu_fresh.jpg)"})
-    //     console.log(imgarr[0])
-    //     console.log("1111")
-    // })
-    // })
-
-
-
-
-
+    })
 
 
     // 登录注册弹出框js  
@@ -167,6 +140,8 @@ $(function () {
         })
         // console.log("2222")
     })
+
+
     $(".input_checkbox>a").on('click', function () {
         $("#wangji").css({
             "display": "block"
