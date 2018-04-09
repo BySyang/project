@@ -145,7 +145,13 @@ section {
 .firstList .bigdl:nth-child(5) {
   margin-left: 0;
 }
-.icon-xing {
+.icon-star {
+  color: #ffc832;
+  letter-spacing: -3px;
+  font-weight: normal;
+  margin-top: -100px;
+}
+.icon-STAR {
   color: #ffc832;
   letter-spacing: -3px;
   font-weight: normal;
