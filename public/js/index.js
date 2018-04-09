@@ -52,6 +52,8 @@ $(function () {
         if (flag) {
             $("#list").show()
             $(".product_img").show()
+            $(".head-nav1").css({"box-shadow":"0px 0px 0px #fff"})
+            // console.log("111")
         } else {
             $("#list").hide()
             $(".product_img").hide()
@@ -68,7 +70,7 @@ $(function () {
     $(".product_txt").parent().siblings().children().mouseenter(function(){
         $("#list").hide();
         $(".product_img").hide()
-        console.log("11111")
+        // console.log("11111")
 
     })
 
