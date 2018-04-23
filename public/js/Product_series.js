@@ -1,15 +1,7 @@
 /**
  * Created by Admin on 2018/3/30.
  */
-function margin() {
-    $(".firstList dl:nth-child(1),.firstList dl:nth-child(5)").css({
-        "margin-left": "0px"
-    });
-    $(".firstList dl:nth-child(5),.firstList dl:nth-child(6),.firstList dl:nth-child(7),.firstList dl:nth-child(8)").css({
-        "margin-top": "17px"
-    });
-}
-margin();
+
 $(".smimg img").css({
     "width": "100%"
 });

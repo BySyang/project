@@ -127,23 +127,18 @@ section {
   height: 100%;
 }
 .firstList {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
   overflow: hidden;
 }
 .firstList .bigdl {
   margin-top: 38px;
-  float: left;
-  width: 22.4%;
+  width: 22.8%;
   height: 448px;
   background-color: white;
-  margin-left: 36px;
   -webkit-transition: all 0.8s linear;
-}
-.firstList .bigdl:nth-child(1) {
-  margin-left: 0;
-}
-.firstList .bigdl:nth-child(5) {
-  margin-left: 0;
 }
 .icon-star {
   color: #ffc832;
