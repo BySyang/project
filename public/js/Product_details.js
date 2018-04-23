@@ -77,20 +77,59 @@ $(function () {
   });
 
   //复选择
-  $('.product_detamid>ul>li').on('click',function(){
+  $('.product_detamid>ul>li').on('click', function () {
     $(this).addClass('product_midactive').siblings().removeClass('product_midactive');
     $('.con').eq($('.product_detamid>ul>li').index(this)).addClass('product_datatabture').siblings().removeClass('product_datatabture');
   });
 });
 
 $.ajax({
-  type:'get',
-  url:`/goodscore?id=${$('#pingfen').data('id')}`,
-  success(data){
-    console.log(1)
-    console.log(data)
+  type: 'get',
+  url: `/goodscore?id=${$('#pingfen').data('id')}`,
+  success(data) {
+    var str = '';
+    for (let i = 0; i < data.length; i++) {
+      $.ajax({
+        type:'post',
+        url:`/userOneInfo`,
+        async:false,
+        data:`id=${data[i].userId}`,
+        success(data1){
+          str += ` <div>
+      <div class="con_left">
+        <img src="${data1[0].userPhoto}" alt="">
+        <p>${data1[0].userName}</p>
+      </div>
+      <div class="con_right">
+        <div>
+          <p>评分:</p>`
+        },
+        error(err){
+          console.log(err)
+        }
+      })
+     
+      for (let j = 0; j < data[i].orderScore; j++) {
+        str += `<span class="icon-star iconfont"  style="color:#ffc832;"></span>`
+      }
+      for (let k = 0; k < 5-data[i].orderScore; k++) {
+        str += `<span class="icon-STAR iconfont"></span>`
+      }
+      str+=`</div>
+        <p>${data[i].scoreText}</p>
+        <p class="pro_data_ed">${formatDate(data[i].createTime)}</p>
+      </div>
+    </div>`
+    }
+    if(str==''){
+      str =` <div class="product_comments">
+      <span>暂无评价！</span>
+      <div></div>
+    </div>`
+    }
+    $('#pingfen').html(str);
   },
-  error(err){
+  error(err) {
     console.log(err)
   }
 })
