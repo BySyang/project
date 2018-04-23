@@ -82,3 +82,15 @@ $(function () {
     $('.con').eq($('.product_detamid>ul>li').index(this)).addClass('product_datatabture').siblings().removeClass('product_datatabture');
   });
 });
+
+$.ajax({
+  type:'get',
+  url:`/goodscore?id=${$('#pingfen').data('id')}`,
+  success(data){
+    console.log(1)
+    console.log(data)
+  },
+  error(err){
+    console.log(err)
+  }
+})

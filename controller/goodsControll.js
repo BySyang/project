@@ -2,7 +2,6 @@ const goodsModal = require('../modal/goodsModal');
 module.exports = {
 
     goodsList(req, res) {
-        console.log(1)
         let typeId = req.query.seriesId;
         let obj = {};
         new Promise(function (resolve, reject) {
@@ -20,7 +19,6 @@ module.exports = {
                 goodsModal.goodsList(typeId, function (err, goodsList) {
                     if (!err) {
                         obj.goodsList = goodsList;
-                        console.log(goodsList)
                         res.render('parts/Product_series', {
                             data: obj
                         });
@@ -33,10 +31,6 @@ module.exports = {
         }).catch(function(err){
             console.log(err);
         })
-
-
-
-
     },
     goodsOne(req, res) {
         let goodsId = req.query.id;
@@ -55,9 +49,27 @@ module.exports = {
                         error
                     });
                 }
-
-
             } else {
+                console.log(err)
+            }
+        })
+    },
+    goodscore(req,res){
+        let goodsId = req.query.id;
+        goodsModal.goodscore(goodsId,function(err,data){
+            if(!err){
+                res.send(data)
+            }else{
+                console.log(err)
+            }
+        })
+    },
+    goodspecs(req,res){
+        let goodsId = req.query.id;
+        goodsModal.goodspecs(goodsId,function(err,data){
+            if(!err){
+                res.send(data)
+            }else{
                 console.log(err)
             }
         })

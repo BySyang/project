@@ -17,9 +17,11 @@
     <section id="product_sectop">
       <div class="line"></div>
       <div id="product_leftmenu">
-        <a href="#">活力少女</a>
+        <a href="/Product_series.html?seriesId=<%= data.typeId %>">活力少女</a>
         <span>></span>
-        <a href="#">活力粉色运动内衣</a>
+        <a href="#">
+          <%= data.goodsName%>
+        </a>
       </div>
       <div id="product_detatop">
         <div id="product_detaleft">
@@ -53,17 +55,19 @@
         </div>
         <div id="product_detaright">
           <div class="right_deta">
-            <p>活力粉色运动内衣</p>
-            <p>挥洒青春，穿出自我</p>
+            <p>
+              <%- data.typeDes.substr(9) %>
+            </p>
             <span>
-              <i class="iconfont icon-star"></i>
-              <i class="iconfont icon-star"></i>
-              <i class="iconfont icon-star"></i>
-              <i class="iconfont icon-star"></i>
-              <i class="iconfont icon-star"></i>
-              <span>5</span>
-              <span>></span>
-              <span>369条评论</span>
+              <% for(let i=0;i < data.goodscore;i++ ){ %>
+                <span class="icon-star iconfont"  style="color:#ffc832;"></span>
+                <% } %>
+                  <% for(let i=0;i < 5-data.goodscore;i++ ){ %>
+                    <span class="icon-STAR iconfont"></span>
+                    <% } %>
+                      <span><%= data.goodscore%></span>
+                      <span>></span>
+                      <span><%= data.goodsUsers%>条评论</span>
             </span>
             <div class="price">
               <span>价格:</span>
@@ -259,17 +263,18 @@
           <div class="product_box">
             <div class="product_comments_top">
               <p>整体评价</p>
-              <p>5</p>
+              <p><%= data.goodscore%></p>
               <p>
-                <i class="iconfont icon-star"></i>
-                <i class="iconfont icon-star"></i>
-                <i class="iconfont icon-star"></i>
-                <i class="iconfont icon-star"></i>
-                <i class="iconfont icon-star"></i>
+                  <% for(let i=0;i < data.goodscore;i++ ){ %>
+                    <span class="icon-star iconfont"  style="color:#ffc832;"></span>
+                    <% } %>
+                      <% for(let i=0;i < 5-data.goodscore;i++ ){ %>
+                        <span class="icon-STAR iconfont"></span>
+                        <% } %>
               </p>
               <img src="./images/series/content_images/zhichi.png" alt="">
             </div>
-            <div class="product_comments_con">
+            <div class="product_comments_con" data-id="<%= data.goodsId%>" id="pingfen">
               <div>
                 <div class="con_left">
                   <img src="./images/personalImage/personal_personImg.jpeg" alt="">
@@ -291,25 +296,25 @@
                 </div>
               </div>
               <div>
-                  <div class="con_left">
-                    <img src="./images/personalImage/personal_personImg.jpeg" alt="">
-                    <p>Soul</p>
-                  </div>
-                  <div class="con_right">
-                    <div>
-                      <p>评分:</p>
-                      <span>
-                        <i class="iconfont icon-star"></i>
-                        <i class="iconfont icon-star"></i>
-                        <i class="iconfont icon-star"></i>
-                        <i class="iconfont icon-star"></i>
-                        <i class="iconfont icon-star"></i>
-                      </span>
-                    </div>
-                    <p>合身，舒服，料子自然</p>
-                    <p>2017-04-2 15:20:39</p>
-                  </div>
+                <div class="con_left">
+                  <img src="./images/personalImage/personal_personImg.jpeg" alt="">
+                  <p>Soul</p>
                 </div>
+                <div class="con_right">
+                  <div>
+                    <p>评分:</p>
+                    <span>
+                      <i class="iconfont icon-star"></i>
+                      <i class="iconfont icon-star"></i>
+                      <i class="iconfont icon-star"></i>
+                      <i class="iconfont icon-star"></i>
+                      <i class="iconfont icon-star"></i>
+                    </span>
+                  </div>
+                  <p>合身，舒服，料子自然</p>
+                  <p>2017-04-2 15:20:39</p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="product_comments">
