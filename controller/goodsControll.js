@@ -66,7 +66,8 @@ module.exports = {
     },
     goodspecs(req,res){
         let goodsId = req.query.id;
-        goodsModal.goodspecs(goodsId,function(err,data){
+        let spec = req.query.spec;
+        goodsModal.goodspecs(goodsId,spec,function(err,data){
             if(!err){
                 res.send(data)
             }else{
