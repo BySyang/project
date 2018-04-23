@@ -81,6 +81,9 @@ $(function () {
     $(this).addClass('product_midactive').siblings().removeClass('product_midactive');
     $('.con').eq($('.product_detamid>ul>li').index(this)).addClass('product_datatabture').siblings().removeClass('product_datatabture');
   });
+  var prodata = $('.pro_data_ed').text();
+  var prodataed = formatDate(prodata);
+  $('.pro_data_ed').text(prodataed);
 });
 
 $.ajax({

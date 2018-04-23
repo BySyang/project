@@ -284,15 +284,16 @@
                   <div>
                     <p>评分:</p>
                     <span>
-                      <i class="iconfont icon-star"></i>
-                      <i class="iconfont icon-star"></i>
-                      <i class="iconfont icon-star"></i>
-                      <i class="iconfont icon-star"></i>
-                      <i class="iconfont icon-star"></i>
+                        <% for(let i=0;i < data.orderScore;i++ ){ %>
+                          <span class="icon-star iconfont"  style="color:#ffc832;"></span>
+                          <% } %>
+                            <% for(let i=0;i < 5-data.orderScore;i++ ){ %>
+                              <span class="icon-STAR iconfont"></span>
+                              <% } %>
                     </span>
                   </div>
-                  <p>合身，舒服，料子自然</p>
-                  <p>2017-04-2 15:20:39</p>
+                  <p><%= data.scoreText %></p>
+                  <p class="pro_data_ed"><%= data.createTime %></p>
                 </div>
               </div>
               <div>
