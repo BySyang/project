@@ -22,9 +22,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser('session'));
 app.use(session({
-  secret: 'session',
+  secret: 'abcd',
   resave: false,
-  saveUninitialized: true,
+  saveUninitialized: false,
   cookie:{
     maxAge: 800000
   }

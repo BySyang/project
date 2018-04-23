@@ -18,8 +18,8 @@ router.get('/*.html', function (req, res, next) {
 });
 router.get('/Product_series.html', goodsControll.goodsList);   //商品系列页
 router.get('/Product_details.html', goodsControll.goodsOne); //商品详情页
-router.get('/goodscore',goodsControll.goodscore);
-router.get('/goodspecs',goodsControll.goodspecs);
+router.get('/goodscore',goodsControll.goodscore);   //商品评论
+router.get('/goodspecs',goodsControll.goodspecs);  //商品规格
 router.get('/shopping.html', catControll.catList);          //购物车
 router.get('/personal-center.html',userCenter.userCenterInit)   //个人中心
 module.exports = router;

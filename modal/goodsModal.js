@@ -18,7 +18,7 @@ module.exports = {
         sqlPool(sql,[goodsId],fn)
     },
     goodspecs(goodsId,fn){
-        let sql =  `select * from goods_specs WHERE goodsId = ? `;
+        let sql =  `SELECT * FROM goods_specs AS a,dictionary AS b WHERE a.dictId = b.dictId AND a.goodsId=?`;
         sqlPool(sql,[goodsId],fn)
     }
 }
