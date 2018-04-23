@@ -18,4 +18,6 @@ router.post('/getIdent',AV.sendMsg);
 router.post('/verifyCode',AV.verifyCode);
 
 
+router.post('/userOneInfo',userControll.userOneInfo);
+
 module.exports = router;

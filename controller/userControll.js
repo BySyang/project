@@ -65,5 +65,14 @@ module.exports = {
             }
         })
     },
+    userOneInfo(req,res){
+        userModal.userOneInfo(req.body.id,function(err,data){
+            if(!err){
+                res.send(data)
+            }else{
+                console.log(err)
+            }
+        })
+    }
     
 }

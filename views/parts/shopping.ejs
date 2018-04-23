@@ -29,13 +29,12 @@
       </div>
       <div class="shopping_sec">
         <%  data.forEach(function(item){ %>
-          <% console.log(item) %>
         <ul>
           <li class="onlycheck">
             <i class="shop_check iconfont icon-gougou"></i>
           </li>
           <li class="shopping_name">
-            <img src="./images/series/sports/sports_goods/<%= item.goodsImg.split('|')[0].replace('?','') %>" alt="">
+            <img src="./images/series/<%= item.goodsImg.split('|')[0].replace('?','') %>" alt="">
             <span><%= data.goodsName %></span>
           </li>
           <li class="shopping_price"><%= item.goodsPrice%>   元</li>
