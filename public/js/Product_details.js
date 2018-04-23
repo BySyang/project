@@ -44,6 +44,8 @@ $(function () {
   $("#fangdajing").magnifying();
 
   //color选择
+  console.log($('.color div').eq(0).find('div'))
+  $('.color div').eq(0).find('div').addClass("color_default");
   $('.color div').each(function () {
     $(this).click(function () {
       $(".color div").addClass("color_default").removeClass("color_checked");
@@ -81,6 +83,9 @@ $(function () {
     $(this).addClass('product_midactive').siblings().removeClass('product_midactive');
     $('.con').eq($('.product_detamid>ul>li').index(this)).addClass('product_datatabture').siblings().removeClass('product_datatabture');
   });
+  if($('.toppinlun').text()==='条评论'){
+    $('.toppinlun').html('0条评论!')
+  }
 });
 
 $.ajax({
