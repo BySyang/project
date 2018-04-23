@@ -275,34 +275,7 @@
               <img src="./images/series/content_images/zhichi.png" alt="">
             </div>
             <div class="product_comments_con" data-id="<%= data.goodsId%>" id="pingfen">
-              <% for(let i=0;i < ;i++){ %>
-              <div>
-                <div class="con_left">
-                  <img src="./images/personalImage/personal_personImg.jpeg" alt="">
-                  <p>Soul</p>
-                </div>
-                <div class="con_right">
-                  <div>
-                    <p>评分:</p>
-                    <span>
-                        <% for(let i=0;i < data.orderScore;i++ ){ %>
-                          <span class="icon-star iconfont"  style="color:#ffc832;"></span>
-                          <% } %>
-                            <% for(let i=0;i < 5-data.orderScore;i++ ){ %>
-                              <span class="icon-STAR iconfont"></span>
-                              <% } %>
-                    </span>
-                  </div>
-                  <p><%= data.scoreText %></p>
-                  <p class="pro_data_ed"><%= data.createTime %></p>
-                </div>
-              </div>
-              <% } %>
             </div>
-          </div>
-          <div class="product_comments">
-            <span>暂无评价！</span>
-            <div></div>
           </div>
         </div>
         <div id="product_detatab3" class="con">
