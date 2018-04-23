@@ -82,7 +82,7 @@ $(function () {
     $('.con').eq($('.product_detamid>ul>li').index(this)).addClass('product_datatabture').siblings().removeClass('product_datatabture');
   });
 });
-
+//渲染评论
 $.ajax({
   type: 'get',
   url: `/goodscore?id=${$('#pingfen').data('id')}`,
@@ -133,3 +133,8 @@ $.ajax({
     console.log(err)
   }
 })
+
+//渲染商品规格
+// $.ajax({
+//   type:get
+// })
