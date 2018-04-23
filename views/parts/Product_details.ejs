@@ -67,36 +67,37 @@
                     <% } %>
                       <span><%= data.goodscore%></span>
                       <span>></span>
-                      <span><%= data.goodsUsers%>条评论</span>
+                      <span class="toppinlun"><%= data.goodsUsers%>条评论</span>
             </span>
             <div class="price">
               <span>价格:</span>
               <span>￥229</span>
+              <span>库存:</span>
+              <span>100</span>
             </div>
             <div class="color">
               <p>颜色</p>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+              <div data-id="0"></div>
+              <div data-id="1"></div>
+              <div data-id="2"></div>
+              <div data-id="3"></div>
+              <div data-id="4"></div>
             </div>
             <div class="size">
               <p>衣带尺寸</p>
-              <div>32</div>
-              <div>34</div>
-              <div>36</div>
-              <div>38</div>
-              <div>40</div>
+              <div data-id="70">70</div>
+              <div data-id="75">75</div>
+              <div data-id="80">80</div>
+              <div data-id="85">85</div>
+              <div data-id="90">90</div>
             </div>
             <div class="cups">
               <p>罩杯大小</p>
-              <div>A</div>
-              <div>B</div>
-              <div>C</div>
-              <div>D</div>
-              <div>E</div>
+              <div data-id="A">A</div>
+              <div data-id="B">B</div>
+              <div data-id="C">C</div>
+              <div data-id="D">D</div>
+              <div data-id="E">E</div>
             </div>
             <div class="number">
               <p>数量</p>
@@ -162,10 +163,10 @@
               </div>
               <div>
                 <div class="t3_left">
-                  <img src="./images/series/sports/sports_goods/sports_goods1/sportsGoods1_content/sportsGoods1_lg.jpg" alt="">
+                  <img src="./images/series/<%=  data.goodsImg.split('|')[0].replace('?','').replace(/(\.+)/,'(1)$1')  %>">
                 </div>
                 <div class="t3_right">
-                  <h3>活力粉色运动内衣II1/2光面薄模杯文胸AM111551</h3>
+                  <h3><%- data.goodsName %></h3>
                   <table>
                     <tbody>
                       <tr>
@@ -244,17 +245,6 @@
               </div>
               <div>
                 <img src="./images/series/content_images/size2017_bra.jpg" alt="">
-              </div>
-            </div>
-            <div class="tab5_box">
-              <div>
-                <h2>模特展示</h2>
-                <span>/ Models Show</span>
-              </div>
-              <div>
-                <img src="./images/series/sports/sports_goods/sports_goods1/sportsGoods1_content/sportsGoods1_picA(1).jpg" alt="">
-                <img src="./images/series/sports/sports_goods/sports_goods1/sportsGoods1_content/sportsGoods1_picD(1).jpg" alt="">
-                <img src="./images/series/sports/sports_goods/sports_goods1/sportsGoods1_content/sportsGoods1_picC(1).jpg" alt="">
               </div>
             </div>
           </div>
