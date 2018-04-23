@@ -18,6 +18,11 @@ module.exports = {
     resetPwd(user,pwd,fn){
         let updateSql = 'update users set logPwd= ?  where logName=?';
         sqlPool(updateSql,[pwd,user],fn)
+    },
+    userOneInfo(userId,fn){
+        let sql = 'select userName,userPhoto from users where userId = ?';
+        console.log(userId)
+        sqlPool(sql,[userId],fn)
     }
     
 }
