@@ -170,7 +170,7 @@ $.ajax({
           str += `<div data-id="${item}"></div>`
         }
       })
-      return str
+      return '<p>颜色</p>'+str
     });
     $('.size').html(() => {
       var str = '';
@@ -181,7 +181,7 @@ $.ajax({
           str += `<div data-id="${item}">${item}</div>`;
         }
       })
-      return str
+      return '<p>衣带尺寸</p>'+str
     })
     $('.cups').html(() => {
       var str = '';
@@ -192,7 +192,7 @@ $.ajax({
           str += `<div data-id="${item}">${item}</div>`
         }
       })
-      return str
+      return '<p>罩杯大小</p>'+str
     });
     showStock()
   }
