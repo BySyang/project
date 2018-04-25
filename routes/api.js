@@ -17,14 +17,20 @@ router.post('/adminExit', admin.adminExit);
 
 
 //获取用户信息
-router.get('/userInfo',(req,res)=>{
+router.get('/userInfo', (req, res) => {
   let sql = 'select * from users where userId=?';
   let userId = req.query.userId;
-  sqlPool(sql, [userId],(err, data) => {
+  sqlPool(sql, [userId], (err, data) => {
     handleData(res, err, data)
   })
 })
-
+//获取评论列表
+router.get('/goodScoreList', (req, res) => {
+  let sql = 'select * from goods_scores';
+  sqlPool(sql, (err, data) => {
+    handleData(res, err, data)
+  })
+})
 //获取商品分类列表
 router.get('/goodsTypeList', (req, res) => {
   let sql = 'select * from goods_types';
