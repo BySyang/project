@@ -2,7 +2,7 @@ const mysql = require('mysql');
 
 module.exports = (function () {
     var pool = mysql.createPool({
-        connectionLimit: 2,
+        connectionLimit: 50,
         host: '172.16.13.7',
         user: 'root',
         password: 'root',
