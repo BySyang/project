@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const admin = require('../controller/admin');
 const sqlPool = require('../modal/sqlPool');
+const fs = require('fs');
 const responseData = {
   code: 1,
   message: 'success',
@@ -18,23 +19,51 @@ router.post('/adminExit', admin.adminExit);
 
 //获取用户信息
 router.get('/userInfo', (req, res) => {
-  let sql = 'select * from users where userId=?';
+  let sql = 'select * from users';
   let userId = req.query.userId;
-  sqlPool(sql, [userId], (err, data) => {
+  let arr = [];
+  if (userId) {
+    sql += ' where userId =?';
+    arr.push(userId);
+  }
+  sqlPool(sql, arr, (err, data) => {
     handleData(res, err, data)
   })
 })
 //获取评论列表
 router.get('/goodScoreList', (req, res) => {
-  let sql = 'select * from goods_scores';
-  sqlPool(sql, (err, data) => {
+  let username = req.query.username;
+  let startDate = req.query.startDate;
+  let endDate = req.query.endDate + " 23:59:59";
+  let sql = 'SELECT uss.username, gsc.userId, gsc.scoreText, gsc.createTime,gsc.orderScore,gsc.isShow ' +
+    ' from goods_scores gsc ' +
+    ' LEFT JOIN users uss ON uss.userId = gsc.userId where 1=1 ';
+  let param = [];
+  if (username != null && username != "") {
+    username = "%" + username + "%";
+    sql = sql + " and uss.username like ?";
+    param.push(username);
+  }
+  if (startDate != null && startDate != "") {
+    sql = sql + " and gsc.createTime >= ? and gsc.createTime <= ?";
+    param.push(startDate);
+    param.push(endDate);
+  }
+  sqlPool(sql, param, (err, data) => {
     handleData(res, err, data)
   })
 })
+
 //获取商品分类列表
 router.get('/goodsTypeList', (req, res) => {
   let sql = 'select * from goods_types';
-  sqlPool(sql, (err, data) => {
+  let typeId = req.query.typeId;
+  let arr = [];
+  if (typeId) {
+    sql += ' where typeId=?';
+    arr.push(typeId)
+  }
+  sqlPool(sql, arr, (err, data) => {
     handleData(res, err, data)
   })
 })
@@ -110,8 +139,9 @@ router.get('/ordersList', (req, res) => {
 })
 //获取订单商品
 router.get('/orderGoods', (req, res) => {
-  let sql = 'select * from order_goods where orderId =? ';
-  sqlPool(sql, (err, data) => {
+  let sql = 'SELECT * FROM goods a LEFT JOIN order_goods b ON a.goodsId=b.goodsId WHERE orderId =?';
+  let orderId = req.query.orderId;
+  sqlPool(sql, orderId, (err, data) => {
     handleData(res, err, data)
   })
 })
@@ -149,8 +179,10 @@ router.post('/orderModify', (req, res) => {
 
 
 
-
-
+//图片上传
+router.post('/uploadImg', (req, res) => {
+  console.log(req.body)
+})
 
 
 //数据处理
