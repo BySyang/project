@@ -4,6 +4,9 @@ const router = express.Router();
 const admin = require('../controller/admin');
 const sqlPool = require('../modal/sqlPool');
 const fs = require('fs');
+const sd = require("silly-datetime");
+const path = require('path');
+const formidable = require('formidable');
 const responseData = {
   code: 1,
   message: 'success',
@@ -69,14 +72,14 @@ router.get('/goodsTypeList', (req, res) => {
 })
 //获取商品列表
 router.get('/goodsList', (req, res) => {
-  let sql = 'select * from goods';
+  let sql = 'SELECT a.*,b.typeName FROM goods a LEFT JOIN goods_types b ON a.typeId=b.typeId ';
   sqlPool(sql, (err, data) => {
     handleData(res, err, data)
   })
 });
 //修改商品
 router.post('/goodsModify', (req, res) => {
-  let sql = 'update goods set ';
+  let sql = 'update goods set';
   let arr = [];
   let goodsId = req.body.goodsId || ''; //商品ID
   let typeId = req.body.typeId || ''; //商品类型Id
@@ -87,35 +90,36 @@ router.post('/goodsModify', (req, res) => {
   let isHot = req.body.isHot || ''; //是否热销
   let isNew = req.body.isNew || ''; //是否新品
   if (typeId != '') {
-    sql += ' typeId=? ';
+    sql += ' typeId=?,';
     arr.push(typeId);
   }
   if (goodsName != '') {
-    sql += ' goodsName=? ';
+    sql += ' goodsName=?,';
     arr.push(goodsName);
   }
   if (goodsDesc != '') {
-    sql += ' goodsDesc=? ';
+    sql += ' goodsDesc=?,';
     arr.push(goodsDesc);
   }
   if (goodStock != '') {
-    sql += ' goodStock=? ';
+    sql += ' goodStock=?,';
     arr.push(goodStock);
   }
   if (isSale != '') {
-    sql += ' isSale=? ';
+    sql += ' isSale=?,';
     arr.push(isSale);
   }
   if (isHot != '') {
-    sql += ' isHot=? ';
+    sql += ' isHot=?,';
     arr.push(isHot);
   }
   if (isNew != '') {
-    sql += ' isNew=? ';
+    sql += ' isNew=?,';
     arr.push(isNew);
   }
   sql += ' where  goodsId=? ';
   arr.push(goodsId);
+  sql = sql.replace(/,\s*where/g, ' where');
   sqlPool(sql, arr, (err, data) => {
     handleData(res, err, data)
   })
@@ -171,8 +175,13 @@ router.post('/orderModify', (req, res) => {
     handleData(res, err, data)
   })
 })
-
-
+//获取支付方式
+router.get('/pays', (req, res) => {
+  let sql = 'select * from pays';
+  sqlPool(sql, (err, data) => {
+    handleData(res, err, data)
+  })
+})
 
 
 
@@ -181,7 +190,51 @@ router.post('/orderModify', (req, res) => {
 
 //图片上传
 router.post('/uploadImg', (req, res) => {
-  console.log(req.body)
+  var form = new formidable.IncomingForm();
+  form.uploadDir = "./tmp";
+  form.parse(req, function (err, fields, files) {
+    if (!err) {
+      var flag = true;
+      new Promise((a, b) => {
+        for (var key of Object.keys(files)) {
+          var file = files[key];
+          //使用第三方模块silly-datetime
+          var t = sd.format(new Date(), 'YYYYMMDDHHmmss');
+          //生成随机数
+          var ran = parseInt(Math.random() * 8999 + 10000);
+          //拿到扩展名
+          var extname = path.extname(file.name);
+          //旧的路径
+          var oldpath = file.path;
+          //新的路径
+          var newpath = 'public/images/uploads/' + t + ran + extname;
+          //改名
+          fs.renameSync(oldpath, newpath);
+        }
+        a('ok');
+      }).then(() => {
+        res.writeHead(200, {
+          'content-type': 'text/plain'
+        });
+        res.end("成功");
+      }).catch(err=>{
+        console.log(err);
+        res.writeHead(404, {
+          'content-type': 'text/plain'
+        });
+        res.end("失败");
+      })
+
+    }
+
+    //所有的文本域、单选框，都在fields存放；
+    //所有的文件域，files
+    res.writeHead(200, {
+      'content-type': 'text/plain'
+    });
+
+    res.end("success");
+  })
 })
 
 
@@ -207,7 +260,6 @@ function handleData(res, err, data) {
     console.log(err)
   }
 }
-
 
 
 
