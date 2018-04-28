@@ -136,7 +136,7 @@ router.post('/goodsDel', (req, res) => {
 
 //获取订单列表
 router.get('/ordersList', (req, res) => {
-  let sql = 'select * from orders';
+  let sql = 'select a.*,b.payName from orders a, pays b where a.orderPayMethod=b.id ';
   sqlPool(sql, (err, data) => {
     handleData(res, err, data)
   })
