@@ -153,24 +153,25 @@ router.get('/orderGoods', (req, res) => {
 router.post('/orderModify', (req, res) => {
   let sql = 'update orders set ';
   let arr = [];
-  let orderStatus = req.body.orderStatus || ''; //订单状态
+  let orderStatus = parseInt(req.body.orderStatus) || ''; //订单状态
   let adminRemarks = req.body.adminRemarks || ''; //订单管理员备注
   let orderAddress = req.body.orderAddress || ''; //订单地址
-  let orderId = req.body.orderId || ''; //订单ID
+  let orderId = parseInt(req.body.orderId) || ''; //订单ID
   if (orderStatus != '') {
-    sql += ' orderStatus=? ';
+    sql += ' orderStatus=?, ';
     arr.push(orderStatus);
   }
   if (adminRemarks != '') {
-    sql += ' adminRemarks=?';
+    sql += ' adminRemarks=?,';
     arr.push(adminRemarks);
   }
   if (orderAddress != '') {
-    sql += ' orderAddress=?';
+    sql += ' orderAddress=?,';
     arr.push(orderAddress);
   }
   sql += ' where orderId=?';
   arr.push(orderId);
+  sql = sql.replace(/,\s*where/g, ' where');
   sqlPool(sql, arr, (err, data) => {
     handleData(res, err, data)
   })
@@ -195,6 +196,8 @@ router.post('/uploadImg', (req, res) => {
   form.parse(req, function (err, fields, files) {
     if (!err) {
       var flag = true;
+      var LargeImgSrc = '';
+      var smallImgSrc = [];
       new Promise((a, b) => {
         for (var key of Object.keys(files)) {
           var file = files[key];
@@ -207,17 +210,30 @@ router.post('/uploadImg', (req, res) => {
           //旧的路径
           var oldpath = file.path;
           //新的路径
-          var newpath = 'public/images/uploads/' + t + ran + extname;
+          var newpath = 'public/images/series/uploads/' + t + ran + extname;
+          if (key == 'goodLargeImg') LargeImgSrc = 'uploads/' + t + ran + extname;;
+          if (key.startsWith('goodsImg')) smallImgSrc.push(t + ran + extname);
           //改名
           fs.renameSync(oldpath, newpath);
         }
         a('ok');
       }).then(() => {
-        res.writeHead(200, {
-          'content-type': 'text/plain'
-        });
-        res.end("成功");
-      }).catch(err=>{
+        let arr = [];
+        fields.goodLargeImg = LargeImgSrc;
+        fields.goodsImg = 'uploads/?' + smallImgSrc.join('|');
+        arr.push(parseInt(fields.goodsType));
+        arr.push(fields.goodsName);
+        arr.push(fields.goodsImg);
+        arr.push(fields.goodsDesc);
+        arr.push(parseInt(fields.goodStock));
+        arr.push(parseFloat(fields.goodSvg));
+        arr.push(fields.goodLargeImg);
+        let sql = `insert into goods values(null,? ,? ,? ,? ,? ,?,30,0,5,1,1,1,default,?)`
+        //数据库字段  null,typeId,goodsName,,goodsImg,goodsDesc,goodStock,goodSvg,warnStock,saleNum,goodscore,isSale,isHot,isNew,createTime,goodLargeImg
+        sqlPool(sql,arr, (err, data) => {
+          handleData(res, err, data)
+        })
+      }).catch(err => {
         console.log(err);
         res.writeHead(404, {
           'content-type': 'text/plain'
@@ -226,14 +242,6 @@ router.post('/uploadImg', (req, res) => {
       })
 
     }
-
-    //所有的文本域、单选框，都在fields存放；
-    //所有的文件域，files
-    res.writeHead(200, {
-      'content-type': 'text/plain'
-    });
-
-    res.end("success");
   })
 })
 
