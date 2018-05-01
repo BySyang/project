@@ -1,6 +1,7 @@
-* {
+*,body {
   margin: 0;
   padding: 0;
+  /* background-color: #f7f7f7; */
 }
 header {
   width: 100%;
@@ -10,7 +11,7 @@ header {
 }
 header>h5 {
   color: rgb(71, 71, 71);
-  font-family: "Î¢ÈíÑÅºÚ";
+  font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
   font-size: 20px;
   position: absolute;
   left: 800px;
@@ -22,6 +23,7 @@ header>h5 {
 section {
   width: 100%;
   height: 655px;
+  margin-bottom: 50px;
   background-color: #f7f7f7;
 }
 ul li {
@@ -37,13 +39,13 @@ ul li {
 }
 #culContent>ul>li>div>p {
    color: #666666;
-   font-family: "Î¢ÈíÑÅºÚ";
+   font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
    font-size: 24px;
    line-height: 130px;
  }
 #culContent>ul>li>div>a>span {
   color: #666666;
-  font-family: "Î¢ÈíÑÅºÚ";
+  font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
   font-size: 14px;
 
 }
@@ -105,7 +107,7 @@ li>div {
   text-align: center;
   margin: auto;
 }
-/*¸øËùÓĞLiÌí¼ÓÑùÊ½*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Liï¿½ï¿½ï¿½ï¿½ï¿½Ê½*/
 
 .liClass {
   width: 330px;
@@ -118,7 +120,7 @@ a {
 
 
 
-/*myModaNuml °å¿éÑùÊ½*/
+/*myModaNuml ï¿½ï¿½ï¿½ï¿½ï¿½Ê½*/
 .myImg {
   display: block;
   margin: 0 auto;
@@ -127,7 +129,7 @@ a {
 p {
    text-align: center;
    color: #666666;
-   font-family: "Î¢ÈíÑÅºÚ";
+   font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
    font-size: 18px;
    margin-top: 20px;
    line-height: 30px;
@@ -160,7 +162,7 @@ p {
 #myNav1_1 span , #myNav1_2 span {
   text-align: center;
   color: #666666;
-  font-family: "Î¢ÈíÑÅºÚ";
+  font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
   font-size: 14px;
 }
 #myNav1_1>ul>li>div>img ,
@@ -174,7 +176,7 @@ p {
 
 
 
-/*myModaNum1_1 °å¿éÑùÊ½*/
+/*myModaNum1_1 ï¿½ï¿½ï¿½ï¿½ï¿½Ê½*/
 .mySize {
   width: 900px;
   height: 155px;
@@ -242,7 +244,7 @@ p {
 
 
 
-/*myModaNum1_2 °å¿éÑùÊ½*/
+/*myModaNum1_2 ï¿½ï¿½ï¿½ï¿½ï¿½Ê½*/
 #myModalNum1_2>p {
   font-size: 14px;
   color: #666;
@@ -296,7 +298,7 @@ p {
 
 
 
-/*myNodaNum2_1 ÄÚÒÂ´©´÷²½Öèstyle*/
+/*myNodaNum2_1 ï¿½ï¿½ï¿½Â´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½style*/
 
 .myStep1 {
   background-image: url("../images/culture/201/wear_steps_pic1.png");
@@ -423,7 +425,7 @@ p {
   padding-top: 200px;
 }
 
-/*myNodaNum2_2 ÄÚÒÂÏ´µÓstyle*/
+/*myNodaNum2_2 ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ï¿½style*/
 
 .washTitle1 {
   font-size: 25px;
@@ -524,7 +526,7 @@ p {
 }
 
 
-/*myNodaNum2_3 ÄÚÒÂÁÀÉ¹style*/
+/*myNodaNum2_3 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹style*/
 .myAir {
   background-image: url(../images/culture/203/Underwear_air_content.png);
   background-repeat: no-repeat;
@@ -583,7 +585,7 @@ p {
 }
 
 
-/*myNodaNum2_4 ÄÚÒÂÁÀÉ¹style*/
+/*myNodaNum2_4 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹style*/
 
 .foldText1 {
   background-image: url(../images/culture/204/Underwear_FoldKeep_bigpic.png);
@@ -657,7 +659,7 @@ p {
 
 
 
-/*myNodaNum3_1 Ñ¡¹ºÄÚÒÂµÄÒªµãstyle*/
+/*myNodaNum3_1 Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½Òªï¿½ï¿½style*/
 
 .myKey {
   margin-left: 80px;
@@ -714,7 +716,7 @@ p {
 
 
 
-/*myNodaNum3_2 Ñ¡¹ºÄÚÒÂ´îÅä*/
+/*myNodaNum3_2 Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½ï¿½ï¿½*/
 
 .myMatchTitle {
   font-size: 20px;
@@ -849,10 +851,13 @@ p {
 .matchT1 {
   font-size: 20px;
   line-height: 26px;
-  font-family: Î¢ÈíÑÅºÚ;
+  font-family: Î¢ï¿½ï¿½ï¿½Åºï¿½;
 }
 .matchT2 {
   font-size: 16px;
   line-height: 26px;
   font-weight: bold;
+}
+footer{
+  margin-top: 5px;
 }

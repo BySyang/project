@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0 ;
 }
-.body {
-    width: 1347px;
+body{
     font-family: "微软雅黑";
 }
 .outer {
     width: 100%;
     height: 2560px;
+    margin-bottom: 50px;
+    overflow: hidden;
 }
 .banner {
     width: 100%;
@@ -78,7 +79,7 @@
 
 
 .section2-z{
-    width: 1050px;
+    /* width: 1050px; */
     margin: 0 auto;
     border: solid 1px #F2F2F2;
 }
@@ -86,8 +87,8 @@
 .section2-1 {
     width: 1050px;
     height: 347px;
-    /*background-color: yellow;*/
     margin: 0 auto;
+    /* margin-bottom: 60px; */
 }
 
 .section2-1-l {

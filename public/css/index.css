@@ -360,10 +360,10 @@ p:nth-child(1) {
 
 .four_img2>div {
     position: absolute;
-    left: 55.7%;
+    left: 49%;
     background: url("../images/indexImage/index_content/sexy/index_sex2.jpg");
     background-size: 100% 100%;
-    width: 432px;
+    width: 500px;
     height: 287px;
 
 }
@@ -526,6 +526,6 @@ p:nth-child(1) {
 }
 
 footer{
-    bottom: -4650px;
+    margin-top: 4525px;
     
 }
