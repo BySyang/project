@@ -4,6 +4,10 @@
 body{
     width: 100%;
 }
+section{
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 80px;
+}
 .zx_banner{
     width:100%;
     height:550px;
@@ -31,7 +35,7 @@ body{
     margin-top: 25px;
 }
 .zx_nav>p{
-    font-family: "Î¢ÈíÑÅºÚ";
+    font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
     font-size:16px ;
     color: white;
     text-align: center;
@@ -69,7 +73,7 @@ body{
 }
 .zx_a>p{
     width: 100%;
-    font-family: "Î¢ÈíÑÅºÚ";
+    font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
     font-size: 16px;
     margin-top:36px ;
     word-spacing: 2em;
@@ -97,7 +101,6 @@ body{
 .zx_nav1{
     width:95%;
     height:330px;
-    /*border: 1px solid red;*/
     margin: 0 auto;
     margin-top: 110px;
     overflow: hidden;
@@ -120,7 +123,7 @@ body{
     background-color:#E1C189 ;
 }
 .zx_e>p{
-    font-family: "Î¢ÈíÑÅºÚ";
+    font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
     font-size: 16px;
     color:white;
     text-align: center;
@@ -150,7 +153,7 @@ body{
     margin-top: 89px;
 }
 .zx_im>h5{
-    font-family: "Î¢ÈíÑÅºÚ";
+    font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
     font-size: 16px;
     margin-top:26px ;
     word-spacing: 2em;
@@ -159,7 +162,7 @@ body{
     width: 100%;
 }
 .zx_im>p{
-    font-family: "Î¢ÈíÑÅºÚ";
+    font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
     font-size: 14px;
     margin-top:26px ;
     word-spacing: 2em;
@@ -182,7 +185,7 @@ body{
 
 }
 .zx_p>h5{
-    font-family: "Î¢ÈíÑÅºÚ";
+    font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
     font-size: 16px;
     margin-top:30px ;
     word-spacing: 2em;
@@ -190,7 +193,7 @@ body{
     width: 100%;
 }
 .zx_p>p{
-    font-family: "Î¢ÈíÑÅºÚ";
+    font-family: "Î¢ï¿½ï¿½ï¿½Åºï¿½";
     font-size: 14px;
     margin-top:26px ;
     word-spacing: 2em;
