@@ -35,26 +35,14 @@ router.get('/userInfo', (req, res) => {
 })
 //获取评论列表
 router.get('/goodScoreList', (req, res) => {
-  let username = req.query.username;
-  let startDate = req.query.startDate;
-  let endDate = req.query.endDate + " 23:59:59";
-  let sql = 'SELECT uss.username, gsc.userId, gsc.scoreText, gsc.createTime,gsc.orderScore,gsc.isShow ' +
-    ' from goods_scores gsc ' +
-    ' LEFT JOIN users uss ON uss.userId = gsc.userId where 1=1 ';
-  let param = [];
-  if (username != null && username != "") {
-    username = "%" + username + "%";
-    sql = sql + " and uss.username like ?";
-    param.push(username);
-  }
-  if (startDate != null && startDate != "") {
-    sql = sql + " and gsc.createTime >= ? and gsc.createTime <= ?";
-    param.push(startDate);
-    param.push(endDate);
-  }
-  sqlPool(sql, param, (err, data) => {
+  let sql = 'SELECT uss.username, gsc.userId, gsc.scoreText, gsc.createTime, '+
+            'gsc.orderScore, gsc.isShow, goo.goodsName '+
+            'FROM goods_scores gsc '+
+            'LEFT JOIN users uss ON uss.userId = gsc.userId '+
+            'LEFT JOIN goods goo ON goo.goodsId = gsc.goodsId ';
+  sqlPool(sql, (err, data) => {
     handleData(res, err, data)
-  })
+  }) 
 })
 
 //获取商品分类列表
