@@ -30,23 +30,23 @@
               <% data.goodsImg.split('|').forEach(function(item,index){  %>
                 <% if(index == 0){ %>
                   <li class="active">
-                    <img src="./images/series/<%=  item.replace('?','')  %>" data-bigimg="./images/series/<%=  item.replace('?','').replace(/(\.+)/,'(1)$1')  %>">
+                    <img src="./images/series/<%=  item.replace('?','')  %>" data-bigimg="./images/series/<%= item.indexOf('upload')>-1?item.replace('?','').replace(/(\.+)/,'$1'):item.replace('?','').replace(/(\.+)/,'(1)$1')  %>">
                   </li>
                   <% }else{ %>
                     <li>
-                      <img src="./images/series/<%=  data.goodsImg.split('?')[0]+item  %>" data-bigimg="./images/series/<%=  data.goodsImg.split('?')[0]+(item.replace(/(\.+)/,'(1)$1')) %>">
+                      <img src="./images/series/<%=  data.goodsImg.split('?')[0]+item  %>" data-bigimg="./images/series/<%=  item.indexOf('upload')>-1?data.goodsImg.split('?')[0]+(item.replace(/(\.+)/,'(1)$1')):data.goodsImg.split('?')[0]+(item.replace(/(\.+)/,'$1')) %>">
                     </li>
                     <% } %>
                       <% }) %>
             </ul>
             <div class="con-fangDaIMg">
               <!-- 正常显示的图片-->
-              <img src="./images/series/<%=  data.goodsImg.split('|')[0].replace('?','').replace(/(\.+)/,'(1)$1')  %>">
+              <img src="./images/series/<%= data.goodsImg.indexOf('upload')>-1?data.goodsImg.split('|')[0].replace('?','').replace(/(\.+)/,'$1'):data.goodsImg.split('|')[0].replace('?','').replace(/(\.+)/,'(1)$1')  %>">
               <!-- 滑块-->
               <div class="magnifyingBegin"></div>
               <!-- 放大镜显示的图片 -->
               <div class="magnifyingShow">
-                <img src="./images/series/<%=  data.goodsImg.split('|')[0].replace('?','').replace(/(\.+)/,'(1)$1')  %>">
+                <img src="./images/series/<%=  data.goodsImg.indexOf('upload')>-1?data.goodsImg.split('|')[0].replace('?','').replace(/(\.+)/,'$1'):data.goodsImg.split('|')[0].replace('?','').replace(/(\.+)/,'(1)$1')  %>">
               </div>
             </div>
 
