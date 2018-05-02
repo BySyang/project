@@ -12,6 +12,7 @@
 }
 body {
   width: 100%;
+  background: #f7f7f7;
 }
 h2 {
   font-size: 26px;
@@ -49,17 +50,28 @@ h2 {
   width: 100%;
   height: 550px;
 }
+/* .section{
+  width: 84%;
+  margin: 0 auto;
+  padding: 0 8%;
+} */
 section {
   width: 84%;
-  padding: 0 10%;
+  /* padding: 0 auto; */
+  
+  padding: 0 8%;
+  overflow: hidden;
 }
 .albumSec1 {
-  background-color: #f7f7f7;
+  background-color: #f7f7f7;  
   height: 1850px;
+  /* display: flex; */
+  
 }
 .albumSec1 > div:first-child {
   overflow: hidden;
   width: 100%;
+  margin-left: 35px;
 }
 .albumSec1 > div:first-child > div {
   float: left;
@@ -78,7 +90,7 @@ section {
 .albumSec1 > div:nth-of-type(2) {
   width: 94%;
   background-color: white;
-  margin-top: 20px;
+  margin: 20px 0 0 35px;
   height: 200px;
 }
 .albumSec1 > div:nth-of-type(2) h2 {
@@ -92,35 +104,40 @@ section {
   margin: 0 auto;
 }
 .albumSec1 > div:nth-of-type(3) {
-  width: 94%;
+  /* position: absolute; */
+  width: 96%;
   margin-top: 20px;
 }
 .albumSec1 > div:nth-of-type(3) > div {
   float: left;
+  margin-left: 35px;
 }
 .albumSec1 > div:nth-of-type(3) > div:nth-of-type(1) {
-  width: 47%;
-  height: 700px;
+  /* position: relative; */
+  /* left: 35px; */
+  width: 46%;
+  height: 700px; 
 }
 .albumSec1 > div:nth-of-type(3) > div:nth-of-type(1) img {
   width: 100%;
   height: 100%;
 }
 .albumSec1 > div:nth-of-type(3) > div:nth-of-type(1) h2 {
-  margin: 0 6%;
+  margin: 0 35px;
   color: #ff0066;
 }
-.albumSec1 > div:nth-of-type(3) > div:last-child {
-  margin-left: 6%;
-  width: 47%;
+.albumSec1 > div:nth-of-type(3) > div:nth-of-type(2) {
+  margin-left: 50px;
+  /* float: right; */
+  width: 46%;
 }
-.albumSec1 > div:nth-of-type(3) > div:last-child img {
+.albumSec1 > div:nth-of-type(3) > div:nth-of-type(2) img {
   width: 100%;
 }
-.albumSec1 > div:nth-of-type(3) > div:last-child > img:first-child {
+.albumSec1 > div:nth-of-type(3) > div:nth-of-type(2) > img:first-child {
   height: 600px;
 }
-.albumSec1 > div:nth-of-type(3) > div:last-child > img:last-child {
+.albumSec1 > div:nth-of-type(3) > div:nth-of-type(2) > img:last-child {
   height: 300px;
 }
 .albumSec2 {
@@ -131,6 +148,7 @@ section {
   position: relative;
   width: 30%;
   float: left;
+  margin-left: 35px;
   margin-top: 20px;
 }
 .albumSec2 div img {
@@ -174,15 +192,14 @@ section {
   margin: 475px 0 0 40%;
 }
 .albumSec3 {
-  position: relative;
+  /* position: relative; */
   margin-top: 10px;
-  width: 84%;
   height: 520px;
 }
-.albumSec3 div {
+.albumSec3>div {
   float: left;
 }
-.albumSec3 div:nth-of-type(3) {
+.albumSec3>div:nth-of-type(3) {
   width: 30%;
   margin-left: 2%;
 }
@@ -192,6 +209,7 @@ section {
 }
 .albumSec3 > div:nth-of-type(1) {
   width: 30%;
+  margin-left: 35px;
 }
 .albumSec3 > div:nth-of-type(1) img {
   width: 100%;
