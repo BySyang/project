@@ -30,7 +30,7 @@ app.use(session({
   }
 }))
 //分发路由
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'static')));
 app.use('/', pages);
 app.use('/', users);
 app.use('/',orders);
