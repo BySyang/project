@@ -164,11 +164,11 @@ router.post('/orderModify', (req, res) => {
     arr.push(orderStatus);
   }
   if (Courier != '') {
-    sql += ' Courier=? ';
+    sql += ' Courier=?, ';
     arr.push(Courier);
   }
   if (selectCourier != '') {
-    sql += ' selectCourier=? ';
+    sql += ' selectCourier=?, ';
     arr.push(selectCourier);
   }
   if (adminRemarks != '') {
@@ -289,7 +289,7 @@ router.post('/addGoods', (req, res) => {
         arr.push(fields.goodLargeImg);
         let sql = `insert into goods values(null,? ,? ,? ,? ,? ,?,30,0,5,1,1,1,default,?)`
         //数据库字段  null,typeId,goodsName,,goodsImg,goodsDesc,goodStock,goodSvg,warnStock,saleNum,goodscore,isSale,isHot,isNew,createTime,goodLargeImg
-        sqlPool(sql,arr, (err, data) => {
+        sqlPool(sql, arr, (err, data) => {
           handleData(res, err, data)
         })
       }).catch(err => {
@@ -304,17 +304,23 @@ router.post('/addGoods', (req, res) => {
   })
 })
 //删数据
-router.post('/delete',(req,res)=>{
-  let  tableName  = req.body.tableName;
-  for (let [key, val] of Object.entries(req.body)){
-    
+router.post('/delete', (req, res) => {
+  let tableName = req.body.tableName;
+  let tableKey, tableVal,arr=[];
+  let all = req.body.all&&req.body.all==1?true:false;
+  for (let [key, val] of Object.entries(req.body)) {
+    if (key.toLowerCase().endsWith('id')) {
+      tableKey = key;
+      tableVal = val;
+    }
   }
-  let tableKey = req.body;
-  let tableVal = re
-  let sql='delete from ';
+  let sql = `delete from ${tableName} where ${tableKey}=? `;
+  if(all) sql = sql.substr(0,sql.indexOf('where'));
+  sqlPool(sql, [tableVal], (err, data) => {
+    handleData(res, err, data)
+  })
 
 })
-
 //数据处理
 function handleData(res, err, data) {
   if (!err) {
