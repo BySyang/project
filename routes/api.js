@@ -210,7 +210,7 @@ router.post('/uploadImg', (req, res) => {
           //旧的路径
           var oldpath = file.path;
           //新的路径
-          var newpath = 'public/images/series/uploads/' + t + ran + extname;
+          var newpath = 'static/images/series/uploads/' + t + ran + extname;
           if (key == 'goodLargeImg') LargeImgSrc = 'uploads/' + t + ran + extname;;
           if (key.startsWith('goodsImg')) smallImgSrc.push(t + ran + extname);
           //改名
