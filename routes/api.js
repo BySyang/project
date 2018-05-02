@@ -157,9 +157,19 @@ router.post('/orderModify', (req, res) => {
   let adminRemarks = req.body.adminRemarks || ''; //订单管理员备注
   let orderAddress = req.body.orderAddress || ''; //订单地址
   let orderId = req.body.orderId || ''; //订单ID
+  let Courier = req.body.Courier || ''; //快递单号
+  let selectCourier = req.body.selectCourier || ''; //快递方式
   if (orderStatus != '') {
     sql += ' orderStatus=? ';
     arr.push(orderStatus);
+  }
+  if (Courier != '') {
+    sql += ' Courier=? ';
+    arr.push(Courier);
+  }
+  if (selectCourier != '') {
+    sql += ' selectCourier=? ';
+    arr.push(selectCourier);
   }
   if (adminRemarks != '') {
     sql += ' adminRemarks=?';
