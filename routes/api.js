@@ -164,11 +164,11 @@ router.post('/orderModify', (req, res) => {
     arr.push(orderStatus);
   }
   if (Courier != '') {
-    sql += ' Courier=? ';
+    sql += ' Courier=?, ';
     arr.push(Courier);
   }
   if (selectCourier != '') {
-    sql += ' selectCourier=? ';
+    sql += ' selectCourier=?, ';
     arr.push(selectCourier);
   }
   if (adminRemarks != '') {
@@ -198,9 +198,58 @@ router.get('/pays', (req, res) => {
 
 
 
+//添加商品分类
+router.post('/addGoodsType', (req, res) => {
+  var form = new formidable.IncomingForm();
+  form.uploadDir = "./tmp";
+  form.parse(req, function (err, fields, files) {
+    if (!err) {
+      var LargeImgSrc = '';
+      var smallImgSrc = [];
+      new Promise((a, b) => {
+        for (var key of Object.keys(files)) {
+          var file = files[key];
+          //使用第三方模块silly-datetime
+          var t = sd.format(new Date(), 'YYYYMMDDHHmmss');
+          //生成随机数
+          var ran = parseInt(Math.random() * 8999 + 10000);
+          //拿到扩展名
+          var extname = path.extname(file.name);
+          //旧的路径
+          var oldpath = file.path;
+          //新的路径
+          var newpath = 'static/images/series/uploads/' + t + ran + extname;
+          if (key == 'typeBannerImg') LargeImgSrc = 'uploads/' + t + ran + extname;;
+          if (key.startsWith('typeImg')) smallImgSrc.push(t + ran + extname);
+          //改名
+          fs.renameSync(oldpath, newpath);
+        }
+        a('ok');
+      }).then(() => {
+        let arr = [];
+        fields.typeBannerImg = LargeImgSrc;
+        fields.typeImg = 'uploads/?' + smallImgSrc.join('|');
+        arr.push(fields.typeName);
+        arr.push(fields.typeDes);
+        arr.push(fields.typeImg);
+        arr.push(fields.typeBannerImg);
+        let sql = `insert into goods_types values(null,?,1,default,?,?,?)`;
+        sqlPool(sql, arr, (err, data) => {
+          handleData(res, err, data)
+        })
+      }).catch(err => {
+        console.log(err);
+        res.writeHead(404, {
+          'content-type': 'text/plain'
+        });
+        res.end("失败");
+      })
 
-//图片上传
-router.post('/uploadImg', (req, res) => {
+    }
+  })
+})
+//添加商品
+router.post('/addGoods', (req, res) => {
   var form = new formidable.IncomingForm();
   form.uploadDir = "./tmp";
   form.parse(req, function (err, fields, files) {
@@ -240,7 +289,7 @@ router.post('/uploadImg', (req, res) => {
         arr.push(fields.goodLargeImg);
         let sql = `insert into goods values(null,? ,? ,? ,? ,? ,?,30,0,5,1,1,1,default,?)`
         //数据库字段  null,typeId,goodsName,,goodsImg,goodsDesc,goodStock,goodSvg,warnStock,saleNum,goodscore,isSale,isHot,isNew,createTime,goodLargeImg
-        sqlPool(sql,arr, (err, data) => {
+        sqlPool(sql, arr, (err, data) => {
           handleData(res, err, data)
         })
       }).catch(err => {
@@ -254,8 +303,24 @@ router.post('/uploadImg', (req, res) => {
     }
   })
 })
+//删数据
+router.post('/delete', (req, res) => {
+  let tableName = req.body.tableName;
+  let tableKey, tableVal,arr=[];
+  let all = req.body.all&&req.body.all==1?true:false;
+  for (let [key, val] of Object.entries(req.body)) {
+    if (key.toLowerCase().endsWith('id')) {
+      tableKey = key;
+      tableVal = val;
+    }
+  }
+  let sql = `delete from ${tableName} where ${tableKey}=? `;
+  if(all) sql = sql.substr(0,sql.indexOf('where'));
+  sqlPool(sql, [tableVal], (err, data) => {
+    handleData(res, err, data)
+  })
 
-
+})
 //数据处理
 function handleData(res, err, data) {
   if (!err) {
