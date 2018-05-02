@@ -188,9 +188,58 @@ router.get('/pays', (req, res) => {
 
 
 
+//添加商品分类
+router.post('/addGoodsType', (req, res) => {
+  var form = new formidable.IncomingForm();
+  form.uploadDir = "./tmp";
+  form.parse(req, function (err, fields, files) {
+    if (!err) {
+      var LargeImgSrc = '';
+      var smallImgSrc = [];
+      new Promise((a, b) => {
+        for (var key of Object.keys(files)) {
+          var file = files[key];
+          //使用第三方模块silly-datetime
+          var t = sd.format(new Date(), 'YYYYMMDDHHmmss');
+          //生成随机数
+          var ran = parseInt(Math.random() * 8999 + 10000);
+          //拿到扩展名
+          var extname = path.extname(file.name);
+          //旧的路径
+          var oldpath = file.path;
+          //新的路径
+          var newpath = 'static/images/series/uploads/' + t + ran + extname;
+          if (key == 'typeBannerImg') LargeImgSrc = 'uploads/' + t + ran + extname;;
+          if (key.startsWith('typeImg')) smallImgSrc.push(t + ran + extname);
+          //改名
+          fs.renameSync(oldpath, newpath);
+        }
+        a('ok');
+      }).then(() => {
+        let arr = [];
+        fields.typeBannerImg = LargeImgSrc;
+        fields.typeImg = 'uploads/?' + smallImgSrc.join('|');
+        arr.push(fields.typeName);
+        arr.push(fields.typeDes);
+        arr.push(fields.typeImg);
+        arr.push(fields.typeBannerImg);
+        let sql = `insert into goods_types values(null,?,1,default,?,?,?)`;
+        sqlPool(sql, arr, (err, data) => {
+          handleData(res, err, data)
+        })
+      }).catch(err => {
+        console.log(err);
+        res.writeHead(404, {
+          'content-type': 'text/plain'
+        });
+        res.end("失败");
+      })
 
-//图片上传
-router.post('/uploadImg', (req, res) => {
+    }
+  })
+})
+//添加商品
+router.post('/addGoods', (req, res) => {
   var form = new formidable.IncomingForm();
   form.uploadDir = "./tmp";
   form.parse(req, function (err, fields, files) {
@@ -244,7 +293,17 @@ router.post('/uploadImg', (req, res) => {
     }
   })
 })
+//删数据
+router.post('/delete',(req,res)=>{
+  let  tableName  = req.body.tableName;
+  for (let [key, val] of Object.entries(req.body)){
+    
+  }
+  let tableKey = req.body;
+  let tableVal = re
+  let sql='delete from ';
 
+})
 
 //数据处理
 function handleData(res, err, data) {
