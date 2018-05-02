@@ -1,18 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  /* div {
-  letter-spacing: .15em;
-  line-height: 35px;
-} */
 }
-* div {
+#container div {
   letter-spacing: .15em;
   line-height: 35px;
 }
 body {
   width: 100%;
-  background: #f7f7f7;
+  /* background: #f7f7f7; */
 }
 h2 {
   font-size: 26px;
@@ -63,7 +59,7 @@ section {
   overflow: hidden;
 }
 .albumSec1 {
-  background-color: #f7f7f7;  
+  background-color: #f0f0f0;  
   height: 1850px;
   /* display: flex; */
   
@@ -111,11 +107,12 @@ section {
 .albumSec1 > div:nth-of-type(3) > div {
   float: left;
   margin-left: 35px;
+  /* border: 1px solid red; */
 }
 .albumSec1 > div:nth-of-type(3) > div:nth-of-type(1) {
   /* position: relative; */
   /* left: 35px; */
-  width: 46%;
+  width: 45%;
   height: 700px; 
 }
 .albumSec1 > div:nth-of-type(3) > div:nth-of-type(1) img {
@@ -127,8 +124,7 @@ section {
   color: #ff0066;
 }
 .albumSec1 > div:nth-of-type(3) > div:nth-of-type(2) {
-  margin-left: 50px;
-  /* float: right; */
+  margin-left: 52px;
   width: 46%;
 }
 .albumSec1 > div:nth-of-type(3) > div:nth-of-type(2) img {
@@ -194,6 +190,7 @@ section {
 .albumSec3 {
   /* position: relative; */
   margin-top: 10px;
+  margin-bottom: 20px;
   height: 520px;
 }
 .albumSec3>div {
