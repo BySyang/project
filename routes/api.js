@@ -38,7 +38,7 @@ router.get('/goodScoreList', (req, res) => {
   let username = req.query.username;
   let startDate = req.query.startDate;
   let endDate = req.query.endDate + " 23:59:59";
-  let sql = 'SELECT uss.username, gsc.userId, gsc.scoreText, gsc.createTime,gsc.orderScore,gsc.isShow ' +
+  let sql = 'SELECT uss.username, gsc.userId, gsc.scoreText, gsc.createTime,gsc.orderScore,gsc.isShow,gsc.reply ' +
     ' from goods_scores gsc ' +
     ' LEFT JOIN users uss ON uss.userId = gsc.userId where 1=1 ';
   let param = [];
@@ -55,8 +55,7 @@ router.get('/goodScoreList', (req, res) => {
   sqlPool(sql, param, (err, data) => {
     handleData(res, err, data)
   })
-})
-
+});
 //获取商品分类列表
 router.get('/goodsTypeList', (req, res) => {
   let sql = 'select * from goods_types';
@@ -81,14 +80,16 @@ router.get('/goodsList', (req, res) => {
 router.post('/goodsModify', (req, res) => {
   let sql = 'update goods set';
   let arr = [];
-  let goodsId = req.body.goodsId || ''; //商品ID
-  let typeId = req.body.typeId || ''; //商品类型Id
+  let goodsId = parseInt(req.body.goodsId) || ''; //商品ID
+  let typeId = parseInt(req.body.typeId) || ''; //商品类型Id
   let goodsName = req.body.goodsName || ''; //商品名
   let goodsDesc = req.body.goodsDesc || ''; //商品描述
-  let goodStock = req.body.goodStock || ''; //商品库存
+  let goodStock = parseInt(req.body.goodStock) || ''; //商品库存
+  let goodSvg = parseFloat(req.body.goodSvg) || ''; //商品价格
+  let goodscore = parseInt(req.body.goodscore) || ''; //商品评分
   let isSale = req.body.isSale || ''; //是否显示
-  let isHot = req.body.isHot || ''; //是否热销
-  let isNew = req.body.isNew || ''; //是否新品
+  let isHot = parseInt(req.body.isHot) || ''; //是否热销
+  let isNew = parseInt(req.body.isNew) || ''; //是否新品
   if (typeId != '') {
     sql += ' typeId=?,';
     arr.push(typeId);
@@ -104,6 +105,10 @@ router.post('/goodsModify', (req, res) => {
   if (goodStock != '') {
     sql += ' goodStock=?,';
     arr.push(goodStock);
+  }
+  if (goodSvg != '') {
+    sql += ' goodSvg=?,';
+    arr.push(goodSvg);
   }
   if (isSale != '') {
     sql += ' isSale=?,';
@@ -125,14 +130,6 @@ router.post('/goodsModify', (req, res) => {
   })
 })
 
-//删除商品
-router.post('/goodsDel', (req, res) => {
-  let sql = 'delete from goods where  goodsId =?';
-  let goodsId = req.body.goodsId;
-  sqlPool(sql, [goodsId], (err, data) => {
-    handleData(res, err, data)
-  })
-})
 
 //获取订单列表
 router.get('/ordersList', (req, res) => {
@@ -303,11 +300,36 @@ router.post('/addGoods', (req, res) => {
     }
   })
 })
+//修改图片
+router.post('/imgModify', (req, res) => {
+  var form = new formidable.IncomingForm();
+  form.uploadDir = "./tmp";
+  form.parse(req, function (err, fields, files) {
+    if (!err) {
+      let arrImg = fields.oldImg.split('|');
+        for (var key of Object.keys(files)) {
+          var oldpath = files[key].path;
+          var newpath = arrImg[key.charAt(key.length - 1)].substr();
+          fs.renameSync(oldpath, newpath);1
+        }
+        res.writeHead(200, {
+          'content-type': 'text/plain'
+        });
+        res.end("成功");
+    }else{
+      console.log(err);
+      res.writeHead(404, {
+        'content-type': 'text/plain'
+      });
+      res.end("失败");
+    }
+  })
+})
 //删数据
 router.post('/delete', (req, res) => {
   let tableName = req.body.tableName;
-  let tableKey, tableVal,arr=[];
-  let all = req.body.all&&req.body.all==1?true:false;
+  let tableKey, tableVal, arr = [];
+  let all = req.body.all && req.body.all == 1 ? true : false;
   for (let [key, val] of Object.entries(req.body)) {
     if (key.toLowerCase().endsWith('id')) {
       tableKey = key;
@@ -315,12 +337,25 @@ router.post('/delete', (req, res) => {
     }
   }
   let sql = `delete from ${tableName} where ${tableKey}=? `;
-  if(all) sql = sql.substr(0,sql.indexOf('where'));
+  if (all) sql = sql.substr(0, sql.indexOf('where'));
   sqlPool(sql, [tableVal], (err, data) => {
     handleData(res, err, data)
   })
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
 //数据处理
 function handleData(res, err, data) {
   if (!err) {
