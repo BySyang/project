@@ -1,5 +1,4 @@
-*{
-    margin:0;
+*{margin:0;
     padding:0;
     list-style:none;
     border:0;
@@ -123,7 +122,7 @@ body{
 }
 .xxpop2 a:hover p{
     text-decoration:underline;
-    color:#09f
+    color:#FF0066
 }
 .maijiayouhuayue{
     width:1226px;
@@ -175,9 +174,10 @@ body{
     line-height:50px
 }
 .ddzjes em{
-    color:#F00;
-    font-size:20px;
-    font-weight:bold
+    color:#FF0066;
+    font-size:16px;
+    font-weight:bold ;
+    font-family:"Î¢ÈíÑÅºÚ"
 }
 .syycklo{
     width:1226px;
@@ -218,13 +218,11 @@ body{
     line-height:30px;
     font-size:14px;
     color:#fff;
-    background:#09f;
+    background:#FF0066;
     float:right;
     margin-top:10px
 }
-.tijiaodingdang56:hover{
-    background:#058de7
-}
+/*.tijiaodingdang56:hover{color:#FF0066}*/
 .zgykskbj em{
     line-height:50px;
     font-size:14px;
@@ -246,8 +244,8 @@ body{
     color:#fff
 }
 .zgykskbj a:hover{
-    background:#e98c00
-}
+     background:#e98c00
+ }
 .changepc{
     width:1218px;
     background:#fffdf3;
@@ -335,7 +333,8 @@ body{
     text-align: center;
     border-radius: 3px;
     position: absolute;
-    right: 10px; top: 10px;
+    right: 10px;
+    top: 10px;
     border: 1px solid #56b4f8;
     cursor: pointer;
 }
@@ -344,13 +343,15 @@ body{
     height: 34px;
     display: inline-block;
     border-bottom: 2px solid #56b4f8;
-    padding: 0; margin: 0;
+    padding: 0;
+    margin: 0;
 }
 ._citys0 li {
     display: inline-block;
     line-height: 34px;
     font-size: 15px;
-    color: #888; width: 80px;
+    color: #888;
+    width: 80px;
     text-align: center;
     cursor: pointer;
 }
@@ -390,7 +391,8 @@ body{
     padding-left:20px;
     padding-right:20px;
     line-height:40px;
-    background:#09f; color:#FFF;
+    background:#09f;
+    color:#FFF;
     float:left;
     font-size:14px;
     margin-top:10px;
@@ -467,7 +469,7 @@ body{
     font-size:20px;
     color:#333;
     padding-left:20px;
- background:#fff
+    background:#fff
 }
 .titijj{
     width:1226px;
@@ -483,7 +485,6 @@ body{
     text-align:center;
     line-height:37px;
     font-size:12px;
-    color:#666;
     margin-left:12px
 }
 .xzbsni{
@@ -505,17 +506,21 @@ body{
     float:left
 }
 .xzbsni ul li:hover{
-    border-color:#FF0066;
+    border-color:#09f;
     cursor:pointer
 }
 .xzbsni ul li.plok{
     border-color:#09f
 }
 .animaa{
-    background:#FF0066;
-    color:#fff; width:100px;
+    background:#09f;
+    color:#fff;
+    width:100px;
     margin:0 auto;
     border-radius:6px
+}
+.animaa:hover{
+    background:#007acb
 }
 
 

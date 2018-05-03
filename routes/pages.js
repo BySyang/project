@@ -3,6 +3,7 @@ var router = express.Router();
 var goodsControll = require('../controller/goodsControll');
 var catControll = require('../controller/catControll');
 var userCenter = require('../controller/userCenter');
+var shoporderControll = require('../controller/shoporderControll')
 router.get('/', function (req, res) {
     res.render('index');
 })
@@ -22,4 +23,5 @@ router.get('/goodscore',goodsControll.goodscore);   //商品评论
 router.get('/goodspecs',goodsControll.goodspecs);  //商品规格
 router.get('/shopping.html', catControll.catList);          //购物车
 router.get('/personal-center.html',userCenter.userCenterInit)   //个人中心
+router.get('/views/parts/shoporder.ejs',shoporderControll.shoporderlist)   //商品详情
 module.exports = router;

@@ -103,7 +103,6 @@ header {
 .box-banner {
     position: relative;
     width: 100%;
-    height: 635px;
     overflow: hidden;
     z-index: -1
 }
@@ -153,7 +152,7 @@ header {
     position: absolute;
     width: 222px;
     height: 25px;
-    left: 85px;
+    left: 78px;
     top: 1.4px;
 }
 
@@ -292,7 +291,7 @@ footer {
     width: 150px;
     height: 22px;
     left: 120px;
-    top: 65%
+    top: 63%
 }
 
 .bottom-icon>i {
@@ -311,6 +310,7 @@ footer {
     background-color:rgba(255,255,255,0.9);
     box-shadow: 0px 3px  3px gray;
     display: none;
+    cursor: pointer;
 }
 .iconbox {
     position: absolute;
