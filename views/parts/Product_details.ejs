@@ -34,7 +34,7 @@
                   </li>
                   <% }else{ %>
                     <li>
-                      <img src="./images/series/<%=  data.goodsImg.split('?')[0]+item  %>" data-bigimg="./images/series/<%=  item.indexOf('upload')>-1?data.goodsImg.split('?')[0]+(item.replace(/(\.+)/,'(1)$1')):data.goodsImg.split('?')[0]+(item.replace(/(\.+)/,'$1')) %>">
+                      <img src="./images/series/<%=  data.goodsImg.split('?')[0]+item  %>" data-bigimg="./images/series/<%=  data.goodsImg.indexOf('upload')>-1?data.goodsImg.split('?')[0]:data.goodsImg.split('?')[0]+(item.replace(/(\.+)/,'(1)$1')) %>">
                     </li>
                     <% } %>
                       <% }) %>
