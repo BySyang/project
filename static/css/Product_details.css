@@ -432,20 +432,12 @@
   width: 150px;
   vertical-align: 250%;
 }
-#product_detatab3 .product_guide .guide_con .sizejisuan {
-  width: 456px;
-}
-#product_detatab3 .product_guide .guide_con .cimacanzhao {
-  width: 100%;
-}
-#product_detatab3 .product_guide .guide_con .wugtcanzhao {
-  width: 530px;
-}
-#product_detatab3 .product_guide .guide_con .guijiaocanzhao {
-  width: 395px;
-}
+#product_detatab3 .product_guide .guide_con .sizejisuan,
+#product_detatab3 .product_guide .guide_con .cimacanzhao,
+#product_detatab3 .product_guide .guide_con .wugtcanzhao,
+#product_detatab3 .product_guide .guide_con .guijiaocanzhao,
 #product_detatab3 .product_guide .guide_con .yirucz {
-  width: 80%;
+  width: 100%;
 }
 #product_detatab3 .product_guide .guide_con .notxz {
   font-size: 10px;
