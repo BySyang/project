@@ -22,7 +22,7 @@ router.post('/adminExit', admin.adminExit);
 
 //获取用户信息
 router.get('/userInfo', (req, res) => {
-  let sql = 'select * from users';
+  let sql = 'select a.*,b.score from users a left join user_scores b on a.userId=b.userId ';
   let userId = req.query.userId;
   let arr = [];
   if (userId) {
@@ -32,6 +32,19 @@ router.get('/userInfo', (req, res) => {
   sqlPool(sql, arr, (err, data) => {
     handleData(res, err, data)
   })
+})
+router.post('/userModify', (req, res) => {
+  let sql = 'update users set logName=?,logPwd=?,userPhone=?,userEmail=? where userId=?';
+  var arr = [];
+  arr.push(req.body.logName || ''); //登录名
+  arr.push(req.body.logPwd ||'');//登录密码
+  arr.push(req.body.userPhone || '');//手机号
+  arr.push(req.body.userEmail || '');//邮箱
+  arr.push(req.body.userId);     //用户id
+  sqlPool(sql, arr, (err, data) => {
+    handleData(res, err, data)
+  })
+
 })
 //获取评论列表
 router.get('/goodScoreList', (req, res) => {
@@ -65,7 +78,7 @@ router.post('/typeModify', (req, res) => {
   let typeDes = req.body.typeDes || '';
   let idShow = req.body.idShow || '';
   let typeId = req.body.typeId || '';
-  let arr=[];
+  let arr = [];
   if (typeName != '') {
     sql += ' typeName=?,';
     arr.push(typeName);
