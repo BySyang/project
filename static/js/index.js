@@ -44,7 +44,7 @@ $(function () {
         }
     })
 
-
+    
     // 系列下拉菜单js
     var flag = $("#list").is(":hidden");
     var imgflag = $(".product_img").is(":hidden");

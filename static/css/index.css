@@ -7,26 +7,47 @@
 }
 body{
     width: 100%;
-    height: 6400px;
 }
 p{
     letter-spacing: .2em;
 }
     /* 内容第一部分 */
 section{
-    position: relative;
     width: 100%;
-    height: 1500px
 }
 
 .first-contain{
     width: 100%;
-    height: 1000px;
     background: #f7f7f7;
+    /* border: 1px solid red; */
+    height: 800px;
     overflow: hidden
 }
 .first_text{
+   width: 100%;
+   /* border: 1px solid red; */
+}
+.img_contain{
     /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.img_contain div:nth-child(1){
+    margin:55px 20px 20px 0px;
+    background: url("../images/indexImage/index_content/wild/index_wild1.jpg");
+    background-size: 100% 100%;
+    width: 450px;
+    height: 520px;
+}
+.img_contain div:nth-child(2){
+    margin:55px 20px 20px 0px;
+    margin-top: 55px;
+    background: url("../images/indexImage/index_content/wild/index_wild2.jpg");
+    background-size: 100% 100%;
+    width: 450px;
+    height: 520px;
 }
 p {
     text-align: center;
@@ -39,12 +60,12 @@ p:nth-child(1) {
 
 .section-button,
 .section-button2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     width: 450px;
     height: 60px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 10px auto;
+    margin:auto;
 }
 
 .section-button>button {
@@ -87,57 +108,6 @@ p:nth-child(1) {
     color: #f06;
     float: right;
     border: 1px solid #f06
-}
-
-.img-t1>div {
-    position: absolute;
-    background: url("../images/indexImage/index_content/wild/index_wild1.jpg");
-    background-size: 100% 100%;
-    left: 186px;
-    top: 290px;
-    width: 480px;
-    height: 500px
-}
-
-.img-t2>div {
-    position: absolute;
-    top: 390px;
-    right: 200px;
-    background: url("../images/indexImage/index_content/wild/index_wild2.jpg");
-    background-size: 100% 100%;
-    box-shadow: 5px 2px 5px 3px #000;
-    width: 455px;
-    height: 600px
-}
-
-.img-t1>p {
-    position: absolute;
-    left: 51.5%;
-    top: 20%;
-    font-size: 16px
-}
-
-.img-t2>p {
-    position: absolute;
-    left: 14%;
-    top: 52.5%;
-    font-size: 16px
-}
-
-.text_t1 {
-    position: absolute;
-    top: 55%;
-    left: 31%;
-    height: 137px;
-}
-
-.text_t1>p {
-    /*display: inline-block;*/
-    margin: 4px 0;
-    font-style: normal;
-    font-size: 14px;
-    width: 245px;
-    text-align: right;
 }
 
 .second_contain {
@@ -526,6 +496,6 @@ p:nth-child(1) {
 }
 
 footer{
-    margin-top: 4525px;
+    margin-top: 80px;
     
 }
