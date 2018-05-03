@@ -145,6 +145,8 @@ router.post('/orderModify', (req, res) => {
   let orderId = req.body.orderId || ''; //订单ID
   let Courier = req.body.Courier || ''; //快递单号
   let selectCourier = req.body.selectCourier || ''; //快递方式
+  let refundState = req.body.refundState || ''; //退款状态
+  let refundInfo = req.body.refundInfo || ''; //退款状态
   if (orderStatus != '') {
     sql += ' orderStatus=?, ';
     arr.push(orderStatus);
@@ -160,6 +162,14 @@ router.post('/orderModify', (req, res) => {
   if (adminRemarks != '') {
     sql += ' adminRemarks=?,';
     arr.push(adminRemarks);
+  }
+  if (refundState != '') {
+    sql += ' refundState=?,';
+    arr.push(refundState);
+  }
+  if (refundInfo != '') {
+    sql += ' refundInfo=?,';
+    arr.push(refundInfo);
   }
   if (orderAddress != '') {
     sql += ' orderAddress=?,';
