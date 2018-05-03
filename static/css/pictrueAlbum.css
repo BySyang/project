@@ -86,7 +86,7 @@ section {
 .albumSec1 > div:nth-of-type(2) {
   width: 94%;
   background-color: white;
-  margin: 20px 0 0 35px;
+  margin: 20px 0  0 35px;
   height: 200px;
 }
 .albumSec1 > div:nth-of-type(2) h2 {
@@ -103,10 +103,13 @@ section {
   /* position: absolute; */
   width: 96%;
   margin-top: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+
 }
 .albumSec1 > div:nth-of-type(3) > div {
   float: left;
-  margin-left: 35px;
+  margin-left: 15px;
   /* border: 1px solid red; */
 }
 .albumSec1 > div:nth-of-type(3) > div:nth-of-type(1) {
@@ -124,7 +127,7 @@ section {
   color: #ff0066;
 }
 .albumSec1 > div:nth-of-type(3) > div:nth-of-type(2) {
-  margin-left: 52px;
+  margin-left: 74px;
   width: 46%;
 }
 .albumSec1 > div:nth-of-type(3) > div:nth-of-type(2) img {

@@ -307,14 +307,14 @@ p:nth-child(1) {
     top: 25.4%;
     margin: 0 auto;
     width: 72.3%;
+    /* border: 1px solid red; */
     height: 753px
 }
 
 .four_img1>div {
-    position: absolute;
     background: url("../images/indexImage/index_content/sexy/index_sex1.jpg");
     background-size: 100% 100%;
-    width: 460px;
+    width: 46.6%;
     height: 539px;
     box-shadow: -2px -2px 2px 1px lightgrey
 }
@@ -329,22 +329,24 @@ p:nth-child(1) {
 }
 
 .four_img2>div {
-    position: absolute;
-    left: 49%;
+    margin-top: -55.5%;
+    margin-left: 48.7%;
     background: url("../images/indexImage/index_content/sexy/index_sex2.jpg");
     background-size: 100% 100%;
     width: 500px;
     height: 287px;
-
 }
-
+.four_img2>p{
+    margin-left: 50%;
+    margin-top: 2.5%;
+}
 .four_img3>div {
     position: absolute;
     left: 48.8%;
-    top: 46.6%;
+    top: 46.5%;
     background: url("../images/indexImage/index_content/sexy/index_sex3.jpg");
     background-size: 100% 100%;
-    width: 500px;
+    width: 51.2%;
     height: 402px;
     box-shadow: 2px 2px 2px 1px lightgrey;
 }
@@ -353,6 +355,7 @@ p:nth-child(1) {
     position: absolute;
     top: 80%;
     left: 29%;
+    width: 18%;
     font-size: 16px;
     color: #333;
     text-align: right
@@ -364,9 +367,6 @@ p:nth-child(1) {
     height: 1240px;
     background-color: #f7f7f7;
     overflow: hidden;
-}
-.five_text{
-    /* border: 1px solid red; */
 }
 .five_img {
     position: absolute;
