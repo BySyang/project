@@ -35,17 +35,17 @@ router.get('/userInfo', (req, res) => {
 })
 //获取评论列表
 router.get('/goodScoreList', (req, res) => {
-  let sql = 'SELECT uss.username, gsc.userId, gsc.scoreText, gsc.createTime, '+
-            'gsc.orderScore, gsc.isShow, goo.goodsName '+
-            'FROM goods_scores gsc '+
-            'LEFT JOIN users uss ON uss.userId = gsc.userId '+
-            'LEFT JOIN goods goo ON goo.goodsId = gsc.goodsId ';
+  let sql = 'SELECT uss.username, gsc.userId, gsc.scoreText, gsc.createTime, ' +
+    'gsc.orderScore, gsc.isShow, goo.goodsName ' +
+    'FROM goods_scores gsc ' +
+    'LEFT JOIN users uss ON uss.userId = gsc.userId ' +
+    'LEFT JOIN goods goo ON goo.goodsId = gsc.goodsId ';
   sqlPool(sql, (err, data) => {
     handleData(res, err, data)
-  }) 
+  })
 })
 
-//获取商品分类列表
+//获取商品系列表
 router.get('/goodsTypeList', (req, res) => {
   let sql = 'select * from goods_types';
   let typeId = req.query.typeId;
@@ -57,6 +57,34 @@ router.get('/goodsTypeList', (req, res) => {
   sqlPool(sql, arr, (err, data) => {
     handleData(res, err, data)
   })
+})
+//修改商品系列
+router.post('/typeModify', (req, res) => {
+  let sql = 'update goods_types set';
+  let typeName = req.body.typeName || '';
+  let typeDes = req.body.typeDes || '';
+  let idShow = req.body.idShow || '';
+  let typeId = req.body.typeId || '';
+  let arr=[];
+  if (typeName != '') {
+    sql += ' typeName=?,';
+    arr.push(typeName);
+  }
+  if (typeDes != '') {
+    sql += ' typeDes=?,';
+    arr.push(typeDes);
+  }
+  if (idShow != '') {
+    sql += ' idShow=?,';
+    arr.push(idShow);
+  }
+  sql += ' where  typeId=? ';
+  arr.push(typeId);
+  sql = sql.replace(/,\s*where/g, ' where');
+  sqlPool(sql, arr, (err, data) => {
+    handleData(res, err, data)
+  })
+
 })
 //获取商品列表
 router.get('/goodsList', (req, res) => {
@@ -306,16 +334,17 @@ router.post('/imgModify', (req, res) => {
   form.parse(req, function (err, fields, files) {
     if (!err) {
       let arrImg = fields.oldImg.split('|');
-        for (var key of Object.keys(files)) {
-          var oldpath = files[key].path;
-          var newpath = arrImg[key.charAt(key.length - 1)].substr();
-          fs.renameSync(oldpath, newpath);1
-        }
-        res.writeHead(200, {
-          'content-type': 'text/plain'
-        });
-        res.end("成功");
-    }else{
+      for (var key of Object.keys(files)) {
+        var oldpath = files[key].path;
+        var newpath = arrImg[key.charAt(key.length - 1)].substr();
+        fs.renameSync(oldpath, newpath);
+        1
+      }
+      res.writeHead(200, {
+        'content-type': 'text/plain'
+      });
+      res.end("成功");
+    } else {
       console.log(err);
       res.writeHead(404, {
         'content-type': 'text/plain'
