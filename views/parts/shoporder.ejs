@@ -4,11 +4,14 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>shoporder</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_611086_ykgw0jdliwcow29.css">
+    <link rel="stylesheet" href="./css/parts.css">
     <link rel="stylesheet" href="./css/shoporder.css" />
 </head>
 
 <body>
-    <% include parts/header %>
+    <% include header %>
+    <% console.log(data) %>
         <!--全部开始-->
         <div class="tianxiehedui">
             <!--标题-->
@@ -245,12 +248,14 @@
             <!--商品清单结束-->
             <a href="#" class="tijiaodingdang56">提交订单</a>
         </div>
-        <% include parts/footer %>
+        <% include footer %>
 
-            <script src="./js/jquery-1.11.3.js"></script>
-            <script src="js/city.js/cityJson.js"></script>
-            <script src="js/city.js/citySet.js"></script>
-            <script src="js/city.js/Popt.js"></script>
+            <script src="js/jquery-1.11.3.js"></script>
+            <script src="./js/layer-v3.1.1/layer/layer.js"></script>
+            <script src="./js/index.js"></script>
+            <script src="./js/city.js/cityJson.js"></script>
+            <script src="./js/city.js/citySet.js"></script>
+            <script src="./js/city.js/Popt.js"></script>
             <script src="./js/shoporder.js"></script>
 </body>
 

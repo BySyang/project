@@ -31,9 +31,9 @@ app.use(session({
 }))
 //分发路由
 app.use(express.static(path.join(__dirname, 'static')));
-app.use('/', pages);
-app.use('/', users);
-app.use('/',orders);
+app.use(pages);
+app.use( users);
+app.use(orders);
 app.use(api);
 
 // catch 404 and forward to error handler

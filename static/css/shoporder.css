@@ -3,17 +3,19 @@
     list-style:none;
     border:0;
     text-decoration:none;
-    font-family:"Î¢ÈíÑÅºÚ";
+    font-family:"Î¢ï¿½ï¿½ï¿½Åºï¿½";
     font-style:normal
 }
 body{
-    background:#f7f7f7
+    background:#f7f7f7;
+
 }
 .tianxiehedui{
-    width:1226px;
+    width:80%;
     height:auto;
     overflow:hidden;
-    margin:100px auto
+    padding-top:100px;
+    margin: 0 auto;
 }
 .rzhdndgw{
     width:1226px;
@@ -177,7 +179,7 @@ body{
     color:#FF0066;
     font-size:16px;
     font-weight:bold ;
-    font-family:"Î¢ÈíÑÅºÚ"
+    font-family:"Î¢ï¿½ï¿½ï¿½Åºï¿½"
 }
 .syycklo{
     width:1226px;

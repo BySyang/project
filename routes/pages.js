@@ -11,7 +11,7 @@ router.get('/*.html', function (req, res, next) {
     let path = req.url.substr(1).split('.html')[0];
     if (path === 'login') {
         res.render('parts/login');
-    } else if (path === 'Product_series' || path === 'Product_details' || path === 'shopping' || path === 'personal-center') {
+    } else if (path === 'Product_series' || path === 'Product_details' || path === 'shopping' || path === 'personal-center' || path ==='shoporder') {
         next();
     } else {
         res.render(path);
@@ -23,5 +23,5 @@ router.get('/goodscore',goodsControll.goodscore);   //商品评论
 router.get('/goodspecs',goodsControll.goodspecs);  //商品规格
 router.get('/shopping.html', catControll.catList);          //购物车
 router.get('/personal-center.html',userCenter.userCenterInit)   //个人中心
-router.get('/views/parts/shoporder.ejs',shoporderControll.shoporderlist)   //商品详情
+router.get('/shoporder.html', shoporderControll.orderList)   //订单详情
 module.exports = router;
