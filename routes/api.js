@@ -150,7 +150,7 @@ router.post('/goodsModify', (req, res) => {
 
 //获取订单列表
 router.get('/ordersList', (req, res) => {
-  let sql = 'select a.*,b.payName from orders a, pays b where a.orderPayMethod=b.id ';
+  let sql = 'SELECT a.*,b.payName,c.userName FROM orders a, pays b ,users c WHERE a.orderPayMethod=b.id AND a.userId=c.userId';
   sqlPool(sql, (err, data) => {
     handleData(res, err, data)
   })
