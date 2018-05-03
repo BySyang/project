@@ -6,4 +6,5 @@ const catControll = require('../controller/catControll');
 
 router.post('/orderList',orderControll.orderList);
 router.post('/catList',catControll.catList);
+router.post('/orderAdd', orderControll.orderAdd)
 module.exports = router;

@@ -35,29 +35,17 @@ router.get('/userInfo', (req, res) => {
 })
 //获取评论列表
 router.get('/goodScoreList', (req, res) => {
-  let username = req.query.username;
-  let startDate = req.query.startDate;
-  let endDate = req.query.endDate + " 23:59:59";
-  let sql = 'SELECT uss.username, gsc.userId, gsc.scoreText, gsc.createTime,gsc.orderScore,gsc.isShow ' +
-    ' from goods_scores gsc ' +
-    ' LEFT JOIN users uss ON uss.userId = gsc.userId where 1=1 ';
-  let param = [];
-  if (username != null && username != "") {
-    username = "%" + username + "%";
-    sql = sql + " and uss.username like ?";
-    param.push(username);
-  }
-  if (startDate != null && startDate != "") {
-    sql = sql + " and gsc.createTime >= ? and gsc.createTime <= ?";
-    param.push(startDate);
-    param.push(endDate);
-  }
-  sqlPool(sql, param, (err, data) => {
+  let sql = 'SELECT uss.username, gsc.userId, gsc.scoreText, gsc.createTime, ' +
+    'gsc.orderScore, gsc.isShow, goo.goodsName ' +
+    'FROM goods_scores gsc ' +
+    'LEFT JOIN users uss ON uss.userId = gsc.userId ' +
+    'LEFT JOIN goods goo ON goo.goodsId = gsc.goodsId ';
+  sqlPool(sql, (err, data) => {
     handleData(res, err, data)
   })
 })
 
-//获取商品分类列表
+//获取商品系列表
 router.get('/goodsTypeList', (req, res) => {
   let sql = 'select * from goods_types';
   let typeId = req.query.typeId;
@@ -70,6 +58,34 @@ router.get('/goodsTypeList', (req, res) => {
     handleData(res, err, data)
   })
 })
+//修改商品系列
+router.post('/typeModify', (req, res) => {
+  let sql = 'update goods_types set';
+  let typeName = req.body.typeName || '';
+  let typeDes = req.body.typeDes || '';
+  let idShow = req.body.idShow || '';
+  let typeId = req.body.typeId || '';
+  let arr=[];
+  if (typeName != '') {
+    sql += ' typeName=?,';
+    arr.push(typeName);
+  }
+  if (typeDes != '') {
+    sql += ' typeDes=?,';
+    arr.push(typeDes);
+  }
+  if (idShow != '') {
+    sql += ' idShow=?,';
+    arr.push(idShow);
+  }
+  sql += ' where  typeId=? ';
+  arr.push(typeId);
+  sql = sql.replace(/,\s*where/g, ' where');
+  sqlPool(sql, arr, (err, data) => {
+    handleData(res, err, data)
+  })
+
+})
 //获取商品列表
 router.get('/goodsList', (req, res) => {
   let sql = 'SELECT a.*,b.typeName FROM goods a LEFT JOIN goods_types b ON a.typeId=b.typeId ';
@@ -81,14 +97,16 @@ router.get('/goodsList', (req, res) => {
 router.post('/goodsModify', (req, res) => {
   let sql = 'update goods set';
   let arr = [];
-  let goodsId = req.body.goodsId || ''; //商品ID
-  let typeId = req.body.typeId || ''; //商品类型Id
+  let goodsId = parseInt(req.body.goodsId) || ''; //商品ID
+  let typeId = parseInt(req.body.typeId) || ''; //商品类型Id
   let goodsName = req.body.goodsName || ''; //商品名
   let goodsDesc = req.body.goodsDesc || ''; //商品描述
-  let goodStock = req.body.goodStock || ''; //商品库存
+  let goodStock = parseInt(req.body.goodStock) || ''; //商品库存
+  let goodSvg = parseFloat(req.body.goodSvg) || ''; //商品价格
+  let goodscore = parseInt(req.body.goodscore) || ''; //商品评分
   let isSale = req.body.isSale || ''; //是否显示
-  let isHot = req.body.isHot || ''; //是否热销
-  let isNew = req.body.isNew || ''; //是否新品
+  let isHot = parseInt(req.body.isHot) || ''; //是否热销
+  let isNew = parseInt(req.body.isNew) || ''; //是否新品
   if (typeId != '') {
     sql += ' typeId=?,';
     arr.push(typeId);
@@ -104,6 +122,10 @@ router.post('/goodsModify', (req, res) => {
   if (goodStock != '') {
     sql += ' goodStock=?,';
     arr.push(goodStock);
+  }
+  if (goodSvg != '') {
+    sql += ' goodSvg=?,';
+    arr.push(goodSvg);
   }
   if (isSale != '') {
     sql += ' isSale=?,';
@@ -125,14 +147,6 @@ router.post('/goodsModify', (req, res) => {
   })
 })
 
-//删除商品
-router.post('/goodsDel', (req, res) => {
-  let sql = 'delete from goods where  goodsId =?';
-  let goodsId = req.body.goodsId;
-  sqlPool(sql, [goodsId], (err, data) => {
-    handleData(res, err, data)
-  })
-})
 
 //获取订单列表
 router.get('/ordersList', (req, res) => {
@@ -159,6 +173,8 @@ router.post('/orderModify', (req, res) => {
   let orderId = req.body.orderId || ''; //订单ID
   let Courier = req.body.Courier || ''; //快递单号
   let selectCourier = req.body.selectCourier || ''; //快递方式
+  let refundState = req.body.refundState || ''; //退款状态
+  let refundInfo = req.body.refundInfo || ''; //退款状态
   if (orderStatus != '') {
     sql += ' orderStatus=?, ';
     arr.push(orderStatus);
@@ -174,6 +190,14 @@ router.post('/orderModify', (req, res) => {
   if (adminRemarks != '') {
     sql += ' adminRemarks=?,';
     arr.push(adminRemarks);
+  }
+  if (refundState != '') {
+    sql += ' refundState=?,';
+    arr.push(refundState);
+  }
+  if (refundInfo != '') {
+    sql += ' refundInfo=?,';
+    arr.push(refundInfo);
   }
   if (orderAddress != '') {
     sql += ' orderAddress=?,';
@@ -303,11 +327,37 @@ router.post('/addGoods', (req, res) => {
     }
   })
 })
+//修改图片
+router.post('/imgModify', (req, res) => {
+  var form = new formidable.IncomingForm();
+  form.uploadDir = "./tmp";
+  form.parse(req, function (err, fields, files) {
+    if (!err) {
+      let arrImg = fields.oldImg.split('|');
+      for (var key of Object.keys(files)) {
+        var oldpath = files[key].path;
+        var newpath = arrImg[key.charAt(key.length - 1)].substr();
+        fs.renameSync(oldpath, newpath);
+        1
+      }
+      res.writeHead(200, {
+        'content-type': 'text/plain'
+      });
+      res.end("成功");
+    } else {
+      console.log(err);
+      res.writeHead(404, {
+        'content-type': 'text/plain'
+      });
+      res.end("失败");
+    }
+  })
+})
 //删数据
 router.post('/delete', (req, res) => {
   let tableName = req.body.tableName;
-  let tableKey, tableVal,arr=[];
-  let all = req.body.all&&req.body.all==1?true:false;
+  let tableKey, tableVal, arr = [];
+  let all = req.body.all && req.body.all == 1 ? true : false;
   for (let [key, val] of Object.entries(req.body)) {
     if (key.toLowerCase().endsWith('id')) {
       tableKey = key;
@@ -315,12 +365,25 @@ router.post('/delete', (req, res) => {
     }
   }
   let sql = `delete from ${tableName} where ${tableKey}=? `;
-  if(all) sql = sql.substr(0,sql.indexOf('where'));
+  if (all) sql = sql.substr(0, sql.indexOf('where'));
   sqlPool(sql, [tableVal], (err, data) => {
     handleData(res, err, data)
   })
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
 //数据处理
 function handleData(res, err, data) {
   if (!err) {

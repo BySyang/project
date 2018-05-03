@@ -222,6 +222,8 @@ function showStock() {
 }
 $('#lijibuy').on('click',function(){
   let id = $(this).attr('data-id');
-  location.href = `shoporder?id=${id}`;
-  console.log("111")
+  $.ajax({
+    type:'post',
+    url:'/orderAdd',
+  })
 })
