@@ -329,7 +329,8 @@ p:nth-child(1) {
 }
 
 .four_img2>div {
-    margin-top: -55.5%;
+    position: absolute;
+    top: 0%;
     margin-left: 48.7%;
     background: url("../images/indexImage/index_content/sexy/index_sex2.jpg");
     background-size: 100% 100%;
@@ -337,8 +338,9 @@ p:nth-child(1) {
     height: 287px;
 }
 .four_img2>p{
-    margin-left: 50%;
-    margin-top: 2.5%;
+    position: absolute;
+    margin-left: 70%;
+    top: 36%;
 }
 .four_img3>div {
     position: absolute;
