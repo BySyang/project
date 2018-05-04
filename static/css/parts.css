@@ -75,6 +75,9 @@ header {
     color: #fff;
     display: none;
 }
+.out>i{
+    font-size: 20px;
+}
 
 .box_icon:hover {
     color: #f06;
@@ -157,7 +160,11 @@ header {
 }
 
 .head_nav_right_i> .box_icon {
-    margin: 2px 20px 0px 20px
+    margin: 2px 20px 0px 20px;
+    
+}
+.box_icon>i{
+    font-size: 20px;
 }
 .head-nav>ul>li:nth-child(7) {
     border: 1px solid red;
@@ -184,6 +191,9 @@ header {
 
 .box_input1 {
     color: #f06
+}
+.box_input1>i{
+    font-size: 20px;
 }
 
 /* 底部信息 */
