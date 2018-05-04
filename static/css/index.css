@@ -23,7 +23,9 @@ img:hover{
 p {
     letter-spacing: .2em;
 }
-
+.iconfont{
+    font-size: 30px;
+}
 /* 内容第一部分 */
 
 section {
@@ -51,6 +53,10 @@ section {
     margin-left: -1050px;
     width: 100%;
 }
+/* .first_text p:nth-child(1){
+    font-size: 30px;
+    color: #ff0066;
+} */
 
 .first_text1 {
     margin-left: 0px;
@@ -108,7 +114,8 @@ p {
 }
 
 p:nth-child(1) {
-    font-size: 26px
+    font-size: 30px;
+    color: #ff0066;
 }
 
 .section-button {
@@ -269,7 +276,7 @@ p:nth-child(1) {
     position: absolute;
     width: 457px;
     height: 562px;
-    box-shadow: -2px -2px 2px 1px lightgrey;
+    box-shadow: -1px -2px 2px 1px lightgrey;
     overflow: hidden;
     cursor: pointer;
     transition: all .6s;
@@ -287,7 +294,7 @@ p:nth-child(1) {
     left: 51%;
     width: 470px;
     height: 320px;
-    /* border: 1px solid red; */
+    box-shadow: -1px -1px 2px 1px lightgrey;
     overflow: hidden;
 }
 
@@ -351,6 +358,10 @@ p:nth-child(1) {
     opacity: 0;
     width: 100%;
 }
+/* .three_text>p:nth-child(1){
+    font-size: 30px;
+    color: #ff0066;
+} */
 
 .three_contain>p {
     padding-top: 20px
@@ -363,16 +374,16 @@ p:nth-child(1) {
     margin: 0 auto;
     width: 974px;
     height: 625px;
-    top: 28.7%
+    top: 28.7%;
 }
 
 .three_img1 {
     position: absolute;
     width: 466px;
     height: 521px;
-    box-shadow: -2px -2px 2px 1px lightgrey;
     overflow: hidden;
     cursor: pointer;
+    box-shadow: 2px -2px 2px 1px lightgrey;
 }
 
 .three_img1>img {
@@ -394,6 +405,7 @@ p:nth-child(1) {
     position: absolute;
     width: 230px;
     height: 315px;
+    box-shadow: 2px -2px 2px 1px lightgrey;
 }
 
 .three_img2>div:nth-child(1)>img {
@@ -407,6 +419,7 @@ p:nth-child(1) {
     width: 236px;
     height: 230px;
     left: 52%;
+    overflow: hidden;
 }
 
 .three_img2>div:nth-child(2)>img {
@@ -414,7 +427,7 @@ p:nth-child(1) {
     width: 100%;
     height: 100%;
 }
-
+ 
 .three_img2>p {
     width: 300px;
     position: absolute;
@@ -525,7 +538,7 @@ p:nth-child(1) {
     height: 100%;
 }
 
-.four_img3>p {
+.four_img>p {
     position: absolute;
     top: 80%;
     left: 29%;
@@ -555,7 +568,7 @@ p:nth-child(1) {
 
 .five_img1 {
     position: absolute;
-    right: 15%;
+    right: 0%;
     width: 600px;
     top: 3.5%;
     height: 338px;
@@ -569,14 +582,14 @@ p:nth-child(1) {
     height: 100%;
 }
 
-.five_img1>p {
+.five_img>p {
     position: absolute;
     text-align: right;
-    top: 30%;
-    left: -33%;
+    top: 15%;
+    left: 18%;
     letter-spacing: 1px;
     font-size: 16px;
-    color: #333
+    color: #333;
 }
 
 .five_img2 {
@@ -610,7 +623,7 @@ p:nth-child(1) {
     top: 41.5%;
     width: 428px;
     height: 570px;
-    box-shadow: 2px 2px 2px 1px lightgrey;
+    box-shadow: -2px -2px 2px 1px lightgrey;
     cursor: pointer;
     overflow: hidden;
 }

@@ -2,8 +2,6 @@
 
   var Shutter = function (elem, options) {
     this.defaults = {
-      shutterW: 1200,
-      shutterH: 500,
       isAutoPlay: false,
       playInterval: 3000,
       curDisplay: 0,
@@ -17,10 +15,8 @@
   Shutter.prototype = {
     play: function () {
       var self = this;
-
       if (this.opts.isAutoPlay) {
         clearInterval(this.playTime);
-
         this.playTime = setInterval(function () {
           self.$nextBtn.click();
         }, this.opts.playInterval);
@@ -187,7 +183,7 @@
 
 
       this.play();
-      this.$shutter.hover(function () {
+      this.$shutter.click(function () {
         clearInterval(self.playTime);
       }, function () {
         self.play();
