@@ -52,6 +52,7 @@ body {
 
 #container>.h-banner img {
   width: 100%;
+  height: 100%;
 }
 #container>section {
   width: 84%;
@@ -151,65 +152,55 @@ color: #ff0066;
   flex-direction: row;
   justify-content: space-around
 }
-.albumSec2>div {
+.slider {
   position: relative;
   width: 28%;
   height: 500px;
   float: left;
   margin-top: 50px;
 }
-.albumSec2 div img {
+.slider img {
   transition: all 1s linear;
   position: absolute;
   width: 100%;
   left: 0;
   right: 0;
 }
-.albumSec2 div img:nth-of-type(2) {
+.albumSec2 .slider img:nth-of-type(2) {
   opacity: 0;
 }
-
 /* ********************************************************************************************************************** */
 
 .albumSec3 {
   margin-top: 10px;
   margin-bottom: 80px;
   clear: both;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .albumSec3>div {
-  float: left;
+  width: 28%;
 }
-.albumSec3>div:nth-of-type(3) {
-  width: 30%;
-  margin-left: 2%;
+.albumSec3>div>img{
+  width: 100%
 }
-.albumSec3 div:nth-of-type(3) img {
+.albumSec3>div>div{
   width: 100%;
 }
-.albumSec3>div:nth-of-type(1) {
-  width: 30%;
-  margin-left: 35px;
+.albumSec3>div>div>img{
+  width:100%;
 }
-.albumSec3>div:nth-of-type(1) img {
-  width: 100%;
-}
-.albumSec3>div:nth-of-type(2) {
-  position: relative;
-  margin-left: 2%;
-  width: 30%;
-}
-.albumSec3>div:nth-of-type(2) div:first-child {
-  margin-top: 30px;
+.albumSec3>div:nth-of-type(2) div:first-child{
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .albumSec3>div:nth-of-type(2) div:first-child p {
   text-align: center;
-  line-height: 50px;
-  height: 50px;
+  line-height: 30px;
 }
 .albumSec3>div:nth-of-type(2) div:last-child {
-  position: absolute;
-  top: 233px;
-}
-.albumSec3>div:nth-of-type(2) div:last-child img {
-  width: 100%;
+  height: 40%;
 }
