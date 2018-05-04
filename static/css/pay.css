@@ -4,7 +4,7 @@
     list-style:none;
     border:0;
     text-decoration:none;
-    font-family:"Î¢ÈíÑÅºÚ";
+    font-family:"Î¢ï¿½ï¿½ï¿½Åºï¿½";
     font-style:normal
 }
 body{
@@ -454,7 +454,8 @@ body{
 .tijiaozhifu{
     width:1226px;
     height:auto;
-    margin:100px auto;
+    padding-top: 100px;
+    margin:0 auto;
     overflow:hidden;
     border-top:2px solid #e4e4e4;
     border-bottom:2px solid #e4e4e4
@@ -495,6 +496,10 @@ body{
     padding-bottom:6px;
     background:#fff
 }
+.xzbsni ul{
+    margin: 0 auto;
+    width: 50%;
+}
 .xzbsni ul li{
     width:120px;
     height:50px;
@@ -502,7 +507,12 @@ body{
     border:2px solid #cacace;
     margin-left:6px;
     overflow:hidden;
-    float:left
+    float:left;
+
+}
+.xzbsni ul li img{
+    width: 100%;
+    height: 100%;
 }
 .xzbsni ul li:hover{
     border-color:#FF0066;

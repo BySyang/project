@@ -8,8 +8,8 @@ module.exports = {
     },
     register(user,pwd,fn){
         let insertSql = 
-        `insert into users values (null,?,?,?,null,default,default,'personal_personImg.jpeg',?,'2015-12-14',null,default,default,null,default)`;
-        // id , logName  ?, logPwd ?, userName ?, trueName , userType , userSex,  userPhoto , userPone ? , userBirthday , userEmail ,userScore , createTime , lastTime ,userStatus
+        `insert into users values (null,?,?,?,null,default,default,'personal_personImg.jpeg',?,'2015-12-14',null,default,default,null,default,1)`;
+        // id , logName  ?, logPwd ?, userName ?, trueName , userType , userSex,  userPhoto , userPone ? , userBirthday , userEmail ,userScore , createTime , lastTime ,userStatus,userLevel
         sqlPool(insertSql,[user,pwd,user,user],fn);
     },
     userInfo(user,fn){

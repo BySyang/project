@@ -170,7 +170,7 @@ $.ajax({
           str += `<div data-id="${item}"></div>`
         }
       })
-      return '<p>颜色</p>'+str
+      return '<p>颜色</p>' + str
     });
     $('.size').html(() => {
       var str = '';
@@ -181,7 +181,7 @@ $.ajax({
           str += `<div data-id="${item}">${item}</div>`;
         }
       })
-      return '<p>衣带尺寸</p>'+str
+      return '<p>衣带尺寸</p>' + str
     })
     $('.cups').html(() => {
       var str = '';
@@ -192,7 +192,7 @@ $.ajax({
           str += `<div data-id="${item}">${item}</div>`
         }
       })
-      return '<p>罩杯大小</p>'+str
+      return '<p>罩杯大小</p>' + str
     });
     showStock()
   }
@@ -220,10 +220,37 @@ function showStock() {
 
   })
 }
-$('#lijibuy').on('click',function(){
+$('#lijibuy').on('click', function () {
   let id = $(this).attr('data-id');
-  $.ajax({
-    type:'post',
-    url:'/orderAdd',
-  })
+  let stock = $('.goodStock').text() //库存
+  if (stock > 0) {
+    $('.price .money').text() //单价
+    $('#number_show').val() //数量
+    $('#pingfen').data('id') //商品id
+    let spec = `${$('.color .active').data('id')}|${$('.size .active').data('id')}|${$('.cups .active').data('id')}`;
+    $.ajax({
+      type: 'post',
+      url: '/orderAdd',
+      data: {
+        price: $('.price .money').text().substr(1),
+        num: $('#number_show').val(),
+        goodsId: $('#pingfen').data('id'),
+        goodSpec: spec
+      },
+      success(data) {
+        if (data == 'ok') {
+          window.location.href = 'shoporder.html'
+        }else{
+          layer.msg(data);
+        }
+      },
+      error(err) {
+        console.log(err)
+      }
+    })
+  } else {
+    layer.msg('库存不足!');
+  }
+
+
 })

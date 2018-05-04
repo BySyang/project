@@ -4,65 +4,79 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>pay</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_611086_ykgw0jdliwcow29.css">
+    <link rel="stylesheet" href="./css/parts.css">
     <link rel="stylesheet" href="css/pay.css" />
 </head>
 
 <body>
-    <% include parts/header %>
+    <% include header %>
+
         <!--支付订单-->
-        <div class="tijiaozhifu">
+        <div class="tijiaozhifu" data-id="<%=orderInfo.orderId%>">
             <!--标题-->
-            <div class="zhifutt">
-                <span>支付提交</span>
-                <span>请您及时付款，以便订单尽快处理！ 在线支付金额：
-                    <s style=" color:#FF0066">￥375.80</s>
-                </span>
-            </div>
-            <!--导航列表-->
-            <div class="titijj">
-                <span style=" width:290px">订单号</span>
-                <span style="width:290px">支付方式</span>
-                <span style="width:290px">金额</span>
-                <span style="width:290px">物流</span>
-            </div>
-            <!--各个订单列表-->
-            <div class="titijj">
-                <span style=" width:290px; color:#999">8000000000009101</span>
-                <span style="width:290px; color:#999">在线支付</span>
-                <span style="width:290px; color:#999">￥384.00 ( 预存款已支付：￥35.00 )</span>
-                <span style="width:290px; color:#999">快递</span>
-            </div>
-            <div class="titijj">
-                <span style=" width:290px; color:#999">8000000000009101</span>
-                <span style="width:290px; color:#999">在线支付</span>
-                <span style="width:290px; color:#999">￥384.00 ( 预存款已支付：￥35.00 )</span>
-                <span style="width:290px; color:#999">快递</span>
-            </div>
-            <div class="titijj">
-                <span style=" width:290px; color:#999">8000000000009101</span>
-                <span style="width:290px; color:#999">在线支付</span>
-                <span style="width:290px; color:#999">￥384.00 ( 预存款已支付：￥35.00 )</span>
-                <span style="width:290px; color:#999">快递</span>
-            </div>
-            <!--选择支付方式-->
-            <div class="xzbsni">
-                <ul>
-                    <li>
-                        <img src="./images/alipay_logo.gif" />
-                    </li>
-                    <!--<li>-->
-                    <!--<img src="./images/1327947-z.jpg"/>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                    <!--<img src="./images/alipay_logo.gif"/>-->
-                    <!--</li>-->
-                </ul>
-            </div>
+
+            <% if(orderInfo.isPay==1){%>
+                <div class="zhifutt">
+                    <span>您已付款,请等待物流发货!</span>
+                </div>
+                <%}else{%>
+                    <div class="zhifutt">
+                        <span>支付提交</span>
+                        <span>请您及时付款，以便订单尽快处理！ 在线支付金额：
+                            <s style=" color:#FF0066">￥
+                                <% console.log(orderInfo) %>
+                                    <%=orderInfo.realTotalMoney%>
+                            </s>
+                        </span>
+                    </div>
+                    <!--导航列表-->
+                    <div class="titijj">
+                        <span style=" width:290px">订单号</span>
+                        <span style="width:290px">金额</span>
+                        <span style="width:290px">物流</span>
+                    </div>
+                    <!--各个订单列表-->
+                    <div class="titijj">
+                        <span style=" width:290px; color:#999">
+                            <%=orderInfo.orderunique%>
+                        </span>
+                        <span style="width:290px; color:#999">￥
+                            <%=orderInfo.realTotalMoney%>
+                        </span>
+                        <span style="width:290px; color:#999">快递</span>
+                    </div>
+                    <!--选择支付方式-->
+                    <div class="xzbsni">
+                        <p>请选择支付方式</p>
+                        <ul>
+                            <li>
+                                <img src="./images/pays/zhifb.jpg" />
+                            </li>
+                            <li>
+                                <img src="./images/pays/weixin.jpg" />
+                            </li>
+                            <li>
+                                <img src="./images/pays/yinlian.jpg" />
+                            </li>
+                            <li>
+                                <img src="./images/pays/paypal.png" />
+                            </li>
+                        </ul>
+                    </div>
+                    <!--确认提交并支付-->
+                    <a href="#" style="display:block; padding-left:20px; padding-right:20px; line-height:40px; font-size:14px" class="animaa"
+                        id="pay">确认提交并支付</a>
+                    <%}%>
+
+
         </div>
-        <!--确认提交并支付-->
-        <a href="#" style="display:block; padding-left:20px; padding-right:20px; line-height:40px; font-size:14px" class="animaa">确认提交并支付</a>
-        <% include parts/footer %>
-            <script src="./js/jquery-1.11.3.js"></script>
+
+        <% include footer %>
+            <script src="js/jquery-1.11.3.js"></script>
+            <script src="./js/layer-v3.1.1/layer/layer.js"></script>
+            <script src="./js/index.js"></script>
+            <script src="./js/pay.js"></script>
 </body>
 
 </html>
