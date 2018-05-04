@@ -57,6 +57,9 @@
             <p>
               <%- data.typeDes.substr(9,9) %>
             </p>
+            <p>
+              <%- data.typeDes.substr(23) %>
+            </p>
             <span>
               <% for(let i=0;i < data.goodscore;i++ ){ %>
                 <span class="icon-star iconfont"  style="color:#ffc832;"></span>
@@ -65,17 +68,22 @@
                     <span class="icon-STAR iconfont"></span>
                     <% } %>
                       <span><%= data.goodscore%></span>
-                      <span>></span>
+                      <span class="iconfont icon-jiantou"></span>
                       <span class="toppinlun"><%= data.goodsUsers%>条评论</span>
             </span>
             <div class="price">
-              <span>单价:</span>
-              <span class="money">￥229</span>
-              <span>库存:</span>
-              <span class="goodStock">100</span>
+              <div>
+                  <span>单&nbsp;&nbsp;&nbsp;&nbsp;价：</span>
+                  <span class="money"></span>
+              </div>
+              <div>
+                  <span>库&nbsp;&nbsp;&nbsp;&nbsp;存：</span>
+                  <span class="goodStock"></span>
+                  <span class="goodStock2">件</span>
+              </div>
             </div>
             <div class="color">
-              <p>颜色</p>
+              <p>颜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;色</p>
               
             </div>
             <div class="size">
@@ -87,7 +95,7 @@
              
             </div>
             <div class="number">
-              <p>数量</p>
+              <p>数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</p>
               <div id="number_redu">-</div>
               <input type="text" value="1" id="number_show" readonly="readonly">
               <div id="number_add">+</div>

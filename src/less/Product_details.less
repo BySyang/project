@@ -37,13 +37,13 @@
 #product_detaright{
   margin-left: 95px;
   >.right_deta{
-    p:first-of-type{
+    >p:first-of-type{
       font-size:20px;
       margin-bottom: 10px;
     }
-    p:last-of-type{
+    >p:last-of-type{
       font-size: @smFont;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
     span:first-of-type{
       margin-bottom: 10px;
@@ -55,25 +55,39 @@
       }
     }
     >.price{
+      color: #999999;
       margin-bottom: 10px;
+      background-color: #f3f3f3;
       padding: 10px 0;
       width: 400px;
-      border-bottom: 1px dotted #000;
+      // border-bottom: 1px dotted #000;
       span{
         font-size: @smFont;
+      }
+      .money,.goodStock,.goodStock2{
+        color: red;
+        font-size: 20px;
+      }
+      div span:first-child{
+        margin-right: 20px;
       }
     }
     >.color{
       margin-bottom: 10px;
       p{
         font-size: @smFont;
+        display:inline;
+        color: #999999;
       }
       div{
         cursor: pointer;
         margin-right: 12px;
         width: 30px;
-        height: 30px;
+        height: 28px;
         display: inline-block;
+        border: 1px solid #c9c9c9;
+        text-align: center;
+        line-height: 30px;
       }
       div:nth-of-type(1){
         background-color: red;
@@ -98,6 +112,8 @@
       margin-bottom: 10px;
       p{
         font-size: @smFont;
+        color: #999999;
+        display:inline;
       }
       div{
         cursor: pointer;
@@ -113,7 +129,9 @@
     >.number{
       margin-bottom: 10px;
       p{
+        display:inline;
         font-size: @smFont;
+        color: #999999;
       }
       div,input{
         padding: 0;
