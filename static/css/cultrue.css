@@ -6,15 +6,20 @@
 header {
   width: 100%;
   height: 550px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   background-image: url("../images/culture/bg.png");
+}
+header span{
+  color: #ff0066;
 
 }
 header>h5 {
   color: rgb(71, 71, 71);
-  font-family: "΢���ź�";
-  font-size: 20px;
+  font-family: "微软雅黑";
+  font-size: 26px;
   position: absolute;
-  left: 800px;
+  left: 700px;
   top: 300px;
   font-weight: normal;
   text-indent:40px;
