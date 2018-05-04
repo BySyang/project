@@ -13,6 +13,7 @@
   margin: 20px auto;
 }
 #product_leftmenu a {
+  font-size: 16px;
   color: black;
   text-decoration: none;
 }
@@ -34,13 +35,13 @@
 #product_detaright {
   margin-left: 95px;
 }
-#product_detaright > .right_deta p:first-of-type {
-  font-size: 16px;
+#product_detaright > .right_deta > p:first-of-type {
+  font-size: 20px;
   margin-bottom: 10px;
 }
-#product_detaright > .right_deta p:last-of-type {
+#product_detaright > .right_deta > p:last-of-type {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 #product_detaright > .right_deta span:first-of-type {
   margin-bottom: 10px;
@@ -52,26 +53,41 @@
   font-size: 14px;
 }
 #product_detaright > .right_deta > .price {
+  color: #999999;
   margin-bottom: 10px;
+  background-color: #f3f3f3;
   padding: 10px 0;
   width: 400px;
-  border-bottom: 1px dotted #000;
 }
 #product_detaright > .right_deta > .price span {
   font-size: 14px;
+}
+#product_detaright > .right_deta > .price .money,
+#product_detaright > .right_deta > .price .goodStock,
+#product_detaright > .right_deta > .price .goodStock2 {
+  color: red;
+  font-size: 20px;
+}
+#product_detaright > .right_deta > .price div span:first-child {
+  margin-right: 20px;
 }
 #product_detaright > .right_deta > .color {
   margin-bottom: 10px;
 }
 #product_detaright > .right_deta > .color p {
   font-size: 14px;
+  display: inline;
+  color: #999999;
 }
 #product_detaright > .right_deta > .color div {
   cursor: pointer;
   margin-right: 12px;
   width: 30px;
-  height: 30px;
+  height: 28px;
   display: inline-block;
+  border: 1px solid #c9c9c9;
+  text-align: center;
+  line-height: 30px;
 }
 #product_detaright > .right_deta > .color div:nth-of-type(1) {
   background-color: red;
@@ -98,6 +114,8 @@
 #product_detaright > .right_deta > .size p,
 #product_detaright > .right_deta .cups p {
   font-size: 14px;
+  color: #999999;
+  display: inline;
 }
 #product_detaright > .right_deta > .size div,
 #product_detaright > .right_deta .cups div {
@@ -114,7 +132,9 @@
   margin-bottom: 10px;
 }
 #product_detaright > .right_deta > .number p {
+  display: inline;
   font-size: 14px;
+  color: #999999;
 }
 #product_detaright > .right_deta > .number div,
 #product_detaright > .right_deta > .number input {
@@ -202,7 +222,7 @@
   width: 65px;
   height: auto;
   cursor: pointer;
-  border: 2px solid #ff0066;
+  border: 1px solid white;
   text-align: center;
 }
 .con-FangDa-ImgList > li > img {
@@ -212,7 +232,7 @@
   height: auto;
 }
 .con-FangDa-ImgList > .active {
-  border-color: #9e9d9d;
+  border-color: red;
 }
 .product_detamid {
   width: 100%;
