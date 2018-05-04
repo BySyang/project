@@ -3,11 +3,11 @@ a {
   font-size: 16px;
 }
 header {
-  width: 1346px;
+  width: 100%;
   height: 550px;
 }
 #Banimg {
-  width: 1346px;
+  width: 100%;
   height: 550px;
 }
 #Banimg img {
@@ -23,11 +23,12 @@ section {
   overflow: hidden;
 }
 .search_border {
-  width: 1139px;
+  width: 100%;
   height: 34px;
   border-bottom: 1px solid #FFCCFF;
   border-top: 1px solid #FFCCFF;
   margin-top: 62px;
+  position: relative;
 }
 .search_border #search_color,
 .search_border #search_size,
@@ -48,10 +49,11 @@ section {
 }
 .search_border p {
   color: #ff0066;
-  padding-left: 815px;
   font-family: "Times New Roman";
   font-size: 22px;
-  margin-top: 0px;
+  position: absolute;
+  left: 90%;
+  margin-top: 0;
 }
 .search_border #search_size {
   margin-left: 20px;
@@ -136,7 +138,7 @@ section {
 .firstList .bigdl {
   margin-top: 38px;
   width: 22.8%;
-  height: 448px;
+  /* height: 448px; */
   background-color: white;
   -webkit-transition: all 0.8s linear;
 }
@@ -162,6 +164,7 @@ section {
   font-size: 18px;
   font-family: "微软雅黑", "宋体";
   font-weight: normal;
+  margin-right: 38%;
 }
 .bugBtn {
   width: 43px;
@@ -172,7 +175,7 @@ section {
   background-color: white;
   color: #ff0066;
   font-weight: normal;
-  margin-left: 65px;
+  /* margin-right: 38%; */
   -webkit-transition: all .3s linear;
 }
 .bugBtn:hover {

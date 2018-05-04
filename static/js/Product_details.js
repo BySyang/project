@@ -55,15 +55,15 @@ $(function () {
   })
   //size选择
   $('.size').on('click', 'div', function () {
-    $(this).siblings().css('background-color', '#fff');
-    $(this).css('background-color', '#ff0066');
+    $(this).siblings().css('border', '1px solid white');
+    $(this).css('border', '1px solid red');
     $(this).addClass('active').siblings().removeClass('active');
     showStock()
   });
   //cups选择
   $('.cups').on('click', 'div', function () {
-    $(this).siblings().css('background-color', '#fff');
-    $(this).css('background-color', '#ff0066');
+    $(this).siblings().css('border', '1px solid white');
+    $(this).css('border', '1px solid red');
     $(this).addClass('active').siblings().removeClass('active');
     showStock()
   });
@@ -176,7 +176,7 @@ $.ajax({
       var str = '';
       sizeArr.forEach((item, i) => {
         if (i == 0) {
-          str += `<div data-id="${item}" style="background-color: rgb(255, 0, 102);" class="active">${item}</div>`;
+          str += `<div data-id="${item}" style="border: 1px solid red;" class="active">${item}</div>`;
         } else {
           str += `<div data-id="${item}">${item}</div>`;
         }
@@ -187,7 +187,7 @@ $.ajax({
       var str = '';
       cupsArr.forEach((item, i) => {
         if (i == 0) {
-          str += `<div data-id="${item}" style="background-color: rgb(255, 0, 102);" class="active">${item}</div>`
+          str += `<div data-id="${item}" style="border: 1px solid red;" class="active">${item}</div>`
         } else {
           str += `<div data-id="${item}">${item}</div>`
         }
