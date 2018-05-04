@@ -19,6 +19,28 @@ module.exports = {
          *
          */
         sqlPool(sql,arr,fn);
-
+    },
+    orderLast(userId,fn){
+        let sql = 'SELECT * FROM orders WHERE userId=? ORDER BY  orderId DESC LIMIT 1 ';
+        sqlPool(sql,[userId],fn);
+    },
+    orderGoodsAdd(arr,fn){
+        let sql = 'insert into order_goods values'+
+            '(null,?,?,?,?,?)'
+            /* 
+            *id ,订单id,商品id,商品数量,商品单价,商品规格
+            */
+        sqlPool(sql,arr,fn);
+    },
+    orderGoodsLast(userId,fn){
+        let sql = 'SELECT a.*,b.goodsName,b.goodLargeImg FROM order_goods a LEFT JOIN goods b ON a.goodsId = b.goodsId WHERE orderId = (SELECT orderId FROM orders WHERE userId = 1 ORDER BY orderId DESC LIMIT 1)';
+        sqlPool(sql,[userId],fn)
+    },
+    orderModify(arr,fn){
+        let sql =  'update orders set orderRemarks=?, orderAddress=? where orderId=? ';
+        if(arr.length==2){
+            sql = 'update orders set isPay=1 where orderId=?'
+        }
+        sqlPool(sql,arr,fn)
     }
 }
