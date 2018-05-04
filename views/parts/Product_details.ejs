@@ -17,7 +17,7 @@
       <div class="line"></div>
       <div id="product_leftmenu">
         <a href="/Product_series.html?seriesId=<%= data.typeId %>">活力少女</a>
-        <span>></span>
+        <span class="iconfont icon-jiantou"></span>
         <a href="#">
           <%= data.goodsName%>
         </a>
@@ -55,7 +55,7 @@
         <div id="product_detaright">
           <div class="right_deta">
             <p>
-              <%- data.typeDes.substr(9) %>
+              <%- data.typeDes.substr(9,9) %>
             </p>
             <span>
               <% for(let i=0;i < data.goodscore;i++ ){ %>

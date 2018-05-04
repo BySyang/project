@@ -13,6 +13,7 @@
   margin: 20px auto;
 }
 #product_leftmenu a {
+  font-size: 16px;
   color: black;
   text-decoration: none;
 }
@@ -35,7 +36,7 @@
   margin-left: 95px;
 }
 #product_detaright > .right_deta p:first-of-type {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 #product_detaright > .right_deta p:last-of-type {
@@ -202,7 +203,7 @@
   width: 65px;
   height: auto;
   cursor: pointer;
-  border: 2px solid #ff0066;
+  border: 1px solid white;
   text-align: center;
 }
 .con-FangDa-ImgList > li > img {
@@ -212,7 +213,7 @@
   height: auto;
 }
 .con-FangDa-ImgList > .active {
-  border-color: #9e9d9d;
+  border-color: red;
 }
 .product_detamid {
   width: 100%;
