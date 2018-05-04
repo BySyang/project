@@ -59,77 +59,63 @@ body {
   padding: 0 8%;
   overflow: hidden;
 }
-
+/* 身体1 */
 .albumSec1 {
   background-color: #f0f0f0;
-  /* height: auto; */
-  /* display: flex; */
 }
-
+/* 身体1，板块1 */
 .sec1_fir {
   overflow: hidden;
-  /* background-color: red; */
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around
 }
-
 .sec1_fir>div {
-  /* float: left; */
   width: 44%;
-  /* height: 674px; */
   margin: 50px 0;
   overflow: hidden;
 }
 .sec1_fir>div>img {
   width: 100%;
 }
+/* 身体1，板块1 */
 .sec1_snd {
   overflow: hidden;
-  /* background-color: red; */
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around
 }
-
 .sec1_snd>div {
   width: 94%;
   background-color: white;
   height: 200px;
   margin: 0 0 50px 0;
 }
-
 .sec1_snd>div h2 {
   width: 84%;
   text-align: center;
   margin: 0 auto;
 }
-
 .sec1_snd>div>div {
   width: 82%;
   text-align: center;
   margin: 0 auto;
 }
-
-/* ********************************************************************************************************************** */
-
+/* 身体1，板块1 */
 .sec1_thirds {
 overflow: hidden;
-/* background-color: red; */
 width: 100%;
 display: flex;
 flex-direction: row;
 justify-content: space-around
 }
-
 .sec1_thirds>div {
 width: 44%;
 margin: 0 0 50px 0;
 overflow: hidden;
 }
-
 .sec1_thirds>div img {
   width: 100%;
 }
@@ -142,11 +128,9 @@ color: #ff0066;
   margin-top: 3%;
 }
 
-/* ********************************************************************************************************************** */
-
+/* 板块2*************************************************************************************************************** */
 .albumSec2 {
   position: relative;  
-  /* width: 94%; */
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -169,7 +153,7 @@ color: #ff0066;
 .albumSec2 .slider img:nth-of-type(2) {
   opacity: 0;
 }
-/* ********************************************************************************************************************** */
+/* 板块3************************************************************************************************************** */
 
 .albumSec3 {
   margin-top: 10px;
