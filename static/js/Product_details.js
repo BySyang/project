@@ -274,7 +274,7 @@ $('#tianjiagouwu').click(() => {
           layer.confirm('您的宝贝已加入购物车,您是继续购物,还是前往购物车结算？', {
             btn: ['继续购物', '前往购物车'] //按钮
           }, function () {
-
+            layer.closeAll('dialog');
           }, function () {
             location.href = 'shopping.html';
           });
