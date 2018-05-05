@@ -60,8 +60,21 @@ ul li {
   width: 330px;
   height: 130px;
   margin-top: 10px;
-  box-shadow: 1px 2px 10px rgba(188, 188, 188, 0.35);
+  box-shadow: 1px 2px 3px rgba(188, 188, 188, 0.35);
 }
+.culCaptionNum1:hover{
+  transform: scale(1.1);
+  transition: all .5s;
+}
+.culCaptionNum2:hover{
+  transform: scale(1.1);
+  transition: all .5s;
+}
+.culCaptionNum3:hover{
+  transform: scale(1.1);
+  transition: all .5s;
+}
+
 .culCaptionNum1>a>img {
   margin-top: 13px;
 }
@@ -69,7 +82,7 @@ ul li {
   width: 330px;
   height: 100px;
   margin-top: 3px;
-  box-shadow: 1px 2px 10px rgba(188, 188, 188, 0.35);
+  box-shadow: 1px 2px 3px rgba(188, 188, 188, 0.35);
 }
 .culCaptionNum2>a>img {
   float: left;
@@ -92,7 +105,7 @@ ul li {
   width: 330px;
   height: 200px;
   margin-top: 8px;
-  box-shadow: 1px 2px 10px rgba(188, 188, 188, 0.35);
+  box-shadow: 1px 2px 3px rgba(188, 188, 188, 0.35);
 }
 .culCaptionNum3>a>img {
   margin-top:35px;

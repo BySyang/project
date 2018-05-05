@@ -37,7 +37,7 @@
             <!--这个选择框结束-->
             <!--收货人信息结束-->
             <!--发票信息-->
-            <div class="shouhurxl shouhurxl13">
+            <div class="shouhurxl shouhurxl13" id="userInfo2">
                 <div class="shouhurxl1 shouhurxl12">
                     <em>发票信息</em>
                     <a href="#">修改</a>
@@ -118,7 +118,8 @@
             <!--商品清单-->
             <div class="shouhurxl">
                 <!--一条商品信息开始-->
-                <div class="xxpop1" style="background:rgba(255,153,0,0.1); padding-bottom:6px">
+                <div class="a">
+                <div class="xxpop1" style=padding-bottom:6px">
                     <div class="xxpop2">
                         <span>店铺</span>
                         <a href="#">
@@ -153,6 +154,7 @@
                                 <%=zhongjia%>
                             </p>
                     </div>
+                </div>
                 </div>
                 <!--买家留言-->
                 <div class="maijiayouhuayue">
@@ -208,9 +210,9 @@
                         </div>
                     </div>
                     <!--一条商品信息结束-->
+                     <!--商品清单结束-->
+                    <a href="#" class="tijiaodingdang56" id="submit" data-id="<%=orderInfo.orderId%>">提交订单</a>
             </div>
-            <!--商品清单结束-->
-            <a href="#" class="tijiaodingdang56" id="submit" data-id="<%=orderInfo.orderId%>">提交订单</a>
         </div>
     </div>
         <% include footer %>
