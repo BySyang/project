@@ -26,7 +26,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie:{
-    maxAge: 800000
+    maxAge: 800000000
   }
 }))
 //分发路由

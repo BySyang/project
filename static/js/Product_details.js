@@ -240,7 +240,7 @@ $('#lijibuy').on('click', function () {
       success(data) {
         if (data == 'ok') {
           window.location.href = 'shoporder.html'
-        }else{
+        } else {
           layer.msg(data);
         }
       },
@@ -251,6 +251,36 @@ $('#lijibuy').on('click', function () {
   } else {
     layer.msg('库存不足!');
   }
-
-
+})
+$('#tianjiagouwu').click(() => {
+  let stock = $('.goodStock').text() //库存
+  if (stock > 0) {
+    $('.price .money').text() //单价
+    $('#number_show').val() //数量
+    $('#pingfen').data('id') //商品id
+    let spec = `${$('.color .active').data('id')}|${$('.size .active').data('id')}|${$('.cups .active').data('id')}`;
+    $.ajax({
+      type: 'post',
+      url: '/catAdd',
+      data: {
+        price: $('.price .money').text().substr(1).trim(),
+        catNum: $('#number_show').val(),
+        goodsId: $('#pingfen').data('id'),
+        spec: spec
+      },
+      success(data) {
+        layer.msg(data)
+        // if (data == 'ok') {
+        //   window.location.href = 'shoporder.html'
+        // } else {
+        //   layer.msg(data);
+        // }
+      },
+      error(err) {
+        console.log(err)
+      }
+    })
+  } else {
+    layer.msg('库存不足!');
+  }
 })
