@@ -17,7 +17,8 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 635px
+    height: 635px;
+    
 }
 
 .head-nav {
@@ -25,7 +26,7 @@ header {
     z-index: 999;
     width: 100%;
     height: 86px;
-    background-color: rgba(52, 52, 52, .3)
+    background-color: rgba(52, 52, 52, .3);
 }
 
 .head-nav1 {

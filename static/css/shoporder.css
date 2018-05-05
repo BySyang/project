@@ -8,31 +8,41 @@
 }
 body{
     width: 100%;
-    background:#f7f7f7;
+    height: 100%;
+    /* background:#f7f7f7; */
+    background-image:url('../images/personalImage/personal_bg.png') ;
+    background-repeat:no-repeat;
+    background-size: 100% 100%; 
 
 }
 .container{
-    /* border: 1px solid red; */
-    width: 90%;
+    width: 80%;
     margin: 0px auto 80px auto;
+    overflow: hidden;
     /* border: 1px solid red; */
-    background: #f7f7f7;
+    /* border: 1px solid red; */
+    /* background: #f7f7f7; */
 }
 .tianxiehedui{
+    /* border: 1px solid red; */
     width:100%;
     height:auto;
     overflow:hidden;
     padding-top:100px;
+    padding-bottom: 0px;
     margin: 0 auto;
 }
 .rzhdndgw{
-    width:1226px;
+    width:100%;
     height:auto;
     overflow:hidden;
     line-height:50px;
     font-size:14px;
-    padding-left:20px;
-    background:#fff
+    text-indent: 20px;
+    background:#fff;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    border-radius: 10px;
 }
 .shouhurxl{
     width:1226px;
@@ -65,7 +75,7 @@ body{
     text-decoration:underline
 }
 .shouhurxl2{
-    width:1226px;
+    width:100%;
     height:auto;
     overflow:hidden
 }
@@ -98,14 +108,15 @@ body{
     padding-left:20px
 }
 .xxpop1{
-    width:1226px;
+    width:100%;
     height:auto;
     overflow:hidden;
     background: white;
+
 }
 .xxpop2{
     float:left;
-    margin-right:40px
+    margin-right:15px
 }
 .xxpop2 span{
     display:block;
@@ -133,18 +144,16 @@ body{
     text-decoration:underline;
     color:#FF0066
 }
-.a{
-    margin-bottom: 10px;
-    /* border: 1px solid red; */
-}
 .maijiayouhuayue{
-    width:1226px;
+    width:100%;
     height:auto;
     overflow:hidden;
     background:white;
-    padding-top:6px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* padding-top:6px; */
     border:none;
-    /* border: 1px solid red; */
+    /* margin-bottom: 20px; */
 }
 .maijiayouhuayue em{
     display:block;
@@ -153,7 +162,7 @@ body{
     float:left;
 }
 #liuyan{
-    width: 91%;
+    width: 100%;
     height: 20px;
     border: 1px solid #f0f0f0;
     margin-top: 14px;
@@ -161,23 +170,34 @@ body{
 
 }
 .shouhurxl{
+    width: 100%;
+    margin-bottom: 20px;
     background: #F7F7F7;
+    border-radius: 10px;
 }
 #userInfo{
     background: white;
+    margin-top: 30px;
+    border-radius: 10px;
 }
 #userInfo2{
+    width: 100%;
     background: white;
+    margin-top: 0px;
+    border-radius: 10px;
 }
 .shouhurxlm{
-    width:1226px;
+    width:100%;
     height:auto;
     overflow:hidden;
     background:white;
-    margin-top: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    /* margin-top: 10px; */
 }
 .shouhurxlm ul li{
-    width:1226px;
+    width:100%;
     height:auto;
     overflow:hidden
 }
@@ -192,8 +212,8 @@ body{
     width:1226px;
     height:auto;
     overflow:hidden;
-    border-top:1px solid #bbb;
-    border-bottom:1px solid #bbb
+    border-top:1px solid #f0f0f0;
+    border-bottom:1px solid #f0f0f0
 }
 .ddzjes em{
     padding-left:20px;
@@ -209,11 +229,12 @@ body{
     font-family:"΢���ź�"
 }
 .syycklo{
-    width:1226px;
+    width:100%;
     height:30px;
     overflow:hidden;
     background:#FFF;
-    border-bottom:1px solid #bbb
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .syycklo em{
     display:block;
@@ -251,7 +272,8 @@ body{
     color:#fff;
     background:#FF0066;
     float:right;
-    margin-top:10px
+    margin-top:10px;
+    border-radius: 5px;
 }
 /*.tijiaodingdang56:hover{color:#FF0066}*/
 .zgykskbj em{
@@ -266,7 +288,7 @@ body{
     display:block;
     padding-left:20px;
     padding-right:20px;
-    background:#f90;
+    background:#FF0066;
     line-height:30px;
     font-size:14px;
     float:left;
@@ -278,12 +300,15 @@ body{
      background:#e98c00
  }
 .changepc{
-    width:1218px;
+    width:100%;
     background:#fffdf3;
-    /* border:4px solid #09f; */
+    padding-left:20px; 
     height:auto;
     overflow:hidden;
     display:none
+}
+.tongyongdizhi{
+    width: 100%;
 }
 .tongyongdizhi span{
     display:block;
@@ -436,7 +461,7 @@ body{
     width:100%;
     background:#FFFDF3;
     margin:0 auto;
-    /* border:4px solid #09f; */
+    padding-left: 20px;
     overflow:hidden;
     display:none
 }
