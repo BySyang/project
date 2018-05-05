@@ -1,6 +1,6 @@
 /* 购物车 */
 const sqlPool = require('./sqlPool');
-let sql =  `SELECT * FROM cats a ,goods b, goods_specs c WHERE a.goodsId=b.goodsId AND a.specId=c.specId HAVING userId =?` ;
+let sql = `SELECT a.*,b.goodsName,b.goodsImg FROM cats a ,goods b WHERE a.goodsId=b.goodsId AND a.userId=?`;
     
 module.exports = {
     catList(userId,fn){

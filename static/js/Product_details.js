@@ -220,8 +220,8 @@ function showStock() {
 
   })
 }
+//生成订单
 $('#lijibuy').on('click', function () {
-  let id = $(this).attr('data-id');
   let stock = $('.goodStock').text() //库存
   if (stock > 0) {
     $('.price .money').text() //单价
@@ -252,6 +252,7 @@ $('#lijibuy').on('click', function () {
     layer.msg('库存不足!');
   }
 })
+//生成购物车
 $('#tianjiagouwu').click(() => {
   let stock = $('.goodStock').text() //库存
   if (stock > 0) {
@@ -269,12 +270,15 @@ $('#tianjiagouwu').click(() => {
         spec: spec
       },
       success(data) {
-        layer.msg(data)
-        // if (data == 'ok') {
-        //   window.location.href = 'shoporder.html'
-        // } else {
-        //   layer.msg(data);
-        // }
+        if (data == 'ok') {
+          layer.confirm('您的宝贝已加入购物车,您是继续购物,还是前往购物车结算？', {
+            btn: ['继续购物', '前往购物车'] //按钮
+          }, function () {
+
+          }, function () {
+            location.href = 'shopping.html';
+          });
+        }
       },
       error(err) {
         console.log(err)

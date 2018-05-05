@@ -28,28 +28,34 @@
         </ul>
       </div>
       <div class="shopping_sec">
-        <%  data.forEach(function(item){ %>
-        <ul>
-          <li class="onlycheck">
-            <i class="shop_check iconfont icon-gougou"></i>
-          </li>
-          <li class="shopping_name">
-            <img src="./images/series/<%= item.goodsImg.split('|')[0].replace('?','') %>" alt="">
-            <span><%= data.goodsName %></span>
-          </li>
-          <li class="shopping_price"><%= item.goodsPrice%>   元</li>
-          <li class="shopping_number">
-            <div class="number_redu iconfont icon-jian"></div>
-            <input type="text" value="<%= item.cartNum%>" class="number_show" readonly="readonly">
-            <div class="number_add iconfont icon-jia"></div>
-          </li>
-          <li class="shopping_subtotal"><%= item.goodsPrice*item.cartNum%>元</li>
-          <li class="shopping_operation">
-            <i class="iconfont icon-shanchu"></i>
-          </li>
+        <% data %>
+          <%  data.forEach(function(item){ %>
 
-        </ul>
-      <% }) %>
+            <ul data-id="<%=item.goodsId%>">
+              <li class="onlycheck">
+                <i class="shop_check iconfont icon-gougou"></i>
+              </li>
+              <li class="shopping_name">
+                <img src="./images/series/<%= item.goodsImg.split('|')[0].replace('?','') %>" alt="">
+                <span>
+                  <%= data.goodsName %>
+                </span>
+              </li>
+              <li class="shopping_price" data-price="<%=item.price%>">
+                <%= item.price%> 元</li>
+              <li class="shopping_number">
+                <div class="number_redu iconfont icon-jian"></div>
+                <input type="text" value="<%= item.cartNum%>" class="number_show" readonly="readonly">
+                <div class="number_add iconfont icon-jia"></div>
+              </li>
+              <li class="shopping_subtotal">
+                <%= item.price*item.cartNum%>元</li>
+              <li class="shopping_operation">
+                <i class="iconfont icon-shanchu"></i>
+              </li>
+
+            </ul>
+            <% }) %>
       </div>
       <div class="shopping_settlement">
         <ul>
