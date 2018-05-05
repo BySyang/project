@@ -33,7 +33,7 @@ header {
     width: 100%;
     height: 86px;
     background-color: rgb(255, 255, 255, .9);
-    box-shadow: -2px 0 8px #000
+    box-shadow: -2px 0 4px 1px #f7f7f7
 }
 
 .head-nav>h1 {
@@ -274,7 +274,7 @@ footer {
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 16px;
+    right: 6px;
     margin: auto 0;
     height: 31px;
     width: 80px;

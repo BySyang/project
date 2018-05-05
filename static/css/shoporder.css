@@ -7,11 +7,19 @@
     font-style:normal
 }
 body{
+    width: 100%;
     background:#f7f7f7;
 
 }
+.container{
+    /* border: 1px solid red; */
+    width: 90%;
+    margin: 0px auto 80px auto;
+    /* border: 1px solid red; */
+    background: #f7f7f7;
+}
 .tianxiehedui{
-    width:80%;
+    width:100%;
     height:auto;
     overflow:hidden;
     padding-top:100px;
@@ -24,7 +32,6 @@ body{
     line-height:50px;
     font-size:14px;
     padding-left:20px;
-    color:#666;
     background:#fff
 }
 .shouhurxl{
@@ -43,7 +50,6 @@ body{
     display:block;
     line-height:50px;
     font-size:14px;
-    color:#333;
     padding-left:20px;
     float:left
 }
@@ -140,8 +146,15 @@ body{
     display:block;
     line-height:50px;
     font-size:14px;
-    color:#666;
-    float:left
+    float:left;
+}
+#liuyan{
+    width: 91%;
+    height: 20px;
+    border: 1px solid #bbb;
+    margin-top: 14px;
+    padding-left:10px; 
+
 }
 .shouhurxlm{
     width:1226px;
@@ -194,15 +207,17 @@ body{
     line-height:30px;
     font-size:14px;
     float:left;
-    color:#666
 }
 .syycklo span{
     display:block;
     padding-left:6px;
-    line-height:30px;
+    line-height:31px;
     font-size:14px;
     float:left;
     color:#333
+}
+.dianyidian{
+    margin-top:9px !important;
 }
 .zgykskbj{
     width:1226px;

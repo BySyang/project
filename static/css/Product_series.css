@@ -138,11 +138,13 @@ section {
   height: 100%;
 }
 .firstList {
+
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   overflow: hidden;
+  margin-bottom: 80px;
 }
 .firstList .bigdl {
   margin-top: 38px;
