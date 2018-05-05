@@ -31,9 +31,9 @@
         <% data %>
           <%  data.forEach(function(item){ %>
 
-            <ul data-id="<%=item.goodsId%>">
+            <ul data-id="<%=item.goodsId%>" data-spec="<%=item.spec%>">
               <li class="onlycheck">
-                <i class="shop_check iconfont icon-gougou"></i>
+                <i class="shop_check iconfont icon-gougou check"></i>
               </li>
               <li class="shopping_name">
                 <img src="./images/series/<%= item.goodsImg.split('|')[0].replace('?','') %>" alt="">
@@ -62,14 +62,14 @@
           <li>
             <p>
               <a>继续购物</a>&nbsp;&nbsp;|&nbsp;&nbsp;共&nbsp;
-              <span id="shopping_allnum">1</span>&nbsp;件商品,已选择&nbsp;
-              <span id="shopping_checknum">1</span>&nbsp;件
+              <span id="shopping_allnum">0</span>&nbsp;件商品,已选择&nbsp;
+              <span id="shopping_checknum">0</span>&nbsp;件
             </p>
           </li>
           <li>
             <p>
               合计:
-              <span id="shopping_subtotal">399</span>元
+              <span id="shopping_subtotal">0</span>元
             </p>
             <a class="shopping_btn" id="shopping_jiesuan">去结算</a>
           </li>
