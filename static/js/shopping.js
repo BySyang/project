@@ -25,4 +25,6 @@ $(function () {
     $(this).toggleClass('shop_checked');
   })
   
+
+  $('')
 });
