@@ -101,8 +101,9 @@ body {
 }
 .sec1_snd>div>div {
   width: 82%;
+  line-height: 30px;
   text-align: center;
-  margin: 0 auto;
+  margin: 2% auto;
 }
 /* 身体1，板块1 */
 .sec1_thirds {
@@ -127,6 +128,7 @@ color: #ff0066;
 }
 .sec1_thirds>div:first-child>div{
   margin-top: 3%;
+  line-height: 30px;
 }
 
 /* 板块2*************************************************************************************************************** */
