@@ -49,20 +49,20 @@ $(function () {
 
   //color选择
   $('.color').on('click', 'div', function () {
-    $(this).addClass("color_checked").removeClass("color_default").siblings().addClass('color_default').removeClass("color_checked");
+    $(this).addClass("color_checked").removeClass("color_default").siblings('div').addClass('color_default').removeClass("color_checked");
     $(this).addClass('active').siblings().removeClass('active');
     showStock()
   })
   //size选择
   $('.size').on('click', 'div', function () {
-    $(this).siblings().css('border', '1px solid white');
+    $(this).siblings('div').css('border', '1px solid #ccc');
     $(this).css('border', '1px solid #ff0066');
     $(this).addClass('active').siblings().removeClass('active');
     showStock()
   });
   //cups选择
   $('.cups').on('click', 'div', function () {
-    $(this).siblings().css('border', '1px solid white');
+    $(this).siblings('div').css('border', '1px solid #ccc');
     $(this).css('border', '1px solid  #ff0066');
     $(this).addClass('active').siblings().removeClass('active');
     showStock()
@@ -220,8 +220,8 @@ function showStock() {
 
   })
 }
+//生成订单
 $('#lijibuy').on('click', function () {
-  let id = $(this).attr('data-id');
   let stock = $('.goodStock').text() //库存
   if (stock > 0) {
     $('.price .money').text() //单价
@@ -240,7 +240,7 @@ $('#lijibuy').on('click', function () {
       success(data) {
         if (data == 'ok') {
           window.location.href = 'shoporder.html'
-        }else{
+        } else {
           layer.msg(data);
         }
       },
@@ -251,6 +251,40 @@ $('#lijibuy').on('click', function () {
   } else {
     layer.msg('库存不足!');
   }
+})
+//生成购物车
+$('#tianjiagouwu').click(() => {
+  let stock = $('.goodStock').text() //库存
+  if (stock > 0) {
+    $('.price .money').text() //单价
+    $('#number_show').val() //数量
+    $('#pingfen').data('id') //商品id
+    let spec = `${$('.color .active').data('id')}|${$('.size .active').data('id')}|${$('.cups .active').data('id')}`;
+    $.ajax({
+      type: 'post',
+      url: '/catAdd',
+      data: {
+        price: $('.price .money').text().substr(1).trim(),
+        catNum: $('#number_show').val(),
+        goodsId: $('#pingfen').data('id'),
+        spec: spec
+      },
+      success(data) {
+        if (data == 'ok') {
+          layer.confirm('您的宝贝已加入购物车,您是继续购物,还是前往购物车结算？', {
+            btn: ['继续购物', '前往购物车'] //按钮
+          }, function () {
 
-
+          }, function () {
+            location.href = 'shopping.html';
+          });
+        }
+      },
+      error(err) {
+        console.log(err)
+      }
+    })
+  } else {
+    layer.msg('库存不足!');
+  }
 })
