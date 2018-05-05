@@ -1,6 +1,8 @@
 @import 'reset.css';
 section {
   background-image: url("../images/personalImage/personal_bg.png");
+  background-size: cover;
+  background-clip: padding-box;
   overflow: hidden;
   padding: 100px 0 80px 10px;
   margin-bottom: 2px;
