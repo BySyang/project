@@ -11,7 +11,7 @@
 
 <body>
     <% include header %>
-
+        <div class="container">
         <!--支付订单-->
         <div class="tijiaozhifu" data-id="<%=orderInfo.orderId%>">
             <!--标题-->
@@ -65,13 +65,11 @@
                         </ul>
                     </div>
                     <!--确认提交并支付-->
-                    <a href="#" style="display:block; padding-left:20px; padding-right:20px; line-height:40px; font-size:14px" class="animaa"
-                        id="pay">确认提交并支付</a>
+                    <button href="#" class="animaa"
+                        id="pay">立即支付</button>
                     <%}%>
-
-
         </div>
-
+    </div>
         <% include footer %>
             <script src="js/jquery-1.11.3.js"></script>
             <script src="./js/layer-v3.1.1/layer/layer.js"></script>
