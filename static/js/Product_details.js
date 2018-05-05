@@ -55,14 +55,14 @@ $(function () {
   })
   //size选择
   $('.size').on('click', 'div', function () {
-    $(this).siblings().css('border', '1px solid white');
+    $(this).siblings('div').css('border', '1px solid #ccc');
     $(this).css('border', '1px solid #ff0066');
     $(this).addClass('active').siblings().removeClass('active');
     showStock()
   });
   //cups选择
   $('.cups').on('click', 'div', function () {
-    $(this).siblings().css('border', '1px solid white');
+    $(this).siblings('div').css('border', '1px solid #ccc');
     $(this).css('border', '1px solid  #ff0066');
     $(this).addClass('active').siblings().removeClass('active');
     showStock()
