@@ -11,6 +11,7 @@
 
 <body>
     <% include header %>
+    <div class="container">
         <!--全部开始-->
         <div class="tianxiehedui">
             <!--标题-->
@@ -156,7 +157,7 @@
                 <!--买家留言-->
                 <div class="maijiayouhuayue">
                     <em style=" width:90px; text-align:right">买家留言：</em>
-                    <textarea id="liuyan" style=" line-height:20px; font-size:14px; color:#111; border:1px solid #bbb; width:1000px; box-shadow:none" placeholder="选填：对本次交易的说明（建议填写已经和商家达成一致的说明）"></textarea>
+                    <input id="liuyan" placeholder="选填：对本次交易的说明（建议填写已经和商家达成一致的说明）"></input>
                 </div>
                 <!--商品合计-->
                 <% var zhekou =  userInfo.userLevel*5/100%>
@@ -211,6 +212,7 @@
             <!--商品清单结束-->
             <a href="#" class="tijiaodingdang56" id="submit" data-id="<%=orderInfo.orderId%>">提交订单</a>
         </div>
+    </div>
         <% include footer %>
 
             <script src="js/jquery-1.11.3.js"></script>
