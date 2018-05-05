@@ -49,7 +49,7 @@ $(function () {
 
   //color选择
   $('.color').on('click', 'div', function () {
-    $(this).addClass("color_checked").removeClass("color_default").siblings().addClass('color_default').removeClass("color_checked");
+    $(this).addClass("color_checked").removeClass("color_default").siblings('div').addClass('color_default').removeClass("color_checked");
     $(this).addClass('active').siblings().removeClass('active');
     showStock()
   })
