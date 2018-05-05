@@ -31,7 +31,7 @@
   float: left;
 }
 .color_default {
-  border: none;
+  border: 1px solid #cccccc;
 }
 .color_checked {
   border: 1px solid red;
