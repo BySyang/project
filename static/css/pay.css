@@ -471,14 +471,15 @@ body{
 
 }
 .zhifutt{
-    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width:1226px;
     height:auto;
     overflow:hidden;
     line-height:80px;
     font-size:18px;
     color:#333;
-    padding-left:20px;
+    text-indent: 20px;
     background:#fff;
 }
 .titijj{
@@ -498,7 +499,7 @@ body{
     margin-left:12px
 }
 .xzbsni{
-    width:1225px;
+    width:100%;
     height:auto;
     overflow:hidden;
     border:1px solid #e4e4e4;
@@ -506,7 +507,9 @@ body{
     border-left:none;
     padding-top:6px;
     padding-bottom:25px;
-    background:#fff
+    background:#fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .xzbsni>p{
     margin-left: 20px;
