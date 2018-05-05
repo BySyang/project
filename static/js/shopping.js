@@ -25,7 +25,7 @@ $(function () {
   $(document).on('click', '.number_redu', function () {
     var nowNum = $(this).siblings('input').val();
     var newNum = $(this).siblings('input').val(nowNum > 1 ? --nowNum : nowNum).val();
-    $(this).parents('li').siblings('.shopping_subtotal').text($(this).parents('li').siblings('.shopping_price').data('price') * newNum+'元')
+    $(this).parents('li').siblings('.shopping_subtotal').text($(this).parents('li').siblings('.shopping_price').data('price') * newNum + '元')
     if (nowNum != newNum) catCalc();
   })
   //商品加
@@ -33,7 +33,7 @@ $(function () {
     var nowNum = $(this).siblings('input').val();
     var newNum = $(this).siblings('input').val(++nowNum).val();
     console.log(newNum)
-    $(this).parents('li').siblings('.shopping_subtotal').text($(this).parents('li').siblings('.shopping_price').data('price') * newNum+'元')
+    $(this).parents('li').siblings('.shopping_subtotal').text($(this).parents('li').siblings('.shopping_price').data('price') * newNum + '元')
     catCalc();
   })
   //购物车算法
@@ -56,12 +56,30 @@ $(function () {
   }
   //购物车结算
   $('#shopping_jiesuan').click(() => {
+    var goodsInfo = {};
     var ul = $($('.shopping_sec').find('ul').has('.shop_checked'));
     var goodsId = ul.data('id');
     var price = ul.find('.shopping_price').data('price');
     var num = ul.find('input').val();
     var spec = ul.data('spec');
-    console.log([goodsId, price, num, spec])
-    
+    ul.each(function (i) {
+      goodsInfo['goodsId' + i] = $(this).data('id');
+      goodsInfo['price' + i] = $(this).find('.shopping_price').data('price');
+      goodsInfo['num' + i] = $(this).find('input').val();
+      goodsInfo['spec' + i] = $(this).data('spec');
+    })
+    console.log(goodsInfo)
+    $.ajax({
+      type:'post',
+      url: '/orderAdd',
+      data: goodsInfo,
+      success(data){
+        console.log(data);
+      },
+      error(err){
+        console.log(err);
+        
+      }
+    })
   })
 });
