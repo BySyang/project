@@ -9,4 +9,5 @@ router.post('/catList', catControll.catList);
 router.post('/orderAdd', orderControll.orderAdd)
 router.post('/orderModifyweb', orderControll.orderModify);
 router.post('/catAdd', catControll.catAdd);
+router.post('/catCancel', catControll.catCancel);
 module.exports = router;

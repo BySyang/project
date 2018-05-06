@@ -10,5 +10,10 @@ module.exports = {
         let sql = 'insert into cats values(null,?,?,?,?,?,0,default)';
         //用户id,商品id,商品价格,商品数量,商品规格,是否取消,时间.
         sqlPool(sql,arr,fn)
+    },
+    catCancel(arr,fn){
+        console.log(arr)
+        let sql = 'UPDATE cats SET isCancel=1 WHERE cartId IN (?)';
+        sqlPool(sql,arr,fn)
     }
 }

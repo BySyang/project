@@ -12,13 +12,13 @@ $(function () {
                 url: '/orderModifyweb',
                 data: {
                     orderId: $('.tijiaozhifu').data('id'),
-                    isPay: 1
+                    isPay: 1,
+                    isCancel:0
                 },
                 success(data) {
                     if (data == 'ok') {
                         layer.msg('支付成功,等待客服处理...')
                     } else {
-                        console.log(data)
                         layer.msg(data);
                     }
                 }

@@ -28,7 +28,6 @@ module.exports = {
 
             orderModal.orderAdd(arr, (err, data) => {
                 if (!err) {
-                    console.log(1111)
                     new Promise((resolve, reject) => {
                         orderModal.orderLast(userId, (err, data) => {
                             if (!err) {
@@ -41,12 +40,10 @@ module.exports = {
                         return new Promise((resolve, reject) => {
                             let param = [];
                             goodsInfo.forEach((item, i) => {
-                                console.log(item)
                                 param[i] ? 1 : param[i] = [];
                                 param[i].push(orderId, item.goodsId, item.num, item.price, item.spec);
                             })
-                            console.log(param)
-                            orderModal.orderGoodsAdd(param, (err, data) => {
+                            orderModal.orderGoodsAdd([param], (err, data) => {
                                 if (!err) {
                                     res.send('ok')
                                 } else {
@@ -76,9 +73,10 @@ module.exports = {
             let remarks = req.body.Remarks;
             let address = req.body.address;
             let isPay = req.body.isPay;
+            let isCancel = req.body.isCancel;
             let param = [remarks, address, orderId];
-            if (isPay) {
-                param = [orderId, isPay];
+            if (isCancel){
+                param = [isPay, isCancel, orderId,1];
             }
             orderModal.orderModify(param, (err, data) => {
                 if (!err) {

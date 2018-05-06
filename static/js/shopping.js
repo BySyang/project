@@ -57,6 +57,7 @@ $(function () {
   //购物车结算
   $('#shopping_jiesuan').click(() => {
     var goodsInfo = {};
+    var cartIds = [];
     var ul = $($('.shopping_sec').find('ul').has('.shop_checked'));
     var goodsId = ul.data('id');
     var price = ul.find('.shopping_price').data('price');
@@ -67,18 +68,35 @@ $(function () {
       goodsInfo['price' + i] = $(this).find('.shopping_price').data('price');
       goodsInfo['num' + i] = $(this).find('input').val();
       goodsInfo['spec' + i] = $(this).data('spec');
+      cartIds.push($(this).data('cart'));
     })
-    console.log(goodsInfo)
+    if (cartIds.length == 0) {
+      layer.msg('没有商品!');
+      return 
+    }
     $.ajax({
-      type:'post',
+      type: 'post',
       url: '/orderAdd',
       data: goodsInfo,
-      success(data){
-        console.log(data);
+      success(data) {
+        if (data == 'ok') {
+          $.post('/catCancel', {
+            cartIds
+          }, data => {
+            if (data == 'ok') {
+              location.href = 'shoporder.html';
+            } else {
+              layer.msg(data);
+            }
+          })
+        } else {
+          layer.msg(data);
+        }
+
       },
-      error(err){
+      error(err) {
         console.log(err);
-        
+
       }
     })
   })

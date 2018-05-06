@@ -32,6 +32,17 @@ module.exports = {
         }else{
             res.send('请先登录!')
         }
-
+    },
+    //
+    catCancel(req,res){
+        console.log(req.body)
+        catModal.catCancel([...Object.values(req.body)],(err)=>{
+            if(!err){
+                res.send('ok');
+            }else{
+                console.log(err);
+                res.send('服务器错误,请联系管理员!')
+            }
+        })
     }
 }

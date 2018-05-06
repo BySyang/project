@@ -6,7 +6,7 @@ module.exports = {
             let userId = userInfo.userId;
             orderModal.orderGoodsLast(userId, function (err, data) {
                 res.render('parts/shoporder', {
-                    orderInfo: data[0],
+                    orderInfo: data,
                     userInfo
                 });
             });

@@ -25,21 +25,21 @@ module.exports = {
         sqlPool(sql,[userId],fn);
     },
     orderGoodsAdd(arr,fn){
-        let sql = 'insert into order_goods values'+
-            '(null,?,?,?,?,?)'
+        let sql = 'insert into order_goods(orderId,goodsId,goodsNum,goodsPrice,spec) values ?' ;
             /* 
             *id ,订单id,商品id,商品数量,商品单价,商品规格
             */
         sqlPool(sql,arr,fn);
     },
     orderGoodsLast(userId,fn){
-        let sql = 'SELECT a.*,b.goodsName,b.goodLargeImg FROM order_goods a LEFT JOIN goods b ON a.goodsId = b.goodsId WHERE orderId = (SELECT orderId FROM orders WHERE userId = 1 ORDER BY orderId DESC LIMIT 1)';
+        let sql = 'SELECT a.*,b.goodsName,b.goodLargeImg,c.totalMoney,c.realTotalMoney,c.orderRemarks FROM order_goods a LEFT JOIN goods b  ON a.goodsId = b.goodsId LEFT JOIN orders c ON a.orderId=c.orderId WHERE a.orderId = (SELECT d.orderId FROM orders d WHERE d.userId = ? ORDER BY d.orderId DESC LIMIT 1)';
         sqlPool(sql,[userId],fn)
     },
     orderModify(arr,fn){
+        console.log(arr)
         let sql =  'update orders set orderRemarks=?, orderAddress=? where orderId=? ';
-        if(arr.length==2){
-            sql = 'update orders set isPay=1 where orderId=?'
+        if(arr.length==4){
+            sql = 'update orders set isPay=?, iscancel=? where orderId=?';
         }
         sqlPool(sql,arr,fn)
     }

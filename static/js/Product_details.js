@@ -232,10 +232,10 @@ $('#lijibuy').on('click', function () {
       type: 'post',
       url: '/orderAdd',
       data: {
-        price: $('.price .money').text().substr(1),
-        num: $('#number_show').val(),
-        goodsId: $('#pingfen').data('id'),
-        goodSpec: spec
+        price0: $('.price .money').text().substr(1),
+        num0: $('#number_show').val(),
+        goodsId0: $('#pingfen').data('id'),
+        goodSpec0: spec
       },
       success(data) {
         if (data == 'ok') {

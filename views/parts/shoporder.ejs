@@ -115,53 +115,66 @@
             <!--发票信息结束-->
             <!--商品清单-->
             <div class="shouhurxl">
+
                 <!--一条商品信息开始-->
-                    <div class="xxpop1" style=padding-bottom:6px ">
+                <div class="xxpop1" style="padding-bottom:6px">
                     <div class="xxpop2 ">
                         <span>店铺</span>
-                        <a href="# ">
-                            <p>FashionGirl</p>
-                        </a>
+                        <% orderInfo.forEach(item=>{%>
+                            <a href="# ">
+                                <p>FashionGirl</p>
+                            </a>
+                            <%})%>
                     </div>
                     <div class="xxpop2 " style=" width:630px ">
                         <span>商品</span>
-                        <a href="# ">
-                            <p style=" line-height:50px ">
-                                <img src="./images/series/<%=orderInfo.goodLargeImg%>" />
-                        <span>
-                        <%=orderInfo.goodsName%>
-                        </span>
-                            </p>
+                        <% orderInfo.forEach(item=>{%>
+                            <a href="# ">
+                                <p style=" line-height:50px ">
+                                    <img src="./images/series/<%=item.goodLargeImg%>" />
+                                    <span>
+                                        <%=item.goodsName%>
+                                    </span>
+                                </p>
                             </a>
+                            <%})%>
+
                     </div>
                     <div class="xxpop2">
                         <span>单价(元)</span>
-                        <p>
-                            <%= orderInfo.goodsPrice%>
-                        </p>
+                        <% orderInfo.forEach(item=>{%>
+                            <p>
+                                <%= item.goodsPrice%>
+                            </p>
+                            <%})%>
+
                     </div>
                     <div class="xxpop2">
                         <span>数量</span>
-                        <p>
-                            <%=orderInfo.goodsNum%>
-                        </p>
+                        <% orderInfo.forEach(item=>{%>
+                            <p>
+                                <%=item.goodsNum%>
+                            </p>
+                            <%})%>
                     </div>
                     <div class="xxpop2">
                         <span>小计(元)</span>
-                        <% var zhongjia = orderInfo.goodsPrice*orderInfo.goodsNum%>
-                            <p>
-                                <%=zhongjia%>
-                            </p>
+                        <% orderInfo.forEach(item=>{%>
+                            <% var zhongjia = item.goodsPrice*item.goodsNum%>
+                                <p>
+                                    <%=zhongjia%>
+                                </p>
+                                <%})%>
+
                     </div>
                 </div>
-        </div>
-        <!--买家留言-->
-        <div class="maijiayouhuayue">
-            <em style=" width:90px; text-align:right">买家留言：</em>
-            <input id="liuyan" placeholder="选填：对本次交易的说明（建议填写已经和商家达成一致的说明）">
-        </div>
-        <!--商品合计-->
-        <% var zhekou =  userInfo.userLevel*5/100%>
+            </div>
+            <!--买家留言-->
+            <div class="maijiayouhuayue">
+                <em style=" width:90px; text-align:right">买家留言：</em>
+                <input id="liuyan" placeholder="选填：对本次交易的说明（建议填写已经和商家达成一致的说明）" value="<%=orderInfo[0].orderRemarks%>"></textarea>
+            </div>
+            <!--商品合计-->
             <div class="shouhurxlm">
                 <ul>
                     <li>
@@ -172,7 +185,7 @@
                     <li>
                         <em>
                             <s>
-                                <%=1-zhekou%>折
+                                <%=(1-userInfo.userLevel*5/100)*100 %>折
                             </s>
                         </em>
                         <em>会员折扣:</em>
@@ -180,17 +193,17 @@
                     <li>
                         <em>
                             <s>
-                                <%=zhongjia*(1-zhekou)+11%>
+                                <%=orderInfo[0].totalMoney%>
                             </s>元</em>
                         <em>本店合计：</em>
                     </li>
                 </ul>
                 <!--订单总金额-->
                 <div class="ddzjes">
-                    <em>订单总金额：</em>
+                    <em>实付金额：</em>
                     <em style=" padding-left:0">
                         <s>
-                            <%=zhongjia*(1-zhekou)+11%>
+                            <%=orderInfo[0].realTotalMoney%>
                         </s>元</em>
                 </div>
                 <!--使用预存款-->
@@ -211,16 +224,17 @@
             <!--一条商品信息结束-->
             <!--商品清单结束-->
             <a href="#" class="tijiaodingdang56" id="submit" data-id="<%=orderInfo.orderId%>">提交订单</a>
-            </div>
-            <% include footer %>
+            <a href="#" class="tijiaodingdang56" id="cancel">取消订单</a>
+        </div>
+        <% include footer %>
 
-                <script src="js/jquery-1.11.3.js"></script>
-                <script src="./js/layer-v3.1.1/layer/layer.js"></script>
-                <script src="./js/index.js"></script>
-                <script src="./js/city.js/cityJson.js"></script>
-                <script src="./js/city.js/citySet.js"></script>
-                <script src="./js/city.js/Popt.js"></script>
-                <script src="./js/shoporder.js"></script>
+            <script src="js/jquery-1.11.3.js"></script>
+            <script src="./js/layer-v3.1.1/layer/layer.js"></script>
+            <script src="./js/index.js"></script>
+            <script src="./js/city.js/cityJson.js"></script>
+            <script src="./js/city.js/citySet.js"></script>
+            <script src="./js/city.js/Popt.js"></script>
+            <script src="./js/shoporder.js"></script>
 </body>
 
 </html>

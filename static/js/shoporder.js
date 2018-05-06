@@ -147,7 +147,6 @@ $('#submit').click(() => {
             address = attr;
         }
     }
-    console.log(address)
     var Remarks = $('#liuyan').val();
     var orderId = $('#submit').data('id');
     $.ajax({
@@ -159,9 +158,32 @@ $('#submit').click(() => {
             orderId
         },
         success(data) {
-            if(data=='ok'){
-                location.href='pay.html';
-            }else{
+            if (data == 'ok') {
+                location.href = 'pay.html';
+            } else {
+                layer.msg(data);
+            }
+        },
+        error(err) {
+            console.log(err)
+        }
+    })
+})
+$('#cancel').click(() => {
+    $.ajax({
+        type: 'post',
+        url: '/orderModifyweb',
+        data: {
+            isPay:0,
+            isCancel: 1,
+            orderId: $('#submit').data('id')
+        },
+        success(data) {
+            if (data == 'ok') {
+                layer.msg('订单已取消,正在跳转至首页...',function(){
+                    location.href = 'index.html';
+                })
+            } else {
                 layer.msg(data);
             }
         },
