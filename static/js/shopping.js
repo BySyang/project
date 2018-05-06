@@ -27,14 +27,15 @@ $(function () {
     var newNum = $(this).siblings('input').val(nowNum > 1 ? --nowNum : nowNum).val();
     $(this).parents('li').siblings('.shopping_subtotal').text($(this).parents('li').siblings('.shopping_price').data('price') * newNum + '元')
     if (nowNum != newNum) catCalc();
+    numChange.call(this);
   })
   //商品加
   $(document).on('click', '.number_add', function () {
     var nowNum = $(this).siblings('input').val();
     var newNum = $(this).siblings('input').val(++nowNum).val();
-    console.log(newNum)
     $(this).parents('li').siblings('.shopping_subtotal').text($(this).parents('li').siblings('.shopping_price').data('price') * newNum + '元')
     catCalc();
+    numChange.call(this);
   })
   //购物车算法
   function catCalc() {
@@ -72,7 +73,7 @@ $(function () {
     })
     if (cartIds.length == 0) {
       layer.msg('没有商品!');
-      return 
+      return
     }
     $.ajax({
       type: 'post',
@@ -101,3 +102,45 @@ $(function () {
     })
   })
 });
+
+//删除商品
+$(document).on('click', '.icon-shanchu', function () {
+  var that = this;
+  layer.confirm('你确定要从购物车中删除此商品吗?', {
+      btn: ['删除', '取消']
+    },
+    function () {
+      $.post('/catDel', {
+        cartId: $(that).parents('ul').data('cart')
+      }, data => {
+        if (data == 'ok') {
+          layer.msg('删除成功');
+          if ($(that).parents('ul').siblings().length == 0) {
+            $(that).parents('.shopping_sec').append('<ul>你的购物车空空如也.</ul>');
+          }
+          $(that).parents('ul').remove()
+        } else {
+          layer.msg(data);
+        }
+      })
+    },
+    function () {
+      layer.closeAll();
+    })
+})
+
+function numChange() {
+  var cartNum = $(this).siblings('input').val();
+  var cartId = $(this).parents('ul').data('cart');
+  $.post('/catModify', {
+    cartNum,
+    cartId
+  }, data => {
+    if (data == 'ok') {
+      console.log('修改成功')
+    } else {
+      layer.msg('添加出错0.0!');
+    }
+  })
+
+}

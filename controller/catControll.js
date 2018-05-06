@@ -20,29 +20,50 @@ module.exports = {
             let catNum = req.body.catNum;
             let price = req.body.price;
             let spec = req.body.spec;
-            let param = [userId, goodsId, price,catNum,spec];
-            catModal.catAdd(param,(err,data)=>{
-                if(!err){
+            let param = [userId, goodsId, price, catNum, spec];
+            catModal.catAdd(param, (err, data) => {
+                if (!err) {
                     res.send('ok');
-                }else{
+                } else {
                     console.log(err)
                     res.send('服务器错误,请联系管理员!');
                 }
             })
-        }else{
+        } else {
             res.send('请先登录!')
         }
     },
     //
-    catCancel(req,res){
-        console.log(req.body)
-        catModal.catCancel([...Object.values(req.body)],(err)=>{
-            if(!err){
+    catCancel(req, res) {
+        catModal.catCancel([...Object.values(req.body)], (err) => {
+            if (!err) {
                 res.send('ok');
-            }else{
+            } else {
                 console.log(err);
                 res.send('服务器错误,请联系管理员!')
             }
         })
+    },
+    catDel(req, res) {
+        let cartId = req.body.cartId;
+        catModal.catDel(cartId, (err) => {
+            if (!err) {
+                res.send('ok');
+            } else {
+                res.send('服务器出错,请联系管理员!')
+            }
+        })
+    },
+    catModify(req, res) {
+        let cartId = req.body.cartId;
+        let cartNum = req.body.cartNum;
+        catModal.catModify([cartNum,cartId],err=>{
+            if(!err){
+                res.send('ok');
+            }else{
+                console.log(err)
+                res.send('服务器出错,请联系管理员!')
+            }
+        })        
     }
 }

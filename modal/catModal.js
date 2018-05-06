@@ -12,8 +12,16 @@ module.exports = {
         sqlPool(sql,arr,fn)
     },
     catCancel(arr,fn){
-        console.log(arr)
         let sql = 'UPDATE cats SET isCancel=1 WHERE cartId IN (?)';
+        sqlPool(sql,arr,fn)
+    },
+    catDel(cartId,fn){
+        let sql = 'delete  from cats where cartId=?';
+        sqlPool(sql,[cartId],fn);
+        //delete from 表名 where  过滤条件
+    },
+    catModify(arr,fn){
+        let sql = 'update cats set cartNum=? where cartId=?';
         sqlPool(sql,arr,fn)
     }
 }

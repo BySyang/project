@@ -278,6 +278,8 @@ $('#tianjiagouwu').click(() => {
           }, function () {
             location.href = 'shopping.html';
           });
+        }else{
+          layer.msg(data);
         }
       },
       error(err) {
