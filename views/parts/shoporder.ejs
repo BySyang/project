@@ -11,85 +11,30 @@
 
 <body>
     <% include header %>
-    <% console.log(data) %>
-        <!--全部开始-->
-        <div class="tianxiehedui">
-            <!--标题-->
-            <div class="rzhdndgw">温馨提示：请认真核对您的购物信息</div>
-            <!--收货人信息-->
-            <div class="shouhurxl clastyo">
-                <div class="shouhurxl1">
-                    <em>收货人信息</em>
-                    <a href="#" class="chgeb">修改</a>
-                </div>
-                <div class="shouhurxl2">
-                    <span>王莉</span>
-                    <span>山东省 济南市 天桥区历山北路黄台电子商务产业园1020</span>
-                    <span>
-                        <em>电话：</em>
-                        <em>15554465535</em>
-                    </span>
+        <div class="container">
+            <!--全部开始-->
+            <div class="tianxiehedui">
+                <!--标题-->
+                <div class="rzhdndgw">温馨提示：请认真核对您的购物信息</div>
+                <!--收货人信息-->
+                <div class="shouhurxl clastyo" id="userInfo" data-id="<%= userInfo.userId%>">
+                    <div class="shouhurxl1">
+                        <em>默认地址</em>
+                        <a href="#" class="chgeb">修改</a>
+                    </div>
+                    <div class="shouhurxl2">
+                        <span>王莉</span>
+                        <span>山东省 济南市 天桥区历山北路黄台电子商务产业园1020</span>
+                        <span>
+                            <em>电话：</em>
+                            <em>15554465535</em>
+                        </span>
+                    </div>
                 </div>
             </div>
             <!--点击修改会出现这个选择框-->
-            <div class="changepc">
-                <!--以前的旧地址-->
-                <div class="tongyongdizhi">
-                    <input type="radio" name="adressa" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
-                    <span>王莉</span>
-                    <span>山东省 济南市 天桥区历山北路黄台电子商务产业园1020</span>
-                    <span>
-                        <em>电话：</em>
-                        <em>15554465535</em>
-                    </span>
-                    <a href="#">删除</a>
-                </div>
-                <!--添加新地址-->
-                <div class="dandudizhi">
-                    <input type="radio" name="adressa" class="adressa" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
-                    <span>使用新地址</span>
-                </div>
-                <!--添加新地址-->
-                <div class="opcaty1">
-                    <div class="opcaty2">
-                        <em>收货人姓名：</em>
-                        <input style="float:left; border:1px solid #bbb; box-shadow:none; height:28px; font-size:12px; text-indent:6px" type="text"
-                            class="shuru" />
-
-                    </div>
-                    <div class="opcaty2">
-                        <em>所在的地区：</em>
-                        <input type="text" id="city" value="点击选择地区" style=" height:28px; font-size:12px; border:1px solid #bbb; float:left" />
-                    </div>
-                    <div class="opcaty2">
-                        <em>详细的地址：</em>
-                        <input style="float:left; border:1px solid #bbb; box-shadow:none; height:28px; font-size:12px; text-indent:6px; width:488px"
-                            type="text" class="shuru" placeholder="请填写真实地址，不需要重复填写所在地区" required />
-
-                    </div>
-                    <div class="opcaty2">
-                        <em>联系的电话：</em>
-                        <input style="float:left; border:1px solid #bbb; box-shadow:none; height:28px; font-size:12px; text-indent:6px" type="text"
-                            class="shuru" />
-
-                    </div>
-                    <a href="#" class="bcshrxopl">保存收货人信息</a>
-                </div>
-                <!--新地址结束-->
-                <!--添加新地址结束-->
-            </div>
-            <!--这个选择框结束-->
-            <!--收货人信息结束-->
-            <!--支付方式-->
-            <div class="shouhurxl">
-                <h3>支付方式</h3>
-                <div class="zhifufangsj1">
-                    <span>在线支付</span>
-                </div>
-            </div>
-            <!--支付方式结束-->
-            <!--发票信息-->
-            <div class="shouhurxl shouhurxl13">
+            <div class="changepc"></div>
+            <div class="shouhurxl shouhurxl13" id="userInfo2">
                 <div class="shouhurxl1 shouhurxl12">
                     <em>发票信息</em>
                     <a href="#">修改</a>
@@ -98,6 +43,7 @@
                     <span>普通发票 个人 食品</span>
                 </div>
             </div>
+
             <!--修改发票信息-->
             <div class="xgfpxo">
                 <div class="fapiaowr">
@@ -170,93 +116,111 @@
             <!--商品清单-->
             <div class="shouhurxl">
                 <!--一条商品信息开始-->
-                <div class="xxpop1" style="background:rgba(255,153,0,0.1); padding-bottom:6px">
-                    <div class="xxpop2">
+                    <div class="xxpop1" style=padding-bottom:6px ">
+                    <div class="xxpop2 ">
                         <span>店铺</span>
-                        <a href="#">
+                        <a href="# ">
                             <p>FashionGirl</p>
                         </a>
                     </div>
-                    <div class="xxpop2" style=" width:630px">
+                    <div class="xxpop2 " style=" width:630px ">
                         <span>商品</span>
-                        <a href="#">
-                            <p style=" line-height:50px">
-                                <img src="./images/series/sports/sports_goods/sports_goods2/sportsGoods2_content/sportsGoods2_picB(1).jpg"
-                                />&nbsp;运动内衣</p>
-                        </a>
+                        <a href="# ">
+                            <p style=" line-height:50px ">
+                                <img src="./images/series/<%=orderInfo.goodLargeImg%>" />
+                        <span>
+                        <%=orderInfo.goodsName%>
+                        </span>
+                            </p>
+                            </a>
                     </div>
                     <div class="xxpop2">
                         <span>单价(元)</span>
-                        <p>1000</p>
+                        <p>
+                            <%= orderInfo.goodsPrice%>
+                        </p>
                     </div>
                     <div class="xxpop2">
                         <span>数量</span>
-                        <p>1</p>
+                        <p>
+                            <%=orderInfo.goodsNum%>
+                        </p>
                     </div>
                     <div class="xxpop2">
                         <span>小计(元)</span>
-                        <p>1000</p>
+                        <% var zhongjia = orderInfo.goodsPrice*orderInfo.goodsNum%>
+                            <p>
+                                <%=zhongjia%>
+                            </p>
                     </div>
                 </div>
-                <!--买家留言-->
-                <div class="maijiayouhuayue">
-                    <em style=" width:90px; text-align:right">买家留言：</em>
-                    <textarea style=" line-height:20px; font-size:14px; color:#111; border:1px solid #bbb; width:1000px; box-shadow:none" placeholder="选填：对本次交易的说明（建议填写已经和商家达成一致的说明）"></textarea>
-                </div>
-                <!--商品合计-->
-                <div class="shouhurxlm">
-                    <ul>
-                        <li>
-                            <em>
-                                <s>0</s>元</em>
-                            <em>运费：</em>
-                        </li>
-                        <li>
-                            <em>
-                                <s>95</s>元</em>
-                            <em>商品金额：</em>
-                        </li>
-                        <li>
-                            <em>
-                                <s>95</s>元</em>
-                            <em>本店合计：</em>
-                        </li>
-                    </ul>
-                    <!--订单总金额-->
-                    <div class="ddzjes">
-                        <em>订单总金额：</em>
-                        <em style=" padding-left:0">
-                            <s>95</s>元</em>
-                    </div>
-                    <!--使用预存款-->
-                    <div class="syycklo">
-                        <em>用预存款：</em>
-                        <input type="checkbox" class="dianyidian" value="1" name="pd_pay" style=" margin-top:8px; float:left; margin-left:6px">
-                        <span>使用预存款（可用金额：
-                            <i>40</i>元）</span>
-                    </div>
-                    <!--请输入支付密码-->
-                    <div class="zgykskbj">
-                        <em>支付密码：</em>
-                        <input style="float:left; border:1px solid #bbb; box-shadow:none; height:28px; font-size:12px; text-indent:6px; margin-top:10px"
-                            type="text" class="shuru" />
-                        <a href="#">使用</a>
-                    </div>
-                </div>
-                <!--一条商品信息结束-->
-            </div>
-            <!--商品清单结束-->
-            <a href="#" class="tijiaodingdang56">提交订单</a>
         </div>
-        <% include footer %>
+        <!--买家留言-->
+        <div class="maijiayouhuayue">
+            <em style=" width:90px; text-align:right">买家留言：</em>
+            <input id="liuyan" placeholder="选填：对本次交易的说明（建议填写已经和商家达成一致的说明）">
+        </div>
+        <!--商品合计-->
+        <% var zhekou =  userInfo.userLevel*5/100%>
+            <div class="shouhurxlm">
+                <ul>
+                    <li>
+                        <em>
+                            <s>11</s>元</em>
+                        <em>运费：</em>
+                    </li>
+                    <li>
+                        <em>
+                            <s>
+                                <%=1-zhekou%>折
+                            </s>
+                        </em>
+                        <em>会员折扣:</em>
+                    </li>
+                    <li>
+                        <em>
+                            <s>
+                                <%=zhongjia*(1-zhekou)+11%>
+                            </s>元</em>
+                        <em>本店合计：</em>
+                    </li>
+                </ul>
+                <!--订单总金额-->
+                <div class="ddzjes">
+                    <em>订单总金额：</em>
+                    <em style=" padding-left:0">
+                        <s>
+                            <%=zhongjia*(1-zhekou)+11%>
+                        </s>元</em>
+                </div>
+                <!--使用预存款-->
+                <div class="syycklo">
+                    <em>用预存款：</em>
+                    <input type="checkbox" class="dianyidian" value="1" name="pd_pay" style=" margin-top:8px; float:left; margin-left:6px">
+                    <span>使用预存款（可用金额：
+                        <i>40</i>元）</span>
+                </div>
+                <!--请输入支付密码-->
+                <div class="zgykskbj">
+                    <em>支付密码：</em>
+                    <input style="float:left; border:1px solid #bbb; box-shadow:none; height:28px; font-size:12px; text-indent:6px; margin-top:10px"
+                        type="text" class="shuru" />
+                    <a href="#">使用</a>
+                </div>
+            </div>
+            <!--一条商品信息结束-->
+            <!--商品清单结束-->
+            <a href="#" class="tijiaodingdang56" id="submit" data-id="<%=orderInfo.orderId%>">提交订单</a>
+            </div>
+            <% include footer %>
 
-            <script src="js/jquery-1.11.3.js"></script>
-            <script src="./js/layer-v3.1.1/layer/layer.js"></script>
-            <script src="./js/index.js"></script>
-            <script src="./js/city.js/cityJson.js"></script>
-            <script src="./js/city.js/citySet.js"></script>
-            <script src="./js/city.js/Popt.js"></script>
-            <script src="./js/shoporder.js"></script>
+                <script src="js/jquery-1.11.3.js"></script>
+                <script src="./js/layer-v3.1.1/layer/layer.js"></script>
+                <script src="./js/index.js"></script>
+                <script src="./js/city.js/cityJson.js"></script>
+                <script src="./js/city.js/citySet.js"></script>
+                <script src="./js/city.js/Popt.js"></script>
+                <script src="./js/shoporder.js"></script>
 </body>
 
 </html>

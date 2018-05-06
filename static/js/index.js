@@ -1,16 +1,4 @@
 $(function () {
-    // 轮播js
-
-        $(".head-banner li").css({opacity:0}).eq(0).css({opacity:1});    //先隐藏所有图片，再将对象移到第一张图片，使之淡入
-        var index = 0;
-        setInterval(function(){
-            $(".head-banner li").eq(index).animate({'opacity':1},2000).siblings().animate({opacity:0},2000);
-            index++;
-            index%=3;
-            
-        },4000)
-         
-
     // 导航js
     $(window).scroll(function () {
         var scrollTop = $(this).scrollTop();
@@ -39,12 +27,22 @@ $(function () {
             $(".head_nav_right_i>a").removeClass("box_input1");
             $(".box_input").css({
                 "border": "1px solid white"
-            })
-
+            }) 
+        }
+        if(scrollTop>300&&scrollTop<800){
+            $('.first-contain').addClass('first-contain_load')
+            $('.first_text').addClass('first_text1')  
+        }
+        if(scrollTop>910&&scrollTop<950){
+            $('.second_text').addClass('second_text1')
+        }
+        if(scrollTop>1750&&scrollTop<1850){
+            $('.three_text').animate({'opacity':'1'},2000);
+            $('.three_contain img').animate({'opacity':'1'},2000);
         }
     })
 
-    
+
     // 系列下拉菜单js
     var flag = $("#list").is(":hidden");
     var imgflag = $(".product_img").is(":hidden");
@@ -52,8 +50,9 @@ $(function () {
         if (flag) {
             $("#list").show()
             $(".product_img").show()
-            $(".head-nav1").css({"box-shadow":"0px 0px 0px #fff"})
-            // console.log("111")
+            $(".head-nav1").css({
+                "box-shadow": "0px 0px 0px #fff"
+            })
         } else {
             $("#list").hide()
             $(".product_img").hide()
@@ -67,7 +66,7 @@ $(function () {
         $(".product_img").hide()
 
     })
-    $(".product_txt").parent().siblings().children().mouseenter(function(){
+    $(".product_txt").parent().siblings().children().mouseenter(function () {
         $("#list").hide();
         $(".product_img").hide()
         // console.log("11111")
@@ -209,39 +208,39 @@ $('#logBtn').click(function () {
 
 // 重置密码
 $('#resetPwd').click(function () {
-        let data = $('#wangji').serialize();
-        $.ajax({
-            url: 'resetPwd',
-            type: 'post',
-            data: data,
-            success(data) {
-                if (data == 'ok') {
-                    layer.msg('密码重置成功');
-                    $("#wangji").css({
-                        "display": "none"
-                    })
-                    $(".l_z").css({
-                        "display": "block"
-                    })
-                    $("#denglu").css({
-                        "display": "block"
-                    })
-                } else {
-                    layer.msg('密码重置失败')
-                }
-            },
-            error(err) {
-                console.log(err)
+    let data = $('#wangji').serialize();
+    $.ajax({
+        url: 'resetPwd',
+        type: 'post',
+        data: data,
+        success(data) {
+            if (data == 'ok') {
+                layer.msg('密码重置成功');
+                $("#wangji").css({
+                    "display": "none"
+                })
+                $(".l_z").css({
+                    "display": "block"
+                })
+                $("#denglu").css({
+                    "display": "block"
+                })
+            } else {
+                layer.msg('密码重置失败')
             }
-        })
+        },
+        error(err) {
+            console.log(err)
+        }
+    })
 });
 
 // isOk = true 
 $('#wangji .getIdent_code').click(function () {
-    getYz($('#wangji'),'#resetPwd');
+    getYz($('#wangji'), '#resetPwd');
 });
 $('#zhuce .getIdent_code').click(function () {
-    getYz($('#zhuce'),'#regBtn');
+    getYz($('#zhuce'), '#regBtn');
 });
 /* 
  *   注册
@@ -277,6 +276,15 @@ $('#shopping').click(function () {
         }
     })
 })
+
+
+
+
+
+
+
+
+
 /**
  * 个人中心页面渲染
  */
@@ -353,7 +361,7 @@ function showOrders() {
 /* 
  *  获取验证码
  */
-function getYz(dom,btn, fn) {
+function getYz(dom, btn, fn) {
     $.ajax({
         url: 'getIdent',
         type: 'post',
@@ -361,7 +369,7 @@ function getYz(dom,btn, fn) {
         success(data) {
             if (data == 'success') {
                 layer.msg('短信发送成功!');
-                dom.find(btn).on('click',function () {
+                dom.find(btn).on('click', function () {
                     $.ajax({
                         url: 'verifyCode',
                         type: 'post',
@@ -417,12 +425,12 @@ isLogin({
 })
 
 //点击退出
-$(".out").on('click',function(){
+$(".out").on('click', function () {
     $.ajax({
-        type:'post',
-        url:'userExit',
-        success:function(data){
-            if(data=='ok'){
+        type: 'post',
+        url: 'userExit',
+        success: function (data) {
+            if (data == 'ok') {
                 location.reload()
             }
         }
@@ -494,6 +502,14 @@ $('.toSeriesBtn').click(function () {
     let series = $(this).data('id');
     location.href = `Product_series.html?seriesId=${series}`;
 })
+$('.six_img_next').click(function(){
+    let series = $(this).data('id');
+    location.href = `Product_series.html?seriesId=${series}`;
+})
+$('.btn-img').click(function(){
+    let series = $(this).data('id');
+    location.href = `Product_series.html?seriesId=${series}`;
+})
 
 /**
  * 本地储存用户
@@ -512,4 +528,3 @@ function deluser() {
     }
 
 }
-

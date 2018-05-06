@@ -49,21 +49,21 @@ $(function () {
 
   //color选择
   $('.color').on('click', 'div', function () {
-    $(this).addClass("color_checked").removeClass("color_default").siblings().addClass('color_default').removeClass("color_checked");
+    $(this).addClass("color_checked").removeClass("color_default").siblings('div').addClass('color_default').removeClass("color_checked");
     $(this).addClass('active').siblings().removeClass('active');
     showStock()
   })
   //size选择
   $('.size').on('click', 'div', function () {
-    $(this).siblings().css('background-color', '#fff');
-    $(this).css('background-color', '#ff0066');
+    $(this).siblings('div').css('border', '1px solid #ccc');
+    $(this).css('border', '1px solid #ff0066');
     $(this).addClass('active').siblings().removeClass('active');
     showStock()
   });
   //cups选择
   $('.cups').on('click', 'div', function () {
-    $(this).siblings().css('background-color', '#fff');
-    $(this).css('background-color', '#ff0066');
+    $(this).siblings('div').css('border', '1px solid #ccc');
+    $(this).css('border', '1px solid  #ff0066');
     $(this).addClass('active').siblings().removeClass('active');
     showStock()
   });
@@ -170,29 +170,29 @@ $.ajax({
           str += `<div data-id="${item}"></div>`
         }
       })
-      return '<p>颜色</p>'+str
+      return '<p>颜色</p>' + str
     });
     $('.size').html(() => {
       var str = '';
       sizeArr.forEach((item, i) => {
         if (i == 0) {
-          str += `<div data-id="${item}" style="background-color: rgb(255, 0, 102);" class="active">${item}</div>`;
+          str += `<div data-id="${item}" style="border: 1px solid red;" class="active">${item}</div>`;
         } else {
           str += `<div data-id="${item}">${item}</div>`;
         }
       })
-      return '<p>衣带尺寸</p>'+str
+      return '<p>衣带尺寸</p>' + str
     })
     $('.cups').html(() => {
       var str = '';
       cupsArr.forEach((item, i) => {
         if (i == 0) {
-          str += `<div data-id="${item}" style="background-color: rgb(255, 0, 102);" class="active">${item}</div>`
+          str += `<div data-id="${item}" style="border: 1px solid red;" class="active">${item}</div>`
         } else {
           str += `<div data-id="${item}">${item}</div>`
         }
       })
-      return '<p>罩杯大小</p>'+str
+      return '<p>罩杯大小</p>' + str
     });
     showStock()
   }
@@ -220,10 +220,71 @@ function showStock() {
 
   })
 }
-$('#lijibuy').on('click',function(){
-  let id = $(this).attr('data-id');
-  $.ajax({
-    type:'post',
-    url:'/orderAdd',
-  })
+//生成订单
+$('#lijibuy').on('click', function () {
+  let stock = $('.goodStock').text() //库存
+  if (stock > 0) {
+    $('.price .money').text() //单价
+    $('#number_show').val() //数量
+    $('#pingfen').data('id') //商品id
+    let spec = `${$('.color .active').data('id')}|${$('.size .active').data('id')}|${$('.cups .active').data('id')}`;
+    $.ajax({
+      type: 'post',
+      url: '/orderAdd',
+      data: {
+        price: $('.price .money').text().substr(1),
+        num: $('#number_show').val(),
+        goodsId: $('#pingfen').data('id'),
+        goodSpec: spec
+      },
+      success(data) {
+        if (data == 'ok') {
+          window.location.href = 'shoporder.html'
+        } else {
+          layer.msg(data);
+        }
+      },
+      error(err) {
+        console.log(err)
+      }
+    })
+  } else {
+    layer.msg('库存不足!');
+  }
+})
+//生成购物车
+$('#tianjiagouwu').click(() => {
+  let stock = $('.goodStock').text() //库存
+  if (stock > 0) {
+    $('.price .money').text() //单价
+    $('#number_show').val() //数量
+    $('#pingfen').data('id') //商品id
+    let spec = `${$('.color .active').data('id')}|${$('.size .active').data('id')}|${$('.cups .active').data('id')}`;
+    $.ajax({
+      type: 'post',
+      url: '/catAdd',
+      data: {
+        price: $('.price .money').text().substr(1).trim(),
+        catNum: $('#number_show').val(),
+        goodsId: $('#pingfen').data('id'),
+        spec: spec
+      },
+      success(data) {
+        if (data == 'ok') {
+          layer.confirm('您的宝贝已加入购物车,您是继续购物,还是前往购物车结算？', {
+            btn: ['继续购物', '前往购物车'] //按钮
+          }, function () {
+            layer.closeAll('dialog');
+          }, function () {
+            location.href = 'shopping.html';
+          });
+        }
+      },
+      error(err) {
+        console.log(err)
+      }
+    })
+  } else {
+    layer.msg('库存不足!');
+  }
 })

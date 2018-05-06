@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_611086_1tufovounm56ogvi.css">
     <link rel="stylesheet" href="./css/parts.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/shutter.css">
     <title>index</title>
 </head>
 
@@ -16,13 +17,31 @@
     <header>
         <% include parts/header %>
             <!-- 导航轮播 -->
-            <div class="box-banner">
+            <!-- <div class="box-banner">
                 <div class="head-banner">
                     <li></li>
                     <li></li>
                     <li></li>
                 </div>
+            </div> -->
+            <div class="shutter">
+                <div class="shutter-img">
+                    <a>
+                        <img src="./images/indexImage/index_banner/index_banner1.jpg" alt="#">
+                    </a>
+                    <a>
+                        <img src="./images/indexImage/index_banner/index_banner2.jpg" alt="#">
+                    </a>
+                    <a>
+                        <img src="./images/indexImage/index_banner/index_banner3.jpg" alt="#">
+                    </a>
+                </div>
+                <ul class="shutter-btn">
+                    <li class="prev"></li>
+                    <li class="next"></li>
+                </ul>
             </div>
+
     </header>
     <section>
         <!-- 内容第一部分 -->
@@ -33,13 +52,17 @@
                 </p>
                 <p>野性魅惑系列产品，以清新浅色为主打，展现女性青春之美，给人活力，让人蠢蠢欲动</p>
             </div>
-            <div class="section-button">
-                <button data-id="2" class="toSeriesBtn">前往查看</button>
+            <div class="section-button ">
+                <button class="bubbly-button toSeriesBtn" data-id="2">前往查看</button>
                 <button>更多系列</button>
             </div>
             <div class="img_contain">
-                <div></div>
-                <div></div>
+                <div class="btn-img" data-id="2">
+                    <img src='../images/indexImage/index_content/wild/index_wild1.jpg' alt="">
+                </div>
+                <div>
+                    <img src='../images/indexImage/index_content/wild/index_wild2.jpg' alt="">
+                </div class="btn-img" data-id='2'>
             </div>
         </div>
         <!-- 内容第二部分 -->
@@ -50,21 +73,27 @@
                 </p>
                 <p>清新自然系列产品，以清新浅色为主打，展现女性青春之美，给人活力，让人蠢蠢欲动</p>
             </div>
-            <div class="section-button2">
-                <button data-id="3" class="toSeriesBtn">前往查看</button>
+            <div class="section-button">
+                <button class="bubbly-button toSeriesBtn" data-id="3">前往查看</button>
                 <button>更多系列</button>
             </div>
+
             <div class="second_img">
-                <div class="second_img1">
+                <div class="second_img1 btn-img" data-id="3">
+                    <img src="../images/indexImage/index_content/fresh/index_fresh1.jpg" alt="">
                     <p>清新丽人Satisfactory</p>
                 </div>
                 <div class="second_img2">
-                    <div></div>
-                    <div></div>
+                    <div class="btn-img" data-id="3">
+                        <img src="../images/indexImage/index_content/fresh/index_fresh2.jpg" alt="">
+                    </div>
+                    <div class="btn-img" data-id="3">
+                        <img src="../images/indexImage/index_content/fresh/index_fresh3.jpg" alt="">
+                    </div>
                     <p>无法爱上，这般随意的绽放，正如无法爱上，所有泛滥膨胀的情感</p>
                 </div>
-                <div class="second_img3">
-                    <p>清新可人 Pure</p>
+                <div class="second_img3 btn-img" data-id="3">
+                    <img src="../images/indexImage/index_content/fresh/index_fresh4.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -76,24 +105,29 @@
                 </p>
                 <p>活力少女系列产品，以清新浅色为主打，展现女性青春之美，给人活力，让人蠢蠢欲动</p>
             </div>
-            
+
             <div class="section-button">
-                <button data-id="4" class="toSeriesBtn">前往查看</button>
+                <button class="bubbly-button toSeriesBtn" data-id="4">前往查看</button>
                 <button>更多系列</button>
             </div>
             <div class="three_img">
-                <div class="three_img1">
-                    <div></div>
+                <div class="three_img1 btn-img" data-id="4">
+                    <img src="../images/indexImage/index_content/sports/index_sports1.jpg" alt="">
                 </div>
-                <div class="three_img2">
-                    <div></div>
-                    <div></div>
+                <div class="three_img2 btn-img" data-id="4">
+                    <div>
+                        <img src="../images/indexImage/index_content/sports/index_sports2.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="../images/indexImage/index_content/sports/index_sports3.jpg" alt="">
+                    </div>
+
                     <p>人生总要有一场
-                       <br>充满活力的旅行 Energetic
-                       </p>
+                        <br>充满活力的旅行 Energetic
+                    </p>
                 </div>
-                <div class="three_img3">
-                    <div></div>
+                <div class="three_img3 btn-img" data-id="4">
+                    <img src="../images/indexImage/index_content/sports/index_sports4.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -105,23 +139,23 @@
                 </p>
                 <p>情调趣味系列产品，以清新浅色为主打，展现女性青春之美，给人活力，让人蠢蠢欲动</p>
             </div>
-            <div class="section-button2">
-                <button data-id="1" class="toSeriesBtn">前往查看</button>
+            <div class="section-button">
+                <button class="bubbly-button toSeriesBtn" data-id="1">前往查看</button>
                 <button>更多系列</button>
             </div>
             <div class="four_img">
-                <div class="four_img1">
-                    <div></div>
+                <div class="four_img1 btn-img" data-id="1">
+                    <img src="../images/indexImage/index_content/sexy/index_sex1.jpg" alt="">
                     <p>极致尤物Charm</p>
                 </div>
-                <div class="four_img2">
-                    <div></div>
+                <div class="four_img2 btn-img" data-id="1">
+                    <img src="../images/indexImage/index_content/sexy/index_sex2.jpg" alt="">
                     <p>妩媚夜猫</p>
                 </div>
-                <div class="four_img3">
-                    <div></div>
-                    <p>逗情打趣上帝派来的致命诱惑</br>
+                <div class="four_img3 btn-img" data-id="1">
+                    <img src="../images/indexImage/index_content/sexy/index_sex3.jpg" alt="">
                 </div>
+                <p>逗情打趣上帝派来的致命诱惑</br>
             </div>
         </div>
         <!-- 内容第五部分 -->
@@ -133,21 +167,21 @@
                 <p>气质优雅系列产品，以清新浅色为主打，展现女性青春之美，给人活力，让人蠢蠢欲动</p>
             </div>
             <div class="section-button">
-                <button >更多系列</button>
-                <button data-id="5" class="toSeriesBtn">前往查看</button>
+                <button class="bubbly-button toSeriesBtn" data-id="5">前往查看</button>
+                <button>更多系列</button>
             </div>
             <div class="five_img">
-                <div class="five_img1">
-                    <div></div>
-                    <p>愿你在尘世获得幸福
-                        <br>愿你面朝大海，春暖花开</p>
+                <div class="five_img1 btn-img" data-id="5">
+                    <img src="../images/indexImage/index_content/grace/index_grace1.jpg" alt="">
                 </div>
+                <p>愿你在尘世获得幸福
+                <br>愿你面朝大海，春暖花开</p>
                 <div class="five_img2">
-                    <div></div>
+                    <img src="../images/indexImage/index_content/grace/index_grace2.jpg" alt="">
                     <p>优雅气质 Grace</p>
                 </div>
                 <div class="five_img3">
-                    <div></div>
+                    <img src="../images/indexImage/index_content/grace/index_grace3.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -157,10 +191,18 @@
                 <i class="icon-redu iconfont"></i>
             </p>
             <div class="six_img">
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
+                <div class="six_img_next i1" data-id="1">
+                    <img src="../images/indexImage/index_content/hot/index_hot1.jpg" alt="">
+                </div>
+                <div class="six_img_next i2" data-id="2">
+                    <img src="../images/indexImage/index_content/hot/index_hot3.jpg" alt="">
+                </div>
+                <div class="six_img_next i3" data-id="3">
+                    <img src="../images/indexImage/index_content/hot/index_hot2.jpg" alt="">
+                </div>
+                <div class="six_img_next i4" data-id="4">
+                    <img src="../images/indexImage/index_content/hot/index_hot4.jpg" alt="">
+                </div>
             </div>
         </div>
     </section>
@@ -168,7 +210,36 @@
         <script src="./js/jquery-1.11.3.js"></script>
         <script src="./js/layer-v3.1.1/layer/layer.js"></script>
         <script src="./js/index.js"></script>
-</body>
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/velocity.js"></script>
+        <script src="./js/shutter.js"></script>
+        <script>
+            $(function () {
+                $('.shutter').shutter({
+                    isAutoPlay: true, // 是否自动播放
+                    playInterval: 1800, // 自动播放时间
+                    curDisplay: 3, // 当前显示页
+                    fullPage: true // 是否全屏展示
+                });
+            });
+            var animateButton = function (e) {
 
+                e.preventDefault;
+
+                e.target.classList.remove('animate');
+
+                e.target.classList.add('animate');
+                setTimeout(function () {
+                    e.target.classList.remove('animate');
+                }, 700);
+            };
+
+            var classname = document.getElementsByClassName("bubbly-button");
+
+            for (var i = 0; i < classname.length; i++) {
+                classname[i].addEventListener('click', animateButton, false);
+            }
+        </script>
+</body>
 
 </html>
