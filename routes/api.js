@@ -49,7 +49,7 @@ router.post('/userModify', (req, res) => {
 //获取评论列表
 router.get('/goodScoreList', (req, res) => {
   let sql = 'SELECT uss.username, gsc.userId, gsc.scoreText, gsc.createTime, ' +
-    'gsc.orderScore, gsc.isShow, goo.goodsName ' +
+    'gsc.orderScore, gsc.isShow, gsc.scoreId, gsc.replyInfo, goo.goodsName ' +
     'FROM goods_scores gsc ' +
     'LEFT JOIN users uss ON uss.userId = gsc.userId ' +
     'LEFT JOIN goods goo ON goo.goodsId = gsc.goodsId ';
@@ -57,6 +57,29 @@ router.get('/goodScoreList', (req, res) => {
     handleData(res, err, data)
   })
 })
+//修改是否显示
+router.post('/updateGoodScoreIsShow', (req, res) => {
+  let scoreId = req.body.scoreId;
+  let isShow = req.body.isShow;
+  let sql = 'UPDATE goods_scores SET isShow = ? WHERE scoreId = ? ';
+  var arr = [isShow, scoreId];
+  // console.log("scoreId:"+scoreId+",isShow:"+isShow);
+  sqlPool(sql, arr, (err, data) => {
+    handleData(res, err, data)
+  })
+})
+// 修改回复
+router.post('/updateGoodScoreReplyInfo', (req, res) => {
+  let scoreId = req.body.scoreId;
+  let value = req.body.value;
+  let sql = 'UPDATE goods_scores SET replyInfo = ? WHERE scoreId = ?';
+  var arr = [value, scoreId];
+  // console.log("scoreId:"+scoreId+",isShow:"+isShow);
+  sqlPool(sql, arr, (err, data) => {
+    handleData(res, err, data)
+  })
+})
+
 
 //获取商品系列表
 router.get('/goodsTypeList', (req, res) => {
