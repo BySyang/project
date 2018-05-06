@@ -1,7 +1,14 @@
 /**
  * Created by zhangpeng on 2018/4/9.
  */
-
+if($('#null')[0]){
+    let i = 5;
+    setInterval(()=>{
+        i--;
+        $('#null').find('time').text(i);
+        if(i==0) location.href='index.html';
+    },1000)
+}
 $(document).on('click', '#city', function (e) {
     SelCity(this, e);
 });
@@ -12,7 +19,6 @@ $.ajax({
         userId: $('#userInfo').data('id')
     },
     success(data) {
-        console.log(data);
         addressDom(data);
     },
     error(err) {

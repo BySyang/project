@@ -69,6 +69,7 @@ module.exports = {
     //修改订单
     orderModify(req, res) {
         if (req.session.userInfo) {
+            console.log(req.body)
             let orderId = req.body.orderId;
             let remarks = req.body.Remarks;
             let address = req.body.address;

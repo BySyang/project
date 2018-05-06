@@ -32,7 +32,7 @@ module.exports = {
         sqlPool(sql,arr,fn);
     },
     orderGoodsLast(userId,fn){
-        let sql = 'SELECT a.*,b.goodsName,b.goodLargeImg,c.totalMoney,c.realTotalMoney,c.orderRemarks FROM order_goods a LEFT JOIN goods b  ON a.goodsId = b.goodsId LEFT JOIN orders c ON a.orderId=c.orderId WHERE a.orderId = (SELECT d.orderId FROM orders d WHERE d.userId = ? ORDER BY d.orderId DESC LIMIT 1)';
+        let sql = 'SELECT a.*,b.goodsName,b.goodLargeImg,c.totalMoney,c.realTotalMoney,c.orderRemarks,c.iscancel FROM order_goods a LEFT JOIN goods b  ON a.goodsId = b.goodsId LEFT JOIN orders c ON a.orderId=c.orderId WHERE a.orderId = (SELECT d.orderId FROM orders d WHERE d.userId = ? ORDER BY d.orderId DESC LIMIT 1)';
         sqlPool(sql,[userId],fn)
     },
     orderModify(arr,fn){

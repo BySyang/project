@@ -12,219 +12,227 @@
 <body>
     <% include header %>
         <div class="container">
-            <!--全部开始-->
-            <div class="tianxiehedui">
-                <!--标题-->
-                <div class="rzhdndgw">温馨提示：请认真核对您的购物信息</div>
-                <!--收货人信息-->
-                <div class="shouhurxl clastyo" id="userInfo" data-id="<%= userInfo.userId%>">
-                    <div class="shouhurxl1">
-                        <em>默认地址</em>
-                        <a href="#" class="chgeb">修改</a>
+            <% console.log(orderInfo)%>
+                <% if(orderInfo[0].iscancel==1){ %>
+                    <div class="tianxiehedui">
+                        <div class="rzhdndgw" id="null">订单已取消!<time>5</time>秒钟后回到首页... 
+                            <a id="backHome" href="index.html">点击立即跳转</a> </div>
                     </div>
-                    <div class="shouhurxl2">
-                        <span>王莉</span>
-                        <span>山东省 济南市 天桥区历山北路黄台电子商务产业园1020</span>
-                        <span>
-                            <em>电话：</em>
-                            <em>15554465535</em>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <!--点击修改会出现这个选择框-->
-            <div class="changepc"></div>
-            <div class="shouhurxl shouhurxl13" id="userInfo2">
-                <div class="shouhurxl1 shouhurxl12">
-                    <em>发票信息</em>
-                    <a href="#">修改</a>
-                </div>
-                <div class="shouhurxl2">
-                    <span>普通发票 个人 食品</span>
-                </div>
-            </div>
-
-            <!--修改发票信息-->
-            <div class="xgfpxo">
-                <div class="fapiaowr">
-                    <span>发票信息</span>
-                </div>
-                <!--众多发票的信息-->
-                <div class="fapiaowr fapiaowr1">
-                    <input type="radio" name="fapl" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
-                    <span>普通发票 个人 食品</span>
-                    <a href="#">删除</a>
-                </div>
-                <div class="fapiaowr fapiaowr1">
-                    <input type="radio" name="fapl" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
-                    <span>普通发票</span>
-                    <a href="#">删除</a>
-                </div>
-                <div class="fapiaowr fapiaowr1">
-                    <input type="radio" name="fapl" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
-                    <span>普通发票</span>
-                    <a href="#">删除</a>
-                </div>
-                <div class="fapiaowr fapiaowr1">
-                    <input type="radio" name="fapl" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
-                    <span>普通发票</span>
-                    <a href="#">删除</a>
-                </div>
-                <!--发票结束-->
-                <!--使用新的发票信息-->
-                <div class="fapiaowr fapiaowr1">
-                    <input type="radio" name="fapl" style=" float:left; display:block; width:13px; height:13px; margin-top:9px" class="godieba">
-                    <span>使用新的发票信息</span>
-                    <!--点击后这个块又出现-->
-                    <div class="fapiaowr fapiaowr3">
-                        <div class="fapiaowr">
-                            <em style=" float:left; font-size:14px; display:block; color:#333; line-height:30px">发票类型：</em>
-                            <input type="radio" name="fapla" checked style=" float:left; display:block; width:13px; height:13px; margin-top:8px">
-                            <span style=" display:block; float:left; padding-left:6px; line-height:30px; font-size:14px; color:#333">普通发票</span>
-                        </div>
-                        <div class="fapiaowr">
-                            <em style=" float:left; font-size:14px; display:block; color:#333; line-height:30px">发票抬头：</em>
-                            <select style=" float:left; display:block; width:100px; border:1px solid #bbb; height:28px">
-                                <option value="person">个人</option>
-                                <option value="company">单位</option>
-                            </select>
-                            <input style="float:left; border:1px solid #bbb; box-shadow:none; height:26px; font-size:12px; text-indent:6px; width:160px; margin-left:6px"
-                                type="text" class="shuru" placeholder="单位名称" required />
-                        </div>
-                        <div class="fapiaowr">
-                            <em style=" float:left; font-size:14px; display:block; color:#333; line-height:30px">发票内容：</em>
-                            <select style=" float:left; display:block; width:100px; border:1px solid #bbb; height:28px">
-                                <option value="person">明细</option>
-                                <option value="company">酒</option>
-                                <option value="company">玩具</option>
-                                <option value="company">汽车</option>
-                                <option value="company">家电</option>
-                            </select>
-                        </div>
-
-                    </div>
-                    <div style=" width:100%; height:auto ; overflow:hidden">
-                        <a href="#" style=" display:block; padding-left:20px; padding-right:20px; line-height:40px; color:#fff; font-size:14px; margin-top:10px; margin-bottom:10px"
-                            class="worilrgo bcfpxxnm">保存发票信息</a>
-                        <a href="#" style=" display:block; padding-left:20px; padding-right:20px; line-height:40px; color:#fff; font-size:14px; margin-top:10px; margin-bottom:10px; margin-left:10px"
-                            class="worilrgo byynm">不需要发票</a>
-                    </div>
-                    <!--这个块结束-->
-                </div>
-            </div>
-            <!--发票信息结束-->
-            <!--商品清单-->
-            <div class="shouhurxl">
-
-                <!--一条商品信息开始-->
-                <div class="xxpop1" style="padding-bottom:6px">
-                    <div class="xxpop2 ">
-                        <span>店铺</span>
-                        <% orderInfo.forEach(item=>{%>
-                            <a href="# ">
-                                <p>FashionGirl</p>
-                            </a>
-                            <%})%>
-                    </div>
-                    <div class="xxpop2 " style=" width:630px ">
-                        <span>商品</span>
-                        <% orderInfo.forEach(item=>{%>
-                            <a href="# ">
-                                <p style=" line-height:50px ">
-                                    <img src="./images/series/<%=item.goodLargeImg%>" />
+                    <% }else{%>
+                        <!--全部开始-->
+                        <div class="tianxiehedui">
+                            <!--标题-->
+                            <div class="rzhdndgw">温馨提示：请认真核对您的购物信息</div>
+                            <!--收货人信息-->
+                            <div class="shouhurxl clastyo" id="userInfo" data-id="<%= userInfo.userId%>">
+                                <div class="shouhurxl1">
+                                    <em>默认地址</em>
+                                    <a href="#" class="chgeb">修改</a>
+                                </div>
+                                <div class="shouhurxl2">
+                                    <span>王莉</span>
+                                    <span>山东省 济南市 天桥区历山北路黄台电子商务产业园1020</span>
                                     <span>
-                                        <%=item.goodsName%>
+                                        <em>电话：</em>
+                                        <em>15554465535</em>
                                     </span>
-                                </p>
-                            </a>
-                            <%})%>
+                                </div>
+                            </div>
+                        </div>
+                        <!--点击修改会出现这个选择框-->
+                        <div class="changepc"></div>
+                        <div class="shouhurxl shouhurxl13" id="userInfo2">
+                            <div class="shouhurxl1 shouhurxl12">
+                                <em>发票信息</em>
+                                <a href="#">修改</a>
+                            </div>
+                            <div class="shouhurxl2">
+                                <span>普通发票 个人 食品</span>
+                            </div>
+                        </div>
+                        <!--修改发票信息-->
+                        <div class="xgfpxo">
+                            <div class="fapiaowr">
+                                <span>发票信息</span>
+                            </div>
+                            <!--众多发票的信息-->
+                            <div class="fapiaowr fapiaowr1">
+                                <input type="radio" name="fapl" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
+                                <span>普通发票 个人 食品</span>
+                                <a href="#">删除</a>
+                            </div>
+                            <div class="fapiaowr fapiaowr1">
+                                <input type="radio" name="fapl" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
+                                <span>普通发票</span>
+                                <a href="#">删除</a>
+                            </div>
+                            <div class="fapiaowr fapiaowr1">
+                                <input type="radio" name="fapl" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
+                                <span>普通发票</span>
+                                <a href="#">删除</a>
+                            </div>
+                            <div class="fapiaowr fapiaowr1">
+                                <input type="radio" name="fapl" style=" float:left; display:block; width:13px; height:13px; margin-top:9px">
+                                <span>普通发票</span>
+                                <a href="#">删除</a>
+                            </div>
+                            <!--发票结束-->
+                            <!--使用新的发票信息-->
+                            <div class="fapiaowr fapiaowr1">
+                                <input type="radio" name="fapl" style=" float:left; display:block; width:13px; height:13px; margin-top:9px" class="godieba">
+                                <span>使用新的发票信息</span>
+                                <!--点击后这个块又出现-->
+                                <div class="fapiaowr fapiaowr3">
+                                    <div class="fapiaowr">
+                                        <em style=" float:left; font-size:14px; display:block; color:#333; line-height:30px">发票类型：</em>
+                                        <input type="radio" name="fapla" checked style=" float:left; display:block; width:13px; height:13px; margin-top:8px">
+                                        <span style=" display:block; float:left; padding-left:6px; line-height:30px; font-size:14px; color:#333">普通发票</span>
+                                    </div>
+                                    <div class="fapiaowr">
+                                        <em style=" float:left; font-size:14px; display:block; color:#333; line-height:30px">发票抬头：</em>
+                                        <select style=" float:left; display:block; width:100px; border:1px solid #bbb; height:28px">
+                                            <option value="person">个人</option>
+                                            <option value="company">单位</option>
+                                        </select>
+                                        <input style="float:left; border:1px solid #bbb; box-shadow:none; height:26px; font-size:12px; text-indent:6px; width:160px; margin-left:6px"
+                                            type="text" class="shuru" placeholder="单位名称" required />
+                                    </div>
+                                    <div class="fapiaowr">
+                                        <em style=" float:left; font-size:14px; display:block; color:#333; line-height:30px">发票内容：</em>
+                                        <select style=" float:left; display:block; width:100px; border:1px solid #bbb; height:28px">
+                                            <option value="person">明细</option>
+                                            <option value="company">酒</option>
+                                            <option value="company">玩具</option>
+                                            <option value="company">汽车</option>
+                                            <option value="company">家电</option>
+                                        </select>
+                                    </div>
 
-                    </div>
-                    <div class="xxpop2">
-                        <span>单价(元)</span>
-                        <% orderInfo.forEach(item=>{%>
-                            <p>
-                                <%= item.goodsPrice%>
-                            </p>
-                            <%})%>
+                                </div>
+                                <div style=" width:100%; height:auto ; overflow:hidden">
+                                    <a href="#" style=" display:block; padding-left:20px; padding-right:20px; line-height:40px; color:#fff; font-size:14px; margin-top:10px; margin-bottom:10px"
+                                        class="worilrgo bcfpxxnm">保存发票信息</a>
+                                    <a href="#" style=" display:block; padding-left:20px; padding-right:20px; line-height:40px; color:#fff; font-size:14px; margin-top:10px; margin-bottom:10px; margin-left:10px"
+                                        class="worilrgo byynm">不需要发票</a>
+                                </div>
+                                <!--这个块结束-->
+                            </div>
+                        </div>
+                        <!--发票信息结束-->
+                        <!--商品清单-->
+                        <div class="shouhurxl">
+                            <!--一条商品信息开始-->
+                            <div class="xxpop1" style="padding-bottom:6px">
+                                <div class="xxpop2 ">
+                                    <span>店铺</span>
+                                    <% orderInfo.forEach(item=>{%>
+                                        <a href="# ">
+                                            <p>FashionGirl</p>
+                                        </a>
+                                        <%})%>
+                                </div>
+                                <div class="xxpop2 " style=" width:630px ">
+                                    <span>商品</span>
+                                    <% orderInfo.forEach(item=>{%>
+                                        <a href="# ">
+                                            <p style=" line-height:50px ">
+                                                <img src="./images/series/<%=item.goodLargeImg%>" />
+                                                <span>
+                                                    <%=item.goodsName%>
+                                                </span>
+                                            </p>
+                                        </a>
+                                        <%})%>
 
-                    </div>
-                    <div class="xxpop2">
-                        <span>数量</span>
-                        <% orderInfo.forEach(item=>{%>
-                            <p>
-                                <%=item.goodsNum%>
-                            </p>
-                            <%})%>
-                    </div>
-                    <div class="xxpop2">
-                        <span>小计(元)</span>
-                        <% orderInfo.forEach(item=>{%>
-                            <% var zhongjia = item.goodsPrice*item.goodsNum%>
-                                <p>
-                                    <%=zhongjia%>
-                                </p>
-                                <%})%>
+                                </div>
+                                <div class="xxpop2">
+                                    <span>单价(元)</span>
+                                    <% orderInfo.forEach(item=>{%>
+                                        <p>
+                                            <%= item.goodsPrice%>
+                                        </p>
+                                        <%})%>
 
-                    </div>
-                </div>
-            </div>
-            <!--买家留言-->
-            <div class="maijiayouhuayue">
-                <em style=" width:90px; text-align:right">买家留言：</em>
-                <input id="liuyan" placeholder="选填：对本次交易的说明（建议填写已经和商家达成一致的说明）" value="<%=orderInfo[0].orderRemarks%>"></textarea>
-            </div>
-            <!--商品合计-->
-            <div class="shouhurxlm">
-                <ul>
-                    <li>
-                        <em>
-                            <s>11</s>元</em>
-                        <em>运费：</em>
-                    </li>
-                    <li>
-                        <em>
-                            <s>
-                                <%=(1-userInfo.userLevel*5/100)*100 %>折
-                            </s>
-                        </em>
-                        <em>会员折扣:</em>
-                    </li>
-                    <li>
-                        <em>
-                            <s>
-                                <%=orderInfo[0].totalMoney%>
-                            </s>元</em>
-                        <em>本店合计：</em>
-                    </li>
-                </ul>
-                <!--订单总金额-->
-                <div class="ddzjes">
-                    <em>实付金额：</em>
-                    <em style=" padding-left:0">
-                        <s>
-                            <%=orderInfo[0].realTotalMoney%>
-                        </s>元</em>
-                </div>
-                <!--使用预存款-->
-                <div class="syycklo">
-                    <em>用预存款：</em>
-                    <input type="checkbox" class="dianyidian" value="1" name="pd_pay" style=" margin-top:8px; float:left; margin-left:6px">
-                    <span>使用预存款（可用金额：
-                        <i>40</i>元）</span>
-                </div>
-                <!--请输入支付密码-->
-                <div class="zgykskbj">
-                    <em>支付密码：</em>
-                    <input style="float:left; border:1px solid #bbb; box-shadow:none; height:28px; font-size:12px; text-indent:6px; margin-top:10px"
-                        type="text" class="shuru" />
-                    <a href="#">使用</a>
-                </div>
-            </div>
-            <!--一条商品信息结束-->
-            <!--商品清单结束-->
-            <a href="#" class="tijiaodingdang56" id="submit" data-id="<%=orderInfo.orderId%>">提交订单</a>
-            <a href="#" class="tijiaodingdang56" id="cancel">取消订单</a>
+                                </div>
+                                <div class="xxpop2">
+                                    <span>数量</span>
+                                    <% orderInfo.forEach(item=>{%>
+                                        <p>
+                                            <%=item.goodsNum%>
+                                        </p>
+                                        <%})%>
+                                </div>
+                                <div class="xxpop2">
+                                    <span>小计(元)</span>
+                                    <% orderInfo.forEach(item=>{%>
+                                        <% var zhongjia = item.goodsPrice*item.goodsNum%>
+                                            <p>
+                                                <%=zhongjia%>
+                                            </p>
+                                            <%})%>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--买家留言-->
+                        <div class="maijiayouhuayue">
+                            <em style=" width:90px; text-align:right">买家留言：</em>
+                            <input id="liuyan" placeholder="选填：对本次交易的说明（建议填写已经和商家达成一致的说明）" value="<%=orderInfo[0].orderRemarks%>">
+                            </textarea>
+                        </div>
+                        <!--商品合计-->
+                        <div class="shouhurxlm">
+                            <ul>
+                                <li>
+                                    <em>
+                                        <s>11</s>元</em>
+                                    <em>运费：</em>
+                                </li>
+                                <li>
+                                    <em>
+                                        <s>
+                                            <%=(1-userInfo.userLevel*5/100)*100 %>折
+                                        </s>
+                                    </em>
+                                    <em>会员折扣:</em>
+                                </li>
+                                <li>
+                                    <em>
+                                        <s>
+                                            <%=orderInfo[0].totalMoney%>
+                                        </s>元</em>
+                                    <em>本店合计：</em>
+                                </li>
+                            </ul>
+                            <!--订单总金额-->
+                            <div class="ddzjes">
+                                <em>实付金额：</em>
+                                <em style=" padding-left:0">
+                                    <s>
+                                        <%=orderInfo[0].realTotalMoney%>
+                                    </s>元</em>
+                            </div>
+                            <!--使用预存款-->
+                            <div class="syycklo">
+                                <em>用预存款：</em>
+                                <input type="checkbox" class="dianyidian" value="1" name="pd_pay" style=" margin-top:8px; float:left; margin-left:6px">
+                                <span>使用预存款（可用金额：
+                                    <i>40</i>元）</span>
+                            </div>
+                            <!--请输入支付密码-->
+                            <div class="zgykskbj">
+                                <em>支付密码：</em>
+                                <input style="float:left; border:1px solid #bbb; box-shadow:none; height:28px; font-size:12px; text-indent:6px; margin-top:10px"
+                                    type="text" class="shuru" />
+                                <a href="#">使用</a>
+                            </div>
+                        </div>
+                        <!--一条商品信息结束-->
+                        <!--商品清单结束-->
+                        <a href="#" class="tijiaodingdang56" id="submit" data-id="<%=orderInfo[0].orderId%>">提交订单</a>
+                        <a href="#" class="tijiaodingdang56" id="cancel">取消订单</a>
+                        <%}%>
+
         </div>
         <% include footer %>
 
