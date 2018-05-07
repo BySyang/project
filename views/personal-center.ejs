@@ -119,12 +119,14 @@
                                             </ul>
                                             <a href="#">查看详情</a>
                                             <div>
-                                                <% if(item.isPay==0){%>
+                                                <% if(item.isPay==0&&item.iscancel==0){%>
                                                     <a href="pay.html?id=<%=item.orderId %>">立即支付</a>
                                                     <a href="#">取消订单</a>
-                                                    <% }else{%>
+                                                    <% }else if(item.isPay==0&&item.iscancel==1){%>
                                                         <a href="#">已取消</a>
-                                                        <% }%>
+                                                        <% }else{%>
+                                                            <a href="#">已支付</a>
+                                                            <% }%>
 
                                             </div>
 

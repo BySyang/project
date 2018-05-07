@@ -186,9 +186,8 @@ $('#cancel').click(() => {
         },
         success(data) {
             if (data == 'ok') {
-                layer.msg('订单已取消,正在跳转至首页...',function(){
-                    location.href = 'index.html';
-                })
+                layer.msg('订单已取消')
+                location.reload();
             } else {
                 layer.msg(data);
             }

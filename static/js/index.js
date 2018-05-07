@@ -254,6 +254,15 @@ $('#regBtn').click(function () {
         success(data) {
             if (data == 'ok') {
                 layer.msg('注册成功');
+                $("#wangji").css({
+                    "display": "none"
+                })
+                $(".register").css({
+                    "display": "none"
+                })
+                $("#denglu").css({
+                    "display": "block"
+                })
             } else {
                 layer.msg('注册失败');
             }
@@ -431,7 +440,7 @@ $(".out").on('click', function () {
         url: 'userExit',
         success: function (data) {
             if (data == 'ok') {
-                location.reload()
+                location.href="index.html";
             }
         }
 

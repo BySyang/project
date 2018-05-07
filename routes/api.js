@@ -49,7 +49,7 @@ router.post('/userModify', (req, res) => {
 //获取评论列表
 router.get('/goodScoreList', (req, res) => {
   let sql = 'SELECT uss.username, gsc.userId, gsc.scoreText, gsc.createTime, ' +
-    'gsc.orderScore, gsc.isShow, gsc.scoreId, gsc.replyInfo, goo.goodsName ' +
+    'gsc.orderScore, gsc.isShow, gsc.scoreId, gsc.reply, goo.goodsName ' +
     'FROM goods_scores gsc ' +
     'LEFT JOIN users uss ON uss.userId = gsc.userId ' +
     'LEFT JOIN goods goo ON goo.goodsId = gsc.goodsId ';
@@ -72,7 +72,7 @@ router.post('/updateGoodScoreIsShow', (req, res) => {
 router.post('/updateGoodScoreReplyInfo', (req, res) => {
   let scoreId = req.body.scoreId;
   let value = req.body.value;
-  let sql = 'UPDATE goods_scores SET replyInfo = ? WHERE scoreId = ?';
+  let sql = 'UPDATE goods_scores SET reply = ? WHERE scoreId = ?';
   var arr = [value, scoreId];
   // console.log("scoreId:"+scoreId+",isShow:"+isShow);
   sqlPool(sql, arr, (err, data) => {

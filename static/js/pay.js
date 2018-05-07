@@ -17,7 +17,8 @@ $(function () {
                 },
                 success(data) {
                     if (data == 'ok') {
-                        layer.msg('支付成功,等待客服处理...')
+                        layer.msg('支付成功,等待客服处理...');
+                        location.reload();
                     } else {
                         layer.msg(data);
                     }
