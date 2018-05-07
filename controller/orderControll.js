@@ -3,6 +3,7 @@ const sd = require("silly-datetime");
 module.exports = {
     orderList(req, res) {
         let userId = req.session.userInfo.userId;
+        let orderId = req.body.orderId;
         orderModal.orderList(userId, function (err, data) {
             res.send(data);
         })

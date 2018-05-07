@@ -39,6 +39,11 @@ $(function () {
             }
         })
     })
+
+
+    $(document).on('click',()=>{
+        
+    })
     /**
      * 
      * @param {Object} options url | success

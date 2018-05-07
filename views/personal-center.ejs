@@ -80,12 +80,12 @@
                                                 </li>
                                                 <li>颜色 :
                                                     <span>
-                                                        <%= item.spec %>
+                                                        <%= goodSpec().color(item.spec.split("|")[0]) %>
                                                     </span>
                                                 </li>
                                                 <li>尺码 :
                                                     <span>
-                                                        <%= item.spec%>
+                                                        <%= goodSpec().size(item.spec.split("|")[1])%>
                                                     </span>
                                                 </li>
                                                 <li>备注 :
@@ -119,8 +119,13 @@
                                             </ul>
                                             <a href="#">查看详情</a>
                                             <div>
-                                                <a href="#">立即支付</a>
-                                                <a href="#">取消订单</a>
+                                                <% if(item.isPay==0){%>
+                                                    <a href="pay.html?id=<%=item.orderId %>">立即支付</a>
+                                                    <a href="#">取消订单</a>
+                                                    <% }else{%>
+                                                        <a href="#">已取消</a>
+                                                        <% }%>
+
                                             </div>
 
                                         </div>
@@ -272,9 +277,8 @@
                                     <% userAddr.forEach(function(item){ %>
                                         <tr>
                                             <td>
-                                                <% if(item.isdefault== 0){ %>
+                                                <% if(item.isDefault== 0){ %>
                                                     <a href="javascript:void(0)">设为默认</a>
-
                                                     <% }else{ %>
                                                         <a href="javascript:void(0)">当前默认</a>
                                                         <% }%>

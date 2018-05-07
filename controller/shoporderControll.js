@@ -4,7 +4,11 @@ module.exports = {
         if (req.session.userInfo) {
             let userInfo = req.session.userInfo;
             let userId = userInfo.userId;
-            orderModal.orderGoodsLast(userId, function (err, data) {
+            let id = req.query.id;
+            let param = [];
+            id?param.push(userId,id):param.push(userId);
+            console.log(param)
+            orderModal.orderGoodsLast(param, function (err, data) {
                 res.render('parts/shoporder', {
                     orderInfo: data,
                     userInfo
