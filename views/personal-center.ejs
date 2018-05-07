@@ -57,86 +57,86 @@
                                 <li data-num="1">已完成</li>
                             </ul>
                             <% console.log(orders)%>
-                            <% orders.forEach(function(item){ %>
-                                <div class="order-item" data-id="<%= item.orderId %>">
-                                    <p>订单号 :
-                                        <span>
-                                            <%= item.orderunique %>
-                                        </span>
-                                        <time>
-                                            <%= formatDate(item.createTime)  %>
-                                        </time>
-                                        <em>待支付
-                                            <span>[5:00]</span>
-                                        </em>
-                                    </p>
-                                    <div class="order-goods clearfix">
-                                        <img src="images/series/<%= item.goodsImg.split('|')[0].replace('?','') %>" alt="">
-                                        <ul>
-                                            <li>商品名称 :
-                                                <span>
-                                                    <%= item.goodName  %>
-                                                </span>
-                                            </li>
-                                            <li>颜色 :
-                                                <span>
-                                                    <%= goodSpec().color(item.color) %>
-                                                </span>
-                                            </li>
-                                            <li>尺码 :
-                                                <span>
-                                                    <%= goodSpec().size(item.size)%>
-                                                </span>
-                                            </li>
-                                            <li>备注 :
-                                                <span>
-                                                    <%= item.orderRemarks%>
-                                                </span>
-                                            </li>
-                                            <li>运费 :
-                                                <strong>¥
-                                                    <%= item.deliverMoney%>
-                                                </strong>
-                                            </li>
+                                <% orders.forEach(function(item){ %>
+                                    <div class="order-item" data-id="<%= item.orderId %>">
+                                        <p>订单号 :
+                                            <span>
+                                                <%= item.orderunique %>
+                                            </span>
+                                            <time>
+                                                <%= formatDate(item.createTime)  %>
+                                            </time>
+                                            <em>待支付
+                                                <span>[5:00]</span>
+                                            </em>
+                                        </p>
+                                        <div class="order-goods clearfix">
+                                            <img src="images/series/<%= item.goodLargeImg %>" alt="">
+                                            <ul>
+                                                <li>商品名称 :
+                                                    <span>
+                                                        <%= item.goodsName  %>
+                                                    </span>
+                                                </li>
+                                                <li>颜色 :
+                                                    <span>
+                                                        <%= item.spec %>
+                                                    </span>
+                                                </li>
+                                                <li>尺码 :
+                                                    <span>
+                                                        <%= item.spec%>
+                                                    </span>
+                                                </li>
+                                                <li>备注 :
+                                                    <span>
+                                                        <%= item.orderRemarks%>
+                                                    </span>
+                                                </li>
+                                                <li>运费 :
+                                                    <strong>¥
+                                                        <%= item.deliverMoney%>
+                                                    </strong>
+                                                </li>
 
-                                            <li>获得积分 :
-                                                <strong>
-                                                    <%= item.orderScore%>
-                                                </strong>
-                                            </li>
-                                            <li>价格 :
-                                                <strong>¥
-                                                    <%= item.realTotalMoney%>
-                                                </strong>
-                                            </li>
-                                            <li>数量 :
-                                                <strong>
-                                                    <em>&#45;</em>
-                                                    <input type="text" value="<%= item.goodsNum %>">
-                                                    <em>&#43;</em>
-                                                </strong>
-                                            </li>
-                                        </ul>
-                                        <a href="#">查看详情</a>
-                                        <div>
-                                            <a href="#">立即支付</a>
-                                            <a href="#">取消订单</a>
+                                                <li>获得积分 :
+                                                    <strong>
+                                                        <%= item.orderScore%>
+                                                    </strong>
+                                                </li>
+                                                <li>价格 :
+                                                    <strong>¥
+                                                        <%= item.realTotalMoney%>
+                                                    </strong>
+                                                </li>
+                                                <li>数量 :
+                                                    <strong>
+                                                        <em>&#45;</em>
+                                                        <input type="text" value="<%= item.goodsNum %>">
+                                                        <em>&#43;</em>
+                                                    </strong>
+                                                </li>
+                                            </ul>
+                                            <a href="#">查看详情</a>
+                                            <div>
+                                                <a href="#">立即支付</a>
+                                                <a href="#">取消订单</a>
+                                            </div>
+
                                         </div>
-
                                     </div>
-                                </div>
-                                <% }) %>
-                                    <div class="pages">
-                                        <a href="#">首页</a>
-                                        <a href="#">上一页</a>
-                                        <a href="#">2</a>
-                                        <a href="#">3</a>
-                                        <a href="#">4</a>
-                                        <a href="#">5</a>
-                                        <a href="#">6</a>
-                                        <a href="#">下一页</a>
-                                        <a href="#">尾页</a>
-                                    </div>
+                                    <% }) %>
+                                        <div class="pages">
+                                            <a href="#">首页</a>
+                                            <a href="#">上一页</a>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">下一页</a>
+                                            <a href="#">尾页</a>
+                                        </div>
 
                         </div>
                         <div class="preson ">

@@ -1,6 +1,6 @@
 /* 订单 */
 const sqlPool = require('./sqlPool');
-let sql = `SELECT * FROM orders a, order_goods b,goods c , goods_specs d WHERE a.userId=? AND a.orderId=b.orderId AND b.goodsId=c.goodsId=d.goodsId`;
+let sql = `SELECT d.*,c.goodLargeImg,c.goodsName FROM (SELECT a.*,b.goodsId,b.goodsPrice,b.spec,b.goodsNum FROM orders a LEFT JOIN order_goods b ON a.orderId=b.orderId LIMIT 1) d LEFT JOIN goods c ON c.goodsId=d.goodsId WHERE d.userId =?`;
 module.exports = {
     orderList(userId, fn) {
         sqlPool(sql, [userId], fn);

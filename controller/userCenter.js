@@ -7,12 +7,10 @@ module.exports = {
             var userInfo = req.session.userInfo;
             let obj = {};
             obj.userInfo = userInfo;
-            console.log(userInfo)
             new Promise(function (resolve, reject) {
                 orderModal.orderList(userInfo.userId, function (err, orders) {
                     if (!err) {
                         obj.orders = orders;
-                        console.log(orders)
                         resolve(obj)
                     } else {
                         reject(err);
