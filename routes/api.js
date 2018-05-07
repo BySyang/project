@@ -37,10 +37,10 @@ router.post('/userModify', (req, res) => {
   let sql = 'update users set logName=?,logPwd=?,userPhone=?,userEmail=? where userId=?';
   var arr = [];
   arr.push(req.body.logName || ''); //登录名
-  arr.push(req.body.logPwd ||'');//登录密码
-  arr.push(req.body.userPhone || '');//手机号
-  arr.push(req.body.userEmail || '');//邮箱
-  arr.push(req.body.userId);     //用户id
+  arr.push(req.body.logPwd || ''); //登录密码
+  arr.push(req.body.userPhone || ''); //手机号
+  arr.push(req.body.userEmail || ''); //邮箱
+  arr.push(req.body.userId); //用户id
   sqlPool(sql, arr, (err, data) => {
     handleData(res, err, data)
   })
@@ -372,9 +372,10 @@ router.post('/imgModify', (req, res) => {
       let arrImg = fields.oldImg.split('|');
       for (var key of Object.keys(files)) {
         var oldpath = files[key].path;
-        var newpath = arrImg[key.charAt(key.length - 1)].substr();
+
+        var newpath = 'static/'+arrImg[key.charAt(key.length - 1)].substr();
+
         fs.renameSync(oldpath, newpath);
-        1
       }
       res.writeHead(200, {
         'content-type': 'text/plain'

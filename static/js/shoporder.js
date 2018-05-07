@@ -121,6 +121,7 @@ function addressDom(data) {
                     <em> 电话： </em> <em class="t3"> ${item.userPhone} </em> </span> <a href = "#" > 删除 </a> </div>`
         }
     })
+    
     $('.changepc').append(dom1 + dom2 + dom3 + dom4);
 }
 $(document).on('click', '.bcshrxopl', () => {
