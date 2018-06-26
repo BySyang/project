@@ -183,7 +183,7 @@ $('#logBtn').click(function () {
                 } else {
                     deluser();
                 }
-
+ 
                 window.parent.location.reload();
 
             } else if (username.length == 0 && password.length > 0) {
